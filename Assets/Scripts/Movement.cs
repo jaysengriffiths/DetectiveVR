@@ -3,21 +3,24 @@ using System.Collections;
 
 public class Movement : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+    private  Transform transform;
+
+    // Use this for initialization
+    void Start ()
+    {
+        transform = gameObject.GetComponent<Transform>();
 	}
 	
 	// Update is called once per frame
-	private void Update () {
-			if (Input.GetMouseButtonDown(0))
-			{
-				Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+	private void Update ()
+    {
+        if (transform.rotation.z < 75)
+            isMoving();
+    }
 
-				transform.forward = Vector3.MoveTowards(transform.forward, ray.direction, Time.deltaTime) * 10;
-			}
-			// Moving forward
-			transform.position += transform.forward * (Time.deltaTime * 10);
-		}
+    void isMoving()
+    {
+
+    }
      
 }
