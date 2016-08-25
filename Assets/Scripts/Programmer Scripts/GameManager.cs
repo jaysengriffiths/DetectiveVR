@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
         OCULUSMENU,
         INTERACT
    };
-    Gamestate currentState;
+    //Gamestate currentState;
     private static GameManager manager = null;
     private bool kPaused = false;
     private string activeLevel;
@@ -40,13 +40,14 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Debug.Log("Creating a new game state");
-        SceneManager.LoadScene("IntroScene");
+        SceneManager.LoadScene(0);
     }
         //gamestartup
         //fileload
 
     void MissionSelect()
     {
+
         //Main missions
         //puzzle select
         //filler missions (accessible anytim)
@@ -69,10 +70,10 @@ public class GameManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(currentState == Gamestate.INTERACT)
-        {
+        //if(currentState == Gamestate.INTERACT)
+        //{
 
-        }
+        //}
         //Gameflow and isRunning
     }
 
