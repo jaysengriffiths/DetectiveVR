@@ -3,30 +3,31 @@ using System.Collections;
 
 public class Mission : MonoBehaviour
 {
-    public Clue clue;
-    private bool cluesCollected;
-    public struct Suspect
+    public class Suspect
     {
-        public Transform suspectPosition;
-        public AudioClip missionAudio;
-        public GameObject suspectPrefab;
+        GameObject character;
+        public AudioClip wrongArrest;
+        public AudioClip rightArrest;
+        public AudioClip wrongWarn;
+        public AudioClip rightWarn;
+        public AudioClip suspect;
+        public AudioClip thankyou;
+
     }
-
-    public Clue[] clues;
-    //public GameObject[] Prop;
-
-    public enum ClueType
-    {
-        STATIC,
-        ATTACHED
-    };
-
     
+    //populate with characters from scene
+    public Suspect[] suspects;
+
+    public int guiltyIndex;
+    //suspects[guiltyIndex
+    void OnActivate()
+    {
+        guiltyIndex = Random.Range(0, 5);
+    }
 
     // Use this for initialization
     void Start ()
     {
-        
         
     
 	}
@@ -34,9 +35,9 @@ public class Mission : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if(cluesCollected)
-        {
-            //warning book and handcuffs play sound and shine
-        }	
+        //if(cluesCollected)
+        //{
+        //    //warning book and handcuffs play sound and shine
+        //}	
 	}
 }

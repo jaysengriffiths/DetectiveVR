@@ -5,34 +5,64 @@ using System.Collections;
 
 public class MissionManager : MonoBehaviour
 {
-    //private int guiltyIndex;
-
-    public Mission mission;
-    //Array of suspects 0 = complaiant
+    Mission[] missions;
+    public Mission currentMission;
     void Start()
     {
-        //guiltyIndex = Random.Range(0, 5);
-        mission = gameObject.GetComponent<Mission>();
-        
+        missions = FindObjectsOfType<Mission>();
            
     }
+
 
     void FixedUpdate()
     {
 
     }
 
-    void Arrest()
+    void PlaySound(AudioClip sound)
     {
+        //does oculus sound things
+    }
 
-     
-
+    void Arrest(GameObject character)
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            if(currentMission.suspects[i].suspect == character)
+            {
+                AudioClip clip;
+                if(i == currentMission.guiltyIndex)
+                {
+                    clip = currentMission.suspects[i].rightArrest;
+                }
+                else
+                {
+                    clip = currentMission.suspects[i].wrongArrest;
+                }
+                PlaySound(clip);
+            }     
+        }
 
     }
 
-    void Warn()
+    void Warn(GameObject character)
     {
-
+        for (int i = 0; i < 5; i++)
+        {
+            if (currentMission.suspects[i].suspect == character)
+            {
+                AudioClip clip;
+                if (i == currentMission.guiltyIndex)
+                {
+                    clip = currentMission.suspects[i].rightWarn;
+                }
+                else
+                {
+                    clip = currentMission.suspects[i].wrongWarn;
+                }
+                PlaySound(clip);
+            }
+        }
     }
 
     void UpdateSkybox()

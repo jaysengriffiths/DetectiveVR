@@ -40,7 +40,7 @@ public class Clue : MonoBehaviour
         if (isActivated && mClueType == ClueType.STATIC)
         {
             //cluePos.transform.position += new Vector3(0, 1, 0);
-            cluePos.transform.Rotate(Vector3.up * Time.deltaTime * speed);
+            cluePos.transform.Rotate(Vector3.down * Time.deltaTime * speed);
             //cluePos.transform.position = new Vector3(0, 2, 0);
             //play awake sound
         }   
