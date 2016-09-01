@@ -46,6 +46,8 @@ public class Clue : MonoBehaviour
             //play awake sound
         }   
 
+        //test 
+
 
         
 	}
