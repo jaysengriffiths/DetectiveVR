@@ -4,11 +4,11 @@ using System.Collections;
 
 public class Collision : MonoBehaviour
 {
-    private GameObject player;
+    //private GameObject player;
     // Use this for initialization
     void Start()
     {
-        player = gameObject.GetComponent<GameObject>();
+        //player = gameObject.GetComponent<GameObject>();
     }
     
 

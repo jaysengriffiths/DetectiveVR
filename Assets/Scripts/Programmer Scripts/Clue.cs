@@ -14,19 +14,20 @@ public class Clue : MonoBehaviour
     public bool isActivated;
     public AudioClip IdleSound;
     public AudioClip AwakeSound;
-    private int speed = 50;
-    public Transform player;
+    private int speed = 1000;
+    public GameObject player;
     public int activateDistance = 4;
     // Use this for initialization
     void Start ()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         cluePos = gameObject.GetComponent<Transform>();      
-
 	}
 
 	// Update is called once per frame
 	void Update ()
     {
+        
         if(Vector3.Distance(player.transform.position, this.transform.position) < activateDistance)
         {
             isActivated = true;

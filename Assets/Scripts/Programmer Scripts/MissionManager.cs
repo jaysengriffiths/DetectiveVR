@@ -10,9 +10,8 @@ public class MissionManager : MonoBehaviour
     void Start()
     {
         missions = FindObjectsOfType<Mission>();
-           
+        
     }
-
 
     void FixedUpdate()
     {
@@ -21,7 +20,7 @@ public class MissionManager : MonoBehaviour
 
     void PlaySound(AudioClip sound)
     {
-        //does oculus sound things
+        //use oculus sound library
     }
 
     void Arrest(GameObject character)
@@ -67,16 +66,13 @@ public class MissionManager : MonoBehaviour
 
     void UpdateSkybox()
     {
-        //endOfMission
+        //Setup skybox for mission environment
+        //upon mission completion change skybox to night
     }
 
 
     void AwardObject()
     {
-        //if mission = num
-        //if arrest correct
-        //trophy.size * correctGuesses
-        //if warn correct
-        //gift.size * correctGuesses
+        //
     }  
 }

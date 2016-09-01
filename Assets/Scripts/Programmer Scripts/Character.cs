@@ -8,13 +8,14 @@ public class Character : MonoBehaviour
     public AudioClip awakeSound;
     public AudioClip introSound;
     public AudioClip warningSound;
+    public AudioClip arrestSound;
 
-    public string spawnPointName;
+    //public string spawnPointName;
 
 	// Use this for initialization
 	void Start ()
     {
-	    
+	        
 	}
 	
 	// Update is called once per frame
