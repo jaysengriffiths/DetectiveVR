@@ -4,16 +4,22 @@ using System.Collections;
 public class Character : MonoBehaviour
 {
     public string identifier;
-    public AudioClip idleSound;
-    public AudioClip awakeSound;
-    public AudioClip introSound;
-    public AudioClip warningSound;
-    public AudioClip arrestSound;
+    public string idle;
+    public string awake;
+    public string intro;
+    public string warningcuff;
+    public string hqStatue;
+    public float lookAtTime;
+    public bool introPlayed = false;
+
+
+    //true if you're part of the current mission
+    public bool isSuspect = false;
 
     //public string spawnPointName;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
 	        
 	}

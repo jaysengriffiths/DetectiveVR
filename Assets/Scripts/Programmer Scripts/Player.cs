@@ -19,7 +19,9 @@ public class Player : MonoBehaviour {
     private MouseLook mouseLook;
     public float speed = 0.04f;
     public bool confirm = false;
+    private bool clueGiven = false;
 
+    Collider lookedAtObject = null;
 
     [SerializeField]
     GameObject clue;
@@ -37,6 +39,7 @@ public class Player : MonoBehaviour {
 
     void Start()
     {
+        //GetComponent<MissionManager>();
         cam = Camera.main;
         startPos = trans.transform.position;
         startRot = trans.transform.rotation;
@@ -48,23 +51,53 @@ public class Player : MonoBehaviour {
     }
 
     // Update is called once per frame
-    private void FixedUpdate()
+    private void Update()
     {
         walk();
         Look();
-       // Debug.Log(Camera.main.transform.eulerAngles.x);
     }
 
     public void Look()
     {
         RaycastHit hit;
         //Camera.main.
-       
+
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10))
         {
+            
+            if(hit.collider.CompareTag("SUSPECT"))
+            {
+                Character ch = hit.collider.gameObject.GetComponent<Character>();
+                if (lookedAtObject != hit.collider)
+                {
+                    //play awake sound
+                   
+                    Debug.Log("Awake");
+                    ch.lookAtTime = Time.time + 3.0f;
+                }
+                else
+                {
+                    if (Time.time > ch.lookAtTime && ch.lookAtTime != 0)
+                    {
+                        // we've been starting at thisa one thing for three seconds...
+                        //play interact sound
+                        if (!ch.introPlayed)
+                        {
+                            Debug.Log("intro");
+                            ch.introPlayed = true;
+                        }
+                        Debug.Log("interact");
+                        ch.lookAtTime = 0;
+                    }
+                }
+
+                //Debug.Log("Awake");
+                //play awake sound
+            }
+            lookedAtObject = hit.collider;
+
             if (hit.collider.CompareTag("GoldStar"))
             {
-
                 homeCounter++;
 
                 if (homeCounter >= 300)
@@ -81,12 +114,15 @@ public class Player : MonoBehaviour {
                     Debug.Log("are you sure ");
                 }
             }
-            else {
+            else
+            {
                 homeCounter = 0;
             }
-     }
-       
 
+
+        }
+        else
+            lookedAtObject = null;
 
         RotateView();
         float cameraAngle = Camera.main.transform.eulerAngles.x;
@@ -94,6 +130,12 @@ public class Player : MonoBehaviour {
         if (cameraAngle > 270 && cameraAngle < 280)
         {
             clue.SetActive(true);
+            if(!clueGiven)
+            {
+                Debug.Log("Give Clue");
+                clueGiven = true;
+            }
+            
         }
         else
         {
@@ -152,7 +194,7 @@ public class Player : MonoBehaviour {
         Vector3 fwd = q * Camera.main.transform.forward;
         fwd.y = 0;
         trans.transform.position = trans.transform.position + speed * fwd;
-        Invoke(("PlaySound"), 2);   
+        //Invoke(("PlaySound"), 2);   
     }
 
     private void OnApplicationPause(bool pauseStatus)

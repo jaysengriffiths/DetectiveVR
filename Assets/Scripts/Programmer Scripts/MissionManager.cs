@@ -5,12 +5,13 @@ using System.Collections;
 
 public class MissionManager : MonoBehaviour
 {
+    public GameObject currentSuspectSelected;
     Mission[] missions;
     public Mission currentMission;
     void Start()
     {
         missions = FindObjectsOfType<Mission>();
-        
+        currentMission = missions[0];
     }
 
     void FixedUpdate()
@@ -27,10 +28,10 @@ public class MissionManager : MonoBehaviour
     {
         for (int i = 0; i < 5; i++)
         {
-            if(currentMission.suspects[i].suspect == character)
+            if (currentMission.suspects[i].character == character)
             {
-                AudioClip clip;
-                if(i == currentMission.guiltyIndex)
+                string clip;
+                if (i == currentMission.guiltyIndex)
                 {
                     clip = currentMission.suspects[i].rightArrest;
                 }
@@ -38,8 +39,9 @@ public class MissionManager : MonoBehaviour
                 {
                     clip = currentMission.suspects[i].wrongArrest;
                 }
-                PlaySound(clip);
-            }     
+                //AudioClip audioClip = SoundLibrary.GetClip(clip);
+                //PlaySound(audioClip);
+            }
         }
 
     }
@@ -48,9 +50,9 @@ public class MissionManager : MonoBehaviour
     {
         for (int i = 0; i < 5; i++)
         {
-            if (currentMission.suspects[i].suspect == character)
+            if (currentMission.suspects[i].character == character)
             {
-                AudioClip clip;
+                string clip;
                 if (i == currentMission.guiltyIndex)
                 {
                     clip = currentMission.suspects[i].rightWarn;
@@ -59,7 +61,8 @@ public class MissionManager : MonoBehaviour
                 {
                     clip = currentMission.suspects[i].wrongWarn;
                 }
-                PlaySound(clip);
+                //AudioClip audioClip = SoundLibrary.GetClip(clip);
+                //PlaySound(audioClip);
             }
         }
     }
