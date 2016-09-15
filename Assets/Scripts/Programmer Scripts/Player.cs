@@ -96,8 +96,8 @@ public class Player : MonoBehaviour {
                         if (!ch.introPlayed)
                         {
                             AudioClip[] dialog = new AudioClip[2];
-                            dialog[0] = ch.introClip;
-                            dialog[1] = this.introClip;
+                            dialog[0] = this.introClip;
+                            dialog[1] = ch.introClip;
                             setDialog(dialog);
                            
                             ch.introPlayed = true;
