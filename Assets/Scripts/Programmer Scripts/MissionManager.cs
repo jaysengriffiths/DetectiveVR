@@ -5,13 +5,20 @@ using System.Collections;
 
 public class MissionManager : MonoBehaviour
 {
+
+    Player player;
+
     public GameObject currentSuspectSelected;
     Mission[] missions;
+
+    public AudioClip arrestClip;
+
     public Mission currentMission;
     void Start()
     {
         missions = FindObjectsOfType<Mission>();
         currentMission = missions[0];
+        player = FindObjectOfType<Player>();
     }
 
     void FixedUpdate()
@@ -30,7 +37,7 @@ public class MissionManager : MonoBehaviour
         {
             if (currentMission.suspects[i].character == character)
             {
-                string clip;
+                AudioClip clip;
                 if (i == currentMission.guiltyIndex)
                 {
                     clip = currentMission.suspects[i].rightArrest;
@@ -39,8 +46,13 @@ public class MissionManager : MonoBehaviour
                 {
                     clip = currentMission.suspects[i].wrongArrest;
                 }
-                //AudioClip audioClip = SoundLibrary.GetClip(clip);
-                //PlaySound(audioClip);
+                AudioClip[] clips = new AudioClip[3];
+                clips[0] = currentMission.suspects[i].character.nameClip;
+                clips[1] = arrestClip;
+                clips[2] = clip;
+
+                player.setDialog(clips);
+
             }
         }
 
@@ -52,7 +64,7 @@ public class MissionManager : MonoBehaviour
         {
             if (currentMission.suspects[i].character == character)
             {
-                string clip;
+                AudioClip clip;
                 if (i == currentMission.guiltyIndex)
                 {
                     clip = currentMission.suspects[i].rightWarn;
@@ -61,8 +73,11 @@ public class MissionManager : MonoBehaviour
                 {
                     clip = currentMission.suspects[i].wrongWarn;
                 }
-                //AudioClip audioClip = SoundLibrary.GetClip(clip);
-                //PlaySound(audioClip);
+                AudioClip[] clips = new AudioClip[2];
+                clips[0] = currentMission.suspects[i].playerWarning;
+                clips[1] = clip;
+
+                player.setDialog(clips);
             }
         }
     }

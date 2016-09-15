@@ -9,16 +9,20 @@ public class Mission : MonoBehaviour
         public string Identifier;
     }
 
+
+
     [System.Serializable]
     public class Suspect : System.Object
     {
+
         public Character character;
-        public string wrongArrest;
-        public string rightArrest;
-        public string wrongWarn;
-        public string rightWarn;
-        public string interrogate;
-        public string thankyou;
+        public AudioClip wrongArrest;
+        public AudioClip rightArrest;
+        public AudioClip playerWarning; 
+        public AudioClip wrongWarn;
+        public AudioClip rightWarn;
+        public AudioClip interrogate;
+        public AudioClip thankyou;
     }
     
     //populate with characters from scene

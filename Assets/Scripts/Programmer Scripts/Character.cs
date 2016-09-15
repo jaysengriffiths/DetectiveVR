@@ -3,16 +3,16 @@ using System.Collections;
 
 public class Character : MonoBehaviour
 {
-    public string identifier;
-    public string idle;
-    public string awake;
-    public string intro;
+    public AudioClip nameClip;
+    public AudioClip introClip;
     public string warningcuff;
-    public string hqStatue;
+    public string identifier;
     public float lookAtTime;
+    public string hqStatue;
+    public string awake;
+    public string idle;
+
     public bool introPlayed = false;
-
-
     //true if you're part of the current mission
     public bool isSuspect = false;
 

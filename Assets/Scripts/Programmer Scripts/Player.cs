@@ -21,7 +21,11 @@ public class Player : MonoBehaviour {
     public bool confirm = false;
     private bool clueGiven = false;
 
+    private AudioSource audioSource;
+
     Collider lookedAtObject = null;
+
+   AudioClip[] pendingDialog = new AudioClip[0];
 
     [SerializeField]
     GameObject clue;
@@ -34,6 +38,7 @@ public class Player : MonoBehaviour {
 
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         mouseLook = GetComponent<MouseLook>();
     }
 
@@ -53,8 +58,13 @@ public class Player : MonoBehaviour {
     // Update is called once per frame
     private void Update()
     {
-        walk();
-        Look();
+
+
+        if (pendingDialog.Length == 0)
+        {
+            walk();
+            Look();
+        }
     }
 
     public void Look()
@@ -206,5 +216,42 @@ public class Player : MonoBehaviour {
         trans.localPosition = startPos;
         trans.rotation = new Quaternion(0, 0, 0, 1);
     }
+
+    public void setDialog(AudioClip[] array)
+    {
+        pendingDialog = array;
+    }
+
+    private void updateDialog()
+    {
+        //if not playing
+        if (!audioSource.isPlaying)
+        {
+            //and the lenfth isnt 0
+            if (pendingDialog.Length > 0)
+            {
+                //audio clip = the first pending
+                audioSource.clip = pendingDialog[0];
+                //start audio 
+                audioSource.Play();
+                //copy non playing left over audio into temp array tha twill become the pending once play is over 
+                AudioClip[] dialog = new AudioClip[pendingDialog.Length - 1];
+
+                for (int i = 0; i < dialog.Length; i++)
+                {
+
+                    dialog[i] = pendingDialog[i + 1];
+                }
+                pendingDialog = dialog;
+            }
+
+
+        }
+    }
+
+
+
+
+
 }
 
