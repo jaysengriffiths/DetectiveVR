@@ -37,7 +37,7 @@ public class Clue : MonoBehaviour
             //cluePos.transform.position += new Vector3(0, 1, 0);
             cluePos.transform.Rotate(Vector3.down * Time.deltaTime * speed);
             //cluePos.transform.position = new Vector3(0, 2, 0);
-            Debug.Log("awake");
+            //Debug.Log("awake clue");
         }
         if (Vector3.Distance(player.transform.position, this.transform.position) < activateDistance && mClueType == ClueType.STATIC)
         {

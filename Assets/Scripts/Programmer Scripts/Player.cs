@@ -20,6 +20,8 @@ public class Player : MonoBehaviour {
     public float speed = 0.04f;
     public bool confirm = false;
     private bool clueGiven = false;
+    public AudioClip nameClip;
+    public AudioClip introClip;
 
     private AudioSource audioSource;
 
@@ -58,6 +60,7 @@ public class Player : MonoBehaviour {
     // Update is called once per frame
     private void Update()
     {
+        updateDialog();
 
 
         if (pendingDialog.Length == 0)
@@ -73,16 +76,15 @@ public class Player : MonoBehaviour {
         //Camera.main.
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10))
-        {
+        { 
             
-            if(hit.collider.CompareTag("SUSPECT"))
+            if(hit.collider.CompareTag("SUSPECT")) // we're looking at a charcter
             {
                 Character ch = hit.collider.gameObject.GetComponent<Character>();
-                if (lookedAtObject != hit.collider)
+                if (lookedAtObject != hit.collider) // we've changed what we're looking at
                 {
-                    //play awake sound
-                   
-                    Debug.Log("Awake");
+
+                    Debug.Log("Looking at suspect");
                     ch.lookAtTime = Time.time + 3.0f;
                 }
                 else
@@ -93,7 +95,11 @@ public class Player : MonoBehaviour {
                         //play interact sound
                         if (!ch.introPlayed)
                         {
-                            Debug.Log("intro");
+                            AudioClip[] dialog = new AudioClip[2];
+                            dialog[0] = ch.introClip;
+                            dialog[1] = this.introClip;
+                            setDialog(dialog);
+                           
                             ch.introPlayed = true;
                         }
                         Debug.Log("interact");
