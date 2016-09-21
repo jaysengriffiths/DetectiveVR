@@ -5,21 +5,24 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour {
 
     // Use this for initialization
-    private Quaternion startRot;
-    private Vector3 startPos;
-    public Camera cam;
-    public Transform trans;
+    //private Quaternion startRot;
+    //private Vector3 startPos;
     //private Rigidbody player;
     public float minBounds = 10;
     public float maxBounds = 20;
     int counter;
-    public int homeCounter = 0;
-    public int moveTime = 20;
-    public int guessTime = 20;
+    private int warnCounter = 0;
+    private int cuffCounter = 0;
+    private int homeCounter = 0;
+    private int moveTime = 20;
+    //private int guessTime = 20;
+    private bool arrestSuspect = false;
+    private bool warnSuspect = false;
     private MouseLook mouseLook;
     public float speed = 0.04f;
-    public bool confirm = false;
+    //private bool confirm = false;
     private bool clueGiven = false;
+    public Character selectedCharacter;
     public AudioClip nameClip;
     public AudioClip introClip;
 
@@ -46,15 +49,15 @@ public class Player : MonoBehaviour {
 
     void Start()
     {
-        //GetComponent<MissionManager>();
-        cam = Camera.main;
-        startPos = trans.transform.position;
-        startRot = trans.transform.rotation;
+        GetComponent<MissionManager>();
+        //startPos = trans.transform.position;
+        //startRot = trans.transform.rotation;
         //float cameraAngle = Camera.main.transform.rotation.x;
-        trans = gameObject.GetComponent<Transform>();
+        //trans = gameObject.GetComponent<Transform>();
         //player = gameObject.GetComponent<Rigidbody>();
         counter = 0;
-        mouseLook.Init(transform, cam.transform);    
+        mouseLook.Init(transform, Camera.main.transform);    
+        
     }
 
     // Update is called once per frame
@@ -62,12 +65,14 @@ public class Player : MonoBehaviour {
     {
         updateDialog();
 
+        RotateView();
 
-        if (pendingDialog.Length == 0)
+        if (pendingDialog.Length == 0 && !audioSource.isPlaying)
         {
             walk();
             Look();
         }
+        
     }
 
     public void Look()
@@ -75,6 +80,8 @@ public class Player : MonoBehaviour {
         RaycastHit hit;
         //Camera.main.
 
+
+        //Interaction with NPCs
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10))
         { 
             
@@ -93,25 +100,56 @@ public class Player : MonoBehaviour {
                     {
                         // we've been starting at thisa one thing for three seconds...
                         //play interact sound
-                        if (!ch.introPlayed)
+
+                        if (!arrestSuspect && !warnSuspect)
                         {
-                            AudioClip[] dialog = new AudioClip[2];
-                            dialog[0] = this.introClip;
-                            dialog[1] = ch.introClip;
-                            setDialog(dialog);
-                           
-                            ch.introPlayed = true;
+                            if (ch.introPlayed)
+                            {
+                                Debug.Log("interact");
+                            }
                         }
-                        Debug.Log("interact");
-                        ch.lookAtTime = 0;
-                    }
+                            if (!ch.introPlayed)
+                            {
+                                Debug.Log("play intro");
+                                AudioClip[] dialog = new AudioClip[2];
+                                dialog[0] = this.introClip;
+                                dialog[1] = ch.introClip;
+                                setDialog(dialog);
+
+                                ch.introPlayed = true;
+                            }
+                            if (selectedCharacter != null)
+                            {
+                                if (arrestSuspect)
+                                {
+                                    Debug.Log("Arrest Dialogue");
+                                    
+                                }
+                                if (warnSuspect)
+                                {
+                                    Debug.Log("Warn Dialogue");
+                                }
+                            }
+
+
+                            selectedCharacter = ch;
+                            if (Vector3.Dot(Camera.main.transform.forward, lookedAtObject.transform.position - transform.position) < 0)
+                            {
+                                selectedCharacter = null;
+                            }
+                            ch.lookAtTime = 0;
+                        }
                 }
 
                 //Debug.Log("Awake");
                 //play awake sound
+
+
             }
+
             lookedAtObject = hit.collider;
 
+            //Interaction with returning to HQ
             if (hit.collider.CompareTag("GoldStar"))
             {
                 homeCounter++;
@@ -134,11 +172,16 @@ public class Player : MonoBehaviour {
             {
                 homeCounter = 0;
             }
-
-
         }
         else
             lookedAtObject = null;
+
+        if (selectedCharacter!=null && Vector3.Dot(Camera.main.transform.forward, selectedCharacter.transform.position - transform.position) < 0)
+        {
+            selectedCharacter = null;
+            warnSuspect = false;
+            arrestSuspect = false;
+        }
 
         RotateView();
         float cameraAngle = Camera.main.transform.eulerAngles.x;
@@ -160,15 +203,34 @@ public class Player : MonoBehaviour {
         if (cameraAngle > 44 && cameraAngle < 54)
         {
             cuffs.SetActive(true);
+            if (selectedCharacter != null)
+            {
+                cuffCounter++;
+                if (cuffCounter == 200)
+                {
+                    Debug.Log("Cuffing jingling sound");
+                    arrestSuspect = true;
+                }
+            }
         }
         else
         {
             cuffs.SetActive(false);
+            cuffCounter = 0;
         }
 
         if (cameraAngle > 30 && cameraAngle < 44)
         {
             warn.SetActive(true);
+            if (selectedCharacter != null)
+            {
+                warnCounter++;
+                if (warnCounter == 200)
+                {
+                    Debug.Log("warning book sound");
+                    warnSuspect = true;
+                }
+            }
         }
         else
         {
@@ -180,7 +242,7 @@ public class Player : MonoBehaviour {
 
     public void walk()
     {
-        RotateView();
+
         float cameraAngle = Camera.main.transform.eulerAngles.x;
 
         if (cameraAngle > minBounds && cameraAngle < maxBounds && homeCounter == 0)
@@ -201,7 +263,7 @@ public class Player : MonoBehaviour {
         // get the rotation before it's changed
         //float oldYRotation = transform.eulerAngles.y;
 
-        mouseLook.LookRotation(trans, cam.transform);
+        mouseLook.LookRotation(transform, Camera.main.transform);
     }
 
     void isMoving()
@@ -209,19 +271,19 @@ public class Player : MonoBehaviour {
         Quaternion q = UnityEngine.VR.InputTracking.GetLocalRotation(UnityEngine.VR.VRNode.Head);
         Vector3 fwd = q * Camera.main.transform.forward;
         fwd.y = 0;
-        trans.transform.position = trans.transform.position + speed * fwd;
+        transform.position = transform.position + speed * fwd;
         //Invoke(("PlaySound"), 2);   
     }
 
-    private void OnApplicationPause(bool pauseStatus)
-    {
-        SceneManager.LoadScene(0);
-        Camera.main.transform.localPosition = new Vector3(0, 2, 0);
-        trans.transform.rotation = startRot;
-        Camera.main.transform.rotation = new Quaternion(0, 0, 0, 1);
-        trans.localPosition = startPos;
-        trans.rotation = new Quaternion(0, 0, 0, 1);
-    }
+    //private void OnApplicationPause(bool pauseStatus)
+    //{
+    //    SceneManager.LoadScene(0);
+    //    Camera.main.transform.localPosition = new Vector3(0, 2, 0);
+    //    trans.transform.rotation = startRot;
+    //    Camera.main.transform.rotation = new Quaternion(0, 0, 0, 1);
+    //    trans.localPosition = startPos;
+    //    trans.rotation = new Quaternion(0, 0, 0, 1);
+    //}
 
     public void setDialog(AudioClip[] array)
     {
@@ -233,7 +295,7 @@ public class Player : MonoBehaviour {
         //if not playing
         if (!audioSource.isPlaying)
         {
-            //and the lenfth isnt 0
+            //and the length isnt 0
             if (pendingDialog.Length > 0)
             {
                 //audio clip = the first pending

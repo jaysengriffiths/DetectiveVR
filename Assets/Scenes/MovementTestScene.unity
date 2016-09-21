@@ -1158,7 +1158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ffcf6c054726b5409219d1f28195f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSuspectSelected: {fileID: 0}
   arrestClip: {fileID: 0}
   currentMission: {fileID: 0}
 --- !u!4 &236003892
@@ -5490,15 +5489,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d352b77ab0a73934ea6b6161582773f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 1536539148}
-  trans: {fileID: 1833459354}
   minBounds: 10
   maxBounds: 20
-  homeCounter: 0
-  moveTime: 20
-  guessTime: 20
-  speed: 0.03
-  confirm: 0
+  speed: 0.02
+  selectedCharacter: {fileID: 0}
   nameClip: {fileID: 0}
   introClip: {fileID: 8300000, guid: 14271b9097a2b6d43a57457bde3f287e, type: 3}
   clue: {fileID: 1534131912}
@@ -5573,7 +5567,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1833459348}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 0, y: 0.826, z: 0}
+  m_LocalPosition: {x: 0, y: 0.851, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -5645,7 +5639,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:

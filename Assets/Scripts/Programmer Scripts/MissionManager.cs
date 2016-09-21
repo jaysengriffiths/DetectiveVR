@@ -8,7 +8,7 @@ public class MissionManager : MonoBehaviour
 
     Player player;
 
-    public GameObject currentSuspectSelected;
+    //public GameObject currentSuspectSelected;
     Mission[] missions;
 
     public AudioClip arrestClip;
