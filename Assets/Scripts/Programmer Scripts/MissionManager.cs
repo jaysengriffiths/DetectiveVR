@@ -31,7 +31,7 @@ public class MissionManager : MonoBehaviour
         //use oculus sound library
     }
 
-    void Arrest(GameObject character)
+    public void OnArrest(GameObject character)
     {
         for (int i = 0; i < 5; i++)
         {
@@ -58,7 +58,7 @@ public class MissionManager : MonoBehaviour
 
     }
 
-    void Warn(GameObject character)
+    public void OnWarn(GameObject character)
     {
         for (int i = 0; i < 5; i++)
         {

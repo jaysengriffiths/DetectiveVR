@@ -25,7 +25,7 @@ public class Player : MonoBehaviour {
     public Character selectedCharacter;
     public AudioClip nameClip;
     public AudioClip introClip;
-
+    MissionManager missionManager;
     private AudioSource audioSource;
 
     Collider lookedAtObject = null;
@@ -45,6 +45,7 @@ public class Player : MonoBehaviour {
     {
         audioSource = GetComponent<AudioSource>();
         mouseLook = GetComponent<MouseLook>();
+        missionManager = GetComponent<MissionManager>();
     }
 
     void Start()
@@ -123,12 +124,14 @@ public class Player : MonoBehaviour {
                                 if (arrestSuspect)
                                 {
                                     Debug.Log("Arrest Dialogue");
+                                missionManager.OnArrest(selectedCharacter.gameObject);
                                     
                                 }
                                 if (warnSuspect)
                                 {
                                     Debug.Log("Warn Dialogue");
-                                }
+                                missionManager.OnWarn(selectedCharacter.gameObject);
+                            }
                             }
 
 
