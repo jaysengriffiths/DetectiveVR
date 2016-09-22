@@ -5,7 +5,7 @@ public class Character : MonoBehaviour
 {
     public AudioClip nameClip;
     public AudioClip introClip;
-    public string warningcuff;
+    public AudioClip warningcuff;
     public string identifier;
     public float lookAtTime;
     public string hqStatue;
