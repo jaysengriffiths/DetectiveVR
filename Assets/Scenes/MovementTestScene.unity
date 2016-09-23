@@ -736,6 +736,10 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.953168, y: 2.2112813, z: 5.854041}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &94555493 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 128616, guid: 5aa5141a4891ccf4d8f28711f9c09a0d, type: 2}
+  m_PrefabInternal: {fileID: 1595935219}
 --- !u!1001 &147921219
 Prefab:
   m_ObjectHideFlags: 0
@@ -813,7 +817,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11484356, guid: fde7e01d33f7f0744afaa2120ca3dcde, type: 2}
       propertyPath: warningcuff
-      value: 'vBS_SetLawOntoMe_ '
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 133422, guid: fde7e01d33f7f0744afaa2120ca3dcde, type: 2}
       propertyPath: m_TagString
@@ -826,7 +830,11 @@ Prefab:
     - target: {fileID: 11484356, guid: fde7e01d33f7f0744afaa2120ca3dcde, type: 2}
       propertyPath: introClip
       value: 
-      objectReference: {fileID: 8300000, guid: cee29032074c665499956ab80f686d71, type: 3}
+      objectReference: {fileID: 8300000, guid: bd22ed2ad3e157c47afd96ad47136ca2, type: 3}
+    - target: {fileID: 11484356, guid: fde7e01d33f7f0744afaa2120ca3dcde, type: 2}
+      propertyPath: nameClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ecbe5258db35d834c91e90026f1193c7, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fde7e01d33f7f0744afaa2120ca3dcde, type: 2}
   m_IsPrefabParent: 0
@@ -1061,7 +1069,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ffcf6c054726b5409219d1f28195f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrestClip: {fileID: 0}
+  arrestClip: {fileID: 8300000, guid: 662e8063fe96d994db46989c748460f0, type: 3}
+  state: 0
   currentMission: {fileID: 0}
 --- !u!4 &236003892
 Transform:
@@ -1267,6 +1276,8 @@ MonoBehaviour:
   mysterySpeech: {fileID: 0}
   revelationSpeech: {fileID: 0}
   complainantSpeech: {fileID: 0}
+  interogateSpeech: {fileID: 0}
+  clueDialogue: {fileID: 0}
   guiltyIndex: 0
 --- !u!1 &483281122
 GameObject:
@@ -1950,7 +1961,6 @@ GameObject:
   - 33: {fileID: 864420741}
   - 135: {fileID: 864420740}
   - 23: {fileID: 864420739}
-  - 114: {fileID: 864420738}
   m_Layer: 0
   m_Name: Cuffs
   m_TagString: Cuffs
@@ -1958,17 +1968,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &864420738
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 864420737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00aa1a555cfc9044f99d27d07f2d14e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &864420739
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2391,14 +2390,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a839c6c1b3df89e4a9484980c80b6289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameClip: {fileID: 0}
-  introClip: {fileID: 0}
-  warningcuff: {fileID: 0}
-  identifier: 
+  nameClip: {fileID: 8300000, guid: 147b25c33a2806a4d86f1d5f73a84028, type: 3}
+  introClip: {fileID: 8300000, guid: 5e7c17ed1c697be468a83bafa937a704, type: 3}
   lookAtTime: 0
-  hqStatue: 
-  awake: 
-  idle: 
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0
@@ -2443,63 +2437,8 @@ Transform:
   m_Children:
   - {fileID: 1120280617}
   - {fileID: 1382281927}
-  - {fileID: 1868150601}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!1001 &1054265157
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1045849599}
-    m_Modifications:
-    - target: {fileID: 470140, guid: c03e425e56ffeb64d897bd70befaeff3, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -18.92
-      objectReference: {fileID: 0}
-    - target: {fileID: 470140, guid: c03e425e56ffeb64d897bd70befaeff3, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.8572048
-      objectReference: {fileID: 0}
-    - target: {fileID: 470140, guid: c03e425e56ffeb64d897bd70befaeff3, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -13.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 470140, guid: c03e425e56ffeb64d897bd70befaeff3, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 470140, guid: c03e425e56ffeb64d897bd70befaeff3, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.5313579
-      objectReference: {fileID: 0}
-    - target: {fileID: 470140, guid: c03e425e56ffeb64d897bd70befaeff3, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 470140, guid: c03e425e56ffeb64d897bd70befaeff3, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.84714746
-      objectReference: {fileID: 0}
-    - target: {fileID: 470140, guid: c03e425e56ffeb64d897bd70befaeff3, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8227206, guid: c03e425e56ffeb64d897bd70befaeff3, type: 2}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8227206, guid: c03e425e56ffeb64d897bd70befaeff3, type: 2}
-      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
-      value: 1.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 470140, guid: c03e425e56ffeb64d897bd70befaeff3, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.19999999
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c03e425e56ffeb64d897bd70befaeff3, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1083996750
 GameObject:
   m_ObjectHideFlags: 0
@@ -2823,7 +2762,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 495220, guid: c80faabc89b0e444d86b719a3f631830, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8.05
+      value: -0.07
       objectReference: {fileID: 0}
     - target: {fileID: 495220, guid: c80faabc89b0e444d86b719a3f631830, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2831,7 +2770,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 495220, guid: c80faabc89b0e444d86b719a3f631830, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -9.37
+      value: -1.07
       objectReference: {fileID: 0}
     - target: {fileID: 495220, guid: c80faabc89b0e444d86b719a3f631830, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2896,7 +2835,11 @@ Prefab:
     - target: {fileID: 11486704, guid: c80faabc89b0e444d86b719a3f631830, type: 2}
       propertyPath: introClip
       value: 
-      objectReference: {fileID: 8300000, guid: 7b38625865dc4984ca5050599a3dd6b3, type: 3}
+      objectReference: {fileID: 8300000, guid: be48d6dcaf19bda4d99994248146f08f, type: 3}
+    - target: {fileID: 11486704, guid: c80faabc89b0e444d86b719a3f631830, type: 2}
+      propertyPath: nameClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 539787f36b3f0594db3e5af393baeaa3, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c80faabc89b0e444d86b719a3f631830, type: 2}
   m_IsPrefabParent: 0
@@ -3283,6 +3226,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5013fce08be1a9d4da5178eba8db2296, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1319907528 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 170676, guid: 6cc1205cf2395ae4099d868218ad94db, type: 2}
+  m_PrefabInternal: {fileID: 1653663777}
 --- !u!1 &1382281925
 GameObject:
   m_ObjectHideFlags: 0
@@ -3770,6 +3717,8 @@ MonoBehaviour:
   mysterySpeech: {fileID: 0}
   revelationSpeech: {fileID: 0}
   complainantSpeech: {fileID: 0}
+  interogateSpeech: {fileID: 0}
+  clueDialogue: {fileID: 0}
   guiltyIndex: 0
 --- !u!4 &1451212014 stripped
 Transform:
@@ -3977,7 +3926,6 @@ GameObject:
   - 33: {fileID: 1534131916}
   - 135: {fileID: 1534131915}
   - 23: {fileID: 1534131914}
-  - 114: {fileID: 1534131913}
   m_Layer: 0
   m_Name: SkyHint
   m_TagString: SkyHint
@@ -3985,17 +3933,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1534131913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1534131912}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00aa1a555cfc9044f99d27d07f2d14e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1534131914
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4230,6 +4167,10 @@ MonoBehaviour:
   AwakeSound: {fileID: 0}
   activateDistance: 8
   timer: 0
+--- !u!1 &1577836094 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 172392, guid: c80faabc89b0e444d86b719a3f631830, type: 2}
+  m_PrefabInternal: {fileID: 1198147733}
 --- !u!1 &1592386984
 GameObject:
   m_ObjectHideFlags: 0
@@ -4393,7 +4334,11 @@ Prefab:
     - target: {fileID: 11492438, guid: 5aa5141a4891ccf4d8f28711f9c09a0d, type: 2}
       propertyPath: introClip
       value: 
-      objectReference: {fileID: 8300000, guid: fd905d907cac5f14ea355cde285cec42, type: 3}
+      objectReference: {fileID: 8300000, guid: 25f69591459845647a114da6fe3b1f61, type: 3}
+    - target: {fileID: 11492438, guid: 5aa5141a4891ccf4d8f28711f9c09a0d, type: 2}
+      propertyPath: nameClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 25d7743082b1c844385c624a958f643a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5aa5141a4891ccf4d8f28711f9c09a0d, type: 2}
   m_IsPrefabParent: 0
@@ -4445,40 +4390,45 @@ MonoBehaviour:
     playerWarning: {fileID: 8300000, guid: 2138592bfcefd444eb90bdcdcbb065f6, type: 3}
     wrongWarn: {fileID: 8300000, guid: 16013defcf0fa7144b726a92ccfe100b, type: 3}
     rightWarn: {fileID: 8300000, guid: d9fded49613194049ad8cbc0119239e3, type: 3}
-    interrogate: {fileID: 0}
+    explanation: {fileID: 0}
     thankyou: {fileID: 8300000, guid: ce4c89ca04c3ee443a41c1df5aa98e19, type: 3}
+    thanker: {fileID: 1319907528}
   - character: {fileID: 670371015}
     wrongArrest: {fileID: 8300000, guid: 55958bd07a80ad846ab0298e73bef773, type: 3}
     rightArrest: {fileID: 8300000, guid: 6b21b069bdc3af44f809333899b7056f, type: 3}
     playerWarning: {fileID: 8300000, guid: 5e9be270488095049a50565aad2fd20e, type: 3}
     wrongWarn: {fileID: 8300000, guid: f85a9e14d61918e49ab0348aa0bbf732, type: 3}
     rightWarn: {fileID: 8300000, guid: 6c34c856678ad074eaea5b214c8df40d, type: 3}
-    interrogate: {fileID: 8300000, guid: 022c98c3ac9796f46b3f7f767ce771b6, type: 3}
+    explanation: {fileID: 8300000, guid: 022c98c3ac9796f46b3f7f767ce771b6, type: 3}
     thankyou: {fileID: 8300000, guid: 6ea56c79cc92765409adc7b16dd6c0ba, type: 3}
+    thanker: {fileID: 1577836094}
   - character: {fileID: 661525098}
     wrongArrest: {fileID: 8300000, guid: e4d5bc9e8900c784baaf53f5deccfbbc, type: 3}
     rightArrest: {fileID: 8300000, guid: 73b8cabc2c88ad947bb3681dcd5463fb, type: 3}
     playerWarning: {fileID: 8300000, guid: 943d35ac4b878d6439c3b186127ef8e6, type: 3}
     wrongWarn: {fileID: 8300000, guid: dafc01b67a6141e40ae2bd44c67a1738, type: 3}
     rightWarn: {fileID: 8300000, guid: c62fceccf2a36394baf6a380a006c5db, type: 3}
-    interrogate: {fileID: 8300000, guid: cb63d54bcc1340f4096ce1d328ddeeba, type: 3}
+    explanation: {fileID: 8300000, guid: cb63d54bcc1340f4096ce1d328ddeeba, type: 3}
     thankyou: {fileID: 8300000, guid: b41108dd3de57d8479a4db1d51d262ff, type: 3}
+    thanker: {fileID: 94555493}
   - character: {fileID: 1121594356}
     wrongArrest: {fileID: 8300000, guid: 7febb7b9c6da0b84a80e49e8aa068e06, type: 3}
     rightArrest: {fileID: 8300000, guid: 73b8cabc2c88ad947bb3681dcd5463fb, type: 3}
     playerWarning: {fileID: 8300000, guid: 8f437e66c333b2745ab415ab385d52e2, type: 3}
     wrongWarn: {fileID: 8300000, guid: 8cd06344b5b78994d94798c0e056611b, type: 3}
     rightWarn: {fileID: 8300000, guid: 52386ca274e06474bb8de58f9d8c80c3, type: 3}
-    interrogate: {fileID: 8300000, guid: 6dd788f227d0d1143893021f55fa1f58, type: 3}
+    explanation: {fileID: 8300000, guid: 6dd788f227d0d1143893021f55fa1f58, type: 3}
     thankyou: {fileID: 8300000, guid: 65e068c1d88a85c4c9bdcd80d38a56ef, type: 3}
+    thanker: {fileID: 1012016567}
   - character: {fileID: 1012016569}
     wrongArrest: {fileID: 8300000, guid: 2b2458bb1adc2cb498fcdb6f95f74b97, type: 3}
     rightArrest: {fileID: 8300000, guid: e49d0f4b32ba65a47becc501466e448d, type: 3}
     playerWarning: {fileID: 8300000, guid: 48b961dee6bd9244da0df5e53ff887c0, type: 3}
     wrongWarn: {fileID: 8300000, guid: 5ea611d92ac597b4d9454ea147c14df2, type: 3}
     rightWarn: {fileID: 8300000, guid: 036f021a8f057cb49acfb6d526945bd6, type: 3}
-    interrogate: {fileID: 8300000, guid: 4ba9b1389d575d34e9c5efec284f416b, type: 3}
+    explanation: {fileID: 8300000, guid: 4ba9b1389d575d34e9c5efec284f416b, type: 3}
     thankyou: {fileID: 8300000, guid: e383d06170e6bf449a18c80932686a2a, type: 3}
+    thanker: {fileID: 2009158629}
   soundFX:
   - {fileID: 0}
   - {fileID: 0}
@@ -4494,6 +4444,8 @@ MonoBehaviour:
   mysterySpeech: {fileID: 8300000, guid: bcada48850c66634bb3a9959f3b72947, type: 3}
   revelationSpeech: {fileID: 8300000, guid: 1bdae065a82fc514ba20da16db58366c, type: 3}
   complainantSpeech: {fileID: 8300000, guid: 01547d6a32b316840ad9b13012ca4282, type: 3}
+  interogateSpeech: {fileID: 8300000, guid: 9c78cb9886aae844a9743cfadac5c5e2, type: 3}
+  clueDialogue: {fileID: 8300000, guid: 999aab327bfac944ea492d5b97d6f20f, type: 3}
   guiltyIndex: 0
 --- !u!1001 &1653663777
 Prefab:
@@ -4585,7 +4537,11 @@ Prefab:
     - target: {fileID: 11432064, guid: 6cc1205cf2395ae4099d868218ad94db, type: 2}
       propertyPath: introClip
       value: 
-      objectReference: {fileID: 8300000, guid: efaed5aa14c06c843b5ef7654f57248e, type: 3}
+      objectReference: {fileID: 8300000, guid: ea3151b31332c6446bc8bcda6206276c, type: 3}
+    - target: {fileID: 11432064, guid: 6cc1205cf2395ae4099d868218ad94db, type: 2}
+      propertyPath: nameClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 47f58142ec07e514eb0f36043afb8d56, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cc1205cf2395ae4099d868218ad94db, type: 2}
   m_IsPrefabParent: 0
@@ -4600,7 +4556,6 @@ GameObject:
   - 33: {fileID: 1699299847}
   - 135: {fileID: 1699299846}
   - 23: {fileID: 1699299845}
-  - 114: {fileID: 1699299844}
   m_Layer: 0
   m_Name: Warn
   m_TagString: WarningBook
@@ -4608,17 +4563,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1699299844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1699299843}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00aa1a555cfc9044f99d27d07f2d14e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &1699299845
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4958,10 +4902,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d352b77ab0a73934ea6b6161582773f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkTimeStamp: 1
   speed: 0.02
   selectedCharacter: {fileID: 0}
   selectedSoundObject: {fileID: 0}
-  introClip: {fileID: 8300000, guid: 14271b9097a2b6d43a57457bde3f287e, type: 3}
+  nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
+  complain: 0
   clue: {fileID: 1534131912}
   cuffs: {fileID: 864420737}
   warn: {fileID: 1699299843}
@@ -5033,7 +4979,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1833459348}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -0.00000016292068}
-  m_LocalPosition: {x: 0, y: 0.87, z: 0}
+  m_LocalPosition: {x: -1.89, y: 0.8, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -5062,9 +5008,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 75
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -5088,7 +5034,7 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -5117,10 +5063,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!4 &1868150601 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 470140, guid: c03e425e56ffeb64d897bd70befaeff3, type: 2}
-  m_PrefabInternal: {fileID: 1054265157}
 --- !u!1 &1879562049
 GameObject:
   m_ObjectHideFlags: 0
@@ -5368,6 +5310,10 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.708046, y: 0.7528844, z: 6.3576365}
   m_Center: {x: -0.00000047683716, y: 0, z: 0}
+--- !u!1 &2009158629 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 133422, guid: fde7e01d33f7f0744afaa2120ca3dcde, type: 2}
+  m_PrefabInternal: {fileID: 147921219}
 --- !u!1 &2024989263
 GameObject:
   m_ObjectHideFlags: 0

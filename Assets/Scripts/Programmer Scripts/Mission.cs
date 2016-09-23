@@ -14,8 +14,9 @@ public class Mission : MonoBehaviour
         public AudioClip playerWarning; 
         public AudioClip wrongWarn;
         public AudioClip rightWarn;
-        public AudioClip interrogate;
+        public AudioClip explanation;
         public AudioClip thankyou;
+        public GameObject thanker;
     }
     
     //populate with characters from scene
@@ -24,6 +25,8 @@ public class Mission : MonoBehaviour
     public AudioClip mysterySpeech;
     public AudioClip revelationSpeech;
     public AudioClip complainantSpeech;
+    public AudioClip interogateSpeech;
+    public AudioClip clueDialogue;
     public int guiltyIndex;
     //public Transform startMissionPosition;
     void OnActivate()
@@ -40,6 +43,10 @@ public class Mission : MonoBehaviour
         }
     }
 
+    public Suspect GetGuiltySuspect()
+    {
+        return suspects[guiltyIndex];
+    }
     // Use this for initialization
     void Start ()
     {
