@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour {
 
     // Use this for initialization
-    //private Quaternion startRot;
-    //private Vector3 startPos;
+    private Quaternion startRot;
+    private Vector3 startPos;
     //private Rigidbody player;
-    public float minBounds = 10;
-    public float maxBounds = 20;
+    private float minBounds = 10;
+    private float maxBounds = 20;
     int counter;
     private int warnCounter = 0;
     private int cuffCounter = 0;
@@ -19,18 +19,22 @@ public class Player : MonoBehaviour {
     private bool arrestSuspect = false;
     private bool warnSuspect = false;
     private MouseLook mouseLook;
-    public float speed = 0.04f;
+    public float speed = 0.03f;
     //private bool confirm = false;
     private bool clueGiven = false;
     public Character selectedCharacter;
-    public AudioClip nameClip;
+    public SoundLookAt selectedSoundObject;
+    //public AudioClip collisionWallClip;
+    //public AudioClip collisionTreeClip;
+    //public AudioClip collisionPigstyClip;
     public AudioClip introClip;
-    MissionManager missionManager;
+    private float soundLookAtTime = 0;
+    //private Rigidbody rb;
     private AudioSource audioSource;
-
+    private MissionManager missionManager;
     Collider lookedAtObject = null;
 
-   AudioClip[] pendingDialog = new AudioClip[0];
+    AudioClip[] pendingDialog = new AudioClip[0];
 
     [SerializeField]
     GameObject clue;
@@ -45,48 +49,95 @@ public class Player : MonoBehaviour {
     {
         audioSource = GetComponent<AudioSource>();
         mouseLook = GetComponent<MouseLook>();
-        missionManager = GetComponent<MissionManager>();
     }
 
     void Start()
     {
-        GetComponent<MissionManager>();
-        //startPos = trans.transform.position;
-        //startRot = trans.transform.rotation;
+        //rb = GetComponent<Rigidbody>();
+   
+        missionManager = FindObjectOfType<MissionManager>();
+        //selectedSoundObject = FindObjectOfType<SoundLookAt>();
+        startPos = transform.position;
+        startRot = transform.rotation;
         //float cameraAngle = Camera.main.transform.rotation.x;
         //trans = gameObject.GetComponent<Transform>();
         //player = gameObject.GetComponent<Rigidbody>();
         counter = 0;
-        mouseLook.Init(transform, Camera.main.transform);    
-        
+        mouseLook.Init(transform, Camera.main.transform);
+
     }
 
     // Update is called once per frame
-    private void Update()
+    void Update()
     {
+        //rb.velocity = new Vector3(0, 0, 0);
         updateDialog();
 
         RotateView();
-
+        LookAtSoundObjects();
         if (pendingDialog.Length == 0 && !audioSource.isPlaying)
         {
             walk();
             Look();
         }
-        
+
     }
 
+    void LookAtSoundObjects()
+    {
+        RaycastHit hit;
+
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 20))
+        {
+            SoundLookAt soundItem = hit.collider.GetComponent<SoundLookAt>();
+            if (soundItem != selectedSoundObject)
+            {
+                if (soundItem != null)
+                {
+                    //3 seconds delay
+                    soundLookAtTime = Time.time + 3.0f;
+                }
+                selectedSoundObject = soundItem;
+            }
+            else
+            {
+                if (Time.time > soundLookAtTime && soundLookAtTime != 0)
+                {
+                    if (soundItem != null)
+                    {
+                        if (soundItem.timesPlayed < soundItem.maxTimesPlayed)
+                        {
+                            audioSource.clip = soundItem.sound;
+                            audioSource.Play();
+                        }
+                        soundItem.timesPlayed++;
+                    }
+                    soundLookAtTime = 0;
+
+                }
+            }
+
+
+        }
+        else
+        {
+            selectedSoundObject = null;
+            soundLookAtTime = 0;
+        }
+
+    }
     public void Look()
     {
         RaycastHit hit;
         //Camera.main.
 
+        
 
         //Interaction with NPCs
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10))
-        { 
-            
-            if(hit.collider.CompareTag("SUSPECT")) // we're looking at a charcter
+        {
+
+            if (hit.collider.CompareTag("SUSPECT")) // we're looking at a charcter
             {
                 Character ch = hit.collider.gameObject.GetComponent<Character>();
                 if (lookedAtObject != hit.collider) // we've changed what we're looking at
@@ -106,42 +157,39 @@ public class Player : MonoBehaviour {
                         {
                             if (ch.introPlayed)
                             {
+                                ch.IsInteracted = true;
                                 Debug.Log("interact");
                             }
                         }
-                            if (!ch.introPlayed)
-                            {
-                                Debug.Log("play intro");
-                                AudioClip[] dialog = new AudioClip[2];
-                                dialog[0] = this.introClip;
-                                dialog[1] = ch.introClip;
-                                setDialog(dialog);
+                        if (!ch.introPlayed)
+                        {
+                            Debug.Log("play intro");
+                            AudioClip[] dialog = new AudioClip[2];
+                            dialog[0] = this.introClip;
+                            dialog[1] = ch.introClip;
+                            setDialog(dialog);
 
-                                ch.introPlayed = true;
-                            }
-                            if (selectedCharacter != null)
-                            {
-                                if (arrestSuspect)
-                                {
-                                    Debug.Log("Arrest Dialogue");
-                                missionManager.OnArrest(selectedCharacter.gameObject);
-                                    
-                                }
-                                if (warnSuspect)
-                                {
-                                    Debug.Log("Warn Dialogue");
-                                missionManager.OnWarn(selectedCharacter.gameObject);
-                            }
-                            }
-
-
-                            selectedCharacter = ch;
-                            if (Vector3.Dot(Camera.main.transform.forward, lookedAtObject.transform.position - transform.position) < 0)
-                            {
-                                selectedCharacter = null;
-                            }
-                            ch.lookAtTime = 0;
+                            ch.introPlayed = true;
                         }
+                        if (selectedCharacter != null)
+                        {
+                            if (arrestSuspect)
+                            {
+                                Debug.Log("Arrest Dialogue");
+                                missionManager.Arrest(selectedCharacter.gameObject);
+
+                            }
+                            if (warnSuspect)
+                            {
+                                Debug.Log("Warn Dialogue");
+                                missionManager.Warn(selectedCharacter.gameObject);
+                            }
+                        }
+
+
+                        selectedCharacter = ch;
+                        ch.lookAtTime = 0;
+                    }
                 }
 
                 //Debug.Log("Awake");
@@ -179,8 +227,9 @@ public class Player : MonoBehaviour {
         else
             lookedAtObject = null;
 
-        if (selectedCharacter!=null && Vector3.Dot(Camera.main.transform.forward, selectedCharacter.transform.position - transform.position) < 0)
+        if (selectedCharacter != null && Vector3.Dot(Camera.main.transform.forward, selectedCharacter.transform.position - transform.position) < 0)
         {
+            Debug.Log("Looking Away");
             selectedCharacter = null;
             warnSuspect = false;
             arrestSuspect = false;
@@ -192,12 +241,12 @@ public class Player : MonoBehaviour {
         if (cameraAngle > 270 && cameraAngle < 280)
         {
             clue.SetActive(true);
-            if(!clueGiven)
+            if (!clueGiven)
             {
                 Debug.Log("Give Clue");
                 clueGiven = true;
             }
-            
+
         }
         else
         {
@@ -224,15 +273,25 @@ public class Player : MonoBehaviour {
 
         if (cameraAngle > 30 && cameraAngle < 44)
         {
-            warn.SetActive(true);
+            warn.SetActive(true); 
             if (selectedCharacter != null)
             {
                 warnCounter++;
-                if (warnCounter == 200)
+                if (warnCounter == 200 && selectedCharacter.introPlayed && !warnSuspect)
                 {
                     Debug.Log("warning book sound");
+                }
+                if(warnCounter == 500 && selectedCharacter.IsInteracted)
+                {
+                    Debug.Log("Suspect checking");
                     warnSuspect = true;
                 }
+                if(warnCounter == 800)
+                {
+                    Debug.Log("Enks warning");
+                    Debug.Log("Suspect dialogue response");
+                }
+
             }
         }
         else
@@ -246,7 +305,11 @@ public class Player : MonoBehaviour {
     public void walk()
     {
 
-        float cameraAngle = Camera.main.transform.eulerAngles.x;
+        Quaternion q = UnityEngine.VR.InputTracking.GetLocalRotation(UnityEngine.VR.VRNode.Head);
+        Vector3 fwd = q * Camera.main.transform.forward;
+
+        float cameraAngle = (180.0f / 3.14f) * Mathf.Atan2(-fwd.y, Mathf.Sqrt(fwd.x * fwd.x + fwd.z * fwd.z));
+        float cameraAngle0 = Camera.main.transform.eulerAngles.x;
 
         if (cameraAngle > minBounds && cameraAngle < maxBounds && homeCounter == 0)
             counter++;
@@ -282,10 +345,10 @@ public class Player : MonoBehaviour {
     //{
     //    SceneManager.LoadScene(0);
     //    Camera.main.transform.localPosition = new Vector3(0, 2, 0);
-    //    trans.transform.rotation = startRot;
+    //    transform.rotation = startRot;
     //    Camera.main.transform.rotation = new Quaternion(0, 0, 0, 1);
-    //    trans.localPosition = startPos;
-    //    trans.rotation = new Quaternion(0, 0, 0, 1);
+    //    transform.localPosition = startPos;
+    //    transform.rotation = new Quaternion(0, 0, 0, 1);
     //}
 
     public void setDialog(AudioClip[] array)

@@ -26,7 +26,7 @@ public class Collision : MonoBehaviour
         }
         if (other.tag == "WALL")
         {
-            Debug.Log("Hit walll ");
+            Debug.Log("Hit walll");
             //set state as talking
         }
         if (other.tag == "CLUE")

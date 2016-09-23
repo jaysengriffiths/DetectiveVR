@@ -5,7 +5,7 @@ public class Character : MonoBehaviour
 {
     public AudioClip nameClip;
     public AudioClip introClip;
-    public string warningcuff;
+    public AudioClip warningcuff;
     public string identifier;
     public float lookAtTime;
     public string hqStatue;
@@ -13,6 +13,7 @@ public class Character : MonoBehaviour
     public string idle;
 
     public bool introPlayed = false;
+    public bool IsInteracted = false;
     //true if you're part of the current mission
     public bool isSuspect = false;
 

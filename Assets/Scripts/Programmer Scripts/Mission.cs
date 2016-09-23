@@ -3,13 +3,6 @@ using System.Collections;
 
 public class Mission : MonoBehaviour
 {
-    [System.Serializable]
-    public class SoundFX : System.Object
-    {
-        public string Identifier;
-    }
-
-
 
     [System.Serializable]
     public class Suspect : System.Object
@@ -27,9 +20,12 @@ public class Mission : MonoBehaviour
     
     //populate with characters from scene
     public Suspect[] suspects;
-    public SoundFX[] soundFX;
-
+    public AudioClip[] soundFX;
+    public AudioClip mysterySpeech;
+    public AudioClip revelationSpeech;
+    public AudioClip complainantSpeech;
     public int guiltyIndex;
+    //public Transform startMissionPosition;
     void OnActivate()
     {
         guiltyIndex = Random.Range(0, 5);

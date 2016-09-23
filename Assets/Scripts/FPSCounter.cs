@@ -3,7 +3,6 @@ using System.Collections;
 
 public class FPSCounter : MonoBehaviour
 { 
-    private int FramesPerSec;
     private float frequency = 1.0f;
     private string fps;
 
@@ -28,7 +27,7 @@ public class FPSCounter : MonoBehaviour
             // Display it
 
             fps = string.Format("FPS: {0}", Mathf.RoundToInt(frameCount / timeSpan));
-            Debug.Log("FPS: " + fps);
+            //Debug.Log("FPS: " + fps);
         }
     }
 

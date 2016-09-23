@@ -19,6 +19,7 @@ public class MissionManager : MonoBehaviour
         missions = FindObjectsOfType<Mission>();
         currentMission = missions[0];
         player = FindObjectOfType<Player>();
+        //player.transform.position = missions[0].startMissionPosition.transform.position;
     }
 
     void FixedUpdate()
@@ -31,7 +32,7 @@ public class MissionManager : MonoBehaviour
         //use oculus sound library
     }
 
-    public void OnArrest(GameObject character)
+    public void Arrest(GameObject character)
     {
         for (int i = 0; i < 5; i++)
         {
@@ -58,7 +59,7 @@ public class MissionManager : MonoBehaviour
 
     }
 
-    public void OnWarn(GameObject character)
+    public void Warn(GameObject character)
     {
         for (int i = 0; i < 5; i++)
         {
