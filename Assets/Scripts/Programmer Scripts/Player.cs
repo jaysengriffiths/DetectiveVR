@@ -157,6 +157,7 @@ public class Player : MonoBehaviour {
                         {
                             if (ch.introPlayed)
                             {
+                                ch.IsInteracted = true;
                                 Debug.Log("interact");
                             }
                         }
@@ -272,15 +273,25 @@ public class Player : MonoBehaviour {
 
         if (cameraAngle > 30 && cameraAngle < 44)
         {
-            warn.SetActive(true);
+            warn.SetActive(true); 
             if (selectedCharacter != null)
             {
                 warnCounter++;
-                if (warnCounter == 200)
+                if (warnCounter == 200 && selectedCharacter.introPlayed && !warnSuspect)
                 {
                     Debug.Log("warning book sound");
+                }
+                if(warnCounter == 500 && selectedCharacter.IsInteracted)
+                {
+                    Debug.Log("Suspect checking");
                     warnSuspect = true;
                 }
+                if(warnCounter == 800)
+                {
+                    Debug.Log("Enks warning");
+                    Debug.Log("Suspect dialogue response");
+                }
+
             }
         }
         else
@@ -330,15 +341,15 @@ public class Player : MonoBehaviour {
         //Invoke(("PlaySound"), 2);   
     }
 
-    private void OnApplicationPause(bool pauseStatus)
-    {
-        SceneManager.LoadScene(0);
-        Camera.main.transform.localPosition = new Vector3(0, 2, 0);
-        transform.rotation = startRot;
-        Camera.main.transform.rotation = new Quaternion(0, 0, 0, 1);
-        transform.localPosition = startPos;
-        transform.rotation = new Quaternion(0, 0, 0, 1);
-    }
+    //private void OnApplicationPause(bool pauseStatus)
+    //{
+    //    SceneManager.LoadScene(0);
+    //    Camera.main.transform.localPosition = new Vector3(0, 2, 0);
+    //    transform.rotation = startRot;
+    //    Camera.main.transform.rotation = new Quaternion(0, 0, 0, 1);
+    //    transform.localPosition = startPos;
+    //    transform.rotation = new Quaternion(0, 0, 0, 1);
+    //}
 
     public void setDialog(AudioClip[] array)
     {

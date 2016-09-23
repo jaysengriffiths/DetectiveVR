@@ -42,7 +42,7 @@ public class Clue : MonoBehaviour
         }
         if(timer > 500 && !isActivated)
         {
-            Debug.Log("Idle Sound");
+            //Debug.Log("Idle Sound");
             timer = 0;
         }
         timer++;
