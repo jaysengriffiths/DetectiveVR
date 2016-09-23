@@ -5,12 +5,7 @@ public class Character : MonoBehaviour
 {
     public AudioClip nameClip;
     public AudioClip introClip;
-    public AudioClip warningcuff;
-    public string identifier;
     public float lookAtTime;
-    public string hqStatue;
-    public string awake;
-    public string idle;
 
     public bool introPlayed = false;
     public bool IsInteracted = false;

@@ -1,8 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
 
     // Use this for initialization
     private Quaternion startRot;
@@ -10,11 +12,11 @@ public class Player : MonoBehaviour {
     //private Rigidbody player;
     private float minBounds = 10;
     private float maxBounds = 20;
-    int counter;
-    private int warnCounter = 0;
-    private int cuffCounter = 0;
-    private int homeCounter = 0;
-    private int moveTime = 20;
+    float counter;
+    private int warnTimeStamp = 0;
+    private int cuffTimeStamp = 0;
+    private int homeTimeStamp = 0;
+    public float walkTimeStamp = 1;
     //private int guessTime = 20;
     private bool arrestSuspect = false;
     private bool warnSuspect = false;
@@ -27,14 +29,27 @@ public class Player : MonoBehaviour {
     //public AudioClip collisionWallClip;
     //public AudioClip collisionTreeClip;
     //public AudioClip collisionPigstyClip;
-    public AudioClip introClip;
+    public AudioClip nameClip;
     private float soundLookAtTime = 0;
     //private Rigidbody rb;
     private AudioSource audioSource;
     private MissionManager missionManager;
     Collider lookedAtObject = null;
+    private float cameraAngle;
+    public bool complain = false;
 
-    AudioClip[] pendingDialog = new AudioClip[0];
+    public struct Dialog
+    {
+        public Dialog(AudioClip _clip, Character _ch)
+        {
+            clip = _clip;
+            character = _ch;
+        }
+        public AudioClip clip;
+        public Character character;
+    };
+
+    Dialog[] pendingDialog = new Dialog[0];
 
     [SerializeField]
     GameObject clue;
@@ -53,23 +68,29 @@ public class Player : MonoBehaviour {
 
     void Start()
     {
+        warn.SetActive(false);
+        cuffs.SetActive(false);
+        clue.SetActive(false);
         //rb = GetComponent<Rigidbody>();
-   
         missionManager = FindObjectOfType<MissionManager>();
         //selectedSoundObject = FindObjectOfType<SoundLookAt>();
         startPos = transform.position;
         startRot = transform.rotation;
-        //float cameraAngle = Camera.main.transform.rotation.x;
-        //trans = gameObject.GetComponent<Transform>();
-        //player = gameObject.GetComponent<Rigidbody>();
         counter = 0;
         mouseLook.Init(transform, Camera.main.transform);
-
+        if (complain)
+        {
+            missionManager.Complainant();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        Quaternion q = UnityEngine.VR.InputTracking.GetLocalRotation(UnityEngine.VR.VRNode.Head);
+        Quaternion fwd = Camera.main.transform.rotation * q;
+
+        cameraAngle = fwd.eulerAngles.x;
         //rb.velocity = new Vector3(0, 0, 0);
         updateDialog();
 
@@ -80,6 +101,8 @@ public class Player : MonoBehaviour {
             walk();
             Look();
         }
+
+
 
     }
 
@@ -131,7 +154,7 @@ public class Player : MonoBehaviour {
         RaycastHit hit;
         //Camera.main.
 
-        
+
 
         //Interaction with NPCs
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10))
@@ -151,49 +174,12 @@ public class Player : MonoBehaviour {
                     if (Time.time > ch.lookAtTime && ch.lookAtTime != 0)
                     {
                         // we've been starting at thisa one thing for three seconds...
-                        //play interact sound
-
-                        if (!arrestSuspect && !warnSuspect)
-                        {
-                            if (ch.introPlayed)
-                            {
-                                ch.IsInteracted = true;
-                                Debug.Log("interact");
-                            }
-                        }
-                        if (!ch.introPlayed)
-                        {
-                            Debug.Log("play intro");
-                            AudioClip[] dialog = new AudioClip[2];
-                            dialog[0] = this.introClip;
-                            dialog[1] = ch.introClip;
-                            setDialog(dialog);
-
-                            ch.introPlayed = true;
-                        }
-                        if (selectedCharacter != null)
-                        {
-                            if (arrestSuspect)
-                            {
-                                Debug.Log("Arrest Dialogue");
-                                missionManager.Arrest(selectedCharacter.gameObject);
-
-                            }
-                            if (warnSuspect)
-                            {
-                                Debug.Log("Warn Dialogue");
-                                missionManager.Warn(selectedCharacter.gameObject);
-                            }
-                        }
-
-
+                        missionManager.Interrogate(ch);
                         selectedCharacter = ch;
                         ch.lookAtTime = 0;
+
                     }
                 }
-
-                //Debug.Log("Awake");
-                //play awake sound
 
 
             }
@@ -203,25 +189,25 @@ public class Player : MonoBehaviour {
             //Interaction with returning to HQ
             if (hit.collider.CompareTag("GoldStar"))
             {
-                homeCounter++;
+                homeTimeStamp++;
 
-                if (homeCounter >= 300)
+                if (homeTimeStamp >= 300)
                 {
                     //return home 
                     SceneManager.LoadScene("HQ");
                     Debug.Log("testgohome");
 
-                    homeCounter = 0;
+                    homeTimeStamp = 0;
                 }
 
-                if (homeCounter >= 150)
+                if (homeTimeStamp >= 150)
                 {
                     Debug.Log("are you sure ");
                 }
             }
             else
             {
-                homeCounter = 0;
+                homeTimeStamp = 0;
             }
         }
         else
@@ -236,7 +222,6 @@ public class Player : MonoBehaviour {
         }
 
         RotateView();
-        float cameraAngle = Camera.main.transform.eulerAngles.x;
 
         if (cameraAngle > 270 && cameraAngle < 280)
         {
@@ -244,6 +229,11 @@ public class Player : MonoBehaviour {
             if (!clueGiven)
             {
                 Debug.Log("Give Clue");
+                AudioClip clip;
+                clip = missionManager.currentMission.clueDialogue;
+                AudioClip[] clips = new AudioClip[1];
+                clips[0] = clip;
+                setDialog(clips);
                 clueGiven = true;
             }
 
@@ -257,46 +247,49 @@ public class Player : MonoBehaviour {
             cuffs.SetActive(true);
             if (selectedCharacter != null)
             {
-                cuffCounter++;
-                if (cuffCounter == 200)
+                cuffTimeStamp++;
+                if (cuffTimeStamp == 200 && selectedCharacter.introClip && selectedCharacter.IsInteracted)
                 {
                     Debug.Log("Cuffing jingling sound");
-                    arrestSuspect = true;
+                    missionManager.Arrest(selectedCharacter);
                 }
             }
         }
         else
         {
             cuffs.SetActive(false);
-            cuffCounter = 0;
+            cuffTimeStamp = 0;
         }
 
         if (cameraAngle > 30 && cameraAngle < 44)
         {
-            warn.SetActive(true); 
+            warn.SetActive(true);
             if (selectedCharacter != null)
             {
-                warnCounter++;
-                if (warnCounter == 200 && selectedCharacter.introPlayed && !warnSuspect)
+                warnTimeStamp++;
+                if (warnTimeStamp == 200 && selectedCharacter.introPlayed && selectedCharacter.IsInteracted)
                 {
                     Debug.Log("warning book sound");
+                    missionManager.Warn(selectedCharacter);
                 }
-                if(warnCounter == 500 && selectedCharacter.IsInteracted)
-                {
-                    Debug.Log("Suspect checking");
-                    warnSuspect = true;
-                }
-                if(warnCounter == 800)
-                {
-                    Debug.Log("Enks warning");
-                    Debug.Log("Suspect dialogue response");
-                }
+
+                //if(warnTimeStamp == 500 && selectedCharacter.IsInteracted)
+                //{
+                //    Debug.Log("Suspect checking");
+                //    warnSuspect = true;
+                //}
+                //if(warnTimeStamp == 800)
+                //{
+                //    Debug.Log("Enks warning");
+                //    Debug.Log("Suspect dialogue response");
+                //}
 
             }
         }
         else
         {
             warn.SetActive(false);
+            warnTimeStamp = 0;
         }
     }
 
@@ -304,20 +297,23 @@ public class Player : MonoBehaviour {
 
     public void walk()
     {
+        bool lookingDown = (cameraAngle > minBounds && cameraAngle < maxBounds && homeTimeStamp == 0);
 
-        Quaternion q = UnityEngine.VR.InputTracking.GetLocalRotation(UnityEngine.VR.VRNode.Head);
-        Vector3 fwd = q * Camera.main.transform.forward;
-
-        float cameraAngle = (180.0f / 3.14f) * Mathf.Atan2(-fwd.y, Mathf.Sqrt(fwd.x * fwd.x + fwd.z * fwd.z));
-        float cameraAngle0 = Camera.main.transform.eulerAngles.x;
-
-        if (cameraAngle > minBounds && cameraAngle < maxBounds && homeCounter == 0)
-            counter++;
+        if (lookingDown)
+        {
+            if (counter == 0)
+            {
+                counter = Time.time + walkTimeStamp;
+            }
+            else
+            {
+                if (Time.time > counter)
+                    isMoving();
+            }
+        }
         else
             counter = 0;
-        if (counter > moveTime)
-            isMoving();
-        
+
     }
 
 
@@ -351,7 +347,7 @@ public class Player : MonoBehaviour {
     //    transform.rotation = new Quaternion(0, 0, 0, 1);
     //}
 
-    public void setDialog(AudioClip[] array)
+    public void setDialog(Dialog[] array)
     {
         pendingDialog = array;
     }
@@ -364,12 +360,18 @@ public class Player : MonoBehaviour {
             //and the length isnt 0
             if (pendingDialog.Length > 0)
             {
-                //audio clip = the first pending
-                audioSource.clip = pendingDialog[0];
-                //start audio 
-                audioSource.Play();
+
+                //start audio
+                if (pendingDialog[0].character == null)
+                {
+                    // audio clip = the first pending
+                    audioSource.clip = pendingDialog[0].clip;
+                    audioSource.Play();
+                }
+                else
+                    AudioSource.PlayClipAtPoint(pendingDialog[0].clip, pendingDialog[0].character.transform.position);
                 //copy non playing left over audio into temp array tha twill become the pending once play is over 
-                AudioClip[] dialog = new AudioClip[pendingDialog.Length - 1];
+                Dialog[] dialog = new Dialog[pendingDialog.Length - 1];
 
                 for (int i = 0; i < dialog.Length; i++)
                 {
@@ -378,14 +380,39 @@ public class Player : MonoBehaviour {
                 }
                 pendingDialog = dialog;
             }
+            else
+            {
+                if (missionManager.state == MissionManager.MissionState.EndByWarning)
+                {
+                    Debug.Log("play thankyou");
+
+                    AudioClip[] clips = new AudioClip[1];
+                    clips[1] = missionManager.currentMission.GetGuiltySuspect().thankyou;
+
+                    setDialog(clips);
+                }
+
+                if (missionManager.state == MissionManager.MissionState.EndByArrest)
+                {
+                    Debug.Log("play overarching");
+                    AudioClip[] clips = new AudioClip[1];
+                    clips[0] = missionManager.currentMission.revelationSpeech;
+
+                    setDialog(clips);
+
+                }
+
+                if (missionManager.state == MissionManager.MissionState.MissionOver)
+                {
+                    for (int i = 0; i < 5; i++)
+                    {
+                        missionManager.currentMission.suspects[i].character.isSuspect = false;
+                    }
+                }
 
 
+            }
         }
     }
 
-
-
-
-
 }
-
