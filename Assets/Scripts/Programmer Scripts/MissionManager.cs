@@ -53,27 +53,26 @@ public class MissionManager : MonoBehaviour
                     clips[0] = new Player.Dialog(currentMission.interogateSpeech, null);
                     clips[1] = new Player.Dialog(currentMission.suspects[i].explanation, currentMission.suspects[i].character);
 
-
                     player.setDialog(clips);
                 }
                 else
                 {
                     if (i == 0)
                     {
-                        AudioClip[] clips = new AudioClip[2];
-                        clips[0] = player.nameClip;
-                        clips[1] = currentMission.suspects[i].character.introClip;
+                        Player.Dialog[] clips = new Player.Dialog[2];
+                        clips[0] = new Player.Dialog(player.nameClip, null);
+                        clips[1] = new Player.Dialog(currentMission.suspects[i].character.introClip, currentMission.suspects[i].character);
 
                         player.setDialog(clips);
                         currentMission.suspects[i].character.introPlayed = true;
                     }
                     else
                     {
-                        AudioClip[] clips = new AudioClip[4];
-                        clips[0] = player.nameClip;
-                        clips[1] = currentMission.interogateSpeech;
-                        clips[2] = currentMission.suspects[i].character.introClip;
-                        clips[3] = currentMission.suspects[i].explanation;
+                        Player.Dialog[] clips = new Player.Dialog[4];
+                        clips[0] = new Player.Dialog(player.nameClip, null);
+                        clips[1] = new Player.Dialog(currentMission.interogateSpeech, null);
+                        clips[2] = new Player.Dialog(currentMission.suspects[i].character.introClip, currentMission.suspects[i].character);
+                        clips[3] = new Player.Dialog(currentMission.suspects[i].explanation, currentMission.suspects[i].character);
 
                         player.setDialog(clips);
                         currentMission.suspects[i].character.introPlayed = true;
@@ -89,8 +88,8 @@ public class MissionManager : MonoBehaviour
     {
         AudioClip clip;
         clip = currentMission.complainantSpeech;
-        AudioClip[] clips = new AudioClip[1];
-        clips[0] = clip;
+        Player.Dialog[] clips = new Player.Dialog[1];
+        clips[0] = new Player.Dialog(clip, null);
 
         player.setDialog(clips);
     }
@@ -112,10 +111,10 @@ public class MissionManager : MonoBehaviour
                 {
                     clip = currentMission.suspects[i].wrongArrest;
                 }
-                AudioClip[] clips = new AudioClip[3];
-                clips[0] = currentMission.suspects[i].character.nameClip;
-                clips[1] = arrestClip;
-                clips[2] = clip;
+                Player.Dialog[] clips = new Player.Dialog[3];
+                clips[0] = new Player.Dialog(currentMission.suspects[i].character.nameClip, null);
+                clips[1] = new Player.Dialog(arrestClip, null);
+                clips[2] = new Player.Dialog(clip, null);
 
                 player.setDialog(clips);
 
@@ -141,9 +140,9 @@ public class MissionManager : MonoBehaviour
                 {
                     clip = currentMission.suspects[i].wrongWarn;
                 }
-                AudioClip[] clips = new AudioClip[2];
-                clips[0] = currentMission.suspects[i].playerWarning;
-                clips[1] = clip;
+                Player.Dialog[] clips = new Player.Dialog[2];
+                clips[0] = new Player.Dialog(currentMission.suspects[i].playerWarning, null);
+                clips[1] = new Player.Dialog(clip, null);
 
                 player.setDialog(clips);
             }

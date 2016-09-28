@@ -62,7 +62,8 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
+
+        audioSource = GameObject.Find("Microphone").GetComponent<AudioSource>();
         mouseLook = GetComponent<MouseLook>();
     }
 
@@ -231,8 +232,8 @@ public class Player : MonoBehaviour
                 Debug.Log("Give Clue");
                 AudioClip clip;
                 clip = missionManager.currentMission.clueDialogue;
-                AudioClip[] clips = new AudioClip[1];
-                clips[0] = clip;
+                Player.Dialog[] clips = new Player.Dialog[1];
+                clips[0] = new Player.Dialog(clip, null);
                 setDialog(clips);
                 clueGiven = true;
             }
@@ -364,12 +365,17 @@ public class Player : MonoBehaviour
                 //start audio
                 if (pendingDialog[0].character == null)
                 {
-                    // audio clip = the first pending
-                    audioSource.clip = pendingDialog[0].clip;
-                    audioSource.Play();
+                    audioSource.transform.position = transform.position; // snap to player
                 }
                 else
-                    AudioSource.PlayClipAtPoint(pendingDialog[0].clip, pendingDialog[0].character.transform.position);
+                {
+                    audioSource.transform.position = pendingDialog[0].character.transform.position; // snap to player
+                }
+
+                // audio clip = the first pending
+                audioSource.clip = pendingDialog[0].clip;
+                audioSource.Play();
+
                 //copy non playing left over audio into temp array tha twill become the pending once play is over 
                 Dialog[] dialog = new Dialog[pendingDialog.Length - 1];
 
@@ -386,8 +392,8 @@ public class Player : MonoBehaviour
                 {
                     Debug.Log("play thankyou");
 
-                    AudioClip[] clips = new AudioClip[1];
-                    clips[1] = missionManager.currentMission.GetGuiltySuspect().thankyou;
+                    Player.Dialog[] clips = new Player.Dialog[1];
+                    clips[1] = new Player.Dialog(missionManager.currentMission.GetGuiltySuspect().thankyou, null);
 
                     setDialog(clips);
                 }
@@ -395,8 +401,8 @@ public class Player : MonoBehaviour
                 if (missionManager.state == MissionManager.MissionState.EndByArrest)
                 {
                     Debug.Log("play overarching");
-                    AudioClip[] clips = new AudioClip[1];
-                    clips[0] = missionManager.currentMission.revelationSpeech;
+                    Player.Dialog[] clips = new Player.Dialog[1];
+                    clips[0] = new Player.Dialog(missionManager.currentMission.revelationSpeech, null);
 
                     setDialog(clips);
 
