@@ -132,8 +132,15 @@ public class Player : MonoBehaviour
                         if (soundItem.timesPlayed < soundItem.maxTimesPlayed)
                         {
                             audioSource.clip = soundItem.activated;
-                            audioSource.Play();
-                            Debug.Log("Rip Loud");
+                            if (soundItem.playsOnPlayer == true)
+                            {
+                                audioSource.Play();
+                            }
+                            else
+                            {
+                                
+                                AudioSource.PlayClipAtPoint(audioSource.clip, soundItem.transform.position);
+                            }
                         }
 
                         

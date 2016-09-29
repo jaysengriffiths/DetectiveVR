@@ -348,9 +348,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Idle: {fileID: 0}
   activated: {fileID: 8300000, guid: 205555919d098ed45b3e8fdc01a7395b, type: 3}
+  enkNames: {fileID: 0}
   timesPlayed: 0
   maxTimesPlayed: 100
   timeStamp: 0
+  playsOnPlayer: 0
 --- !u!23 &23460669
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5563,7 +5565,6 @@ GameObject:
   - 4: {fileID: 532752227}
   - 33: {fileID: 532752229}
   - 23: {fileID: 532752228}
-  - 114: {fileID: 532752230}
   - 65: {fileID: 532752231}
   m_Layer: 0
   m_Name: house2
@@ -5623,22 +5624,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 532752226}
   m_Mesh: {fileID: 4300028, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
---- !u!114 &532752230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 532752226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Idle: {fileID: 0}
-  activated: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 1
-  timeStamp: 0
 --- !u!65 &532752231
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18636,8 +18621,8 @@ AudioSource:
   Spatialize: 1
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 4.9504952
-  MaxDistance: 100
+  MinDistance: 1
+  MaxDistance: 5
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -18705,9 +18690,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Idle: {fileID: 0}
   activated: {fileID: 8300000, guid: cff741c5dacb29d46bfc45eb14fdebb8, type: 3}
+  enkNames: {fileID: 0}
   timesPlayed: 0
   maxTimesPlayed: 5
   timeStamp: 1
+  playsOnPlayer: 0
 --- !u!65 &1909176935
 BoxCollider:
   m_ObjectHideFlags: 0
