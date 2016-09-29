@@ -28,6 +28,7 @@ public class Mission : MonoBehaviour
     public AudioClip interogateSpeech;
     public AudioClip clueDialogue;
     public int guiltyIndex;
+    public GameObject spawnLocation;
     //public Transform startMissionPosition;
     void OnActivate()
     {

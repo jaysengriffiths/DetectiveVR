@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     private bool arrestSuspect = false;
     private bool warnSuspect = false;
     private MouseLook mouseLook;
-    public float speed = 0.03f;
+    public float speed = 0.01f;
     //private bool confirm = false;
     private bool clueGiven = false;
     public Character selectedCharacter;
@@ -131,7 +131,7 @@ public class Player : MonoBehaviour
                     {
                         if (soundItem.timesPlayed < soundItem.maxTimesPlayed)
                         {
-                            audioSource.clip = soundItem.sound;
+                            audioSource.clip = soundItem.activated;
                             audioSource.Play();
                         }
                         soundItem.timesPlayed++;

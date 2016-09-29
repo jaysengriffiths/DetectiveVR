@@ -34,7 +34,6 @@ public class MissionManager : MonoBehaviour
     void FixedUpdate()
     {
         
-        //BLAH blah kill myself taking photos 
 
     }
 

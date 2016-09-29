@@ -3,7 +3,8 @@ using System.Collections;
 
 public class SoundLookAt : MonoBehaviour {
 
-    public AudioClip sound;
+    public AudioClip onHover;
+    public AudioClip activated;
     public int timesPlayed;
     public int maxTimesPlayed;
 
@@ -14,7 +15,11 @@ public class SoundLookAt : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update ()
+    {
+	    if(timesPlayed == maxTimesPlayed)
+        {
+            gameObject.SetActive(false);
+        }
 	}
 }
