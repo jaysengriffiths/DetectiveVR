@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
     Collider lookedAtObject = null;
     private float cameraAngle;
     public bool complain = false;
-
+    public float soundLookAtTimestamp = 2.0f;
     public struct Dialog
     {
         public Dialog(AudioClip _clip, Character _ch)
@@ -119,7 +119,7 @@ public class Player : MonoBehaviour
                 if (soundItem != null)
                 {
                     //3 seconds delay
-                    soundLookAtTime = Time.time + 3.0f;
+                    soundLookAtTime = Time.time + soundItem.timeStamp;
                 }
                 selectedSoundObject = soundItem;
             }
@@ -131,9 +131,13 @@ public class Player : MonoBehaviour
                     {
                         if (soundItem.timesPlayed < soundItem.maxTimesPlayed)
                         {
-                            audioSource.clip = soundItem.sound;
+                            audioSource.clip = soundItem.activated;
                             audioSource.Play();
+                            Debug.Log("Rip Loud");
                         }
+
+                        
+
                         soundItem.timesPlayed++;
                     }
                     soundLookAtTime = 0;
