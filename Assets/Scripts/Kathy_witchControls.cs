@@ -4,7 +4,6 @@ using System.Collections;
 public class Kathy_witchControls : MonoBehaviour
 {
     static Animator anim;
-    private bool talkingStillGoing = true;
 
 	// Use this for initialization
 	void Start ()
