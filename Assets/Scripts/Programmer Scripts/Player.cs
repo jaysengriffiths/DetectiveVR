@@ -9,7 +9,6 @@ public class Player : MonoBehaviour
     // Use this for initialization
     private Quaternion startRot;
     private Vector3 startPos;
-    //private Rigidbody player;
     private float minBounds = 10;
     private float maxBounds = 20;
     float counter;
@@ -72,13 +71,12 @@ public class Player : MonoBehaviour
         warn.SetActive(false);
         cuffs.SetActive(false);
         clue.SetActive(false);
-        //rb = GetComponent<Rigidbody>();
         missionManager = FindObjectOfType<MissionManager>();
-        //selectedSoundObject = FindObjectOfType<SoundLookAt>();
         startPos = transform.position;
         startRot = transform.rotation;
         counter = 0;
         mouseLook.Init(transform, Camera.main.transform);
+
         if (complain)
         {
             missionManager.Complainant();
@@ -102,9 +100,6 @@ public class Player : MonoBehaviour
             walk();
             Look();
         }
-
-
-
     }
 
     void LookAtSoundObjects()
