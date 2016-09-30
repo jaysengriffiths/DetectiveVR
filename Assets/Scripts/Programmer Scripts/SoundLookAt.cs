@@ -11,7 +11,6 @@ public class SoundLookAt : MonoBehaviour
     public int maxTimesPlayed;
     public int timeStamp;
     private AudioSource Source;
-    public bool playsOnPlayer = false;
     private Transform player;
     private bool isPlaying = false;
     private float nextTimeStamp = 0;

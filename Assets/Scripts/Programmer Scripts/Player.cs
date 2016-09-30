@@ -42,10 +42,23 @@ public class Player : MonoBehaviour
         public Dialog(AudioClip _clip, Character _ch)
         {
             clip = _clip;
-            character = _ch;
+            transform = _ch.transform;
+        }
+
+
+        public Dialog(AudioClip _clip, Transform _trans)
+        {
+            clip = _clip;
+            transform = _trans;
+        }
+
+        public Dialog(AudioClip _clip)
+        {
+            clip = _clip;
+            transform = null;
         }
         public AudioClip clip;
-        public Character character;
+        public Transform transform;
     };
 
     Dialog[] pendingDialog = new Dialog[0];
@@ -124,17 +137,23 @@ public class Player : MonoBehaviour
                 {
                     if (soundItem != null)
                     {
-                        if (soundItem.timesPlayed < soundItem.maxTimesPlayed)
+                        if (!audioSource.isPlaying)
                         {
-                            audioSource.clip = soundItem.activated;
-                            if (soundItem.playsOnPlayer == true)
+                            if (soundItem.timesPlayed < soundItem.maxTimesPlayed)
                             {
-                                audioSource.Play();
-                            }
-                            else
-                            {
-                                
-                                AudioSource.PlayClipAtPoint(audioSource.clip, soundItem.transform.position);
+                                Player.Dialog[] clips = new Player.Dialog[2];
+                                clips[0] = new Player.Dialog(soundItem.activated, soundItem.transform);
+                                clips[1] = new Player.Dialog(soundItem.enkNames);
+                                if (soundItem.isClue)
+                                {
+                                    setDialog(clips);
+
+                                }
+                                else
+                                {
+                                    audioSource.clip = soundItem.activated;
+                                    audioSource.Play();
+                                }
                             }
                         }
 
@@ -239,7 +258,7 @@ public class Player : MonoBehaviour
                 AudioClip clip;
                 clip = missionManager.currentMission.clueDialogue;
                 Player.Dialog[] clips = new Player.Dialog[1];
-                clips[0] = new Player.Dialog(clip, null);
+                clips[0] = new Player.Dialog(clip);
                 setDialog(clips);
                 clueGiven = true;
             }
@@ -369,13 +388,13 @@ public class Player : MonoBehaviour
             {
 
                 //start audio
-                if (pendingDialog[0].character == null)
+                if (pendingDialog[0].transform == null)
                 {
                     audioSource.transform.position = transform.position; // snap to player
                 }
                 else
                 {
-                    audioSource.transform.position = pendingDialog[0].character.transform.position; // snap to player
+                    audioSource.transform.position = pendingDialog[0].transform.position; // snap to player
                 }
 
                 // audio clip = the first pending
@@ -399,7 +418,7 @@ public class Player : MonoBehaviour
                     Debug.Log("play thankyou");
 
                     Player.Dialog[] clips = new Player.Dialog[1];
-                    clips[1] = new Player.Dialog(missionManager.currentMission.GetGuiltySuspect().thankyou, null);
+                    clips[1] = new Player.Dialog(missionManager.currentMission.GetGuiltySuspect().thankyou);
 
                     setDialog(clips);
                 }
@@ -408,7 +427,7 @@ public class Player : MonoBehaviour
                 {
                     Debug.Log("play overarching");
                     Player.Dialog[] clips = new Player.Dialog[1];
-                    clips[0] = new Player.Dialog(missionManager.currentMission.revelationSpeech, null);
+                    clips[0] = new Player.Dialog(missionManager.currentMission.revelationSpeech);
 
                     setDialog(clips);
 

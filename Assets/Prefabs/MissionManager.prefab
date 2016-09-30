@@ -38,7 +38,6 @@ GameObject:
   - 33: {fileID: 33000014135117026}
   - 65: {fileID: 65000012459137770}
   - 23: {fileID: 23000013973274312}
-  - 114: {fileID: 114000013939510532}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -244,6 +243,9 @@ MonoBehaviour:
   interogateSpeech: {fileID: 0}
   clueDialogue: {fileID: 0}
   guiltyIndex: 0
+  clueObjects: []
+  clueStartPos: {fileID: 0}
+  clueSpawned: {fileID: 0}
 --- !u!114 &114000012493033198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -263,23 +265,9 @@ MonoBehaviour:
   interogateSpeech: {fileID: 0}
   clueDialogue: {fileID: 0}
   guiltyIndex: 0
---- !u!114 &114000013939510532
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010484557696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6b5393ebce54f5478ac0c0917236629, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mClueType: 0
-  isActivated: 0
-  IdleSound: {fileID: 0}
-  AwakeSound: {fileID: 0}
-  activateDistance: 8
-  timer: 0
+  clueObjects: []
+  clueStartPos: {fileID: 0}
+  clueSpawned: {fileID: 0}
 --- !u!114 &114000014236828232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -355,3 +343,6 @@ MonoBehaviour:
   interogateSpeech: {fileID: 8300000, guid: 9c78cb9886aae844a9743cfadac5c5e2, type: 3}
   clueDialogue: {fileID: 8300000, guid: 999aab327bfac944ea492d5b97d6f20f, type: 3}
   guiltyIndex: 0
+  clueObjects: []
+  clueStartPos: {fileID: 0}
+  clueSpawned: {fileID: 0}

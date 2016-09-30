@@ -28,10 +28,16 @@ public class Mission : MonoBehaviour
     public AudioClip interogateSpeech;
     public AudioClip clueDialogue;
     public int guiltyIndex;
+    public GameObject[] clueObjects;
+    public Transform clueStartPos;
+    public GameObject clueSpawned;
     //public Transform startMissionPosition;
     void OnActivate()
     {
         guiltyIndex = Random.Range(0, 5);
+        clueSpawned = clueObjects[guiltyIndex];
+        clueSpawned.transform.position = clueStartPos.position;
+        clueSpawned.SetActive(true);
         // find all characters and set their suspect flag to false
         Character[] allCharacters = GameObject.FindObjectsOfType<Character>();
         for (int i = 0; i < allCharacters.Length; i++)
@@ -48,9 +54,13 @@ public class Mission : MonoBehaviour
         return suspects[guiltyIndex];
     }
     // Use this for initialization
-    void Start ()
+    void Awake()
     {
         OnActivate();
+    }
+    void Start ()
+    {
+        //OnActivate();
     
 	}
 	
