@@ -30,13 +30,15 @@ public class Player : MonoBehaviour
     //public AudioClip collisionPigstyClip;
     public AudioClip nameClip;
     private float soundLookAtTime = 0;
-    //private Rigidbody rb;
     private AudioSource audioSource;
     private MissionManager missionManager;
     Collider lookedAtObject = null;
     private float cameraAngle;
     public bool complain = false;
     public float soundLookAtTimestamp = 2.0f;
+
+    //THis is clue the player is holding
+    public MovingClue clueObject = null;
     public struct Dialog
     {
         public Dialog(AudioClip _clip, Character _ch)
@@ -72,18 +74,17 @@ public class Player : MonoBehaviour
     [SerializeField]
     GameObject warn;
 
+    private CharacterController controller;
+
     void Awake()
     {
-
+        controller = GetComponent<CharacterController>();
         audioSource = GameObject.Find("Microphone").GetComponent<AudioSource>();
         mouseLook = GetComponent<MouseLook>();
     }
 
     void Start()
     {
-        warn.SetActive(false);
-        cuffs.SetActive(false);
-        clue.SetActive(false);
         missionManager = FindObjectOfType<MissionManager>();
         startPos = transform.position;
         startRot = transform.rotation;
@@ -157,8 +158,6 @@ public class Player : MonoBehaviour
                             }
                         }
 
-                        
-
                         soundItem.timesPlayed++;
                     }
                     soundLookAtTime = 0;
@@ -178,9 +177,6 @@ public class Player : MonoBehaviour
     public void Look()
     {
         RaycastHit hit;
-        //Camera.main.
-
-
 
         //Interaction with NPCs
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10))
@@ -283,7 +279,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            cuffs.SetActive(false);
+            //cuffs.SetActive(false);
             cuffTimeStamp = 0;
         }
 
@@ -314,7 +310,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            warn.SetActive(false);
+            //warn.SetActive(false);
             warnTimeStamp = 0;
         }
     }
@@ -341,8 +337,6 @@ public class Player : MonoBehaviour
             counter = 0;
 
     }
-
-
     private void RotateView()
     {
         //avoids the mouse looking if the game is effectively paused
@@ -359,7 +353,13 @@ public class Player : MonoBehaviour
         Quaternion q = UnityEngine.VR.InputTracking.GetLocalRotation(UnityEngine.VR.VRNode.Head);
         Vector3 fwd = q * Camera.main.transform.forward;
         fwd.y = 0;
-        transform.position = transform.position + speed * fwd;
+
+        //DONT DO THIS EVER
+        //transform.position = transform.position + speed * fwd;
+
+
+        controller.Move(speed * fwd);
+
         //Invoke(("PlaySound"), 2);   
     }
 

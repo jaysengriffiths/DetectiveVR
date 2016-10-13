@@ -16,6 +16,8 @@ public class SoundLookAt : MonoBehaviour
     private float nextTimeStamp = 0;
     //public bool Activated;
     public bool isClue = false;
+    public bool isActivated = true;
+
     // Use this for initialization
     void Start()
     {
@@ -40,6 +42,16 @@ public class SoundLookAt : MonoBehaviour
                     if (Idle == null)
                     {
                         Source.PlayOneShot(activated, 0.25f);
+                        if (GetComponent<MovingClue>() && isActivated)
+                        {
+                            
+                            //Taking obj out of world and puts it in player hand
+                            //gameObject.SetActive(false);
+                            FindObjectOfType<Player>().clueObject = GetComponent<MovingClue>();
+                        }
+
+                        
+
                     }
                     else
                     {

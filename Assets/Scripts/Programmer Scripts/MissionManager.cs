@@ -7,7 +7,6 @@ public class MissionManager : MonoBehaviour
 {
 
     Player player;
-
     //public GameObject currentSuspectSelected;
     Mission[] missions;
 
@@ -53,6 +52,8 @@ public class MissionManager : MonoBehaviour
                     clips[0] = new Player.Dialog(currentMission.interogateSpeech);
                     clips[1] = new Player.Dialog(currentMission.suspects[i].explanation, currentMission.suspects[i].character);
 
+                    ActivateMovingClue();
+
                     player.setDialog(clips);
                 }
                 else
@@ -84,6 +85,17 @@ public class MissionManager : MonoBehaviour
      
     }
 
+    public void ActivateMovingClue()
+    {
+        if(player.clueObject == null)
+        {
+            return;
+        }
+
+        
+
+
+    }
     public void Complainant()
     {
         AudioClip clip;
