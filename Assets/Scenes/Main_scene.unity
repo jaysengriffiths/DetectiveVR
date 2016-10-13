@@ -657,6 +657,7 @@ MonoBehaviour:
   maxTimesPlayed: 100
   timeStamp: 0
   isClue: 0
+  isActivated: 1
 --- !u!65 &23460669
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1065,6 +1066,7 @@ MonoBehaviour:
   maxTimesPlayed: 5
   timeStamp: 1
   isClue: 1
+  isActivated: 1
 --- !u!65 &39960809
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1151,6 +1153,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &39960811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 39960806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b124ea90f2023946b96c5f536b935a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &41091437
 GameObject:
   m_ObjectHideFlags: 0
@@ -3500,6 +3514,7 @@ MonoBehaviour:
   maxTimesPlayed: 0
   timeStamp: 0
   isClue: 0
+  isActivated: 1
 --- !u!65 &173098404
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6682,6 +6697,7 @@ MonoBehaviour:
   maxTimesPlayed: 5
   timeStamp: 1
   isClue: 1
+  isActivated: 1
 --- !u!65 &443400697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6768,6 +6784,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &443400699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 443400694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b124ea90f2023946b96c5f536b935a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &446746997
 GameObject:
   m_ObjectHideFlags: 0
@@ -6998,6 +7026,7 @@ MonoBehaviour:
   maxTimesPlayed: 5
   timeStamp: 1
   isClue: 1
+  isActivated: 1
 --- !u!65 &457879938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7084,6 +7113,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &457879940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 457879935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b124ea90f2023946b96c5f536b935a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &459170356
 GameObject:
   m_ObjectHideFlags: 0
@@ -7243,6 +7284,7 @@ MonoBehaviour:
   maxTimesPlayed: 0
   timeStamp: 0
   isClue: 0
+  isActivated: 1
 --- !u!82 &485684511
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7607,7 +7649,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: 539787f36b3f0594db3e5af393baeaa3, type: 3}
   introClip: {fileID: 8300000, guid: be48d6dcaf19bda4d99994248146f08f, type: 3}
+  clothRip: {fileID: 0}
   lookAtTime: 0
+  MovingClueLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0
@@ -8095,7 +8139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b124ea90f2023946b96c5f536b935a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  correctClue: {fileID: 0}
+  speed: 0
 --- !u!1 &532752226
 GameObject:
   m_ObjectHideFlags: 0
@@ -9652,7 +9696,7 @@ BoxCollider:
   m_GameObject: {fileID: 587509698}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -9670,7 +9714,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 587509698}
   m_LocalRotation: {x: -0, y: -0.9996551, z: -0, w: -0.026263118}
-  m_LocalPosition: {x: 0, y: -0.7022222, z: 0}
+  m_LocalPosition: {x: 0, y: -0.534, z: 0}
   m_LocalScale: {x: 0.5087763, y: 0.034773756, z: 0.6583051}
   m_LocalEulerAnglesHint: {x: 0, y: -44.164, z: 0}
   m_Children: []
@@ -10918,7 +10962,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: ecbe5258db35d834c91e90026f1193c7, type: 3}
   introClip: {fileID: 8300000, guid: bd22ed2ad3e157c47afd96ad47136ca2, type: 3}
+  clothRip: {fileID: 0}
   lookAtTime: 0
+  MovingClueLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0
@@ -12658,6 +12704,7 @@ MonoBehaviour:
   maxTimesPlayed: 5
   timeStamp: 1
   isClue: 1
+  isActivated: 1
 --- !u!65 &816298091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12744,6 +12791,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &816298093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816298088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b124ea90f2023946b96c5f536b935a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!1 &828524065
 GameObject:
   m_ObjectHideFlags: 0
@@ -13492,6 +13551,7 @@ MonoBehaviour:
   maxTimesPlayed: 0
   timeStamp: 0
   isClue: 0
+  isActivated: 1
 --- !u!1 &892527721
 GameObject:
   m_ObjectHideFlags: 0
@@ -17822,6 +17882,7 @@ MonoBehaviour:
   maxTimesPlayed: 0
   timeStamp: 0
   isClue: 0
+  isActivated: 1
 --- !u!65 &1214816937
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20039,6 +20100,7 @@ MonoBehaviour:
   maxTimesPlayed: 0
   timeStamp: 0
   isClue: 0
+  isActivated: 1
 --- !u!82 &1357017130
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23819,6 +23881,7 @@ MonoBehaviour:
   maxTimesPlayed: 0
   timeStamp: 0
   isClue: 0
+  isActivated: 1
 --- !u!1 &1682559339
 GameObject:
   m_ObjectHideFlags: 0
@@ -25253,7 +25316,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: 147b25c33a2806a4d86f1d5f73a84028, type: 3}
   introClip: {fileID: 8300000, guid: 5e7c17ed1c697be468a83bafa937a704, type: 3}
+  clothRip: {fileID: 0}
   lookAtTime: 0
+  MovingClueLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0
@@ -25674,6 +25739,7 @@ MonoBehaviour:
   maxTimesPlayed: 0
   timeStamp: 0
   isClue: 0
+  isActivated: 1
 --- !u!82 &1852192356
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25766,6 +25832,7 @@ MonoBehaviour:
   maxTimesPlayed: 0
   timeStamp: 0
   isClue: 0
+  isActivated: 1
 --- !u!65 &1852192358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26009,6 +26076,7 @@ MonoBehaviour:
   maxTimesPlayed: 0
   timeStamp: 0
   isClue: 0
+  isActivated: 1
 --- !u!65 &1860044113
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26931,6 +26999,18 @@ MeshFilter:
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 5f871a45e863746478516f179a2603d3, type: 3}
   m_PrefabInternal: {fileID: 207057052}
+--- !u!114 &1909176930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1909176929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b124ea90f2023946b96c5f536b935a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!4 &1909176932 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 5f871a45e863746478516f179a2603d3, type: 3}
@@ -27027,6 +27107,7 @@ MonoBehaviour:
   maxTimesPlayed: 5
   timeStamp: 1
   isClue: 1
+  isActivated: 1
 --- !u!65 &1909176935
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27494,7 +27575,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014294893854, guid: c499189063ad66c4298f293aea424e98, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.00999999
+      value: 0.921
       objectReference: {fileID: 0}
     - target: {fileID: 4000014294893854, guid: c499189063ad66c4298f293aea424e98, type: 2}
       propertyPath: m_LocalPosition.z
@@ -27541,11 +27622,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010398107670, guid: c499189063ad66c4298f293aea424e98, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000010507874600, guid: c499189063ad66c4298f293aea424e98, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4000013229832944, guid: c499189063ad66c4298f293aea424e98, type: 2}
       propertyPath: m_RootOrder
@@ -27553,7 +27634,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010007470830, guid: c499189063ad66c4298f293aea424e98, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4000012638913864, guid: c499189063ad66c4298f293aea424e98, type: 2}
       propertyPath: m_RootOrder
@@ -27564,7 +27645,9 @@ Prefab:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 54000013039260740, guid: c499189063ad66c4298f293aea424e98, type: 2}
+    - {fileID: 136000010247570232, guid: c499189063ad66c4298f293aea424e98, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c499189063ad66c4298f293aea424e98, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1920904409
@@ -28264,6 +28347,7 @@ MonoBehaviour:
   maxTimesPlayed: 0
   timeStamp: 0
   isClue: 0
+  isActivated: 1
 --- !u!65 &1941635868
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29148,6 +29232,7 @@ MonoBehaviour:
   maxTimesPlayed: 0
   timeStamp: 0
   isClue: 0
+  isActivated: 1
 --- !u!65 &1984530589
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30422,6 +30507,7 @@ MonoBehaviour:
   maxTimesPlayed: 0
   timeStamp: 0
   isClue: 0
+  isActivated: 1
 --- !u!65 &2086843264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30632,8 +30718,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27e36548d3b0554aaa06bbb570479b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkTimeStamp: 1
-  speed: 0.01
+  walkTimeStamp: 0.5
+  speed: 1
   feetSource: {fileID: 587509699}
   selectedCharacter: {fileID: 0}
   selectedSoundObject: {fileID: 0}
@@ -30649,6 +30735,23 @@ MonoBehaviour:
   clue: {fileID: 767470243}
   cuffs: {fileID: 485684507}
   warn: {fileID: 1357017126}
+--- !u!143 &2099475543
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2099475541}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 90
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &2099475547 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000014294893854, guid: c499189063ad66c4298f293aea424e98,

@@ -41,7 +41,8 @@ public class Kathy_Player : MonoBehaviour
     private float cameraAngle;
     public bool complain = false;
     public float soundLookAtTimestamp = 2.0f;
-    private Rigidbody rb;
+   
+    private CharacterController controller;
 
     [SerializeField]
     public AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from - Kathy copied from Standard Assets character script
@@ -86,7 +87,7 @@ public class Kathy_Player : MonoBehaviour
 
         audioSource = GameObject.Find("Microphone").GetComponent<AudioSource>();
         mouseLook = GetComponent<MouseLook>();
-        rb = GetComponent<Rigidbody>();
+        controller = GetComponent<CharacterController>();
     }
 
     void Start()
@@ -115,7 +116,7 @@ public class Kathy_Player : MonoBehaviour
         Quaternion fwd = Camera.main.transform.rotation * q;
 
         cameraAngle = fwd.eulerAngles.x;
-        rb.velocity = new Vector3(0, 0, 0);
+        //rb.velocity = new Vector3(0, 0, 0);
         updateDialog();
 
         RotateView();
@@ -370,8 +371,8 @@ public class Kathy_Player : MonoBehaviour
     {
         Quaternion q = UnityEngine.VR.InputTracking.GetLocalRotation(UnityEngine.VR.VRNode.Head);
         Vector3 fwd = q * Camera.main.transform.forward;
-        fwd.y = 0;
-        transform.position = transform.position + speed * fwd;
+        //fwd.y = 0;
+        controller.Move(speed * fwd);
         ProgressStepCycle();  //Kathy
         //Invoke(("PlaySound"), 2);   
     }
