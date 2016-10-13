@@ -757,7 +757,7 @@ Transform:
   m_Children:
   - {fileID: 1920904410}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &24835495
 GameObject:
   m_ObjectHideFlags: 0
@@ -7770,7 +7770,7 @@ Transform:
   - {fileID: 1121594360}
   - {fileID: 501929521}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &512160102
 GameObject:
   m_ObjectHideFlags: 0
@@ -9696,7 +9696,7 @@ BoxCollider:
   m_GameObject: {fileID: 587509698}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -14232,7 +14232,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &938139588
 GameObject:
   m_ObjectHideFlags: 0
@@ -14316,7 +14316,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 964da94a889ab734895ec4eab535bbea, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -20009,6 +20009,48 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1001 &1353643780
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400132, guid: 9bebc30160a161243beaa9dee659d41a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.0421405
+      objectReference: {fileID: 0}
+    - target: {fileID: 400132, guid: 9bebc30160a161243beaa9dee659d41a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.211942e-16
+      objectReference: {fileID: 0}
+    - target: {fileID: 400132, guid: 9bebc30160a161243beaa9dee659d41a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 15.390574
+      objectReference: {fileID: 0}
+    - target: {fileID: 400132, guid: 9bebc30160a161243beaa9dee659d41a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400132, guid: 9bebc30160a161243beaa9dee659d41a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400132, guid: 9bebc30160a161243beaa9dee659d41a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400132, guid: 9bebc30160a161243beaa9dee659d41a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400132, guid: 9bebc30160a161243beaa9dee659d41a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9bebc30160a161243beaa9dee659d41a, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &1354604880
 GameObject:
   m_ObjectHideFlags: 0
@@ -23129,7 +23171,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &1625575416
 GameObject:
   m_ObjectHideFlags: 0
@@ -25582,7 +25624,7 @@ GameObject:
   - 23: {fileID: 1845960716}
   m_Layer: 0
   m_Name: groundPlane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -27599,7 +27641,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014294893854, guid: c499189063ad66c4298f293aea424e98, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 20000014161567200, guid: c499189063ad66c4298f293aea424e98,
         type: 2}
@@ -27766,7 +27808,7 @@ Transform:
   - {fileID: 1585149499}
   - {fileID: 1769669537}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!1 &1926037165
 GameObject:
   m_ObjectHideFlags: 0
@@ -30343,7 +30385,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &2086843258
 GameObject:
   m_ObjectHideFlags: 0
@@ -30719,7 +30761,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkTimeStamp: 0.5
-  speed: 1
+  m_StepPeriod: 0.5
   feetSource: {fileID: 587509699}
   selectedCharacter: {fileID: 0}
   selectedSoundObject: {fileID: 0}

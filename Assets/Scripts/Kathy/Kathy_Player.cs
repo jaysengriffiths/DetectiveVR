@@ -21,9 +21,9 @@ public class Kathy_Player : MonoBehaviour
     private bool arrestSuspect = false;
     private bool warnSuspect = false;
     private MouseLook mouseLook;
-    public float speed = 0.01f;  //Kathy changed from 0.03f
-    private float m_StepCycle;  //Kathy
-    private float m_NextStep;  //Kathy
+    private float speed = 0.01f;  //Kathy changed from 0.03f
+    private float m_StepCycle;  //
+    public float m_StepPeriod;//Kathy
     public AudioSource feetSource;  //Kathy
     //private bool confirm = false;
     private bool clueGiven = false;
@@ -45,8 +45,9 @@ public class Kathy_Player : MonoBehaviour
     private CharacterController controller;
 
     [SerializeField]
-    public AudioClip[] m_FootstepSounds;    // an array of footstep sounds that will be randomly selected from - Kathy copied from Standard Assets character script
-
+    public AudioClip[] m_GroudFootstepSounds;    // an array of footstep sounds that will be randomly selected from - Kathy copied from Standard Assets character script
+    public AudioClip[] m_MudFootstepSounds;
+    public AudioClip[] m_GrassFootstepSounds;
     public struct Dialog
     {
         public Dialog(AudioClip _clip, Character _ch)
@@ -101,7 +102,6 @@ public class Kathy_Player : MonoBehaviour
         counter = 0;
         mouseLook.Init(transform, Camera.main.transform);
         m_StepCycle = 0f;  //Kathy
-        m_NextStep = m_StepCycle / 2f;  //Kathy
 
         if (complain)
         {
@@ -273,7 +273,6 @@ public class Kathy_Player : MonoBehaviour
                 Kathy_Player.Dialog[] clips = new Kathy_Player.Dialog[1];  //Kathy
                 clips[0] = new Kathy_Player.Dialog(clip);  //Kathy
                 setDialog(clips);
-                clueGiven = true;
             }
 
         }
@@ -379,26 +378,65 @@ public class Kathy_Player : MonoBehaviour
     
     void ProgressStepCycle()  //Kathy this whole struct amended from Standard Assets character controller
     {
-        m_StepCycle += (speed * Time.fixedDeltaTime);
+        m_StepCycle += Time.deltaTime;
        
-        if (!(m_StepCycle > m_NextStep))
+        if (!(m_StepCycle > m_StepPeriod))
         {
             return;
         }
 
         PlayFootStepAudio();
+        m_StepCycle = 0;
     }
 
     void PlayFootStepAudio() //Kathy this whole struct amended from Standard Assets character controller
     {
         // pick & play a random footstep sound from the array,
         // excluding sound at index 0
-        int n = Random.Range(1, m_FootstepSounds.Length);
-        feetSource.clip = m_FootstepSounds[n];
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 5))
+        {
+            if (hit.collider.CompareTag("Ground"))
+                {
+                
+            }
+        }
+
+        int n = Random.Range(1, m_GroudFootstepSounds.Length);
+        feetSource.clip = m_GroudFootstepSounds[n];
         feetSource.PlayOneShot(feetSource.clip);
-        // move picked sound to index 0 so it's not picked next time
-        m_FootstepSounds[n] = m_FootstepSounds[0];
-        m_FootstepSounds[0] = feetSource.clip;
+        //move picked sound to index 0 so it's not picked next time
+        m_GroudFootstepSounds[n] = m_GroudFootstepSounds[0];
+        m_GroudFootstepSounds[0] = feetSource.clip;
+
+        m_GroudFootstepSounds[n] = m_GroudFootstepSounds[0];
+        m_GroudFootstepSounds[0] = feetSource.clip;
+
+        //if (GetComponent<Collider>().CompareTag("Grass"))
+        //{
+        //    int n = Random.Range(1, m_GrassFootstepSounds.Length);
+        //    feetSource.clip = m_GrassFootstepSounds[n];
+        //    feetSource.PlayOneShot(feetSource.clip);
+        //    //move picked sound to index 0 so it's not picked next time
+        //    m_GrassFootstepSounds[n] = m_GrassFootstepSounds[0];
+        //    m_GrassFootstepSounds[0] = feetSource.clip;
+
+        //    m_GrassFootstepSounds[n] = m_GrassFootstepSounds[0];
+        //    m_GrassFootstepSounds[0] = feetSource.clip;
+        //}
+
+        //if (GetComponent<Collider>().CompareTag("Mud"))
+        //{
+        //    int n = Random.Range(1, m_MudFootstepSounds.Length);
+        //    feetSource.clip = m_MudFootstepSounds[n];
+        //    feetSource.PlayOneShot(feetSource.clip);
+        //    //move picked sound to index 0 so it's not picked next time
+        //    m_MudFootstepSounds[n] = m_MudFootstepSounds[0];
+        //    m_MudFootstepSounds[0] = feetSource.clip;
+
+        //    m_MudFootstepSounds[n] = m_MudFootstepSounds[0];
+        //    m_MudFootstepSounds[0] = feetSource.clip;
+        //}
     }
 
     //private void OnApplicationPause(bool pauseStatus)
