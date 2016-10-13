@@ -9714,7 +9714,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 587509698}
   m_LocalRotation: {x: -0, y: -0.9996551, z: -0, w: -0.026263118}
-  m_LocalPosition: {x: 0, y: -0.534, z: 0}
+  m_LocalPosition: {x: 0, y: -0.984, z: 0}
   m_LocalScale: {x: 0.5087763, y: 0.034773756, z: 0.6583051}
   m_LocalEulerAnglesHint: {x: 0, y: -44.164, z: 0}
   m_Children: []
@@ -25622,7 +25622,7 @@ GameObject:
   - 33: {fileID: 1845960718}
   - 64: {fileID: 1845960717}
   - 23: {fileID: 1845960716}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: groundPlane
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -27617,7 +27617,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014294893854, guid: c499189063ad66c4298f293aea424e98, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.921
+      value: 0.774
       objectReference: {fileID: 0}
     - target: {fileID: 4000014294893854, guid: c499189063ad66c4298f293aea424e98, type: 2}
       propertyPath: m_LocalPosition.z
@@ -30768,12 +30768,24 @@ MonoBehaviour:
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   complain: 0
   soundLookAtTimestamp: 2
-  m_FootstepSounds:
+  m_GroudFootstepSounds:
   - {fileID: 8300000, guid: 7628acb5e05607844976b00c55113a65, type: 3}
   - {fileID: 8300000, guid: bac38444dd4191649b4961778eeb1f7b, type: 3}
   - {fileID: 8300000, guid: 53c63737f39117147b4697cd5676cec6, type: 3}
   - {fileID: 8300000, guid: cb8039bebbc864b47a1d0ad18b0421eb, type: 3}
   - {fileID: 8300000, guid: 2306d86cb2fb6c64daf23250f70d2cf4, type: 3}
+  m_MudFootstepSounds:
+  - {fileID: 8300000, guid: bf7d80610d150f042aac258f22630d9a, type: 3}
+  - {fileID: 8300000, guid: a3ea0121bdb2504488aaaf2f34d17ca4, type: 3}
+  - {fileID: 8300000, guid: 92573e0fa3a974e4a8e7c4d4c264c16c, type: 3}
+  - {fileID: 8300000, guid: 4a4570050e4d9844087b08a1e5c444e8, type: 3}
+  - {fileID: 8300000, guid: 3bf29a3b71066b14bb489d6f6ae03b7f, type: 3}
+  m_GrassFootstepSounds:
+  - {fileID: 8300000, guid: 3558a4cbddfbab54086c3d460baac5d4, type: 3}
+  - {fileID: 8300000, guid: 771188b33cda9be4fa255885e8da12ec, type: 3}
+  - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
+  - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
+  - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
   clue: {fileID: 767470243}
   cuffs: {fileID: 485684507}
   warn: {fileID: 1357017126}
