@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     //private bool arrestSuspect = false;
     //private bool warnSuspect = false;
     private MouseLook mouseLook;
-    private float speed = 0.01f;  //Kathy changed from 0.03f
+    public float speed = 0.01f;  //Kathy changed from 0.03f
     private float m_StepCycle;  //
     public float m_StepPeriod;//Kathy
     public AudioSource feetSource;  //Kathy

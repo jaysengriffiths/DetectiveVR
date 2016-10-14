@@ -8,22 +8,27 @@ public class MovingClue : MonoBehaviour
     public float speed;
     //public Character character;
     // Use this for initialization
+    public Player player;
     void Awake()
     {
    
     }
     void Start ()
     {
+        player = FindObjectOfType<Player>();
         gameObject.GetComponent<SoundLookAt>();
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+    void MoveTowards()
     {
         float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, transform.position, step);
-
-
+        transform.position = Vector3.MoveTowards(transform.position, player.gameObject.transform.position, step);
     }
 
 }
