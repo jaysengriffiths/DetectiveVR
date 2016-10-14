@@ -2,13 +2,14 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;  //Kathy
 
 public class Player : MonoBehaviour
 {
 
     // Use this for initialization
-    private Quaternion startRot;
-    private Vector3 startPos;
+    //private Quaternion startRot;
+    //private Vector3 startPos;
     private float minBounds = 10;
     private float maxBounds = 20;
     float counter;
@@ -17,10 +18,13 @@ public class Player : MonoBehaviour
     private int homeTimeStamp = 0;
     public float walkTimeStamp = 1;
     //private int guessTime = 20;
-    private bool arrestSuspect = false;
-    private bool warnSuspect = false;
+    //private bool arrestSuspect = false;
+    //private bool warnSuspect = false;
     private MouseLook mouseLook;
-    public float speed = 0.03f;
+    private float speed = 0.01f;  //Kathy changed from 0.03f
+    private float m_StepCycle;  //
+    public float m_StepPeriod;//Kathy
+    public AudioSource feetSource;  //Kathy
     //private bool confirm = false;
     private bool clueGiven = false;
     public Character selectedCharacter;
@@ -30,15 +34,21 @@ public class Player : MonoBehaviour
     //public AudioClip collisionPigstyClip;
     public AudioClip nameClip;
     private float soundLookAtTime = 0;
+    //private Rigidbody rb;
     private AudioSource audioSource;
     private MissionManager missionManager;
     Collider lookedAtObject = null;
     private float cameraAngle;
     public bool complain = false;
     public float soundLookAtTimestamp = 2.0f;
+    public GameObject clueObject;
+   
+    private CharacterController controller;
 
-    //THis is clue the player is holding
-    public MovingClue clueObject = null;
+    [SerializeField]
+    public AudioClip[] m_GroudFootstepSounds;    // an array of footstep sounds that will be randomly selected from - Kathy copied from Standard Assets character script
+    public AudioClip[] m_MudFootstepSounds;
+    public AudioClip[] m_GrassFootstepSounds;
     public struct Dialog
     {
         public Dialog(AudioClip _clip, Character _ch)
@@ -74,22 +84,25 @@ public class Player : MonoBehaviour
     [SerializeField]
     GameObject warn;
 
-    private CharacterController controller;
-
     void Awake()
     {
-        controller = GetComponent<CharacterController>();
+
         audioSource = GameObject.Find("Microphone").GetComponent<AudioSource>();
         mouseLook = GetComponent<MouseLook>();
+        controller = GetComponent<CharacterController>();
     }
 
     void Start()
     {
+        warn.SetActive(false);
+        cuffs.SetActive(false);
+        clue.SetActive(false);
         missionManager = FindObjectOfType<MissionManager>();
-        startPos = transform.position;
-        startRot = transform.rotation;
+        //startPos = transform.position;
+        //startRot = transform.rotation;
         counter = 0;
         mouseLook.Init(transform, Camera.main.transform);
+        m_StepCycle = 0f;  //Kathy
 
         if (complain)
         {
@@ -140,25 +153,30 @@ public class Player : MonoBehaviour
                     {
                         if (!audioSource.isPlaying)
                         {
-                            if (soundItem.timesPlayed < soundItem.maxTimesPlayed)
+                            if (soundItem.timesPlayed < soundItem.maxTimesPlayed || soundItem.maxTimesPlayed == 0)
                             {
-                                Player.Dialog[] clips = new Player.Dialog[2];
-                                clips[0] = new Player.Dialog(soundItem.activated, soundItem.transform);
-                                clips[1] = new Player.Dialog(soundItem.enkNames);
-                                if (soundItem.isClue)
+                                Player.Dialog[] clips = new Player.Dialog[2];  //Kathy
+                                clips[0] = new Player.Dialog(soundItem.activated, soundItem.transform);  //Kathy
+                                clips[1] = new Player.Dialog(soundItem.enkNames);  //Kathy
+                                if (soundItem.isClue || soundItem.enkNameObject)
                                 {
                                     setDialog(clips);
+                                    soundItem.timesPlayed++;
+                                    soundItem.isActivated = true;
 
                                 }
                                 else
                                 {
                                     audioSource.clip = soundItem.activated;
                                     audioSource.Play();
+                                    soundItem.isActivated = true;
                                 }
                             }
                         }
 
-                        soundItem.timesPlayed++;
+
+
+                        
                     }
                     soundLookAtTime = 0;
 
@@ -177,6 +195,9 @@ public class Player : MonoBehaviour
     public void Look()
     {
         RaycastHit hit;
+        //Camera.main.
+
+
 
         //Interaction with NPCs
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10))
@@ -239,8 +260,8 @@ public class Player : MonoBehaviour
         {
             Debug.Log("Looking Away");
             selectedCharacter = null;
-            warnSuspect = false;
-            arrestSuspect = false;
+            //warnSuspect = false;
+            //arrestSuspect = false;
         }
 
         RotateView();
@@ -253,10 +274,9 @@ public class Player : MonoBehaviour
                 Debug.Log("Give Clue");
                 AudioClip clip;
                 clip = missionManager.currentMission.clueDialogue;
-                Player.Dialog[] clips = new Player.Dialog[1];
-                clips[0] = new Player.Dialog(clip);
+                Player.Dialog[] clips = new Player.Dialog[1];  //Kathy
+                clips[0] = new Player.Dialog(clip);  //Kathy
                 setDialog(clips);
-                clueGiven = true;
             }
 
         }
@@ -279,7 +299,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            //cuffs.SetActive(false);
+            cuffs.SetActive(false);
             cuffTimeStamp = 0;
         }
 
@@ -310,7 +330,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            //warn.SetActive(false);
+            warn.SetActive(false);
             warnTimeStamp = 0;
         }
     }
@@ -337,6 +357,8 @@ public class Player : MonoBehaviour
             counter = 0;
 
     }
+
+
     private void RotateView()
     {
         //avoids the mouse looking if the game is effectively paused
@@ -352,17 +374,74 @@ public class Player : MonoBehaviour
     {
         Quaternion q = UnityEngine.VR.InputTracking.GetLocalRotation(UnityEngine.VR.VRNode.Head);
         Vector3 fwd = q * Camera.main.transform.forward;
-        fwd.y = 0;
-
-        //DONT DO THIS EVER
-        //transform.position = transform.position + speed * fwd;
-
-
+        //fwd.y = 0;
         controller.Move(speed * fwd);
-
+        ProgressStepCycle();  //Kathy
         //Invoke(("PlaySound"), 2);   
     }
+    
+    void ProgressStepCycle()  //Kathy this whole struct amended from Standard Assets character controller
+    {
+        m_StepCycle += Time.deltaTime;
+       
+        if (!(m_StepCycle > m_StepPeriod))
+        {
+            return;
+        }
 
+        PlayFootStepAudio();
+        m_StepCycle = 0;
+    }
+
+    void PlayFootStepAudio() //Kathy this whole struct amended from Standard Assets character controller
+    {
+        // pick & play a random footstep sound from the array,
+        // excluding sound at index 0
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 5))
+        {
+            if (hit.collider.CompareTag("Ground"))
+            {
+                int n = Random.Range(1, m_GroudFootstepSounds.Length);
+                feetSource.clip = m_GroudFootstepSounds[n];
+                feetSource.PlayOneShot(feetSource.clip);
+                //move picked sound to index 0 so it's not picked next time
+                m_GroudFootstepSounds[n] = m_GroudFootstepSounds[0];
+                m_GroudFootstepSounds[0] = feetSource.clip;
+
+                m_GroudFootstepSounds[n] = m_GroudFootstepSounds[0];
+                m_GroudFootstepSounds[0] = feetSource.clip;
+
+            }
+        }
+
+
+        if (GetComponent<Collider>().CompareTag("Grass"))
+        {
+            int n = Random.Range(1, m_GrassFootstepSounds.Length);
+            feetSource.clip = m_GrassFootstepSounds[n];
+            feetSource.PlayOneShot(feetSource.clip);
+            
+            m_GrassFootstepSounds[n] = m_GrassFootstepSounds[0];
+            m_GrassFootstepSounds[0] = feetSource.clip;
+
+            m_GrassFootstepSounds[n] = m_GrassFootstepSounds[0];
+            m_GrassFootstepSounds[0] = feetSource.clip;
+        }
+
+        if (GetComponent<Collider>().CompareTag("Mud"))
+        {
+            int n = Random.Range(1, m_MudFootstepSounds.Length);
+            feetSource.clip = m_MudFootstepSounds[n];
+            feetSource.PlayOneShot(feetSource.clip);
+            
+            m_MudFootstepSounds[n] = m_MudFootstepSounds[0];
+            m_MudFootstepSounds[0] = feetSource.clip;
+
+            m_MudFootstepSounds[n] = m_MudFootstepSounds[0];
+            m_MudFootstepSounds[0] = feetSource.clip;
+        }
+    }
     //private void OnApplicationPause(bool pauseStatus)
     //{
     //    SceneManager.LoadScene(0);
@@ -417,8 +496,8 @@ public class Player : MonoBehaviour
                 {
                     Debug.Log("play thankyou");
 
-                    Player.Dialog[] clips = new Player.Dialog[1];
-                    clips[1] = new Player.Dialog(missionManager.currentMission.GetGuiltySuspect().thankyou);
+                    Player.Dialog[] clips = new Player.Dialog[1];  //Kathy
+                    clips[1] = new Player.Dialog(missionManager.currentMission.GetGuiltySuspect().thankyou);  //Kathy
 
                     setDialog(clips);
                 }
@@ -426,8 +505,8 @@ public class Player : MonoBehaviour
                 if (missionManager.state == MissionManager.MissionState.EndByArrest)
                 {
                     Debug.Log("play overarching");
-                    Player.Dialog[] clips = new Player.Dialog[1];
-                    clips[0] = new Player.Dialog(missionManager.currentMission.revelationSpeech);
+                    Player.Dialog[] clips = new Player.Dialog[1];  //Kathy
+                    clips[0] = new Player.Dialog(missionManager.currentMission.revelationSpeech);  //Kathy
 
                     setDialog(clips);
 
