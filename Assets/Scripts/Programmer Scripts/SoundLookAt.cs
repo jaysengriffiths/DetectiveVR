@@ -11,18 +11,21 @@ public class SoundLookAt : MonoBehaviour
     public int maxTimesPlayed;
     public int timeStamp;
     private AudioSource Source;
-    private Transform player;
+    //private Transform player;
     private bool isPlaying = false;
     private float nextTimeStamp = 0;
     //public bool Activated;
     public bool isClue = false;
-    public bool isActivated = true;
+    public bool isActivated = false;
+    public bool enkNameObject = false;
+    public GameObject player;
 
     // Use this for initialization
     void Start()
     {
         Source = gameObject.GetComponent<AudioSource>();
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = FindObjectOfType<Player>().gameObject;
+
     }
 
     // Update is called once per frame
@@ -42,12 +45,13 @@ public class SoundLookAt : MonoBehaviour
                     if (Idle == null)
                     {
                         Source.PlayOneShot(activated, 0.25f);
+                        //isActivated = true;
                         if (GetComponent<MovingClue>() && isActivated)
                         {
                             
                             //Taking obj out of world and puts it in player hand
-                            //gameObject.SetActive(false);
-                            FindObjectOfType<Player>().clueObject = GetComponent<MovingClue>();
+                            gameObject.SetActive(false);
+                            //FindObjectOfType<Player>().clueObject = GetComponent<MovingClue>().gameObject;
                         }
 
                         

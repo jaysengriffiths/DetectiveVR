@@ -20,11 +20,26 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012446685544}
   - 33: {fileID: 33000011665815866}
-  - 23: {fileID: 23000012417650512}
   - 136: {fileID: 136000010653524364}
+  - 23: {fileID: 23000012417650512}
   - 95: {fileID: 95000010032145774}
   m_Layer: 0
   m_Name: giantBellringer_lowpoly_01_jf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000011166372314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011128236680}
+  m_Layer: 0
+  m_Name: Bellringer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -39,6 +54,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013718670564}
   - 114: {fileID: 114000011280452826}
+  - 82: {fileID: 82000010110975890}
   m_Layer: 0
   m_Name: Bellringer
   m_TagString: SUSPECT
@@ -46,6 +62,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4000011128236680
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011166372314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000013718670564}
+  m_RootOrder: 1
 --- !u!4 &4000012446685544
 Transform:
   m_ObjectHideFlags: 1
@@ -65,12 +94,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012033825396}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.544, y: 1.4408138, z: 0.48}
+  m_LocalRotation: {x: -0, y: -0.43784645, z: -0, w: 0.8990498}
+  m_LocalPosition: {x: 40.519814, y: 1.4408138, z: -7.9455447}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -51.665, z: 0}
   m_Children:
   - {fileID: 4000012446685544}
+  - {fileID: 4000011128236680}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!23 &23000012417650512
@@ -109,6 +139,80 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010510702236}
   m_Mesh: {fileID: 4300000, guid: 65f864c2c94d9894db561d52391fa954, type: 3}
+--- !u!82 &82000010110975890
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012033825396}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1cdc0f9dcbd76b240956f8cea480404a, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 1
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 5
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95000010032145774
 Animator:
   serializedVersion: 3
@@ -139,7 +243,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: 539787f36b3f0594db3e5af393baeaa3, type: 3}
   introClip: {fileID: 8300000, guid: be48d6dcaf19bda4d99994248146f08f, type: 3}
+  clothRip: {fileID: 0}
   lookAtTime: 0
+  MovingClueLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0
