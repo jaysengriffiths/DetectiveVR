@@ -74,8 +74,9 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
-
-        audioSource = GameObject.Find("Microphone").GetComponent<AudioSource>();
+        GameObject mic = GameObject.Find("Microphone");
+        if (mic)
+            audioSource = mic.GetComponent<AudioSource>();
         mouseLook = GetComponent<MouseLook>();
     }
 
@@ -108,9 +109,12 @@ public class Player : MonoBehaviour
 
         RotateView();
         LookAtSoundObjects();
-        if (pendingDialog.Length == 0 && !audioSource.isPlaying)
+        if (pendingDialog.Length == 0 && (audioSource==null || !audioSource.isPlaying))
         {
-            walk();
+            if (audioSource)
+            {
+                walk();
+            }
             Look();
         }
     }
@@ -381,7 +385,7 @@ public class Player : MonoBehaviour
     private void updateDialog()
     {
         //if not playing
-        if (!audioSource.isPlaying)
+        if (audioSource && !audioSource.isPlaying)
         {
             //and the length isnt 0
             if (pendingDialog.Length > 0)
