@@ -15,17 +15,12 @@ public class Kathy_witchControls : MonoBehaviour
     void Update()
 
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            anim.SetTrigger("isWaking");
-        }
-
         if (Input.GetKeyDown(KeyCode.T))
         {
             anim.SetTrigger("isStartingToTalk");
         }
 
-        if (Input.GetKeyDown(KeyCode.H))
+        if (Input.GetKeyDown(KeyCode.H))  // no handcuff to talk transition, so stay in handcuff pose while giving or being arrested
         {
             anim.SetTrigger("isPuttingOutHands");
         }
@@ -37,7 +32,12 @@ public class Kathy_witchControls : MonoBehaviour
             
         if (Input.GetKeyDown(KeyCode.L))
         {
-            anim.SetTrigger("isListening");
+            anim.SetTrigger("isStartingToListen");
         }
-     }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            anim.SetTrigger("isIdle");
+        }
+    }
 }
