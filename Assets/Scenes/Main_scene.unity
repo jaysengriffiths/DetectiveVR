@@ -315,6 +315,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 9650673}
   - 82: {fileID: 9650674}
+  - 114: {fileID: 9650675}
   m_Layer: 0
   m_Name: tree59
   m_TagString: Untagged
@@ -411,6 +412,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &9650675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 9650672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &9898907
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +442,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 9898908}
   - 82: {fileID: 9898909}
+  - 114: {fileID: 9898910}
   m_Layer: 0
   m_Name: tree23
   m_TagString: Untagged
@@ -516,6 +539,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &9898910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 9898907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &18092833
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +569,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 18092834}
   - 82: {fileID: 18092835}
+  - 114: {fileID: 18092836}
   m_Layer: 0
   m_Name: tree64
   m_TagString: Untagged
@@ -621,6 +666,59 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &18092836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 18092833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
+--- !u!1 &19220680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 19220681}
+  m_Layer: 0
+  m_Name: drawBridge
+  m_TagString: WALL
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &19220681
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 19220680}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 40.706047, y: 0.84514344, z: -42.035633}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1682559340}
+  - {fileID: 139874481}
+  - {fileID: 1376688508}
+  - {fileID: 34260269}
+  m_Father: {fileID: 196406909}
+  m_RootOrder: 19
 --- !u!1 &23460667
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,7 +857,7 @@ Transform:
   m_Children:
   - {fileID: 1920904410}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &24835495
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,13 +949,14 @@ Transform:
   m_PrefabParentObject: {fileID: 400024, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 34260268}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.0183, y: 0.8451431, z: -42.03563}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.687748, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 574491225}
-  m_RootOrder: 2
+  m_Children:
+  - {fileID: 72185696}
+  m_Father: {fileID: 19220681}
+  m_RootOrder: 3
 --- !u!23 &34260270
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1196,6 +1295,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 56854902}
   - 82: {fileID: 56854903}
+  - 114: {fileID: 56854904}
   m_Layer: 0
   m_Name: tree57
   m_TagString: Untagged
@@ -1292,6 +1392,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &56854904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 56854901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &65857336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,6 +1549,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 69438158}
   m_Mesh: {fileID: 4300090, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
+--- !u!1 &72185695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 72185696}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &72185696
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 72185695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 34260269}
+  m_RootOrder: 0
 --- !u!1 &77742148
 GameObject:
   m_ObjectHideFlags: 0
@@ -1588,6 +1737,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 98969450}
   - 82: {fileID: 98969451}
+  - 114: {fileID: 98969452}
   m_Layer: 0
   m_Name: tree38
   m_TagString: Untagged
@@ -1684,6 +1834,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &98969452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 98969449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &106920452
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,7 +2190,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 196406909}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!23 &128025551
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2217,7 +2388,7 @@ GameObject:
   - 33: {fileID: 139874483}
   - 23: {fileID: 139874482}
   m_Layer: 0
-  m_Name: drawBridgeDown
+  m_Name: drawBridge2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2229,13 +2400,14 @@ Transform:
   m_PrefabParentObject: {fileID: 400020, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 139874480}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 38.16577, y: 3.9233527, z: -49.198444}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.5402756, y: 3.0782094, z: -7.162815}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 574491225}
-  m_RootOrder: 0
+  m_Children:
+  - {fileID: 1725914513}
+  m_Father: {fileID: 19220681}
+  m_RootOrder: 1
 --- !u!23 &139874482
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2351,6 +2523,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 144018354}
   - 82: {fileID: 144018355}
+  - 114: {fileID: 144018356}
   m_Layer: 0
   m_Name: tree5
   m_TagString: Untagged
@@ -2447,6 +2620,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &144018356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 144018353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &145382150
 GameObject:
   m_ObjectHideFlags: 0
@@ -2524,6 +2718,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 146527012}
   - 82: {fileID: 146527013}
+  - 114: {fileID: 146527014}
   m_Layer: 0
   m_Name: tree25
   m_TagString: Untagged
@@ -2620,6 +2815,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &146527014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 146527011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &148028278
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,6 +2845,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 148028279}
   - 82: {fileID: 148028280}
+  - 114: {fileID: 148028281}
   m_Layer: 0
   m_Name: tree48
   m_TagString: Untagged
@@ -2725,6 +2942,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &148028281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 148028278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &149142624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2890,6 +3128,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 154897038}
   - 82: {fileID: 154897039}
+  - 114: {fileID: 154897040}
   m_Layer: 0
   m_Name: tree46
   m_TagString: Untagged
@@ -2986,6 +3225,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &154897040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 154897037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &165906882
 GameObject:
   m_ObjectHideFlags: 0
@@ -3099,7 +3359,7 @@ Transform:
   - {fileID: 1189762184}
   - {fileID: 1342604243}
   m_Father: {fileID: 196406909}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!65 &166383663
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3212,7 +3472,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 196406909}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!23 &173098400
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3260,7 +3520,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bbb487464f6d0464bb9ee64e6f2f848f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 56f1f22b68391e94eaca96e0745d8e37, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -3272,7 +3532,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -3336,9 +3596,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Idle: {fileID: 0}
-  activated: {fileID: 0}
-  enkNames: {fileID: 0}
+  Idle: {fileID: 8300000, guid: 56f1f22b68391e94eaca96e0745d8e37, type: 3}
+  activated: {fileID: 8300000, guid: 56f1f22b68391e94eaca96e0745d8e37, type: 3}
+  enkNames: {fileID: 8300000, guid: e0ea0785226a2754fb38f24188e2bee4, type: 3}
   timesPlayed: 0
   maxTimesPlayed: 0
   timeStamp: 0
@@ -3613,7 +3873,6 @@ Transform:
   - {fileID: 41091438}
   - {fileID: 46826108}
   - {fileID: 1984530583}
-  - {fileID: 574491225}
   - {fileID: 978065868}
   - {fileID: 423160942}
   - {fileID: 2119077472}
@@ -3627,6 +3886,7 @@ Transform:
   - {fileID: 166383661}
   - {fileID: 1894104517}
   - {fileID: 1852192352}
+  - {fileID: 19220681}
   - {fileID: 333586991}
   - {fileID: 1426634226}
   - {fileID: 1479335512}
@@ -3872,6 +4132,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 217500559}
   - 82: {fileID: 217500560}
+  - 114: {fileID: 217500561}
   m_Layer: 0
   m_Name: tree12
   m_TagString: Untagged
@@ -3968,6 +4229,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &217500561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 217500558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &234876907
 GameObject:
   m_ObjectHideFlags: 0
@@ -4296,6 +4578,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 265240145}
   - 82: {fileID: 265240146}
+  - 114: {fileID: 265240147}
   m_Layer: 0
   m_Name: tree11
   m_TagString: Untagged
@@ -4392,6 +4675,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &265240147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 265240144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &284074478
 GameObject:
   m_ObjectHideFlags: 0
@@ -4401,6 +4705,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 284074479}
   - 82: {fileID: 284074480}
+  - 114: {fileID: 284074481}
   m_Layer: 0
   m_Name: tree7
   m_TagString: Untagged
@@ -4497,6 +4802,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &284074481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 284074478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &284639730
 GameObject:
   m_ObjectHideFlags: 0
@@ -4595,7 +4921,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 196406909}
-  m_RootOrder: 16
+  m_RootOrder: 15
 --- !u!23 &285695527
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4927,6 +5253,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 327550471}
   - 82: {fileID: 327550472}
+  - 114: {fileID: 327550473}
   m_Layer: 0
   m_Name: tree4
   m_TagString: Untagged
@@ -5023,6 +5350,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &327550473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 327550470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &333586990
 GameObject:
   m_ObjectHideFlags: 0
@@ -5181,6 +5529,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 345055721}
   - 82: {fileID: 345055722}
+  - 114: {fileID: 345055723}
   m_Layer: 0
   m_Name: tree18
   m_TagString: Untagged
@@ -5277,6 +5626,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &345055723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 345055720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &353716013
 GameObject:
   m_ObjectHideFlags: 0
@@ -5286,6 +5656,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 353716014}
   - 82: {fileID: 353716015}
+  - 114: {fileID: 353716016}
   m_Layer: 0
   m_Name: tree70
   m_TagString: Untagged
@@ -5382,6 +5753,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &353716016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 353716013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &356315216
 GameObject:
   m_ObjectHideFlags: 0
@@ -5459,6 +5851,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 372485391}
   - 82: {fileID: 372485392}
+  - 114: {fileID: 372485393}
   m_Layer: 0
   m_Name: tree58
   m_TagString: Untagged
@@ -5555,6 +5948,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &372485393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 372485390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &386871076
 GameObject:
   m_ObjectHideFlags: 0
@@ -5632,6 +6046,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 387797170}
   - 82: {fileID: 387797171}
+  - 114: {fileID: 387797172}
   m_Layer: 0
   m_Name: tree56
   m_TagString: Untagged
@@ -5728,6 +6143,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &387797172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 387797169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &389859397
 GameObject:
   m_ObjectHideFlags: 0
@@ -6054,6 +6490,153 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 410503318}
   m_Mesh: {fileID: 4300254, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
+--- !u!1 &418920176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100008, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 418920178}
+  - 95: {fileID: 418920177}
+  - 82: {fileID: 418920180}
+  - 114: {fileID: 418920179}
+  m_Layer: 0
+  m_Name: Torn cloth Bellringer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!95 &418920177
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 9500000, guid: 84c81489186df8744bf84359c7899ed5,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 418920176}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!4 &418920178
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400008, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 418920176}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 41.28, y: -0.072, z: -16.28}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 702578085}
+  - {fileID: 1099119453}
+  - {fileID: 1816467683}
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+--- !u!114 &418920179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 418920176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: c636c6cfad7a34d4685f73327b65c1b1, type: 3}
+  activated: {fileID: 0}
+  enkNames: {fileID: 8300000, guid: dd2b869d0e9139d4baa87aec444c8ee0, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 0
+  enkNameObject: 0
+  player: {fileID: 0}
+--- !u!82 &418920180
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 418920176}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 1
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0.1
+  MaxDistance: 5
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &421353826
 GameObject:
   m_ObjectHideFlags: 0
@@ -6063,6 +6646,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 421353827}
   - 82: {fileID: 421353828}
+  - 114: {fileID: 421353829}
   m_Layer: 0
   m_Name: tree20
   m_TagString: Untagged
@@ -6159,6 +6743,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &421353829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 421353826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &422596037
 GameObject:
   m_ObjectHideFlags: 0
@@ -6168,6 +6773,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 422596038}
   - 82: {fileID: 422596039}
+  - 114: {fileID: 422596040}
   m_Layer: 0
   m_Name: tree32
   m_TagString: Untagged
@@ -6264,6 +6870,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &422596040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 422596037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &423160941
 GameObject:
   m_ObjectHideFlags: 0
@@ -6294,7 +6921,7 @@ Transform:
   - {fileID: 1971782222}
   - {fileID: 2125679038}
   m_Father: {fileID: 196406909}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!65 &423160944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7001,7 +7628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: 539787f36b3f0594db3e5af393baeaa3, type: 3}
   introClip: {fileID: 8300000, guid: be48d6dcaf19bda4d99994248146f08f, type: 3}
-  clothRip: {fileID: 0}
+  clothRip: {fileID: 8300000, guid: c636c6cfad7a34d4685f73327b65c1b1, type: 3}
   lookAtTime: 0
   MovingClueLocation: {fileID: 0}
   introPlayed: 0
@@ -7251,6 +7878,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 520213633}
   - 82: {fileID: 520213634}
+  - 114: {fileID: 520213635}
   m_Layer: 0
   m_Name: tree49
   m_TagString: Untagged
@@ -7347,6 +7975,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &520213635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 520213632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &532752226
 GameObject:
   m_ObjectHideFlags: 0
@@ -7986,7 +8635,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 196406909}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!23 &554488302
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8210,7 +8859,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012831788928, guid: 389cf0517874829488a3085d588f9d5a, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114000014236828232, guid: 389cf0517874829488a3085d588f9d5a,
         type: 2}
@@ -8688,51 +9337,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!1 &574491224
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100018, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 574491225}
-  - 65: {fileID: 574491227}
-  m_Layer: 0
-  m_Name: drawBridge
-  m_TagString: BUILDING
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
---- !u!4 &574491225
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400018, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 574491224}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 139874481}
-  - {fileID: 1376688508}
-  - {fileID: 34260269}
-  - {fileID: 1682559340}
-  m_Father: {fileID: 196406909}
-  m_RootOrder: 6
---- !u!65 &574491227
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 574491224}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &574649674
 GameObject:
   m_ObjectHideFlags: 0
@@ -8742,6 +9346,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 574649675}
   - 82: {fileID: 574649676}
+  - 114: {fileID: 574649677}
   m_Layer: 0
   m_Name: tree63
   m_TagString: Untagged
@@ -8838,6 +9443,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &574649677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 574649674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &578637663
 GameObject:
   m_ObjectHideFlags: 0
@@ -8847,6 +9473,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 578637664}
   - 82: {fileID: 578637665}
+  - 114: {fileID: 578637666}
   m_Layer: 0
   m_Name: tree65
   m_TagString: Untagged
@@ -8943,6 +9570,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &578637666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 578637663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &596197673
 GameObject:
   m_ObjectHideFlags: 0
@@ -9360,6 +10008,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 624744494}
   - 82: {fileID: 624744495}
+  - 114: {fileID: 624744496}
   m_Layer: 0
   m_Name: tree16
   m_TagString: Untagged
@@ -9456,6 +10105,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &624744496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 624744493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &630554290
 GameObject:
   m_ObjectHideFlags: 0
@@ -9465,6 +10135,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 630554291}
   - 82: {fileID: 630554292}
+  - 114: {fileID: 630554293}
   m_Layer: 0
   m_Name: tree3
   m_TagString: Untagged
@@ -9561,6 +10232,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &630554293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 630554290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &632591489
 GameObject:
   m_ObjectHideFlags: 0
@@ -9651,6 +10343,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 638728896}
   - 82: {fileID: 638728897}
+  - 114: {fileID: 638728898}
   m_Layer: 0
   m_Name: tree54
   m_TagString: Untagged
@@ -9747,6 +10440,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &638728898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 638728895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &640853350
 GameObject:
   m_ObjectHideFlags: 0
@@ -9892,6 +10606,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 661466638}
   - 82: {fileID: 661466639}
+  - 114: {fileID: 661466640}
   m_Layer: 0
   m_Name: tree21
   m_TagString: Untagged
@@ -9988,6 +10703,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &661466640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 661466637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!114 &661525098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10002,7 +10738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: 47f58142ec07e514eb0f36043afb8d56, type: 3}
   introClip: {fileID: 8300000, guid: ea3151b31332c6446bc8bcda6206276c, type: 3}
-  clothRip: {fileID: 0}
+  clothRip: {fileID: 8300000, guid: 24b21af3080097447b5746415ba44afa, type: 3}
   lookAtTime: 0
   MovingClueLocation: {fileID: 0}
   introPlayed: 0
@@ -10017,6 +10753,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 667559930}
   - 82: {fileID: 667559931}
+  - 114: {fileID: 667559932}
   m_Layer: 0
   m_Name: tree55
   m_TagString: Untagged
@@ -10113,6 +10850,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &667559932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667559929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &668350826
 GameObject:
   m_ObjectHideFlags: 0
@@ -10195,7 +10953,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: ecbe5258db35d834c91e90026f1193c7, type: 3}
   introClip: {fileID: 8300000, guid: bd22ed2ad3e157c47afd96ad47136ca2, type: 3}
-  clothRip: {fileID: 0}
+  clothRip: {fileID: 8300000, guid: 52bcfaf29d0d9e645afc0656902c7a78, type: 3}
   lookAtTime: 0
   MovingClueLocation: {fileID: 1427831502}
   introPlayed: 0
@@ -10651,6 +11409,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 693142341}
   - 82: {fileID: 693142342}
+  - 114: {fileID: 693142343}
   m_Layer: 0
   m_Name: tree13
   m_TagString: Untagged
@@ -10747,6 +11506,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &693142343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 693142340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &695166985
 GameObject:
   m_ObjectHideFlags: 0
@@ -10861,6 +11641,35 @@ Transform:
   - {fileID: 758833647}
   m_Father: {fileID: 1941635863}
   m_RootOrder: 0
+--- !u!1 &702578084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 702578085}
+  m_Layer: 0
+  m_Name: polySurface14
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &702578085
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 702578084}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 1.0074388, z: 0.033107467}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1831271147}
+  m_Father: {fileID: 418920178}
+  m_RootOrder: 0
 --- !u!1 &705955395
 GameObject:
   m_ObjectHideFlags: 0
@@ -10938,6 +11747,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 715541866}
   - 82: {fileID: 715541867}
+  - 114: {fileID: 715541868}
   m_Layer: 0
   m_Name: tree60
   m_TagString: Untagged
@@ -11034,6 +11844,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &715541868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 715541865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &718978168
 GameObject:
   m_ObjectHideFlags: 0
@@ -11751,6 +12582,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 772424590}
   - 82: {fileID: 772424591}
+  - 114: {fileID: 772424592}
   m_Layer: 0
   m_Name: tree6
   m_TagString: Untagged
@@ -11847,6 +12679,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &772424592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 772424589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &773341890
 GameObject:
   m_ObjectHideFlags: 0
@@ -11939,7 +12792,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 778885891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.0551, y: -0.0592, z: 0.1562}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -12013,6 +12866,52 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 784453248}
   m_Mesh: {fileID: 4300130, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
+--- !u!1001 &788085895
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 5f871a45e863746478516f179a2603d3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 41.897625
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5f871a45e863746478516f179a2603d3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0018
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5f871a45e863746478516f179a2603d3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15.5564
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5f871a45e863746478516f179a2603d3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.71013105
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5f871a45e863746478516f179a2603d3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5f871a45e863746478516f179a2603d3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5f871a45e863746478516f179a2603d3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70406955
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5f871a45e863746478516f179a2603d3, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 5f871a45e863746478516f179a2603d3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.510994
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5f871a45e863746478516f179a2603d3, type: 3}
+  m_IsPrefabParent: 0
 --- !u!1 &791021290
 GameObject:
   m_ObjectHideFlags: 0
@@ -12022,6 +12921,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 791021291}
   - 82: {fileID: 791021292}
+  - 114: {fileID: 791021293}
   m_Layer: 0
   m_Name: tree51
   m_TagString: Untagged
@@ -12118,6 +13018,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &791021293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 791021290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &793041353
 GameObject:
   m_ObjectHideFlags: 0
@@ -12907,8 +13828,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Idle: {fileID: 0}
-  activated: {fileID: 0}
+  Idle: {fileID: 8300000, guid: 7ce5bf4d2e217a343a8dcb753347fbcf, type: 3}
+  activated: {fileID: 8300000, guid: 2a16ae582b12bc24c9e5de9ecf67c944, type: 3}
   enkNames: {fileID: 8300000, guid: acfd6c9d153f42e498f80bed9e648f3c, type: 3}
   timesPlayed: 0
   maxTimesPlayed: 0
@@ -12985,6 +13906,34 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 892527721}
   m_Mesh: {fileID: 4300330, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
+--- !u!1 &894692396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100012, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 894692397}
+  m_Layer: 0
+  m_Name: transform2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &894692397
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400012, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 894692396}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.18480793, y: -1.8060218, z: 0.1173521}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1099119453}
+  m_RootOrder: 0
 --- !u!1 &902441175
 GameObject:
   m_ObjectHideFlags: 0
@@ -13198,6 +14147,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 909318933}
   - 82: {fileID: 909318934}
+  - 114: {fileID: 909318935}
   m_Layer: 0
   m_Name: tree68
   m_TagString: Untagged
@@ -13294,6 +14244,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &909318935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 909318932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &926964354
 GameObject:
   m_ObjectHideFlags: 0
@@ -13401,6 +14372,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 932472544}
   - 82: {fileID: 932472545}
+  - 114: {fileID: 932472546}
   m_Layer: 0
   m_Name: tree9
   m_TagString: Untagged
@@ -13497,6 +14469,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &932472546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 932472543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &933076458
 GameObject:
   m_ObjectHideFlags: 0
@@ -13627,7 +14620,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &938139588
 GameObject:
   m_ObjectHideFlags: 0
@@ -13794,7 +14787,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 196406909}
-  m_RootOrder: 10
+  m_RootOrder: 9
 --- !u!23 &957000485
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14007,6 +15000,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 971149045}
   - 82: {fileID: 971149046}
+  - 114: {fileID: 971149047}
   m_Layer: 0
   m_Name: tree36
   m_TagString: Untagged
@@ -14103,6 +15097,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &971149047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 971149044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &978065867
 GameObject:
   m_ObjectHideFlags: 0
@@ -14133,7 +15148,7 @@ Transform:
   - {fileID: 2006251551}
   - {fileID: 319731044}
   m_Father: {fileID: 196406909}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!65 &978065870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14223,6 +15238,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1003028108}
   - 82: {fileID: 1003028109}
+  - 114: {fileID: 1003028110}
   m_Layer: 0
   m_Name: tree15
   m_TagString: Untagged
@@ -14319,6 +15335,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1003028110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1003028107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1007091989
 GameObject:
   m_ObjectHideFlags: 0
@@ -14328,6 +15365,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1007091990}
   - 82: {fileID: 1007091991}
+  - 114: {fileID: 1007091992}
   m_Layer: 0
   m_Name: tree50
   m_TagString: Untagged
@@ -14424,6 +15462,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1007091992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007091989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1008934374
 GameObject:
   m_ObjectHideFlags: 0
@@ -14612,6 +15671,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1015490263}
   - 82: {fileID: 1015490264}
+  - 114: {fileID: 1015490265}
   m_Layer: 0
   m_Name: tree19
   m_TagString: Untagged
@@ -14708,6 +15768,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1015490265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1015490262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1022219034
 GameObject:
   m_ObjectHideFlags: 0
@@ -14717,6 +15798,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1022219035}
   - 82: {fileID: 1022219036}
+  - 114: {fileID: 1022219037}
   m_Layer: 0
   m_Name: tree44
   m_TagString: Untagged
@@ -14813,6 +15895,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1022219037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1022219034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1022913506
 GameObject:
   m_ObjectHideFlags: 0
@@ -14822,6 +15925,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1022913507}
   - 82: {fileID: 1022913508}
+  - 114: {fileID: 1022913509}
   m_Layer: 0
   m_Name: tree47
   m_TagString: Untagged
@@ -14918,6 +16022,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1022913509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1022913506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1028433305
 GameObject:
   m_ObjectHideFlags: 0
@@ -14927,6 +16052,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1028433306}
   - 82: {fileID: 1028433307}
+  - 114: {fileID: 1028433308}
   m_Layer: 0
   m_Name: tree1
   m_TagString: Untagged
@@ -15023,6 +16149,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1028433308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1028433305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1038183134
 GameObject:
   m_ObjectHideFlags: 0
@@ -15100,6 +16247,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1042181555}
   - 82: {fileID: 1042181556}
+  - 114: {fileID: 1042181557}
   m_Layer: 0
   m_Name: tree17
   m_TagString: Untagged
@@ -15196,6 +16344,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1042181557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1042181554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1042579875
 GameObject:
   m_ObjectHideFlags: 0
@@ -15273,6 +16442,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1051485594}
   - 82: {fileID: 1051485595}
+  - 114: {fileID: 1051485596}
   m_Layer: 0
   m_Name: tree22
   m_TagString: Untagged
@@ -15369,6 +16539,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1051485596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1051485593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1053007742
 GameObject:
   m_ObjectHideFlags: 0
@@ -15403,7 +16594,7 @@ Transform:
   - {fileID: 676588122}
   - {fileID: 1548020027}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &1066987957
 GameObject:
   m_ObjectHideFlags: 0
@@ -15502,6 +16693,105 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1070178769}
   m_Mesh: {fileID: 4300338, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
+--- !u!1 &1077201197 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100000, guid: 5f871a45e863746478516f179a2603d3, type: 3}
+  m_PrefabInternal: {fileID: 788085895}
+--- !u!114 &1077201198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1077201197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: cff741c5dacb29d46bfc45eb14fdebb8, type: 3}
+  activated: {fileID: 0}
+  enkNames: {fileID: 8300000, guid: dd2b869d0e9139d4baa87aec444c8ee0, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 0
+  player: {fileID: 0}
+--- !u!82 &1077201199
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1077201197}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 1
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0.1
+  MaxDistance: 5
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1077240056
 GameObject:
   m_ObjectHideFlags: 0
@@ -15678,6 +16968,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1091876684}
   - 82: {fileID: 1091876685}
+  - 114: {fileID: 1091876686}
   m_Layer: 0
   m_Name: tree67
   m_TagString: Untagged
@@ -15774,6 +17065,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1091876686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1091876683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1091951300
 GameObject:
   m_ObjectHideFlags: 0
@@ -15910,6 +17222,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1093468214}
   m_Mesh: {fileID: 4300368, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
+--- !u!1 &1099119452
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100002, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1099119453}
+  m_Layer: 0
+  m_Name: polySurface15
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1099119453
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400002, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099119452}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.43118268, y: 1.8060218, z: -0.10172513}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 894692397}
+  m_Father: {fileID: 418920178}
+  m_RootOrder: 1
 --- !u!1 &1099561008
 GameObject:
   m_ObjectHideFlags: 0
@@ -15919,6 +17260,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1099561009}
   - 82: {fileID: 1099561010}
+  - 114: {fileID: 1099561011}
   m_Layer: 0
   m_Name: tree29
   m_TagString: Untagged
@@ -16015,6 +17357,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1099561011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099561008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1104358384
 GameObject:
   m_ObjectHideFlags: 0
@@ -16165,7 +17528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: 25d7743082b1c844385c624a958f643a, type: 3}
   introClip: {fileID: 8300000, guid: 25f69591459845647a114da6fe3b1f61, type: 3}
-  clothRip: {fileID: 0}
+  clothRip: {fileID: 8300000, guid: e3322972ee4ab384aae84e7042383c70, type: 3}
   lookAtTime: 0
   MovingClueLocation: {fileID: 0}
   introPlayed: 0
@@ -16180,6 +17543,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1121655741}
   - 82: {fileID: 1121655742}
+  - 114: {fileID: 1121655743}
   m_Layer: 0
   m_Name: tree8
   m_TagString: Untagged
@@ -16276,6 +17640,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1121655743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1121655740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1129091167
 GameObject:
   m_ObjectHideFlags: 0
@@ -16285,6 +17670,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1129091168}
   - 82: {fileID: 1129091169}
+  - 114: {fileID: 1129091170}
   m_Layer: 0
   m_Name: tree40
   m_TagString: Untagged
@@ -16381,6 +17767,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1129091170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1129091167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1129461913
 GameObject:
   m_ObjectHideFlags: 0
@@ -17185,7 +18592,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 196406909}
-  m_RootOrder: 15
+  m_RootOrder: 14
 --- !u!23 &1214816933
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17233,7 +18640,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9fec014a624010946b29b28747769017, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ed02bb42c89d9f74db6b7ac4a3396f19, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -17340,6 +18747,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1221167673}
   - 82: {fileID: 1221167674}
+  - 114: {fileID: 1221167675}
   m_Layer: 0
   m_Name: tree39
   m_TagString: Untagged
@@ -17436,6 +18844,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1221167675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1221167672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1230746603
 GameObject:
   m_ObjectHideFlags: 0
@@ -17873,6 +19302,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1253235620}
   - 82: {fileID: 1253235621}
+  - 114: {fileID: 1253235622}
   m_Layer: 0
   m_Name: tree53
   m_TagString: Untagged
@@ -17969,6 +19399,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1253235622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1253235619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1254540865
 GameObject:
   m_ObjectHideFlags: 0
@@ -18232,6 +19683,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1263352735}
   - 82: {fileID: 1263352736}
+  - 114: {fileID: 1263352737}
   m_Layer: 0
   m_Name: tree31
   m_TagString: Untagged
@@ -18328,6 +19780,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1263352737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1263352734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1263394794
 GameObject:
   m_ObjectHideFlags: 0
@@ -18757,6 +20230,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1314807341}
   - 82: {fileID: 1314807342}
+  - 114: {fileID: 1314807343}
   m_Layer: 0
   m_Name: tree66
   m_TagString: Untagged
@@ -18853,6 +20327,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1314807343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1314807340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1319066029
 GameObject:
   m_ObjectHideFlags: 0
@@ -18893,6 +20388,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1321841910}
   - 82: {fileID: 1321841911}
+  - 114: {fileID: 1321841912}
   m_Layer: 0
   m_Name: tree33
   m_TagString: Untagged
@@ -18989,6 +20485,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1321841912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1321841909}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1329678419
 GameObject:
   m_ObjectHideFlags: 0
@@ -19914,7 +21431,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400132, guid: 9bebc30160a161243beaa9dee659d41a, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9bebc30160a161243beaa9dee659d41a, type: 3}
@@ -20214,13 +21731,13 @@ Transform:
   m_PrefabParentObject: {fileID: 400022, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1376688507}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.706047, y: 0.8451431, z: -42.03563}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 574491225}
-  m_RootOrder: 1
+  m_Father: {fileID: 19220681}
+  m_RootOrder: 2
 --- !u!23 &1376688509
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20336,6 +21853,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1381288784}
   - 82: {fileID: 1381288785}
+  - 114: {fileID: 1381288786}
   m_Layer: 0
   m_Name: tree26
   m_TagString: Untagged
@@ -20432,6 +21950,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1381288786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1381288783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1383304629
 GameObject:
   m_ObjectHideFlags: 0
@@ -20900,6 +22439,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1417782686}
   - 82: {fileID: 1417782687}
+  - 114: {fileID: 1417782688}
   m_Layer: 0
   m_Name: tree27
   m_TagString: Untagged
@@ -20996,6 +22536,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1417782688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1417782685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1418736752
 GameObject:
   m_ObjectHideFlags: 0
@@ -21005,6 +22566,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1418736753}
   - 82: {fileID: 1418736754}
+  - 114: {fileID: 1418736755}
   m_Layer: 0
   m_Name: tree34
   m_TagString: Untagged
@@ -21101,6 +22663,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1418736755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1418736752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1422565727
 GameObject:
   m_ObjectHideFlags: 0
@@ -21325,48 +22908,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1422653259}
   m_Mesh: {fileID: 4300358, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
---- !u!1001 &1425847441
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400008, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 41.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.017
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -13.189
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400008, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
-  m_IsPrefabParent: 0
 --- !u!1 &1426634225
 GameObject:
   m_ObjectHideFlags: 0
@@ -21647,6 +23188,74 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1450002149}
   m_Mesh: {fileID: 4300146, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
+--- !u!1 &1460629702
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100006, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1460629703}
+  - 33: {fileID: 1460629705}
+  - 23: {fileID: 1460629704}
+  m_Layer: 0
+  m_Name: polySurface17
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1460629703
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400006, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1460629702}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.43118268, y: 1.8060218, z: -0.10172513}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1816467683}
+  m_RootOrder: 0
+--- !u!23 &1460629704
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: 84c81489186df8744bf84359c7899ed5,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1460629702}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 7bca086b71a2c4743a3aa1614a517a08, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1460629705
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: 84c81489186df8744bf84359c7899ed5,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1460629702}
+  m_Mesh: {fileID: 4300000, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
 --- !u!1 &1464729866
 GameObject:
   m_ObjectHideFlags: 0
@@ -21865,6 +23474,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1473923737}
   - 82: {fileID: 1473923738}
+  - 114: {fileID: 1473923739}
   m_Layer: 0
   m_Name: tree37
   m_TagString: Untagged
@@ -21961,6 +23571,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1473923739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1473923736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1477074237
 GameObject:
   m_ObjectHideFlags: 0
@@ -22038,6 +23669,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1477360053}
   - 82: {fileID: 1477360054}
+  - 114: {fileID: 1477360055}
   m_Layer: 0
   m_Name: tree62
   m_TagString: Untagged
@@ -22134,6 +23766,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1477360055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1477360052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1479335511
 GameObject:
   m_ObjectHideFlags: 0
@@ -22189,6 +23842,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1484685726}
   - 82: {fileID: 1484685727}
+  - 114: {fileID: 1484685728}
   m_Layer: 0
   m_Name: tree14
   m_TagString: Untagged
@@ -22285,6 +23939,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1484685728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1484685725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1486023330
 GameObject:
   m_ObjectHideFlags: 0
@@ -22663,13 +24338,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 0.93552506
+  m_Height: 1.8
   m_Radius: 0.4043425
   m_SlopeLimit: 180
   m_StepOffset: 0
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!114 &1541146321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22820,6 +24495,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1549344551}
   - 82: {fileID: 1549344552}
+  - 114: {fileID: 1549344553}
   m_Layer: 0
   m_Name: tree45
   m_TagString: Untagged
@@ -22916,6 +24592,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1549344553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1549344550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1576793342
 GameObject:
   m_ObjectHideFlags: 0
@@ -22925,6 +24622,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1576793343}
   - 82: {fileID: 1576793344}
+  - 114: {fileID: 1576793345}
   m_Layer: 0
   m_Name: tree10
   m_TagString: Untagged
@@ -23021,6 +24719,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1576793345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1576793342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1577914624
 GameObject:
   m_ObjectHideFlags: 0
@@ -23163,7 +24882,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1583496800}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00999999, y: -0.91218626, z: 0.022089958}
+  m_LocalPosition: {x: -0.00999999, y: -1.44, z: 0.022089958}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -23444,7 +25163,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &1625575416
 GameObject:
   m_ObjectHideFlags: 0
@@ -23522,6 +25241,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1652999484}
   - 82: {fileID: 1652999485}
+  - 114: {fileID: 1652999486}
   m_Layer: 0
   m_Name: tree35
   m_TagString: Untagged
@@ -23618,6 +25338,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1652999486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1652999483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1656680582
 GameObject:
   m_ObjectHideFlags: 0
@@ -23946,8 +25687,9 @@ GameObject:
   - 4: {fileID: 1682559340}
   - 33: {fileID: 1682559342}
   - 23: {fileID: 1682559341}
+  - 65: {fileID: 1682559343}
   m_Layer: 0
-  m_Name: drawBridgeUp
+  m_Name: drawBridge1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23959,13 +25701,13 @@ Transform:
   m_PrefabParentObject: {fileID: 400026, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1682559339}
-  m_LocalRotation: {x: -0.63774157, y: -0, z: -0, w: 0.7702505}
-  m_LocalPosition: {x: 37.60146, y: -0.61, z: -29.16}
+  m_LocalRotation: {x: -0.58853704, y: -0, z: -0, w: 0.8084703}
+  m_LocalPosition: {x: -3.1045876, y: -1.4551435, z: 12.875633}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: -79.22401, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -72.083, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 574491225}
-  m_RootOrder: 3
+  m_Father: {fileID: 19220681}
+  m_RootOrder: 0
 --- !u!23 &1682559341
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -24004,6 +25746,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1682559339}
   m_Mesh: {fileID: 4300486, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
+--- !u!65 &1682559343
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1682559339}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.4518585, y: 12.600887, z: 0.49690056}
+  m_Center: {x: 0.023098946, y: 6.0534143, z: -0.00000010430813}
 --- !u!1 &1694248830
 GameObject:
   m_ObjectHideFlags: 0
@@ -24312,6 +26066,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1722440367}
   - 82: {fileID: 1722440368}
+  - 114: {fileID: 1722440369}
   m_Layer: 0
   m_Name: tree30
   m_TagString: Untagged
@@ -24408,6 +26163,55 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1722440369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1722440366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
+--- !u!1 &1725914512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1725914513}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1725914513
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725914512}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 139874481}
+  m_RootOrder: 0
 --- !u!1 &1729458555
 GameObject:
   m_ObjectHideFlags: 0
@@ -24436,7 +26240,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1729458555}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0072072744, y: -1, z: -0.04138896}
+  m_LocalPosition: {x: 0.0072072744, y: -1.451, z: -0.04138896}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -25319,6 +27123,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1816220535}
   - 82: {fileID: 1816220536}
+  - 114: {fileID: 1816220537}
   m_Layer: 0
   m_Name: tree69
   m_TagString: Untagged
@@ -25415,6 +27220,56 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1816220537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816220534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
+--- !u!1 &1816467682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100004, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1816467683}
+  m_Layer: 0
+  m_Name: polySurface16
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1816467683
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400004, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1816467682}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 1460629703}
+  m_Father: {fileID: 418920178}
+  m_RootOrder: 2
 --- !u!114 &1819772532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25429,7 +27284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: 147b25c33a2806a4d86f1d5f73a84028, type: 3}
   introClip: {fileID: 8300000, guid: 5e7c17ed1c697be468a83bafa937a704, type: 3}
-  clothRip: {fileID: 0}
+  clothRip: {fileID: 8300000, guid: cff741c5dacb29d46bfc45eb14fdebb8, type: 3}
   lookAtTime: 0
   MovingClueLocation: {fileID: 53588292}
   introPlayed: 0
@@ -25444,6 +27299,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1828396535}
   - 82: {fileID: 1828396536}
+  - 114: {fileID: 1828396537}
   m_Layer: 0
   m_Name: tree61
   m_TagString: Untagged
@@ -25540,6 +27396,55 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1828396537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1828396534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
+--- !u!1 &1831271146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100010, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1831271147}
+  m_Layer: 0
+  m_Name: transform1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1831271147
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400010, guid: 84c81489186df8744bf84359c7899ed5, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1831271146}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: -1.0074388, z: -0.033107467}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 702578085}
+  m_RootOrder: 0
 --- !u!1 &1844395346
 GameObject:
   m_ObjectHideFlags: 0
@@ -25739,7 +27644,7 @@ Transform:
   m_Children:
   - {fileID: 5001624}
   m_Father: {fileID: 196406909}
-  m_RootOrder: 19
+  m_RootOrder: 18
 --- !u!23 &1852192353
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26845,7 +28750,7 @@ Transform:
   - {fileID: 574036135}
   - {fileID: 847287355}
   m_Father: {fileID: 196406909}
-  m_RootOrder: 18
+  m_RootOrder: 17
 --- !u!65 &1894104518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27071,6 +28976,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1909943240}
   - 82: {fileID: 1909943241}
+  - 114: {fileID: 1909943242}
   m_Layer: 0
   m_Name: tree
   m_TagString: Untagged
@@ -27167,6 +29073,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1909943242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1909943239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1916478161
 GameObject:
   m_ObjectHideFlags: 0
@@ -27244,6 +29171,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1918155484}
   - 82: {fileID: 1918155485}
+  - 114: {fileID: 1918155486}
   m_Layer: 0
   m_Name: tree42
   m_TagString: Untagged
@@ -27340,6 +29268,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1918155486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1918155483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1919155101
 GameObject:
   m_ObjectHideFlags: 0
@@ -27553,6 +29502,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1926037166}
   - 82: {fileID: 1926037167}
+  - 114: {fileID: 1926037168}
   m_Layer: 0
   m_Name: tree28
   m_TagString: Untagged
@@ -27649,6 +29599,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1926037168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1926037165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1931213693
 GameObject:
   m_ObjectHideFlags: 0
@@ -27658,6 +29629,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1931213694}
   - 82: {fileID: 1931213695}
+  - 114: {fileID: 1931213696}
   m_Layer: 0
   m_Name: tree41
   m_TagString: Untagged
@@ -27754,6 +29726,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1931213696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1931213693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1931965116
 GameObject:
   m_ObjectHideFlags: 0
@@ -27971,7 +29964,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 205555919d098ed45b3e8fdc01a7395b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b53dbac84da46f9409a997c5f7106137, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -28047,9 +30040,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Idle: {fileID: 0}
-  activated: {fileID: 0}
-  enkNames: {fileID: 0}
+  Idle: {fileID: 8300000, guid: b53dbac84da46f9409a997c5f7106137, type: 3}
+  activated: {fileID: 8300000, guid: b53dbac84da46f9409a997c5f7106137, type: 3}
+  enkNames: {fileID: 8300000, guid: 75b187d5fa3c46a46b323753d5dc556f, type: 3}
   timesPlayed: 0
   maxTimesPlayed: 0
   timeStamp: 0
@@ -28214,6 +30207,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1955974638}
   - 82: {fileID: 1955974639}
+  - 114: {fileID: 1955974640}
   m_Layer: 0
   m_Name: tree43
   m_TagString: Untagged
@@ -28310,6 +30304,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1955974640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1955974637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1961249103
 GameObject:
   m_ObjectHideFlags: 0
@@ -28387,6 +30402,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1962174065}
   - 82: {fileID: 1962174066}
+  - 114: {fileID: 1962174067}
   m_Layer: 0
   m_Name: tree52
   m_TagString: Untagged
@@ -28483,6 +30499,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &1962174067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1962174064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &1965742442
 GameObject:
   m_ObjectHideFlags: 0
@@ -28845,15 +30882,15 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.224
+  m_Volume: 0.631
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Spatialize: 0
-  Priority: 208
+  Spatialize: 1
+  Priority: 168
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 90
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -28936,7 +30973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Idle: {fileID: 0}
   activated: {fileID: 0}
-  enkNames: {fileID: 0}
+  enkNames: {fileID: 8300000, guid: 6e5505da926a1d142a01f7b0cb4f6e54, type: 3}
   timesPlayed: 0
   maxTimesPlayed: 0
   timeStamp: 0
@@ -29751,6 +31788,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2041481588}
   - 82: {fileID: 2041481589}
+  - 114: {fileID: 2041481590}
   m_Layer: 0
   m_Name: tree24
   m_TagString: Untagged
@@ -29847,6 +31885,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &2041481590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2041481587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &2042985946
 GameObject:
   m_ObjectHideFlags: 0
@@ -30085,7 +32144,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &2076930942
 GameObject:
   m_ObjectHideFlags: 0
@@ -30319,7 +32378,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 602b3ebeed176964d91d66a95c1e4c26, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -30327,9 +32386,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 100
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -30674,6 +32733,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2110176544}
   - 82: {fileID: 2110176545}
+  - 114: {fileID: 2110176546}
   m_Layer: 0
   m_Name: tree2
   m_TagString: Untagged
@@ -30770,6 +32830,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &2110176546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2110176543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Idle: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  timeStamp: 0
+  isClue: 0
+  isActivated: 1
+  enkNameObject: 1
+  player: {fileID: 0}
 --- !u!1 &2117604791
 GameObject:
   m_ObjectHideFlags: 0
@@ -30800,7 +32881,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 196406909}
-  m_RootOrder: 14
+  m_RootOrder: 13
 --- !u!23 &2117604793
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -30881,7 +32962,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 196406909}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!23 &2119077473
 MeshRenderer:
   m_ObjectHideFlags: 0

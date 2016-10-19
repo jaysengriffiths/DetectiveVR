@@ -32,14 +32,14 @@ public class DragonHouse_sounds : MonoBehaviour
             else if (i == 1)
             {
                 sourceDragonH.PlayOneShot(Dragon2_4);
-                //Debug.Log(1);
+               //Debug.Log(1);
                 yield return new WaitForSeconds(9);
             }
 
             else if (i == 2)
             {
                 sourceDragonH.PlayOneShot(Dragon3_6);
-                //Debug.Log(2);
+               //Debug.Log(2);
                 yield return new WaitForSeconds(11);
             }
           }
