@@ -20,7 +20,7 @@ public class Kathy_witchControls : MonoBehaviour
             anim.SetTrigger("isStartingToTalk");
         }
 
-        if (Input.GetKeyDown(KeyCode.H))  // no handcuff to talk transition, so stay in handcuff pose while giving or being arrested
+        if (Input.GetKeyDown(KeyCode.H))  // no handcuff-to-talk transition, so stay in handcuff pose while giving or being arrested
         {
             anim.SetTrigger("isPuttingOutHands");
         }
