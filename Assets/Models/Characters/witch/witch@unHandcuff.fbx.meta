@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: 222a432d91058a245a91fbe64c370c21
-timeCreated: 1476760818
-licenseType: Free
+guid: 91a40769916cc4d43964c63a8c059706
+timeCreated: 1476845946
+licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
@@ -27,32 +27,31 @@ ModelImporter:
     100038: elbow_R_JNT
     100040: elbow_R_LOC
     100042: elbow_R_LOC_GRP
-    100044: foot_L_CTRL_GRP
-    100046: foot_R_CTRL_GRP
-    100048: hand_L_JNT
-    100050: hand_R_JNT
-    100052: head_CTRL
-    100054: head_CTRL_GRP
-    100056: head_END
-    100058: head_JNT
-    100060: knee_L_CTRL_GRP
-    100062: knee_R_CTRL_GRP
-    100064: neck_CTRL
-    100066: neck_CTRL_GRP
-    100068: neck_JNT
-    100070: RIG_Global_CTRL
-    100072: root_CTRL
-    100074: root_CTRL_GRP
-    100076: root_JNT
-    100078: upper_L_JNT
-    100080: upper_R_JNT
-    100082: //RootNode
-    100084: witch_lowPoly
-    100086: witch_mesh
-    100088: witch_rig_grp
-    100090: witchesHat
-    100092: wrist_L_JNT
-    100094: wrist_R_JNT
+    100044: female_rig_all_GRP
+    100046: foot_L_CTRL_GRP
+    100048: foot_R_CTRL_GRP
+    100050: hand_L_JNT
+    100052: hand_R_JNT
+    100054: head_CTRL
+    100056: head_CTRL_GRP
+    100058: head_END
+    100060: head_JNT
+    100062: knee_L_CTRL_GRP
+    100064: knee_R_CTRL_GRP
+    100066: neck_CTRL
+    100068: neck_CTRL_GRP
+    100070: neck_JNT
+    100072: RIG_Global_CTRL
+    100074: root_CTRL
+    100076: root_CTRL_GRP
+    100078: root_JNT
+    100080: upper_L_JNT
+    100082: upper_R_JNT
+    100084: //RootNode
+    100086: witch_lowPoly
+    100088: witchesHat
+    100090: wrist_L_JNT
+    100092: wrist_R_JNT
     400000: arm_L_CTRL
     400002: arm_L_CTRL_GRP
     400004: arm_L_IKH
@@ -75,35 +74,34 @@ ModelImporter:
     400038: elbow_R_JNT
     400040: elbow_R_LOC
     400042: elbow_R_LOC_GRP
-    400044: foot_L_CTRL_GRP
-    400046: foot_R_CTRL_GRP
-    400048: hand_L_JNT
-    400050: hand_R_JNT
-    400052: head_CTRL
-    400054: head_CTRL_GRP
-    400056: head_END
-    400058: head_JNT
-    400060: knee_L_CTRL_GRP
-    400062: knee_R_CTRL_GRP
-    400064: neck_CTRL
-    400066: neck_CTRL_GRP
-    400068: neck_JNT
-    400070: RIG_Global_CTRL
-    400072: root_CTRL
-    400074: root_CTRL_GRP
-    400076: root_JNT
-    400078: upper_L_JNT
-    400080: upper_R_JNT
-    400082: //RootNode
-    400084: witch_lowPoly
-    400086: witch_mesh
-    400088: witch_rig_grp
-    400090: witchesHat
-    400092: wrist_L_JNT
-    400094: wrist_R_JNT
+    400044: female_rig_all_GRP
+    400046: foot_L_CTRL_GRP
+    400048: foot_R_CTRL_GRP
+    400050: hand_L_JNT
+    400052: hand_R_JNT
+    400054: head_CTRL
+    400056: head_CTRL_GRP
+    400058: head_END
+    400060: head_JNT
+    400062: knee_L_CTRL_GRP
+    400064: knee_R_CTRL_GRP
+    400066: neck_CTRL
+    400068: neck_CTRL_GRP
+    400070: neck_JNT
+    400072: RIG_Global_CTRL
+    400074: root_CTRL
+    400076: root_CTRL_GRP
+    400078: root_JNT
+    400080: upper_L_JNT
+    400082: upper_R_JNT
+    400084: //RootNode
+    400086: witch_lowPoly
+    400088: witchesHat
+    400090: wrist_L_JNT
+    400092: wrist_R_JNT
     4300000: witch_lowPoly
     4300002: witchesHat
-    7400000: Take 001
+    7400000: unHandcuff
     9500000: //RootNode
     13700000: witch_lowPoly
     13700002: witchesHat
@@ -127,7 +125,129 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: unHandcuff
+      takeName: Take 001
+      firstFrame: 291
+      lastFrame: 309
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: female_rig_all_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/arm_L_CTRL_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/arm_L_CTRL_GRP/arm_L_CTRL
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/arm_L_CTRL_GRP/arm_L_CTRL/arm_L_IKH
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/arm_R_CTRL_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/arm_R_CTRL_GRP/arm_R_CTRL
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/arm_R_CTRL_GRP/arm_R_CTRL/arm_R_IKH
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/elbow_L_CTRL_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/elbow_L_CTRL_GRP/elbow_L_CTRL
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/elbow_L_CTRL_GRP/elbow_L_CTRL/elbow_L_LOC_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/elbow_L_CTRL_GRP/elbow_L_CTRL/elbow_L_LOC_GRP/elbow_L_LOC
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/elbow_R_CTRL_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/elbow_R_CTRL_GRP/elbow_R_CTRL
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/elbow_R_CTRL_GRP/elbow_R_CTRL/elbow_R_LOC_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/elbow_R_CTRL_GRP/elbow_R_CTRL/elbow_R_LOC_GRP/elbow_R_LOC
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/foot_L_CTRL_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/foot_R_CTRL_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/knee_L_CTRL_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/knee_R_CTRL_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/root_CTRL_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/root_CTRL_GRP/root_CTRL
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL/neck_CTRL_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL/neck_CTRL_GRP/neck_CTRL
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL/neck_CTRL_GRP/neck_CTRL/head_CTRL_GRP
+        weight: 1
+      - path: female_rig_all_GRP/RIG_Global_CTRL/control_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL/neck_CTRL_GRP/neck_CTRL/head_CTRL_GRP/head_CTRL
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT/chest_JNT
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT/chest_JNT/clav1_L_JNT
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT/chest_JNT/clav1_L_JNT/upper_L_JNT
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT/chest_JNT/clav1_L_JNT/upper_L_JNT/elbow_L_JNT
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT/chest_JNT/clav1_L_JNT/upper_L_JNT/elbow_L_JNT/wrist_L_JNT
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT/chest_JNT/clav1_L_JNT/upper_L_JNT/elbow_L_JNT/wrist_L_JNT/hand_L_JNT
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT/chest_JNT/clav1_R_JNT
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT/chest_JNT/clav1_R_JNT/upper_R_JNT
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT/chest_JNT/clav1_R_JNT/upper_R_JNT/elbow_R_JNT
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT/chest_JNT/clav1_R_JNT/upper_R_JNT/elbow_R_JNT/wrist_R_JNT
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT/chest_JNT/clav1_R_JNT/upper_R_JNT/elbow_R_JNT/wrist_R_JNT/hand_R_JNT
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT/chest_JNT/neck_JNT
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT/chest_JNT/neck_JNT/head_JNT
+        weight: 1
+      - path: female_rig_all_GRP/root_JNT/chest_JNT/neck_JNT/head_JNT/head_END
+        weight: 1
+      - path: witch_lowPoly
+        weight: 1
+      - path: witchesHat
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -164,7 +284,7 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 6cba617195c03a24987eec905c03dae8,
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: fdfac6c8f4e215145a6437914b280c2f,
     type: 3}
   animationType: 2
   humanoidOversampling: 1
