@@ -9,7 +9,6 @@ public class SoundLookAt : MonoBehaviour
     public AudioClip enkNames;
     public int timesPlayed;
     public int maxTimesPlayed;
-    public int timeStamp;
     private AudioSource Source;
     //private Transform player;
     private bool isPlaying = false;

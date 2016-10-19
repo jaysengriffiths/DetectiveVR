@@ -9,6 +9,11 @@ public class Player : MonoBehaviour
 
     class GazeTimer
     {
+        public GazeTimer(float ti)
+        {
+            timeInterval = ti;
+        }
+
         private float timeStamp;
         public float timeInterval;
         private Object obj;
@@ -42,32 +47,34 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Use this for initialization
+    //Player movement
     private float minBounds = 10;
     private float maxBounds = 20;
-    float counter;
-
-    private int homeTimeStamp = 0;
-    public float walkTimeStamp = 1;
-
-    public float speed = 0.01f;  //Kathy changed from 0.03f
-
-
+    private float counter;
+    public float cameraAngle;
+    public float speed = 0.01f;  //Kathy changed from 0.03;
+    public float walkDelay;
     public AudioClip nameClip;
-    private float soundLookAtTime = 0;
+
+    //setting new timers
+    GazeTimer soundLookAtTimer = new GazeTimer(2);
+    GazeTimer suspectGazeTimer = new GazeTimer(2);
+
+    //audio source set
     private AudioSource audioSource;
    
-    Collider lookedAtObject = null;
-    public float cameraAngle;
+    //toggles initial complainant
     public bool complain = false;
-    public float soundLookAtTimestamp = 2.0f;
+
+    //clue obj setup
     public GameObject clueObject;
 
 
     //Footsteps 
     private float m_StepCycle;  //
+    private AudioSource feetSource;  //Kathy
     public float m_StepPeriod;//Kathy
-    public AudioSource feetSource;  //Kathy
+ 
     [SerializeField]
     public AudioClip[] m_GroudFootstepSounds;    // an array of footstep sounds that will be randomly selected from - Kathy copied from Standard Assets character script
     public AudioClip[] m_MudFootstepSounds;
@@ -77,8 +84,7 @@ public class Player : MonoBehaviour
     private MissionManager missionManager;
     private DialogManager dialogManager;
     private CharacterController controller;
-    private SoundLookAt selectedSoundObject;
-
+    private InventoryControl.Accumulator goHomeTimer;
     public Character selectedCharacter;
 
 
@@ -90,6 +96,7 @@ public class Player : MonoBehaviour
         if (mic)
             audioSource = mic.GetComponent<AudioSource>();
         controller = GetComponent<CharacterController>();
+        goHomeTimer = new InventoryControl.Accumulator(2);
     }
 
     void Start()
@@ -133,56 +140,39 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 20))
         {
             SoundLookAt soundItem = hit.collider.GetComponent<SoundLookAt>();
-            if (soundItem != selectedSoundObject)
+            soundLookAtTimer.SetObject(soundItem);
+            if (soundLookAtTimer.IsExpired())
             {
                 if (soundItem != null)
                 {
-                    //3 seconds delay
-                    soundLookAtTime = Time.time + soundItem.timeStamp;
-                }
-                selectedSoundObject = soundItem;
-            }
-            else
-            {
-                if (Time.time > soundLookAtTime && soundLookAtTime != 0)
-                {
-                    if (soundItem != null)
+                    if (!audioSource.isPlaying)
                     {
-                        if (!audioSource.isPlaying)
+                        if (soundItem.timesPlayed < soundItem.maxTimesPlayed || soundItem.maxTimesPlayed == 0)
                         {
-                            if (soundItem.timesPlayed < soundItem.maxTimesPlayed || soundItem.maxTimesPlayed == 0)
+                            DialogManager.Dialog[] clips = new DialogManager.Dialog[2];  //Kathy
+                            clips[0] = new DialogManager.Dialog(soundItem.activated, soundItem.transform);  //Kathy
+                            clips[1] = new DialogManager.Dialog(soundItem.enkNames);  //Kathy
+                            if (soundItem.isClue || soundItem.enkNameObject)
                             {
-                                DialogManager.Dialog[] clips = new DialogManager.Dialog[2];  //Kathy
-                                clips[0] = new DialogManager.Dialog(soundItem.activated, soundItem.transform);  //Kathy
-                                clips[1] = new DialogManager.Dialog(soundItem.enkNames);  //Kathy
-                                if (soundItem.isClue || soundItem.enkNameObject)
-                                {
-                                    dialogManager.setDialog(clips);
-                                    soundItem.timesPlayed++;
-                                    soundItem.isActivated = true;
-
-                                }
-                                else
-                                {
-                                    audioSource.clip = soundItem.activated;
-                                    audioSource.Play();
-                                    soundItem.isActivated = true;
-                                }
+                                dialogManager.setDialog(clips);
+                                soundItem.timesPlayed++;
+                                soundItem.isActivated = true;
+                            }
+                            else
+                            {
+                                audioSource.clip = soundItem.activated;
+                                audioSource.Play();
+                                soundItem.isActivated = true;
                             }
                         }
-   
                     }
-                    soundLookAtTime = 0;
 
                 }
             }
-
-
         }
         else
         {
-            selectedSoundObject = null;
-            soundLookAtTime = 0;
+            soundLookAtTimer.SetObject(null);
         }
 
     }
@@ -191,63 +181,39 @@ public class Player : MonoBehaviour
         RaycastHit hit;
         //Camera.main.
 
-
-
         //Interaction with NPCs
+        bool lookingAtGoldStar = false;
+
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10))
         {
 
             if (hit.collider.CompareTag("SUSPECT")) // we're looking at a charcter
             {
                 Character ch = hit.collider.gameObject.GetComponent<Character>();
-                if (lookedAtObject != hit.collider) // we've changed what we're looking at
+                suspectGazeTimer.SetObject(ch);
+                if (suspectGazeTimer.IsExpired())
                 {
-
-                    Debug.Log("Looking at suspect");
-                    ch.lookAtTime = Time.time + 3.0f;
-                }
-                else
-                {
-                    if (Time.time > ch.lookAtTime && ch.lookAtTime != 0)
-                    {
-                        // we've been starting at thisa one thing for three seconds...
-                        missionManager.Interrogate(ch);
-                        selectedCharacter = ch;
-                        ch.lookAtTime = 0;
-
-                    }
+                    // we've been starting at thisa one thing for three seconds...
+                    missionManager.Interrogate(ch);
+                    selectedCharacter = ch;
                 }
             }
-
-            lookedAtObject = hit.collider;
+            else
+                suspectGazeTimer.SetObject(null);
 
             //Interaction with returning to HQ
             if (hit.collider.CompareTag("GoldStar"))
             {
-                homeTimeStamp++;
-                
-
-                if (homeTimeStamp >= 300)
-                {
-                    //return home 
-                    SceneManager.LoadScene("HQ");
-                    Debug.Log("testgohome");
-
-                    homeTimeStamp = 0;
-                }
-
-                if (homeTimeStamp >= 150)
-                {
-                    Debug.Log("are you sure ");
-                }
-            }
-            else
-            {
-                homeTimeStamp = 0;
+                lookingAtGoldStar = true;
             }
         }
         else
-            lookedAtObject = null;
+        {
+            suspectGazeTimer.SetObject(null);
+        }
+
+        if (goHomeTimer.IsFull(lookingAtGoldStar))
+            SceneManager.LoadScene("HQ");
 
         if (selectedCharacter != null && Vector3.Dot(Camera.main.transform.forward, selectedCharacter.transform.position - transform.position) < 0)
         {
@@ -258,13 +224,13 @@ public class Player : MonoBehaviour
 
     public void walk()
     {
-        bool lookingDown = (cameraAngle > minBounds && cameraAngle < maxBounds && homeTimeStamp == 0);
+        bool lookingDown = (cameraAngle > minBounds && cameraAngle < maxBounds);
 
         if (lookingDown)
         {
             if (counter == 0)
             {
-                counter = Time.time + walkTimeStamp;
+                counter = Time.time + walkDelay;
             }
             else
             {

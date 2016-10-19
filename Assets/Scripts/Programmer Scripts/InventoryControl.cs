@@ -28,7 +28,7 @@ public class InventoryControl : MonoBehaviour
         dialogManager = gameObject.GetComponent<DialogManager>();
     }
 
-    class Accumulator
+    public class Accumulator
     {
         public Accumulator(float ts)
         {
