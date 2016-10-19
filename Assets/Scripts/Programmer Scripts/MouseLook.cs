@@ -17,6 +17,16 @@ public class MouseLook : MonoBehaviour {
     private Quaternion m_CameraTargetRot;
     private bool m_cursorIsLocked = true;
 
+    void Start()
+    {
+        Init(transform, Camera.main.transform);
+    }
+
+    void Update()
+    {
+       LookRotation(transform, Camera.main.transform);
+    }
+
     public void Init(Transform character, Transform camera)
     {
         m_CharacterTargetRot = character.localRotation;
