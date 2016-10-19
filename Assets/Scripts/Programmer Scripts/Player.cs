@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
     private float minBounds = 10;
     private float maxBounds = 20;
     private float counter;
+    [HideInInspector]
     public float cameraAngle;
     public float speed = 0.01f;  //Kathy changed from 0.03;
     public float walkDelay;
@@ -72,7 +73,7 @@ public class Player : MonoBehaviour
 
     //Footsteps 
     private float m_StepCycle;  //
-    private AudioSource feetSource;  //Kathy
+    public AudioSource feetSource;  //Kathy
     public float m_StepPeriod;//Kathy
  
     [SerializeField]
@@ -271,7 +272,7 @@ public class Player : MonoBehaviour
         // pick & play a random footstep sound from the array,
         // excluding sound at index 0
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 5))
+        if (Physics.Raycast(transform.position + new Vector3(0,2,0), Vector3.down, out hit, 5))
         {
             if (hit.collider.CompareTag("Ground"))
             {
@@ -289,12 +290,12 @@ public class Player : MonoBehaviour
         }
 
 
-        if (GetComponent<Collider>().CompareTag("Grass"))
+        if (hit.collider.CompareTag("Grass"))
         {
             int n = Random.Range(1, m_GrassFootstepSounds.Length);
             feetSource.clip = m_GrassFootstepSounds[n];
             feetSource.PlayOneShot(feetSource.clip);
-            
+
             m_GrassFootstepSounds[n] = m_GrassFootstepSounds[0];
             m_GrassFootstepSounds[0] = feetSource.clip;
 
@@ -302,12 +303,12 @@ public class Player : MonoBehaviour
             m_GrassFootstepSounds[0] = feetSource.clip;
         }
 
-        if (GetComponent<Collider>().CompareTag("Mud"))
+        if (hit.collider.CompareTag("Mud"))
         {
             int n = Random.Range(1, m_MudFootstepSounds.Length);
             feetSource.clip = m_MudFootstepSounds[n];
             feetSource.PlayOneShot(feetSource.clip);
-            
+
             m_MudFootstepSounds[n] = m_MudFootstepSounds[0];
             m_MudFootstepSounds[0] = feetSource.clip;
 

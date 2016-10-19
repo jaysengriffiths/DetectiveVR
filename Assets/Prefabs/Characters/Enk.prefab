@@ -28,7 +28,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000010655559180
 GameObject:
   m_ObjectHideFlags: 1
@@ -291,6 +291,8 @@ GameObject:
   - 114: {fileID: 114000012286519272}
   - 143: {fileID: 143000011917981768}
   - 114: {fileID: 114000010199914380}
+  - 114: {fileID: 114000011920492100}
+  - 114: {fileID: 114000012732877384}
   m_Layer: 0
   m_Name: Enk
   m_TagString: Player
@@ -332,7 +334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000013497914506
 GameObject:
   m_ObjectHideFlags: 1
@@ -802,10 +804,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013338468926}
-  m_LocalRotation: {x: -0, y: 0.89011544, z: -0, w: 0.45573518}
-  m_LocalPosition: {x: 39.408, y: -1.279, z: -11.717}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 39.408, y: -1.191, z: -11.717}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
-  m_LocalEulerAnglesHint: {x: 0, y: 126.008, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000012638913864}
   - {fileID: 4000010109803412}
@@ -1274,14 +1276,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b27e36548d3b0554aaa06bbb570479b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkTimeStamp: 0.5
-  m_StepPeriod: 0.5
-  feetSource: {fileID: 82000011063669928}
-  selectedCharacter: {fileID: 0}
-  selectedSoundObject: {fileID: 0}
+  cameraAngle: 0
+  speed: 0.01
+  walkDelay: 0
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
-  complain: 1
-  soundLookAtTimestamp: 2
+  complain: 0
+  clueObject: {fileID: 0}
+  feetSource: {fileID: 82000011063669928}
+  m_StepPeriod: 0.5
   m_GroudFootstepSounds:
   - {fileID: 8300000, guid: 7628acb5e05607844976b00c55113a65, type: 3}
   - {fileID: 8300000, guid: bac38444dd4191649b4961778eeb1f7b, type: 3}
@@ -1300,9 +1302,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
-  clue: {fileID: 1000011856286516}
-  cuffs: {fileID: 1000013496940770}
-  warn: {fileID: 1000010529723666}
+  selectedCharacter: {fileID: 0}
 --- !u!114 &114000010668182042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1322,6 +1322,17 @@ MonoBehaviour:
   smooth: 0
   smoothTime: 5
   lockCursor: 1
+--- !u!114 &114000011920492100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013338468926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 503f9a29295ab6649a87e9b373090597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000012286519272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1333,6 +1344,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ae073fd24fecf34c82812e3226284aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114000012732877384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013338468926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 789abe599e2481e488395c265a9cd7c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkyHint: {fileID: 1000011856286516}
+  HandCuffs: {fileID: 1000013496940770}
+  WarningBook: {fileID: 1000010529723666}
 --- !u!114 &114000012834849260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1349,9 +1374,10 @@ MonoBehaviour:
   enkNames: {fileID: 8300000, guid: cb8d91e73e7b74a4f931e0098be544f7, type: 3}
   timesPlayed: 0
   maxTimesPlayed: 0
-  timeStamp: 0
   isClue: 0
   isActivated: 1
+  enkNameObject: 0
+  player: {fileID: 0}
 --- !u!114 &114000013052225612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1368,9 +1394,10 @@ MonoBehaviour:
   enkNames: {fileID: 8300000, guid: 948c0eea609df6240926050349abc913, type: 3}
   timesPlayed: 0
   maxTimesPlayed: 0
-  timeStamp: 0
   isClue: 0
   isActivated: 1
+  enkNameObject: 0
+  player: {fileID: 0}
 --- !u!143 &143000011917981768
 CharacterController:
   m_ObjectHideFlags: 1
@@ -1381,10 +1408,10 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.0363528
+  m_Height: 1.2831347
   m_Radius: 0.4043425
-  m_SlopeLimit: 90
-  m_StepOffset: 0
-  m_SkinWidth: 0.0001
-  m_MinMoveDistance: 0.001
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0
   m_Center: {x: 0, y: 2, z: 0}
