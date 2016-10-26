@@ -46,7 +46,7 @@ ModelImporter:
     2300000: babyTroll_lowpoly
     3300000: babyTroll_lowpoly
     4300000: babyTroll_lowpoly
-    7400000: Take 001
+    7400000: idle
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -68,7 +68,149 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle
+      takeName: Take 001
+      firstFrame: 30
+      lastFrame: 420
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: babyTroll_lowpoly
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/arm_L_CTRL_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/arm_L_CTRL_GRP/arm_L_CTRL
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/arm_L_CTRL_GRP/arm_L_CTRL/arm_L_IKH
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/arm_R_CTRL_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/arm_R_CTRL_GRP/arm_R_CTRL
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/arm_R_CTRL_GRP/arm_R_CTRL/arm_R_IKH
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/elbow_L_CTRL_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/elbow_L_CTRL_GRP/elbow_L_CTRL
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/elbow_L_CTRL_GRP/elbow_L_CTRL/elbow_L_LOC_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/elbow_L_CTRL_GRP/elbow_L_CTRL/elbow_L_LOC_GRP/elbow_L_LOC
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/elbow_R_CTRL_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/elbow_R_CTRL_GRP/elbow_R_CTRL
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/elbow_R_CTRL_GRP/elbow_R_CTRL/elbow_R_LOC_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/elbow_R_CTRL_GRP/elbow_R_CTRL/elbow_R_LOC_GRP/elbow_R_LOC
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/foot_L_CTRL_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/foot_L_CTRL_GRP/leg_L_CTRL
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/foot_L_CTRL_GRP/leg_L_CTRL/leg_L_IKH
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/foot_R_CTRL_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/foot_R_CTRL_GRP/leg_R_CTRL
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/foot_R_CTRL_GRP/leg_R_CTRL/leg_R_IKH
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/knee_L_CTRL_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/knee_L_CTRL_GRP/knee_L_CTRL
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/knee_L_CTRL_GRP/knee_L_CTRL/knee_L_LOC_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/knee_L_CTRL_GRP/knee_L_CTRL/knee_L_LOC_GRP/knee_L_LOC
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/knee_R_CTRL_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/knee_R_CTRL_GRP/knee_R_CTRL
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/knee_R_CTRL_GRP/knee_R_CTRL/knee_R_LOC_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/knee_R_CTRL_GRP/knee_R_CTRL/knee_R_LOC_GRP/knee_R_LOC
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/root_CTRL_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/root_CTRL_GRP/root_CTRL
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL/neck_CTRL_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL/neck_CTRL_GRP/neck_CTRL
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL/neck_CTRL_GRP/neck_CTRL/head_CTRL_GRP
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/babyTroll_RIG_CTRL/CTRL_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL/neck_CTRL_GRP/neck_CTRL/head_CTRL_GRP/head_CTRL
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/chest_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/chest_JNT/neck_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/chest_JNT/neck_JNT/head_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/chest_JNT/neck_JNT/shoulder_L_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/chest_JNT/neck_JNT/shoulder_L_JNT/elbow_L_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/chest_JNT/neck_JNT/shoulder_L_JNT/elbow_L_JNT/wrist_L_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/chest_JNT/neck_JNT/shoulder_R_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/chest_JNT/neck_JNT/shoulder_R_JNT/elbow_R_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/chest_JNT/neck_JNT/shoulder_R_JNT/elbow_R_JNT/wrist_R_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/thigh_L_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/thigh_L_JNT/knee_L_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/thigh_L_JNT/knee_L_JNT/ankle_L_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/thigh_R_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/thigh_R_JNT/knee_R_JNT
+        weight: 1
+      - path: babyTroll_RIG_GRP_ALL/root_JNT/thigh_R_JNT/knee_R_JNT/ankle_R_JNT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -92,7 +234,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
   importAnimation: 1
-  copyAvatar: 0
+  copyAvatar: 1
   humanDescription:
     human: []
     skeleton: []
@@ -105,7 +247,8 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 5ec0891d643be3b4f888ed26e39ad57c,
+    type: 3}
   animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
