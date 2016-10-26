@@ -116,21 +116,23 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Quaternion q = UnityEngine.VR.InputTracking.GetLocalRotation(UnityEngine.VR.VRNode.Head);
-        Quaternion fwd = Camera.main.transform.rotation * q;
+        Quaternion fwd = Camera.main.transform.rotation;
 
         cameraAngle = fwd.eulerAngles.x;
         //rb.velocity = new Vector3(0, 0, 0);
-        dialogManager.updateDialog();
-
-        LookAtSoundObjects();
-        if (dialogManager.pendingDialog.Length == 0 && (audioSource==null || !audioSource.isPlaying))
+        if (dialogManager != null)
         {
-            if (audioSource)
+            dialogManager.updateDialog();
+
+            LookAtSoundObjects();
+            if (dialogManager.pendingDialog.Length == 0 && (audioSource == null || !audioSource.isPlaying))
             {
-                walk();
+                if (audioSource)
+                {
+                    walk();
+                }
+                Look();
             }
-            Look();
         }
     }
 
@@ -246,8 +248,7 @@ public class Player : MonoBehaviour
 
     void isMoving()
     {
-        Quaternion q = UnityEngine.VR.InputTracking.GetLocalRotation(UnityEngine.VR.VRNode.Head);
-        Vector3 fwd = q * Camera.main.transform.forward;
+        Vector3 fwd = Camera.main.transform.forward;
         //fwd.y = 0;
         controller.Move(speed * fwd);
         ProgressStepCycle();  //Kathy
