@@ -54,14 +54,13 @@ public class InventoryControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player.cameraAngle > 270 && player.cameraAngle < 280)
+        {
+            GiveClue();
+        }
+
         if (player.selectedCharacter != null && player.selectedCharacter.introClip && player.selectedCharacter.IsInteracted)
         {
-
-            if (player.cameraAngle > 270 && player.cameraAngle < 280)
-            {
-                GiveClue();
-            }
-
             if (cuffTimer.IsFull(player.cameraAngle > 44 && player.cameraAngle < 54))
             {
                 HandCuffs.SetActive(true);

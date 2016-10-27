@@ -5,7 +5,7 @@ public class DialogManager : MonoBehaviour {
 
     private MissionManager missionManager;
     private AudioSource audioSource;
-
+    public float soundDelayTime = 0.5f;
 
     public struct Dialog
     {
@@ -78,7 +78,7 @@ public class DialogManager : MonoBehaviour {
 
                 // audio clip = the first pending
                 audioSource.clip = pendingDialog[0].clip;
-                audioSource.Play();
+                audioSource.PlayDelayed(soundDelayTime);
 
                 //copy non playing left over audio into temp array tha twill become the pending once play is over 
                 Dialog[] dialog = new Dialog[pendingDialog.Length - 1];
@@ -94,7 +94,7 @@ public class DialogManager : MonoBehaviour {
             {
                 if (missionManager.state == MissionManager.MissionState.EndByWarning)
                 {
-                    Debug.Log("play thankyou");
+                    //Debug.Log("play thankyou");
 
                     DialogManager.Dialog[] clips = new DialogManager.Dialog[1];  //Kathy
                     clips[1] = new DialogManager.Dialog(missionManager.currentMission.GetGuiltySuspect().thankyou);  //Kathy
@@ -104,7 +104,7 @@ public class DialogManager : MonoBehaviour {
 
                 if (missionManager.state == MissionManager.MissionState.EndByArrest)
                 {
-                    Debug.Log("play overarching");
+                    //Debug.Log("play overarching");
                     DialogManager.Dialog[] clips = new DialogManager.Dialog[1];  //Kathy
                     clips[0] = new DialogManager.Dialog(missionManager.currentMission.revelationSpeech);  //Kathy
 
