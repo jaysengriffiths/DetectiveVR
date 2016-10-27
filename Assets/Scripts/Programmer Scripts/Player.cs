@@ -51,7 +51,7 @@ public class Player : MonoBehaviour
     private float minBounds = 10;
     private float maxBounds = 20;
     private float counter;
-    [HideInInspector]
+    //[HideInInspector]
     public float cameraAngle;
     public float speed = 0.01f;  //Kathy changed from 0.03;
     public float walkDelay;
@@ -70,7 +70,6 @@ public class Player : MonoBehaviour
     //clue obj setup
     public GameObject clueObject;
 
-
     //Footsteps 
     private float m_StepCycle;  //
     public AudioSource feetSource;  //Kathy
@@ -87,6 +86,7 @@ public class Player : MonoBehaviour
     private CharacterController controller;
     private InventoryControl.Accumulator goHomeTimer;
     public Character selectedCharacter;
+    private GameObject enkModel;
 
 
 
@@ -98,6 +98,7 @@ public class Player : MonoBehaviour
             audioSource = mic.GetComponent<AudioSource>();
         controller = GetComponent<CharacterController>();
         goHomeTimer = new InventoryControl.Accumulator(2);
+        enkModel = GameObject.Find("PC_lowPoly");
     }
 
     void Start()
@@ -117,7 +118,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Quaternion fwd = Camera.main.transform.rotation;
-
+        enkModel.transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y ,0);
         cameraAngle = fwd.eulerAngles.x;
         //rb.velocity = new Vector3(0, 0, 0);
         if (dialogManager != null)
@@ -249,10 +250,8 @@ public class Player : MonoBehaviour
     void isMoving()
     {
         Vector3 fwd = Camera.main.transform.forward;
-        //fwd.y = 0;
         controller.Move(speed * fwd);
-        ProgressStepCycle();  //Kathy
-        //Invoke(("PlaySound"), 2);   
+        ProgressStepCycle();
     }
     
     void ProgressStepCycle()  //Kathy this whole struct amended from Standard Assets character controller

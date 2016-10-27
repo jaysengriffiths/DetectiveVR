@@ -27,6 +27,7 @@ public class Mission : MonoBehaviour
     public AudioClip complainantSpeech;
     public AudioClip interogateSpeech;
     public AudioClip clueDialogue;
+    public AudioClip clueComparison;
     public int guiltyIndex;
     public GameObject[] clueObjects;
     public Transform clueStartPos;

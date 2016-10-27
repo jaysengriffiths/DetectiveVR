@@ -3,12 +3,9 @@ using System.Collections;
 
 public class MovingClue : MonoBehaviour
 {
-    //public GameObject correctClue;
-    private Mission mission;
     public float speed;
-    //public Character character;
-    // Use this for initialization
-    public Player player;
+    private Player player;
+    private SoundLookAt soundLook;
     void Awake()
     {
    
@@ -16,19 +13,27 @@ public class MovingClue : MonoBehaviour
     void Start ()
     {
         player = FindObjectOfType<Player>();
-        gameObject.GetComponent<SoundLookAt>();
+        soundLook = GetComponent<SoundLookAt>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (soundLook.isActivated)
+        {
 
+            player.clueObject = this.gameObject;
+            //gameObject.SetActive(false);
+        }
     }
 
-    void MoveTowards()
+    public void MoveTowards(Character character)
     {
         float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, player.gameObject.transform.position, step);
+        Transform clueTransform = character.transform;
+        if (character.MovingClueLocation != null)
+            clueTransform = character.MovingClueLocation;
+        transform.position = Vector3.MoveTowards(transform.position, clueTransform.position, step);
     }
 
 }

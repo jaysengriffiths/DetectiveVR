@@ -10,7 +10,8 @@ public class MissionManager : MonoBehaviour
     //public GameObject currentSuspectSelected;
     Mission[] missions;
     private DialogManager dialogManager;
-
+    private AudioSource audioSource;
+    private bool clueComparisonPlayed = false;
     public AudioClip arrestClip;
     public enum MissionState
     {
@@ -27,6 +28,9 @@ public class MissionManager : MonoBehaviour
     void Awake()
     {
         dialogManager = FindObjectOfType<DialogManager>();
+        GameObject mic = GameObject.Find("Microphone");
+        if (mic)
+            audioSource = mic.GetComponent<AudioSource>();
     }
     void Start()
     {
@@ -36,9 +40,16 @@ public class MissionManager : MonoBehaviour
         //player.transform.position = missions[0].startMissionPosition.transform.position;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-
+        if (player.clueObject && player.clueObject.activeSelf == true && dialogManager.pendingDialog.Length == 0 && player.selectedCharacter != null)
+        {
+            if (clueComparisonPlayed && !audioSource.isPlaying)
+            {
+                player.clueObject.GetComponent<MovingClue>().MoveTowards(player.selectedCharacter);
+                //player.clueObject.transform.eulerAngles = new Vector3(0, -90, 0);
+            }
+        }
     }
 
     void PlaySound(AudioClip sound)
@@ -54,10 +65,16 @@ public class MissionManager : MonoBehaviour
             {
                 if (currentMission.suspects[i].character.introPlayed)
                 {
-                    DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
+                    int num = player.clueObject ? 3 : 2;
+                    DialogManager.Dialog[] clips = new DialogManager.Dialog[num];
                     clips[0] = new DialogManager.Dialog(currentMission.interogateSpeech);
                     clips[1] = new DialogManager.Dialog(currentMission.suspects[i].explanation, currentMission.suspects[i].character);
 
+                    if(player.clueObject)
+                    {
+                        clips[2] = new DialogManager.Dialog(currentMission.clueComparison);
+                        clueComparisonPlayed = true;
+                    }
                     ActivateMovingClue();
 
                     dialogManager.setDialog(clips);
@@ -98,9 +115,8 @@ public class MissionManager : MonoBehaviour
             return;
         }
 
+        player.clueObject.SetActive(true);
         
-
-
     }
     public void Complainant()
     {
