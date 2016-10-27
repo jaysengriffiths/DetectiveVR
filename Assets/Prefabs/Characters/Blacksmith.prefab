@@ -9,53 +9,20 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000012321639230}
+  m_RootGameObject: {fileID: 1000011890207716}
   m_IsPrefabParent: 1
---- !u!1 &1000010396219008
+--- !u!1 &1000011890207716
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000010785794472}
-  - 33: {fileID: 33000011106040910}
-  - 95: {fileID: 95000013844883668}
-  - 136: {fileID: 136000011351406784}
-  - 23: {fileID: 23000013151718664}
-  m_Layer: 0
-  m_Name: giantBlacksmith_lowpoly_01_jf
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1000011847851502
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000012279160192}
-  m_Layer: 0
-  m_Name: BlackSmithClothLocation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1000012321639230
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000012910398428}
-  - 33: {fileID: 33000011873387398}
-  - 114: {fileID: 114000011880666224}
-  - 82: {fileID: 82000011139268522}
+  - 4: {fileID: 4000012897657446}
+  - 33: {fileID: 33000013305202000}
+  - 114: {fileID: 114000012064836242}
+  - 82: {fileID: 82000011978492236}
+  - 114: {fileID: 114000012641892958}
   m_Layer: 0
   m_Name: Blacksmith
   m_TagString: SUSPECT
@@ -63,53 +30,87 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4000010785794472
+--- !u!1 &1000013092189310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010103479730}
+  - 33: {fileID: 33000011100329284}
+  - 95: {fileID: 95000014028518772}
+  - 136: {fileID: 136000011726181802}
+  - 23: {fileID: 23000012541112728}
+  m_Layer: 0
+  m_Name: giantBlacksmith_lowpoly_01_jf
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000013951662208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012663783598}
+  m_Layer: 0
+  m_Name: BlackSmithClothLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000010103479730
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010396219008}
+  m_GameObject: {fileID: 1000013092189310}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.00999999, y: -0.91218626, z: 0.022089958}
+  m_LocalPosition: {x: -0.00999999, y: -1.44, z: 0.022089958}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 4000012910398428}
+  m_Father: {fileID: 4000012897657446}
   m_RootOrder: 0
---- !u!4 &4000012279160192
+--- !u!4 &4000012663783598
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011847851502}
+  m_GameObject: {fileID: 1000013951662208}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.095, y: -0.319, z: 0.109}
+  m_LocalPosition: {x: 0.131, y: -0.824, z: 0.109}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 4000012910398428}
+  m_Father: {fileID: 4000012897657446}
   m_RootOrder: 1
---- !u!4 &4000012910398428
+--- !u!4 &4000012897657446
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012321639230}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 44.1, y: 1.387, z: -1.12}
+  m_GameObject: {fileID: 1000011890207716}
+  m_LocalRotation: {x: -0, y: 0.643554, z: -0, w: 0.76540077}
+  m_LocalPosition: {x: 36.21, y: 1.387, z: -12.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 80.367004, z: 0}
   m_Children:
-  - {fileID: 4000010785794472}
-  - {fileID: 4000012279160192}
+  - {fileID: 4000010103479730}
+  - {fileID: 4000012663783598}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &23000013151718664
+--- !u!23 &23000012541112728
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010396219008}
+  m_GameObject: {fileID: 1000013092189310}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -133,26 +134,26 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33000011106040910
+--- !u!33 &33000011100329284
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010396219008}
+  m_GameObject: {fileID: 1000013092189310}
   m_Mesh: {fileID: 4300000, guid: d08eac39a5a203845bf016ddbfe75253, type: 3}
---- !u!33 &33000011873387398
+--- !u!33 &33000013305202000
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012321639230}
+  m_GameObject: {fileID: 1000011890207716}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!82 &82000011139268522
+--- !u!82 &82000011978492236
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012321639230}
+  m_GameObject: {fileID: 1000011890207716}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -221,13 +222,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!95 &95000013844883668
+--- !u!95 &95000014028518772
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010396219008}
+  m_GameObject: {fileID: 1000013092189310}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: d08eac39a5a203845bf016ddbfe75253, type: 3}
   m_Controller: {fileID: 0}
@@ -238,12 +239,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000011880666224
+--- !u!114 &114000012064836242
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012321639230}
+  m_GameObject: {fileID: 1000011890207716}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a839c6c1b3df89e4a9484980c80b6289, type: 3}
@@ -251,18 +252,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: ecbe5258db35d834c91e90026f1193c7, type: 3}
   introClip: {fileID: 8300000, guid: bd22ed2ad3e157c47afd96ad47136ca2, type: 3}
-  clothRip: {fileID: 0}
-  lookAtTime: 0
-  MovingClueLocation: {fileID: 4000012279160192}
+  clothRip: {fileID: 8300000, guid: 52bcfaf29d0d9e645afc0656902c7a78, type: 3}
+  MovingClueLocation: {fileID: 4000012663783598}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0
---- !u!136 &136000011351406784
+--- !u!114 &114000012641892958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011890207716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundDelay: 3
+  Idle:
+  - {fileID: 8300000, guid: 6d52b8fb1c60d5343873a20d8fa6f011, type: 3}
+  activated: {fileID: 8300000, guid: 4f80983b0b88f494a8d733cf5a1f46ed, type: 3}
+  enkNames: {fileID: 8300000, guid: ecbe5258db35d834c91e90026f1193c7, type: 3}
+  timesPlayed: 0
+  maxTimesPlayed: 0
+  activateDistance: 10
+  globalSound: 0
+  isClue: 0
+  isActivated: 0
+  enkNameObject: 0
+--- !u!136 &136000011726181802
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010396219008}
+  m_GameObject: {fileID: 1000013092189310}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
