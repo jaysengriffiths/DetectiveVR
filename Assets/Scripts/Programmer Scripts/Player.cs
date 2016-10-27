@@ -56,6 +56,7 @@ public class Player : MonoBehaviour
     public float speed = 0.01f;  //Kathy changed from 0.03;
     public float walkDelay;
     public AudioClip nameClip;
+    public Transform enkHoldingCloth;
 
     //setting new timers
     GazeTimer soundLookAtTimer = new GazeTimer(2);
@@ -69,6 +70,8 @@ public class Player : MonoBehaviour
 
     //clue obj setup
     public GameObject clueObject;
+    [HideInInspector]
+    public bool clueComparisonPlayed = false;
 
     //Footsteps 
     private float m_StepCycle;  //
@@ -187,7 +190,8 @@ public class Player : MonoBehaviour
 
         //Interaction with NPCs
         bool lookingAtGoldStar = false;
-
+        
+        //turn off viewing
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10))
         {
 
@@ -219,10 +223,14 @@ public class Player : MonoBehaviour
         if (goHomeTimer.IsFull(lookingAtGoldStar))
             SceneManager.LoadScene("HQ");
 
-        if (selectedCharacter != null && Vector3.Dot(Camera.main.transform.forward, selectedCharacter.transform.position - transform.position) < 0)
+        if (selectedCharacter != null) 
         {
-            Debug.Log("Looking Away");
-            selectedCharacter = null;
+            Vector3 v1 = Camera.main.transform.forward;
+            Vector3 v2 = selectedCharacter.transform.position - transform.position;
+            v1.y = 0;
+            v2.y = 0;
+            if (Vector3.Dot(v1,v2) < 0)
+                selectedCharacter = null;
         }
     }
 

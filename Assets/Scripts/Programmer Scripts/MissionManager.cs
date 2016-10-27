@@ -11,7 +11,6 @@ public class MissionManager : MonoBehaviour
     Mission[] missions;
     private DialogManager dialogManager;
     private AudioSource audioSource;
-    private bool clueComparisonPlayed = false;
     public AudioClip arrestClip;
     public enum MissionState
     {
@@ -44,9 +43,10 @@ public class MissionManager : MonoBehaviour
     {
         if (player.clueObject && player.clueObject.activeSelf == true && dialogManager.pendingDialog.Length == 0 && player.selectedCharacter != null)
         {
-            if (clueComparisonPlayed && !audioSource.isPlaying)
+            if (player.clueComparisonPlayed && !audioSource.isPlaying)
             {
                 player.clueObject.GetComponent<MovingClue>().MoveTowards(player.selectedCharacter);
+
                 //player.clueObject.transform.eulerAngles = new Vector3(0, -90, 0);
             }
         }
@@ -73,7 +73,7 @@ public class MissionManager : MonoBehaviour
                     if(player.clueObject)
                     {
                         clips[2] = new DialogManager.Dialog(currentMission.clueComparison);
-                        clueComparisonPlayed = true;
+                        player.clueComparisonPlayed = true;
                     }
                     ActivateMovingClue();
 

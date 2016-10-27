@@ -61,13 +61,13 @@ public class InventoryControl : MonoBehaviour
 
         if (player.selectedCharacter != null && player.selectedCharacter.introClip && player.selectedCharacter.IsInteracted)
         {
-            if (cuffTimer.IsFull(player.cameraAngle > 44 && player.cameraAngle < 54))
+            if (cuffTimer.IsFull(player.cameraAngle > 60 && player.cameraAngle < 65))
             {
                 HandCuffs.SetActive(true);
                 missionManager.Arrest(player.selectedCharacter);
             }
 
-            if (warningTimer.IsFull(player.cameraAngle > 30 && player.cameraAngle < 44))
+            if (warningTimer.IsFull(player.cameraAngle > 65 && player.cameraAngle < 70))
             {
                 WarningBook.SetActive(true);
                 missionManager.Warn(player.selectedCharacter);
