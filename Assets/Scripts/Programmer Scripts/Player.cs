@@ -101,7 +101,7 @@ public class Player : MonoBehaviour
             audioSource = mic.GetComponent<AudioSource>();
         controller = GetComponent<CharacterController>();
         goHomeTimer = new InventoryControl.Accumulator(2);
-        enkModel = GameObject.Find("PC_lowPoly");
+        enkModel = GameObject.Find("gypsy_mesh");
     }
 
     void Start()
