@@ -17,7 +17,6 @@ public class SoundLookAt : MonoBehaviour
     private float nextTimeStamp = 0;
     public bool globalSound = false;
     public bool isClue = false;
-    [HideInInspector]
     public bool isActivated = false;
     public bool enkNameObject = false;
     private GameObject player;

@@ -7,6 +7,7 @@ public class MovingClue : MonoBehaviour
     private Player player;
     private SoundLookAt soundLook;
     bool movingToTarget = false;
+    public AudioClip clueNoise;
 
     void Awake()
     {
@@ -44,7 +45,14 @@ public class MovingClue : MonoBehaviour
         Transform clueTransform = character.transform;
         if (character.MovingClueLocation != null)
             clueTransform = character.MovingClueLocation;
-        transform.position = Vector3.MoveTowards(transform.position, clueTransform.position, step);
+        if ((transform.position - clueTransform.position).magnitude < 0.1f)
+        {
+            GetComponent<AudioSource>().clip = character.clothRip;
+            GetComponent<AudioSource>().Play();
+
+        }
+        else
+            transform.position = Vector3.MoveTowards(transform.position, clueTransform.position, step);
     }
 
 }

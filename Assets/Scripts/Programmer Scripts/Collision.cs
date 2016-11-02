@@ -17,6 +17,7 @@ public class Collision : MonoBehaviour
         if  (other.tag == "NPC")
         {
             Debug.Log("NPC HIT ");
+
             //set state as talking
         }
         if (other.tag == "BUILDING")

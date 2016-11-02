@@ -32,13 +32,14 @@ public class Mission : MonoBehaviour
     public GameObject[] clueObjects;
     public Transform clueStartPos;
     public GameObject clueSpawned;
+
     //public Transform startMissionPosition;
     void OnActivate()
     {
         guiltyIndex = Random.Range(0, 5);
         clueSpawned = clueObjects[guiltyIndex];
-        clueSpawned.transform.position = clueStartPos.position;
         clueSpawned.SetActive(true);
+        clueSpawned.transform.position = clueStartPos.position;
         // find all characters and set their suspect flag to false
         Character[] allCharacters = GameObject.FindObjectsOfType<Character>();
         for (int i = 0; i < allCharacters.Length; i++)
@@ -61,17 +62,12 @@ public class Mission : MonoBehaviour
     }
     void Start ()
     {
-        //OnActivate();
     
 	}
 	
-	// Update is called once per frame
 	void Update ()
     {
-        //if(cluesCollected)
-        //{
-        //    //warning book and handcuffs play sound and shine
-        //}	
+      
 	}
 
 

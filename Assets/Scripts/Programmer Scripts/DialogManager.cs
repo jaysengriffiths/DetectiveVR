@@ -6,6 +6,8 @@ public class DialogManager : MonoBehaviour {
     private MissionManager missionManager;
     private AudioSource audioSource;
     public float soundDelayTime = 0.5f;
+    private bool relevationSpeechPlayed = false;
+    private bool thankyouSpeechPlayed = false;
 
     public struct Dialog
     {
@@ -95,20 +97,28 @@ public class DialogManager : MonoBehaviour {
                 if (missionManager.state == MissionManager.MissionState.EndByWarning)
                 {
                     //Debug.Log("play thankyou");
+                    if (!thankyouSpeechPlayed)
+                    {
+                        DialogManager.Dialog[] clips = new DialogManager.Dialog[1];  //Kathy
+                        clips[1] = new DialogManager.Dialog(missionManager.currentMission.GetGuiltySuspect().thankyou);  //Kathy
 
-                    DialogManager.Dialog[] clips = new DialogManager.Dialog[1];  //Kathy
-                    clips[1] = new DialogManager.Dialog(missionManager.currentMission.GetGuiltySuspect().thankyou);  //Kathy
-
-                    setDialog(clips);
+                        setDialog(clips);
+                        thankyouSpeechPlayed = true;
+                        missionManager.state = MissionManager.MissionState.MissionOver;
+                    }
                 }
 
                 if (missionManager.state == MissionManager.MissionState.EndByArrest)
                 {
-                    //Debug.Log("play overarching");
-                    DialogManager.Dialog[] clips = new DialogManager.Dialog[1];  //Kathy
-                    clips[0] = new DialogManager.Dialog(missionManager.currentMission.revelationSpeech);  //Kathy
+                    if (!relevationSpeechPlayed)
+                    {
+                        DialogManager.Dialog[] clips = new DialogManager.Dialog[1];  //Kathy
+                        clips[0] = new DialogManager.Dialog(missionManager.currentMission.revelationSpeech);  //Kathy
 
-                    setDialog(clips);
+                        setDialog(clips);
+                        relevationSpeechPlayed = true;
+                        missionManager.state = MissionManager.MissionState.MissionOver;
+                    }
 
                 }
 

@@ -17396,37 +17396,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1150880814}
   m_Mesh: {fileID: 4300356, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
---- !u!1 &1151679157
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1000012859676590, guid: c499189063ad66c4298f293aea424e98,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1151679158}
-  m_Layer: 0
-  m_Name: EyeBalls
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1151679158
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4000010398107670, guid: c499189063ad66c4298f293aea424e98,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1151679157}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.017, y: 2.835, z: 0.092}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1548669990}
-  m_Father: {fileID: 1651737393}
-  m_RootOrder: 2
 --- !u!1 &1152336349
 GameObject:
   m_ObjectHideFlags: 0
@@ -23211,13 +23180,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1548669989}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.017000835, y: 2.8350003, z: 0.0919999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1040197744}
-  m_Father: {fileID: 1151679158}
-  m_RootOrder: 0
+  m_Father: {fileID: 1651737393}
+  m_RootOrder: 2
 --- !u!81 &1548669991
 AudioListener:
   m_ObjectHideFlags: 0
@@ -24069,7 +24038,7 @@ Transform:
   m_Children:
   - {fileID: 1936899888}
   - {fileID: 225000684}
-  - {fileID: 1151679158}
+  - {fileID: 1548669990}
   - {fileID: 1464833256}
   - {fileID: 1474807360}
   - {fileID: 247755272}

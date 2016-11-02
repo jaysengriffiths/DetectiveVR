@@ -11,7 +11,8 @@ public class Character : MonoBehaviour
     public bool IsInteracted = false;
     //true if you're part of the current mission
     public bool isSuspect = false;
-
+    public bool arrestPlayed = false;
+    public bool warnPlayed = false;
     //public string spawnPointName;
 
     // Use this for initialization
