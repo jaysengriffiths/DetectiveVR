@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Kathy_witchControls : MonoBehaviour
 {
-    static Animator anim;
+    Animator anim;
 
 	// Use this for initialization
 	void Start ()

@@ -3,7 +3,8 @@ using System.Collections;
 
 public class animatorController : MonoBehaviour
 {
-    static Animator anim;
+    Animator anim;
+
 
     // Use this for initialization
     void Start()
