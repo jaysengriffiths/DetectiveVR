@@ -72,7 +72,7 @@ public class TilePuzzle : MonoBehaviour {
             if (!soundSource.isPlaying) {
                
                soundSource.pitch = tileItem.audioPitch;
-                soundSource.PlayOneShot (currentSound);
+               soundSource.PlayOneShot (currentSound);
 
         }
        //LOOKING AT A NEW TILE
@@ -106,7 +106,7 @@ public class TilePuzzle : MonoBehaviour {
                             // flipTile(currentTile);
                         }
                         
-                        else if(currentTile.person && !first)
+                        else if( currentTile.person && !first)
                         {
                             Debug.Log("TEST");
                             reSetTiles();
@@ -155,11 +155,9 @@ public class TilePuzzle : MonoBehaviour {
                     tempTile = currentTile;
                     if(currentTile.pBag == true)
                     {
-                       
                         reSetTiles();
                         SceneManager.LoadScene("Main_scene");
                         return false;
-                        
                     }
                     return true;
                 }
@@ -221,16 +219,16 @@ public class TilePuzzle : MonoBehaviour {
                 return Games.game1;
                 break;
             case 2:
-                return Games.game2;
+                return Games.game1;
                 break;
             case 3:
-                return Games.game3;
+                return Games.game1;
                 break;
             case 4:
-                return Games.game4;
+                return Games.game1;
                 break;
             case 5:
-                return Games.game5;
+                return Games.game1;
                 break;
             default:
                 return Games.game1;
@@ -267,7 +265,6 @@ public class TilePuzzle : MonoBehaviour {
             {
                 case "G":
                     m_gameTiles[index].GetComponentInChildren<SpriteRenderer>().color = Color.green;
-                    m_gameTiles[index].GetComponentInChildren<TileData>().color = "G";
                     m_gameTiles[index].GetComponentInChildren<TileData>().audioPitch = 1;
                     break;
                 case "W":
@@ -285,16 +282,17 @@ public class TilePuzzle : MonoBehaviour {
                     break;
                 case "X":
                     m_gameTiles[index].GetComponentInChildren<SpriteRenderer>().color = Color.black;
-                    m_gameTiles[index].GetComponentInChildren<TileData>().color = "X";
+                    m_gameTiles[index].GetComponentInChildren<TileData>().audioPitch = 1.5f; // not used
                     break;
                 case "P":
                     m_gameTiles[index].GetComponentInChildren<SpriteRenderer>().color = Color.grey;
-                    m_gameTiles[index].GetComponentInChildren<TileData>().color = "P";
                     m_gameTiles[index].GetComponentInChildren<TileData>().person = true;
                     m_gameTiles[index].GetComponentInChildren<TileData>().audioPitch = 1f;
 
                     break;
             }
+            m_gameTiles[index].GetComponentInChildren<TileData>().color = color;
+
             switch (icon)
             {
 
