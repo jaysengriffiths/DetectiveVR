@@ -3330,9 +3330,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789abe599e2481e488395c265a9cd7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WarningBook: {fileID: 137091213}
   SkyHint: {fileID: 1924453994}
   HandCuffs: {fileID: 834049824}
-  WarningBook: {fileID: 137091213}
 --- !u!114 &71420236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3347,14 +3347,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraAngle: 0
   speed: 0.01
-  walkDelay: 0
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   enkHoldingCloth: {fileID: 1602215043}
   complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
-  feetSource: {fileID: 2000572476}
-  m_StepPeriod: 0.5
   m_GroudFootstepSounds:
   - {fileID: 8300000, guid: 7628acb5e05607844976b00c55113a65, type: 3}
   - {fileID: 8300000, guid: bac38444dd4191649b4961778eeb1f7b, type: 3}
@@ -3724,6 +3721,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &82063584 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012231215972, guid: 0cd7c0258d76b8d4591dc4ecbe785c45,
+    type: 2}
+  m_PrefabInternal: {fileID: 1146510601}
+--- !u!136 &82063585
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 82063584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.5
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.5, z: 0}
 --- !u!1001 &82603944
 Prefab:
   m_ObjectHideFlags: 0
@@ -7540,7 +7555,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1779111801}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!114 &173942730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7826,7 +7841,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1779111801}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!114 &184110821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10079,9 +10094,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789abe599e2481e488395c265a9cd7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WarningBook: {fileID: 171824269}
   SkyHint: {fileID: 1193600724}
   HandCuffs: {fileID: 2018386395}
-  WarningBook: {fileID: 171824269}
 --- !u!114 &261185548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10096,14 +10111,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraAngle: 0
   speed: 0.01
-  walkDelay: 0
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   enkHoldingCloth: {fileID: 1544816775}
   complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
-  feetSource: {fileID: 1324176941}
-  m_StepPeriod: 0.5
   m_GroudFootstepSounds:
   - {fileID: 8300000, guid: 7628acb5e05607844976b00c55113a65, type: 3}
   - {fileID: 8300000, guid: bac38444dd4191649b4961778eeb1f7b, type: 3}
@@ -10332,7 +10344,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &266092986
 Transform:
   m_ObjectHideFlags: 0
@@ -10374,7 +10386,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 228a01f7f2daa7e49a2effcaa9be62c8, type: 3}
     thankyou: {fileID: 8300000, guid: 6ea56c79cc92765409adc7b16dd6c0ba, type: 3}
     thanker: {fileID: 1000013444717182, guid: dd18194aa651b32459cf63920d8ab0ad, type: 2}
-  - character: {fileID: 987074555}
+  - character: {fileID: 891475735}
     wrongArrest: {fileID: 8300000, guid: 2b2458bb1adc2cb498fcdb6f95f74b97, type: 3}
     rightArrest: {fileID: 8300000, guid: e49d0f4b32ba65a47becc501466e448d, type: 3}
     playerWarning: {fileID: 8300000, guid: 48b961dee6bd9244da0df5e53ff887c0, type: 3}
@@ -10392,7 +10404,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 022c98c3ac9796f46b3f7f767ce771b6, type: 3}
     thankyou: {fileID: 8300000, guid: e383d06170e6bf449a18c80932686a2a, type: 3}
     thanker: {fileID: 1000012880069448, guid: 947a28bbb4267804a86016ece8ae87d7, type: 2}
-  - character: {fileID: 1632726986}
+  - character: {fileID: 24477300}
     wrongArrest: {fileID: 8300000, guid: e4d5bc9e8900c784baaf53f5deccfbbc, type: 3}
     rightArrest: {fileID: 8300000, guid: 063b46459e8fd944a8eeefb65c7455a2, type: 3}
     playerWarning: {fileID: 8300000, guid: 943d35ac4b878d6439c3b186127ef8e6, type: 3}
@@ -10401,7 +10413,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: cb63d54bcc1340f4096ce1d328ddeeba, type: 3}
     thankyou: {fileID: 8300000, guid: ce4c89ca04c3ee443a41c1df5aa98e19, type: 3}
     thanker: {fileID: 1000014182695148, guid: e28c41057d540fd4c96b9a192ecde513, type: 2}
-  - character: {fileID: 1233207279}
+  - character: {fileID: 819615636}
     wrongArrest: {fileID: 8300000, guid: 7febb7b9c6da0b84a80e49e8aa068e06, type: 3}
     rightArrest: {fileID: 8300000, guid: 73b8cabc2c88ad947bb3681dcd5463fb, type: 3}
     playerWarning: {fileID: 8300000, guid: 8f437e66c333b2745ab415ab385d52e2, type: 3}
@@ -15435,12 +15447,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2011583802}
   m_RootOrder: 2
---- !u!114 &432982882 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114000010340314342, guid: e28c41057d540fd4c96b9a192ecde513,
-    type: 2}
-  m_PrefabInternal: {fileID: 1042235557}
-  m_Script: {fileID: 11500000, guid: a839c6c1b3df89e4a9484980c80b6289, type: 3}
 --- !u!1001 &437777874
 Prefab:
   m_ObjectHideFlags: 0
@@ -15771,7 +15777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &448836094
 Transform:
   m_ObjectHideFlags: 0
@@ -17161,6 +17167,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1779111801}
+  - {fileID: 1971336904}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1 &504478011
@@ -19069,7 +19076,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &561888771
 Transform:
   m_ObjectHideFlags: 0
@@ -25103,7 +25110,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: df7dd85ece97ea24c855cb68981b847a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.302
+      value: 43.271
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df7dd85ece97ea24c855cb68981b847a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -25111,7 +25118,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df7dd85ece97ea24c855cb68981b847a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.336
+      value: -8.6246
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df7dd85ece97ea24c855cb68981b847a, type: 3}
       propertyPath: m_LocalRotation.x
@@ -25136,6 +25143,10 @@ Prefab:
     - target: {fileID: 400000, guid: df7dd85ece97ea24c855cb68981b847a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -145.20201
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: df7dd85ece97ea24c855cb68981b847a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df7dd85ece97ea24c855cb68981b847a, type: 3}
@@ -26147,7 +26158,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1779111801}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &775438311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28125,7 +28136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &883447352
 Transform:
   m_ObjectHideFlags: 0
@@ -28581,7 +28592,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1779111801}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!114 &894363869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34472,7 +34483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1051570036
 Transform:
   m_ObjectHideFlags: 0
@@ -36668,86 +36679,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 3.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &1121660878
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1121660882}
-  - 33: {fileID: 1121660881}
-  - 136: {fileID: 1121660880}
-  - 23: {fileID: 1121660879}
-  m_Layer: 0
-  m_Name: wellCollider
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &1121660879
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1121660878}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!136 &1121660880
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1121660878}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1121660881
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1121660878}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1121660882
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1121660878}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.1263132, y: 2.1215498, z: 2.1263125}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 360281994}
-  m_RootOrder: 8
 --- !u!1 &1122246115
 GameObject:
   m_ObjectHideFlags: 0
@@ -37606,6 +37537,10 @@ Prefab:
     - target: {fileID: 4000014087550346, guid: 0cd7c0258d76b8d4591dc4ecbe785c45, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012231215972, guid: 0cd7c0258d76b8d4591dc4ecbe785c45, type: 2}
+      propertyPath: m_TagString
+      value: Puzzle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cd7c0258d76b8d4591dc4ecbe785c45, type: 2}
@@ -40241,9 +40176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789abe599e2481e488395c265a9cd7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WarningBook: {fileID: 1719471729}
   SkyHint: {fileID: 347720546}
   HandCuffs: {fileID: 558298527}
-  WarningBook: {fileID: 1719471729}
 --- !u!114 &1239931625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40258,14 +40193,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraAngle: 0
   speed: 0.01
-  walkDelay: 0
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   enkHoldingCloth: {fileID: 209245148}
   complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
-  feetSource: {fileID: 38087866}
-  m_StepPeriod: 0.5
   m_GroudFootstepSounds:
   - {fileID: 8300000, guid: 7628acb5e05607844976b00c55113a65, type: 3}
   - {fileID: 8300000, guid: bac38444dd4191649b4961778eeb1f7b, type: 3}
@@ -42002,7 +41934,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1779111801}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!114 &1314252480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49438,9 +49370,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789abe599e2481e488395c265a9cd7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WarningBook: {fileID: 475101450}
   SkyHint: {fileID: 349548052}
   HandCuffs: {fileID: 1641718287}
-  WarningBook: {fileID: 475101450}
 --- !u!114 &1538862890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49455,14 +49387,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraAngle: 0
   speed: 0.01
-  walkDelay: 0
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   enkHoldingCloth: {fileID: 1561476862}
   complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
-  feetSource: {fileID: 548125398}
-  m_StepPeriod: 0.5
   m_GroudFootstepSounds:
   - {fileID: 8300000, guid: 7628acb5e05607844976b00c55113a65, type: 3}
   - {fileID: 8300000, guid: bac38444dd4191649b4961778eeb1f7b, type: 3}
@@ -49592,7 +49521,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1541146317}
   m_LocalRotation: {x: -0, y: -0.30999717, z: -0, w: 0.95073754}
-  m_LocalPosition: {x: 41.28, y: 0.020999908, z: -10.67}
+  m_LocalPosition: {x: 20.31, y: 0.020999908, z: 18.07}
   m_LocalScale: {x: 0.9000001, y: 0.90000004, z: 0.9000002}
   m_LocalEulerAnglesHint: {x: 0, y: -36.359, z: 0}
   m_Children:
@@ -50223,7 +50152,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1573124747
 Transform:
   m_ObjectHideFlags: 0
@@ -55733,7 +55662,6 @@ Transform:
   - {fileID: 266092986}
   - {fileID: 1163630735}
   - {fileID: 881645991}
-  - {fileID: 1971336904}
   - {fileID: 894363868}
   - {fileID: 1314252479}
   - {fileID: 775438310}
@@ -61651,9 +61579,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 789abe599e2481e488395c265a9cd7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  WarningBook: {fileID: 2048470271}
   SkyHint: {fileID: 1145184562}
   HandCuffs: {fileID: 1520012419}
-  WarningBook: {fileID: 2048470271}
 --- !u!114 &1948762092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61668,14 +61596,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraAngle: 0
   speed: 0.01
-  walkDelay: 0
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   enkHoldingCloth: {fileID: 1315988257}
   complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
-  feetSource: {fileID: 1378439778}
-  m_StepPeriod: 0.5
   m_GroudFootstepSounds:
   - {fileID: 8300000, guid: 7628acb5e05607844976b00c55113a65, type: 3}
   - {fileID: 8300000, guid: bac38444dd4191649b4961778eeb1f7b, type: 3}
@@ -62604,7 +62529,7 @@ Transform:
   - {fileID: 693526729}
   - {fileID: 332506250}
   m_Father: {fileID: 497117358}
-  m_RootOrder: 3
+  m_RootOrder: 1
 --- !u!114 &1971336905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62636,7 +62561,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 93ab98939a1da404ab781e46812696f6, type: 3}
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
-  - character: {fileID: 432982882}
+  - character: {fileID: 0}
     wrongArrest: {fileID: 8300000, guid: 985b2e2e13c175e4e872faa76b931eb3, type: 3}
     rightArrest: {fileID: 0}
     playerWarning: {fileID: 8300000, guid: bb45bf57be2a55246a22f09f27f0780c, type: 3}
