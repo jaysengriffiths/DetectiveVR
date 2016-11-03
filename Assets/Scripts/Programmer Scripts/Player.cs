@@ -53,9 +53,12 @@ public class Player : MonoBehaviour
     private float counter;
     //[HideInInspector]
     public float cameraAngle;
-    public float speed = 0.01f;  //Kathy changed from 0.03;
-    public float walkDelay;
+    private float footstepVolumeScale = 0.5f;
+    public float speed = 1.5f;  //Kathy changed from 0.03;
+    private float walkDelay = 0;
     public AudioClip nameClip;
+
+    [HideInInspector]
     public Transform enkHoldingCloth;
 
     //setting new timers
@@ -75,8 +78,8 @@ public class Player : MonoBehaviour
 
     //Footsteps 
     private float m_StepCycle;  //
-    public AudioSource feetSource;  //Kathy
-    public float m_StepPeriod;//Kathy
+    private AudioSource feetSource;  //Kathy
+    private float m_StepPeriod = 0.6f;//Kathy
  
     [SerializeField]
     public AudioClip[] m_GroudFootstepSounds;    // an array of footstep sounds that will be randomly selected from - Kathy copied from Standard Assets character script
@@ -95,6 +98,8 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
+        enkHoldingCloth = GameObject.Find("clothHolder").transform;
+        feetSource = gameObject.GetComponentInChildren<AudioSource>();
         dialogManager = GetComponent<DialogManager>();
         GameObject mic = GameObject.Find("Microphone");
         if (mic)
@@ -136,6 +141,19 @@ public class Player : MonoBehaviour
                     walk();
                 }
                 Look();
+            }
+
+            if (selectedCharacter != null)
+            {
+                Vector3 v1 = Camera.main.transform.forward;
+                Vector3 v2 = selectedCharacter.transform.position - transform.position;
+                v1.y = 0;
+                v2.y = 0;
+                if (Vector3.Dot(v1, v2) < 0)
+                {                  
+                    dialogManager.ClearDialog(selectedCharacter);
+                    selectedCharacter = null;
+                }
             }
         }
     }
@@ -223,15 +241,6 @@ public class Player : MonoBehaviour
         if (goHomeTimer.IsFull(lookingAtGoldStar))
             SceneManager.LoadScene("HQ");
 
-        if (selectedCharacter != null) 
-        {
-            Vector3 v1 = Camera.main.transform.forward;
-            Vector3 v2 = selectedCharacter.transform.position - transform.position;
-            v1.y = 0;
-            v2.y = 0;
-            if (Vector3.Dot(v1,v2) < 0)
-                selectedCharacter = null;
-        }
     }
 
     public void walk()
@@ -258,7 +267,7 @@ public class Player : MonoBehaviour
     void isMoving()
     {
         Vector3 fwd = Camera.main.transform.forward;
-        controller.Move(speed * fwd);
+        controller.Move((speed  * Time.deltaTime) * fwd);
         ProgressStepCycle();
     }
     
@@ -287,7 +296,7 @@ public class Player : MonoBehaviour
             {
                 int n = Random.Range(1, m_GroudFootstepSounds.Length);
                 feetSource.clip = m_GroudFootstepSounds[n];
-                feetSource.PlayOneShot(feetSource.clip, .5f);
+                feetSource.PlayOneShot(feetSource.clip, footstepVolumeScale);
                 //move picked sound to index 0 so it's not picked next time
                 m_GroudFootstepSounds[n] = m_GroudFootstepSounds[0];
                 m_GroudFootstepSounds[0] = feetSource.clip;
@@ -303,8 +312,8 @@ public class Player : MonoBehaviour
         {
             int n = Random.Range(1, m_GrassFootstepSounds.Length);
             feetSource.clip = m_GrassFootstepSounds[n];
-            feetSource.PlayOneShot(feetSource.clip, .5f);
-
+            feetSource.PlayOneShot(feetSource.clip, footstepVolumeScale);
+            
             m_GrassFootstepSounds[n] = m_GrassFootstepSounds[0];
             m_GrassFootstepSounds[0] = feetSource.clip;
 
@@ -316,7 +325,7 @@ public class Player : MonoBehaviour
         {
             int n = Random.Range(1, m_MudFootstepSounds.Length);
             feetSource.clip = m_MudFootstepSounds[n];
-            feetSource.PlayOneShot(feetSource.clip, .5f);
+            feetSource.PlayOneShot(feetSource.clip, footstepVolumeScale);
 
             m_MudFootstepSounds[n] = m_MudFootstepSounds[0];
             m_MudFootstepSounds[0] = feetSource.clip;

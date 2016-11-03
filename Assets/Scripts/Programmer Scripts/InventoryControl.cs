@@ -2,23 +2,14 @@
 using System.Collections;
 
 public class InventoryControl : MonoBehaviour
-{
-
-    [SerializeField]
-    GameObject SkyHint;
-
-    [SerializeField]
-    GameObject HandCuffs;
-
-    [SerializeField]
-    GameObject WarningBook;
-
-    //public float minAngle;
-    //public float maxAngle;
-
+{ 
+    public GameObject WarningBook;
+    public GameObject SkyHint;
+    public GameObject HandCuffs;
     private Player player;
     private MissionManager missionManager;
     private DialogManager dialogManager;
+    private bool givingClue = false;
 
     // Use this for initialization
     void Start()
@@ -50,44 +41,43 @@ public class InventoryControl : MonoBehaviour
 
     Accumulator warningTimer = new Accumulator(2);
     Accumulator cuffTimer = new Accumulator(2);
+    Accumulator hintTimer = new Accumulator(2);
 
     // Update is called once per frame
     void Update()
     {
-        if (player.cameraAngle > 270 && player.cameraAngle < 280)
+        if (hintTimer.IsFull(player.cameraAngle > 270 && player.cameraAngle < 280))
         {
+            givingClue = true;
+            if(givingClue)
             GiveClue();
+        }
+
+        else
+        {
+            givingClue = false;
         }
 
         if (player.selectedCharacter != null && player.selectedCharacter.introClip && player.selectedCharacter.IsInteracted)
         {
             if (cuffTimer.IsFull(player.cameraAngle > 60 && player.cameraAngle < 65))
             {
-                HandCuffs.SetActive(true);
                 missionManager.Arrest(player.selectedCharacter);
             }
 
             if (warningTimer.IsFull(player.cameraAngle > 65 && player.cameraAngle < 70))
             {
-                WarningBook.SetActive(true);
                 missionManager.Warn(player.selectedCharacter);
-            }
-
-            else
-            {
-                HandCuffs.SetActive(false);
-                WarningBook.SetActive(false);
             }
         }
     }
 
     public void GiveClue()
     {
-        Debug.Log("Give Clue");
         AudioClip clip;
         clip = missionManager.currentMission.clueDialogue;
         DialogManager.Dialog[] clips = new DialogManager.Dialog[1];  //Kathy
-        clips[0] = new DialogManager.Dialog(clip);  //Kathy
+        clips[0] = new DialogManager.Dialog(clip, SkyHint.transform);  //Kathy
         dialogManager.setDialog(clips);
     }
 

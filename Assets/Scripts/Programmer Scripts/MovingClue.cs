@@ -27,7 +27,7 @@ public class MovingClue : MonoBehaviour
             gameObject.transform.position = player.enkHoldingCloth.transform.position;
             gameObject.transform.rotation = player.enkHoldingCloth.transform.rotation;
             player.clueObject = this.gameObject;
-            gameObject.GetComponent<SoundLookAt>().enabled = false;
+            //gameObject.GetComponent<SoundLookAt>().enabled = false;
             //gameObject.SetActive(false);
         }
 
@@ -49,7 +49,7 @@ public class MovingClue : MonoBehaviour
         {
             GetComponent<AudioSource>().clip = character.clothRip;
             GetComponent<AudioSource>().Play();
-
+            
         }
         else
             transform.position = Vector3.MoveTowards(transform.position, clueTransform.position, step);
