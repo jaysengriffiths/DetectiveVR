@@ -8,6 +8,7 @@ public class DialogManager : MonoBehaviour {
     public float soundDelayTime = 0.5f;
     private bool relevationSpeechPlayed = false;
     private bool thankyouSpeechPlayed = false;
+    private bool mysterySpeechPlayed = false;
     public enum DialogType
     {
         Normal,
@@ -118,11 +119,15 @@ public class DialogManager : MonoBehaviour {
                     //Debug.Log("play thankyou");
                     if (!thankyouSpeechPlayed)
                     {
-                        DialogManager.Dialog[] clips = new DialogManager.Dialog[1];  //Kathy
-                        clips[1] = new DialogManager.Dialog(missionManager.currentMission.GetGuiltySuspect().thankyou);  //Kathy
+                        DialogManager.Dialog[] clips = new DialogManager.Dialog[3];  //Kathy
+                        clips[0] = new DialogManager.Dialog(missionManager.currentMission.GetGuiltySuspect().thankyou);  //Kathy
+                        clips[1] = new DialogManager.Dialog(missionManager.currentMission.revelationSpeech);  //Kathy
+                        clips[2] = new DialogManager.Dialog(missionManager.currentMission.mysterySpeech);  //Kathy
 
                         setDialog(clips);
                         thankyouSpeechPlayed = true;
+                        relevationSpeechPlayed = true;
+                        mysterySpeechPlayed = true;
                         missionManager.state = MissionManager.MissionState.MissionOver;
                     }
                 }
@@ -131,11 +136,13 @@ public class DialogManager : MonoBehaviour {
                 {
                     if (!relevationSpeechPlayed)
                     {
-                        DialogManager.Dialog[] clips = new DialogManager.Dialog[1];  //Kathy
+                        DialogManager.Dialog[] clips = new DialogManager.Dialog[2];  //Kathy
                         clips[0] = new DialogManager.Dialog(missionManager.currentMission.revelationSpeech);  //Kathy
+                        clips[1] = new DialogManager.Dialog(missionManager.currentMission.mysterySpeech);  //Kathy
 
                         setDialog(clips);
                         relevationSpeechPlayed = true;
+                        mysterySpeechPlayed = true;
                         missionManager.state = MissionManager.MissionState.MissionOver;
                     }
 

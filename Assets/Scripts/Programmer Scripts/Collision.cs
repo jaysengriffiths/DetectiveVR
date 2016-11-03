@@ -10,9 +10,9 @@ public class Collision : MonoBehaviour
     {
         //player = gameObject.GetComponent<GameObject>();
     }
-    
 
-    void OnTriggerEnter(Collider other)
+
+    void OnTriggerEnter (Collider other)
     {
         if  (other.tag == "NPC")
         {

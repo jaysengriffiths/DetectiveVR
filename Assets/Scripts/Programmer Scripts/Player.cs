@@ -4,6 +4,20 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;  //Kathy
 
+//TODO LIST
+//Fix collision with buildings, walls play correct audio
+//Fix interaction with handcuffs and warningbook
+//Correct dialog is played however is pause needed? what happens to characters
+//Fix cloth ripping when comparing clues
+
+//|          |  |-------        |
+//|\        /|  |               |
+//| \      / |  |               |
+//|  \    /  |  |-------        |
+//|   \  /   |  |               |
+//|    \/    |  |               |
+//|          |  |-------        |
+
 public class Player : MonoBehaviour
 {
 

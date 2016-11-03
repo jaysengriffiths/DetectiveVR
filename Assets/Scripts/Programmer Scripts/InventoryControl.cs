@@ -49,28 +49,24 @@ public class InventoryControl : MonoBehaviour
         if (hintTimer.IsFull(player.cameraAngle > 270 && player.cameraAngle < 280))
         {
             givingClue = true;
-            if(givingClue)
-            GiveClue();
-        }
-
-        else
-        {
-            givingClue = false;
+            if (givingClue)
+                GiveClue();
         }
 
         if (player.selectedCharacter != null && player.selectedCharacter.introClip && player.selectedCharacter.IsInteracted)
         {
-            if (cuffTimer.IsFull(player.cameraAngle > 60 && player.cameraAngle < 65))
+            if (cuffTimer.IsFull(player.cameraAngle > 65 && player.cameraAngle < 70))
             {
                 missionManager.Arrest(player.selectedCharacter);
             }
 
-            if (warningTimer.IsFull(player.cameraAngle > 65 && player.cameraAngle < 70))
+            if (warningTimer.IsFull(player.cameraAngle > 60 && player.cameraAngle < 65))
             {
                 missionManager.Warn(player.selectedCharacter);
             }
         }
     }
+ 
 
     public void GiveClue()
     {

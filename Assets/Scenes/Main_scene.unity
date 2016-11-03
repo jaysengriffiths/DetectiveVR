@@ -3258,7 +3258,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 66394069}
   m_LocalRotation: {x: -0, y: -0.30999717, z: -0, w: 0.95073754}
-  m_LocalPosition: {x: -0.72190094, y: -1.1315606, z: 3.6323318}
+  m_LocalPosition: {x: -0.72190094, y: 0, z: 3.6323318}
   m_LocalScale: {x: 0.90000045, y: 0.90000004, z: 0.9000006}
   m_LocalEulerAnglesHint: {x: 0, y: -36.359, z: 0}
   m_Children: []
@@ -6788,6 +6788,10 @@ Prefab:
       propertyPath: arrestPlayed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011599172170, guid: 8b9408772e538ed4c87dc891788954f2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8b9408772e538ed4c87dc891788954f2, type: 2}
   m_IsPrefabParent: 0
@@ -7580,6 +7584,7 @@ MonoBehaviour:
   clueObjects: []
   clueStartPos: {fileID: 0}
   clueSpawned: {fileID: 0}
+  enkSpawnPoint: {fileID: 0}
 --- !u!4 &179168314 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010520689326, guid: f7e5b134f1f8a054da7d8e5931895316,
@@ -7866,6 +7871,7 @@ MonoBehaviour:
   clueObjects: []
   clueStartPos: {fileID: 0}
   clueSpawned: {fileID: 0}
+  enkSpawnPoint: {fileID: 0}
 --- !u!1 &184272866
 GameObject:
   m_ObjectHideFlags: 0
@@ -8028,6 +8034,10 @@ Prefab:
     - target: {fileID: 114000013702208154, guid: a9e86c3fe6a17304ab121a499fe452c5,
         type: 2}
       propertyPath: arrestPlayed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010555482474, guid: a9e86c3fe6a17304ab121a499fe452c5, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -9885,6 +9895,10 @@ Prefab:
       propertyPath: arrestPlayed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010551382442, guid: d58ae7013f815a14ab9d46a0f636d94a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d58ae7013f815a14ab9d46a0f636d94a, type: 2}
   m_IsPrefabParent: 0
@@ -10386,6 +10400,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 228a01f7f2daa7e49a2effcaa9be62c8, type: 3}
     thankyou: {fileID: 8300000, guid: 6ea56c79cc92765409adc7b16dd6c0ba, type: 3}
     thanker: {fileID: 1000013444717182, guid: dd18194aa651b32459cf63920d8ab0ad, type: 2}
+    spawnPoint: {fileID: 660979142}
   - character: {fileID: 891475735}
     wrongArrest: {fileID: 8300000, guid: 2b2458bb1adc2cb498fcdb6f95f74b97, type: 3}
     rightArrest: {fileID: 8300000, guid: e49d0f4b32ba65a47becc501466e448d, type: 3}
@@ -10395,6 +10410,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 4ba9b1389d575d34e9c5efec284f416b, type: 3}
     thankyou: {fileID: 8300000, guid: 65e068c1d88a85c4c9bdcd80d38a56ef, type: 3}
     thanker: {fileID: 1000012641600308, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
+    spawnPoint: {fileID: 269525235}
   - character: {fileID: 670802454}
     wrongArrest: {fileID: 8300000, guid: 55958bd07a80ad846ab0298e73bef773, type: 3}
     rightArrest: {fileID: 8300000, guid: 6b21b069bdc3af44f809333899b7056f, type: 3}
@@ -10404,6 +10420,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 022c98c3ac9796f46b3f7f767ce771b6, type: 3}
     thankyou: {fileID: 8300000, guid: e383d06170e6bf449a18c80932686a2a, type: 3}
     thanker: {fileID: 1000012880069448, guid: 947a28bbb4267804a86016ece8ae87d7, type: 2}
+    spawnPoint: {fileID: 1294042388}
   - character: {fileID: 24477300}
     wrongArrest: {fileID: 8300000, guid: e4d5bc9e8900c784baaf53f5deccfbbc, type: 3}
     rightArrest: {fileID: 8300000, guid: 063b46459e8fd944a8eeefb65c7455a2, type: 3}
@@ -10413,6 +10430,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: cb63d54bcc1340f4096ce1d328ddeeba, type: 3}
     thankyou: {fileID: 8300000, guid: ce4c89ca04c3ee443a41c1df5aa98e19, type: 3}
     thanker: {fileID: 1000014182695148, guid: e28c41057d540fd4c96b9a192ecde513, type: 2}
+    spawnPoint: {fileID: 962837239}
   - character: {fileID: 819615636}
     wrongArrest: {fileID: 8300000, guid: 7febb7b9c6da0b84a80e49e8aa068e06, type: 3}
     rightArrest: {fileID: 8300000, guid: 73b8cabc2c88ad947bb3681dcd5463fb, type: 3}
@@ -10422,6 +10440,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 6dd788f227d0d1143893021f55fa1f58, type: 3}
     thankyou: {fileID: 8300000, guid: b41108dd3de57d8479a4db1d51d262ff, type: 3}
     thanker: {fileID: 1000010555482474, guid: a9e86c3fe6a17304ab121a499fe452c5, type: 2}
+    spawnPoint: {fileID: 2066320761}
   soundFX:
   - {fileID: 8300000, guid: c636c6cfad7a34d4685f73327b65c1b1, type: 3}
   - {fileID: 8300000, guid: cff741c5dacb29d46bfc45eb14fdebb8, type: 3}
@@ -10443,6 +10462,7 @@ MonoBehaviour:
   - {fileID: 1573124746}
   clueStartPos: {fileID: 7579080}
   clueSpawned: {fileID: 0}
+  enkSpawnPoint: {fileID: 66394069}
 --- !u!1 &269525234
 GameObject:
   m_ObjectHideFlags: 0
@@ -10464,10 +10484,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 269525234}
-  m_LocalRotation: {x: -0, y: 0.20549463, z: -0, w: 0.97865826}
-  m_LocalPosition: {x: 2.7948914, y: -1.1315606, z: 6.153721}
+  m_LocalRotation: {x: -0, y: 0.9815827, z: -0, w: -0.19103773}
+  m_LocalPosition: {x: 2.7948914, y: 0, z: 6.153721}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 23.51, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 201.77899, z: 0}
   m_Children: []
   m_Father: {fileID: 1729027084}
   m_RootOrder: 1
@@ -14302,7 +14322,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b9d2fc907aac9ef4dadd29166ba39607, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b9d2fc907aac9ef4dadd29166ba39607, type: 3}
       propertyPath: m_LocalScale.x
@@ -22316,7 +22336,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 660979141}
   m_LocalRotation: {x: -0, y: 0.3253184, z: -0, w: 0.94560456}
-  m_LocalPosition: {x: -1.9528999, y: -1.1315606, z: -1.750668}
+  m_LocalPosition: {x: -0.568, y: 0, z: -4.317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 38.238003, z: 0}
   m_Children: []
@@ -25508,7 +25528,7 @@ GameObject:
   - 23: {fileID: 758833648}
   m_Layer: 0
   m_Name: bellTower
-  m_TagString: Untagged
+  m_TagString: BUILDING
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26183,6 +26203,7 @@ MonoBehaviour:
   clueObjects: []
   clueStartPos: {fileID: 0}
   clueSpawned: {fileID: 0}
+  enkSpawnPoint: {fileID: 0}
 --- !u!1 &780397480
 GameObject:
   m_ObjectHideFlags: 0
@@ -27877,6 +27898,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 4d3bdd39dbc499c479b7fc37350b9eff, type: 3}
     thankyou: {fileID: 8300000, guid: a72eca027ed7e1341a6c6e6a9f807d02, type: 3}
     thanker: {fileID: 1000011807833958, guid: abe482c88947c344ba88958c6360f8a2, type: 2}
+    spawnPoint: {fileID: 0}
   - character: {fileID: 114000012954719294, guid: 947a28bbb4267804a86016ece8ae87d7,
       type: 2}
     wrongArrest: {fileID: 8300000, guid: 8c5568b2e8ec11a48987b488a85aa795, type: 3}
@@ -27887,6 +27909,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: c8617c4d86ecd6349a11119ca1f7444b, type: 3}
     thankyou: {fileID: 8300000, guid: 11ca9c3aaa9f7b949964a2e88cdc9c30, type: 3}
     thanker: {fileID: 1000010212309258, guid: 8d694d9bf1fe2ef4bb8d88d7daac2af8, type: 2}
+    spawnPoint: {fileID: 0}
   - character: {fileID: 114000012950188006, guid: abe482c88947c344ba88958c6360f8a2,
       type: 2}
     wrongArrest: {fileID: 8300000, guid: 64337c1747f10944eb5d015f0567e2c6, type: 3}
@@ -27897,6 +27920,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: e1435010b50709940af1ac04f5a0deb6, type: 3}
     thankyou: {fileID: 8300000, guid: 9fa43f645417d524996706b6a682c4de, type: 3}
     thanker: {fileID: 1000012880069448, guid: 947a28bbb4267804a86016ece8ae87d7, type: 2}
+    spawnPoint: {fileID: 0}
   - character: {fileID: 114000010252869138, guid: 52256815b369a6347ab99fb94f99df29,
       type: 2}
     wrongArrest: {fileID: 8300000, guid: f78ecf1fb93f2414da5b9833e2308fc6, type: 3}
@@ -27907,6 +27931,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 9f826d261d6f98847900521aacaa599f, type: 3}
     thankyou: {fileID: 8300000, guid: a13cd40d1f08b0a4ea4a7bcb117731da, type: 3}
     thanker: {fileID: 1000012641600308, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
+    spawnPoint: {fileID: 0}
   - character: {fileID: 114000014121541160, guid: 8d694d9bf1fe2ef4bb8d88d7daac2af8,
       type: 2}
     wrongArrest: {fileID: 8300000, guid: 4ffeb0f45dd060d42bc24a36bf4a502f, type: 3}
@@ -27917,6 +27942,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: e61cfba70eff95340b223de008853518, type: 3}
     thankyou: {fileID: 8300000, guid: 61393b512f0732744b60b28b5f775af4, type: 3}
     thanker: {fileID: 1000011614180854, guid: 52256815b369a6347ab99fb94f99df29, type: 2}
+    spawnPoint: {fileID: 0}
   soundFX: []
   mysterySpeech: {fileID: 8300000, guid: f25677dd863ea9e40b3c1e053a66bdd3, type: 3}
   revelationSpeech: {fileID: 8300000, guid: 14df80b3c12335d4ca81094a50b3278d, type: 3}
@@ -27933,6 +27959,7 @@ MonoBehaviour:
   - {fileID: 149116694}
   clueStartPos: {fileID: 1993859719}
   clueSpawned: {fileID: 0}
+  enkSpawnPoint: {fileID: 0}
 --- !u!1001 &883338119
 Prefab:
   m_ObjectHideFlags: 0
@@ -28617,6 +28644,7 @@ MonoBehaviour:
   clueObjects: []
   clueStartPos: {fileID: 0}
   clueSpawned: {fileID: 0}
+  enkSpawnPoint: {fileID: 0}
 --- !u!1 &898223440
 GameObject:
   m_ObjectHideFlags: 0
@@ -28698,6 +28726,10 @@ Prefab:
     - target: {fileID: 114000010252869138, guid: 52256815b369a6347ab99fb94f99df29,
         type: 2}
       propertyPath: arrestPlayed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011614180854, guid: 52256815b369a6347ab99fb94f99df29, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -29510,6 +29542,10 @@ Prefab:
     - target: {fileID: 4000010868177042, guid: dd18194aa651b32459cf63920d8ab0ad, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0.616
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013444717182, guid: dd18194aa651b32459cf63920d8ab0ad, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd18194aa651b32459cf63920d8ab0ad, type: 2}
@@ -31045,7 +31081,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 962837238}
   m_LocalRotation: {x: -0, y: -0.63555235, z: -0, w: 0.77205783}
-  m_LocalPosition: {x: 3.6281013, y: -1.1315606, z: 2.2523317}
+  m_LocalPosition: {x: 3.6281013, y: 0, z: 2.2523317}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: -79.194, z: 0}
   m_Children: []
@@ -34143,6 +34179,10 @@ Prefab:
       propertyPath: arrestPlayed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000014182695148, guid: e28c41057d540fd4c96b9a192ecde513, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e28c41057d540fd4c96b9a192ecde513, type: 2}
   m_IsPrefabParent: 0
@@ -34159,7 +34199,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013190133598, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 4000013190133598, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
       propertyPath: m_LocalPosition.z
@@ -34202,6 +34242,10 @@ Prefab:
     - target: {fileID: 114000010245928270, guid: 18e74bbc636dc2b49be659f888e2e5a8,
         type: 2}
       propertyPath: arrestPlayed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012641600308, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -37910,6 +37954,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: feaabee869009274b841ea72b1a12742, type: 3}
     thankyou: {fileID: 8300000, guid: 1f358e1f7ac984340900f4fcf0757cf1, type: 3}
     thanker: {fileID: 1000013444717182, guid: dd18194aa651b32459cf63920d8ab0ad, type: 2}
+    spawnPoint: {fileID: 0}
   - character: {fileID: 114000012954719294, guid: 947a28bbb4267804a86016ece8ae87d7,
       type: 2}
     wrongArrest: {fileID: 8300000, guid: 797ae969569ecce48b6a8fe68b689495, type: 3}
@@ -37920,6 +37965,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 4dff46569e63b894295254bb61495868, type: 3}
     thankyou: {fileID: 8300000, guid: edf38679376722148888d161b7dfc0a9, type: 3}
     thanker: {fileID: 1000011614180854, guid: 52256815b369a6347ab99fb94f99df29, type: 2}
+    spawnPoint: {fileID: 0}
   - character: {fileID: 114000012947907416, guid: dd18194aa651b32459cf63920d8ab0ad,
       type: 2}
     wrongArrest: {fileID: 8300000, guid: 4aded3e57d00a4948b11d6357f7315b6, type: 3}
@@ -37930,6 +37976,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 72378b826ea06564481d9948d8a6f7bb, type: 3}
     thankyou: {fileID: 8300000, guid: 257d56f3de8054943a8ad05d06a9807e, type: 3}
     thanker: {fileID: 1000012880069448, guid: 947a28bbb4267804a86016ece8ae87d7, type: 2}
+    spawnPoint: {fileID: 0}
   - character: {fileID: 114000012854149284, guid: 8b9408772e538ed4c87dc891788954f2,
       type: 2}
     wrongArrest: {fileID: 8300000, guid: 7bda3b2b0760a9c4eb1695aaaed4d856, type: 3}
@@ -37940,6 +37987,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: c8096fd78a261a84fbc4b7cc018a19a1, type: 3}
     thankyou: {fileID: 8300000, guid: 49e99f802f96edc4fb38ed6bba4fa1e5, type: 3}
     thanker: {fileID: 1000010555482474, guid: a9e86c3fe6a17304ab121a499fe452c5, type: 2}
+    spawnPoint: {fileID: 0}
   - character: {fileID: 114000010252869138, guid: 52256815b369a6347ab99fb94f99df29,
       type: 2}
     wrongArrest: {fileID: 8300000, guid: 4f690cf22ca45ad4792da71729989f10, type: 3}
@@ -37950,6 +37998,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 5cbd1bdf5d4a5954f8ac3b4e09833ad1, type: 3}
     thankyou: {fileID: 8300000, guid: 893985988675a8842bc7e6bf746df056, type: 3}
     thanker: {fileID: 1000011599172170, guid: 8b9408772e538ed4c87dc891788954f2, type: 2}
+    spawnPoint: {fileID: 0}
   soundFX:
   - {fileID: 8300000, guid: 37ca4ad0e2944c746bdafc1bf91a90cf, type: 3}
   - {fileID: 8300000, guid: b1177c9bc69b1484db845ef58cc298da, type: 3}
@@ -37971,6 +38020,7 @@ MonoBehaviour:
   - {fileID: 557097955}
   clueStartPos: {fileID: 447277190}
   clueSpawned: {fileID: 0}
+  enkSpawnPoint: {fileID: 0}
 --- !u!1 &1164186208
 GameObject:
   m_ObjectHideFlags: 0
@@ -41520,7 +41570,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1294042387}
   m_LocalRotation: {x: -0, y: 0.643554, z: -0, w: 0.76540077}
-  m_LocalPosition: {x: -5.7919006, y: -1.1315606, z: 1.8923321}
+  m_LocalPosition: {x: -2.854, y: 0, z: -0.781}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 80.367004, z: 0}
   m_Children: []
@@ -41959,6 +42009,7 @@ MonoBehaviour:
   clueObjects: []
   clueStartPos: {fileID: 0}
   clueSpawned: {fileID: 0}
+  enkSpawnPoint: {fileID: 0}
 --- !u!1 &1314556341
 GameObject:
   m_ObjectHideFlags: 0
@@ -42982,6 +43033,10 @@ Prefab:
       propertyPath: arrestPlayed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011527711978, guid: 78f48a6dd5d62e149b12cd5f1f355e97, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78f48a6dd5d62e149b12cd5f1f355e97, type: 2}
   m_IsPrefabParent: 0
@@ -43749,9 +43804,9 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1349069364}
-  m_LocalRotation: {x: 0.39644334, y: -0.87432426, z: 0.026433036, w: 0.27873147}
-  m_LocalPosition: {x: 0.1638, y: 1.0558, z: -0.2827}
-  m_LocalScale: {x: 0.700736, y: 0.70073557, z: 0.70073605}
+  m_LocalRotation: {x: 0.20420161, y: -0.15035716, z: -0.3408338, w: 0.9052772}
+  m_LocalPosition: {x: -0.2926073, y: 0.95022017, z: 0.029138317}
+  m_LocalScale: {x: 0.630663, y: 0.6306621, z: 0.63066304}
   m_LocalEulerAnglesHint: {x: 15.4470005, y: -151.07701, z: -44.554}
   m_Children:
   - {fileID: 1082486890}
@@ -43759,8 +43814,8 @@ Transform:
   - {fileID: 2020243239}
   - {fileID: 2137798282}
   - {fileID: 1336745884}
-  m_Father: {fileID: 1541146318}
-  m_RootOrder: 3
+  m_Father: {fileID: 1529496085}
+  m_RootOrder: 0
 --- !u!114 &1349069366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43774,10 +43829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 3
-  Idle:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Idle: []
   activated: {fileID: 8300000, guid: 2a49e0c0370591847be9cec3a7c3dfb0, type: 3}
   enkNames: {fileID: 8300000, guid: cb8d91e73e7b74a4f931e0098be544f7, type: 3}
   timesPlayed: 0
@@ -49521,15 +49573,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1541146317}
   m_LocalRotation: {x: -0, y: -0.30999717, z: -0, w: 0.95073754}
-  m_LocalPosition: {x: 20.31, y: 0.020999908, z: 18.07}
+  m_LocalPosition: {x: 43.74, y: 0.020999908, z: 2.41}
   m_LocalScale: {x: 0.9000001, y: 0.90000004, z: 0.9000002}
   m_LocalEulerAnglesHint: {x: 0, y: -36.359, z: 0}
   m_Children:
   - {fileID: 1583240616}
   - {fileID: 250573421}
   - {fileID: 1694248831}
-  - {fileID: 1349069365}
-  - {fileID: 2076930943}
   - {fileID: 2001362022}
   - {fileID: 1529496085}
   m_Father: {fileID: 0}
@@ -50092,7 +50142,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013133943140, guid: 947a28bbb4267804a86016ece8ae87d7, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -8.84
+      value: -6.29
       objectReference: {fileID: 0}
     - target: {fileID: 4000013133943140, guid: 947a28bbb4267804a86016ece8ae87d7, type: 2}
       propertyPath: m_LocalRotation.x
@@ -50126,6 +50176,10 @@ Prefab:
     - target: {fileID: 114000012954719294, guid: 947a28bbb4267804a86016ece8ae87d7,
         type: 2}
       propertyPath: arrestPlayed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012880069448, guid: 947a28bbb4267804a86016ece8ae87d7, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -54200,7 +54254,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1729027083}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.93511, y: 1.5723743, z: -7.513721}
+  m_LocalPosition: {x: 40.49, y: 0.5, z: -4.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -61347,7 +61401,7 @@ GameObject:
   - 114: {fileID: 1941635867}
   m_Layer: 0
   m_Name: bellTower
-  m_TagString: Wall
+  m_TagString: BUILDING
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -62384,6 +62438,10 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1000010212309258, guid: 8d694d9bf1fe2ef4bb8d88d7daac2af8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d694d9bf1fe2ef4bb8d88d7daac2af8, type: 2}
   m_IsPrefabParent: 0
@@ -62552,6 +62610,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: a34ec1d27619a3a4989f3f97f102ea50, type: 3}
     thankyou: {fileID: 8300000, guid: d1bad5aa9a785404d8fc4bf0259931b7, type: 3}
     thanker: {fileID: 819615633}
+    spawnPoint: {fileID: 0}
   - character: {fileID: 2119617163}
     wrongArrest: {fileID: 8300000, guid: 3bdc6e3e50915d34589d1a43b9fdcf84, type: 3}
     rightArrest: {fileID: 0}
@@ -62561,6 +62620,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 93ab98939a1da404ab781e46812696f6, type: 3}
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
+    spawnPoint: {fileID: 0}
   - character: {fileID: 0}
     wrongArrest: {fileID: 8300000, guid: 985b2e2e13c175e4e872faa76b931eb3, type: 3}
     rightArrest: {fileID: 0}
@@ -62570,6 +62630,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 6b377224d62b0594884b711629807232, type: 3}
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
+    spawnPoint: {fileID: 0}
   - character: {fileID: 24477300}
     wrongArrest: {fileID: 8300000, guid: 9391454fb19a7e34f987c484e4afa8ce, type: 3}
     rightArrest: {fileID: 0}
@@ -62579,6 +62640,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 2f088327878798245994c302b85c8dc5, type: 3}
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
+    spawnPoint: {fileID: 0}
   - character: {fileID: 819615636}
     wrongArrest: {fileID: 8300000, guid: 2afdefe9e28f1e648bd604449369bbf7, type: 3}
     rightArrest: {fileID: 0}
@@ -62588,6 +62650,7 @@ MonoBehaviour:
     explanation: {fileID: 8300000, guid: 07916221921395c45bcae2756ce79ced, type: 3}
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
+    spawnPoint: {fileID: 0}
   soundFX: []
   mysterySpeech: {fileID: 8300000, guid: 59d8539a12e013647a81f3f80af12432, type: 3}
   revelationSpeech: {fileID: 8300000, guid: e2abc08ccd60c4a4db8ab174be3c8e46, type: 3}
@@ -62599,6 +62662,7 @@ MonoBehaviour:
   clueObjects: []
   clueStartPos: {fileID: 0}
   clueSpawned: {fileID: 0}
+  enkSpawnPoint: {fileID: 0}
 --- !u!1 &1971782221
 GameObject:
   m_ObjectHideFlags: 0
@@ -64452,7 +64516,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1541146318}
-  m_RootOrder: 5
+  m_RootOrder: 3
 --- !u!1 &2004923593
 GameObject:
   m_ObjectHideFlags: 0
@@ -66769,10 +66833,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2066320760}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.2451096, y: -1.1315606, z: 5.6223316}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -4.2451096, y: 0, z: 5.6223316}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children: []
   m_Father: {fileID: 1729027084}
   m_RootOrder: 5
@@ -66999,16 +67063,16 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2076930942}
-  m_LocalRotation: {x: 0.00000000745058, y: -0, z: 0.15381154, w: 0.98810023}
-  m_LocalPosition: {x: -0.192, y: 0.987, z: 0.081}
-  m_LocalScale: {x: 6.700862, y: 1.5000008, z: 1.1984625}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 17.390001}
+  m_LocalRotation: {x: 0.21649696, y: 0.8633855, z: 0.11084549, w: 0.44204953}
+  m_LocalPosition: {x: 0.136, y: 0.854, z: 0.065}
+  m_LocalScale: {x: 6.0307765, y: 1.3500007, z: 1.0786164}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 28.095001}
   m_Children:
   - {fileID: 1473509118}
   - {fileID: 1319066030}
   - {fileID: 867918617}
-  m_Father: {fileID: 1541146318}
-  m_RootOrder: 4
+  m_Father: {fileID: 1529496085}
+  m_RootOrder: 1
 --- !u!114 &2076930944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67022,10 +67086,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 3
-  Idle:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Idle: []
   activated: {fileID: 8300000, guid: 43ed9d8c29ca9b24292872ac0c65ea58, type: 3}
   enkNames: {fileID: 8300000, guid: 948c0eea609df6240926050349abc913, type: 3}
   timesPlayed: 0
