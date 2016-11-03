@@ -805,7 +805,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013338468926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.408, y: -1.191, z: -11.717}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1280,8 +1280,10 @@ MonoBehaviour:
   speed: 0.01
   walkDelay: 0
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
+  enkHoldingCloth: {fileID: 0}
   complain: 0
   clueObject: {fileID: 0}
+  clueComparisonPlayed: 0
   feetSource: {fileID: 82000011063669928}
   m_StepPeriod: 0.5
   m_GroudFootstepSounds:
@@ -1333,6 +1335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503f9a29295ab6649a87e9b373090597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundDelayTime: 0.5
 --- !u!114 &114000012286519272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1369,15 +1372,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Idle: {fileID: 8300000, guid: 6dc726bbd30838945bcc12fe950c59f9, type: 3}
+  soundDelay: 3
+  Idle:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   activated: {fileID: 8300000, guid: 2a49e0c0370591847be9cec3a7c3dfb0, type: 3}
   enkNames: {fileID: 8300000, guid: cb8d91e73e7b74a4f931e0098be544f7, type: 3}
   timesPlayed: 0
   maxTimesPlayed: 0
+  activateDistance: 10
+  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
-  player: {fileID: 0}
 --- !u!114 &114000013052225612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1389,15 +1397,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Idle: {fileID: 8300000, guid: bfc7ba383a611b04985c34678b71863c, type: 3}
+  soundDelay: 3
+  Idle:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   activated: {fileID: 8300000, guid: 43ed9d8c29ca9b24292872ac0c65ea58, type: 3}
   enkNames: {fileID: 8300000, guid: 948c0eea609df6240926050349abc913, type: 3}
   timesPlayed: 0
   maxTimesPlayed: 0
+  activateDistance: 10
+  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
-  player: {fileID: 0}
 --- !u!143 &143000011917981768
 CharacterController:
   m_ObjectHideFlags: 1

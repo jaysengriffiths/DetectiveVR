@@ -10,7 +10,7 @@ public class MissionManager : MonoBehaviour
     //public GameObject currentSuspectSelected;
     Mission[] missions;
     private DialogManager dialogManager;
-
+    private AudioSource audioSource;
     public AudioClip arrestClip;
     public enum MissionState
     {
@@ -27,6 +27,9 @@ public class MissionManager : MonoBehaviour
     void Awake()
     {
         dialogManager = FindObjectOfType<DialogManager>();
+        GameObject mic = GameObject.Find("Microphone");
+        if (mic)
+            audioSource = mic.GetComponent<AudioSource>();
     }
     void Start()
     {
@@ -36,9 +39,17 @@ public class MissionManager : MonoBehaviour
         //player.transform.position = missions[0].startMissionPosition.transform.position;
     }
 
-    void FixedUpdate()
+    void Update()
     {
+        if (player.clueObject && player.clueObject.activeSelf == true && dialogManager.pendingDialog.Length == 0 && player.selectedCharacter != null)
+        {
+            if (player.clueComparisonPlayed && !audioSource.isPlaying)
+            {
+                player.clueObject.GetComponent<MovingClue>().MoveTowards(player.selectedCharacter);
 
+                //player.clueObject.transform.eulerAngles = new Vector3(0, -90, 0);
+            }
+        }
     }
 
     void PlaySound(AudioClip sound)
@@ -50,14 +61,20 @@ public class MissionManager : MonoBehaviour
     {
         for (int i = 0; i < 5; i++)
         {
-            if (currentMission.suspects[i].character == character)
+            if ((currentMission.suspects[i].character == character) && (!character.warnPlayed || !character.arrestPlayed))
             {
                 if (currentMission.suspects[i].character.introPlayed)
                 {
-                    DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
+                    int num = player.clueObject ? 3 : 2;
+                    DialogManager.Dialog[] clips = new DialogManager.Dialog[num];
                     clips[0] = new DialogManager.Dialog(currentMission.interogateSpeech);
                     clips[1] = new DialogManager.Dialog(currentMission.suspects[i].explanation, currentMission.suspects[i].character);
 
+                    if (player.clueObject)
+                    {
+                        clips[2] = new DialogManager.Dialog(currentMission.clueComparison);
+                        player.clueComparisonPlayed = true;
+                    }
                     ActivateMovingClue();
 
                     dialogManager.setDialog(clips);
@@ -72,17 +89,30 @@ public class MissionManager : MonoBehaviour
 
                         dialogManager.setDialog(clips);
                         currentMission.suspects[i].character.introPlayed = true;
+                        currentMission.suspects[i].character.IsInteracted = true;
+
                     }
                     else
                     {
-                        DialogManager.Dialog[] clips = new DialogManager.Dialog[4];
+                        int num = player.clueObject ? 5 : 4;
+                        DialogManager.Dialog[] clips = new DialogManager.Dialog[num];
                         clips[0] = new DialogManager.Dialog(player.nameClip);
                         clips[1] = new DialogManager.Dialog(currentMission.interogateSpeech);
                         clips[2] = new DialogManager.Dialog(currentMission.suspects[i].character.introClip, currentMission.suspects[i].character);
                         clips[3] = new DialogManager.Dialog(currentMission.suspects[i].explanation, currentMission.suspects[i].character);
 
-                        dialogManager.setDialog(clips);
                         currentMission.suspects[i].character.introPlayed = true;
+                        currentMission.suspects[i].character.IsInteracted = true;
+                        if (player.clueObject)
+                        {
+                            clips[4] = new DialogManager.Dialog(currentMission.clueComparison);
+                            player.clueComparisonPlayed = true;
+                        }
+                        ActivateMovingClue();
+                        dialogManager.setDialog(clips);
+                        
+
+                      
                     }
                 }
             }
@@ -98,9 +128,8 @@ public class MissionManager : MonoBehaviour
             return;
         }
 
+        player.clueObject.SetActive(true);
         
-
-
     }
     public void Complainant()
     {
@@ -119,23 +148,27 @@ public class MissionManager : MonoBehaviour
         {
             if (currentMission.suspects[i].character == character)
             {
-                AudioClip clip;
-                if (i == currentMission.guiltyIndex)
+                if (!character.arrestPlayed)
                 {
-                    clip = currentMission.suspects[i].rightArrest;
-                    state = MissionState.EndByArrest;
-                }
-                else
-                {
-                    clip = currentMission.suspects[i].wrongArrest;
-                }
-                DialogManager.Dialog[] clips = new DialogManager.Dialog[3];
-                clips[0] = new DialogManager.Dialog(currentMission.suspects[i].character.nameClip);
-                clips[1] = new DialogManager.Dialog(arrestClip);
-                clips[2] = new DialogManager.Dialog(clip);
+                    AudioClip clip;
+                    if (i == currentMission.guiltyIndex)
+                    {
+                        clip = currentMission.suspects[i].rightArrest;
+                        state = MissionState.EndByArrest;
+                    }
+                    else
+                    {
+                        clip = currentMission.suspects[i].wrongArrest;
+                    }
+                    DialogManager.Dialog[] clips = new DialogManager.Dialog[3];
+                    clips[0] = new DialogManager.Dialog(currentMission.suspects[i].character.nameClip);
+                    clips[1] = new DialogManager.Dialog(arrestClip);
+                    clips[2] = new DialogManager.Dialog(clip);
 
-                dialogManager.setDialog(clips);
-
+                    dialogManager.setDialog(clips);
+                    character.arrestPlayed = true;
+                }
+                
             }
         }
 
@@ -148,21 +181,25 @@ public class MissionManager : MonoBehaviour
         {
             if (currentMission.suspects[i].character == character)
             {
-                AudioClip clip;
-                if (i == currentMission.guiltyIndex)
+                if (!character.warnPlayed)
                 {
-                    clip = currentMission.suspects[i].rightWarn;
-                    state = MissionState.EndByWarning;
-                }
-                else
-                {
-                    clip = currentMission.suspects[i].wrongWarn;
-                }
-                DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
-                clips[0] = new DialogManager.Dialog(currentMission.suspects[i].playerWarning);
-                clips[1] = new DialogManager.Dialog(clip);
+                    AudioClip clip;
+                    if (i == currentMission.guiltyIndex)
+                    {
+                        clip = currentMission.suspects[i].rightWarn;
+                        state = MissionState.EndByWarning;
+                    }
+                    else
+                    {
+                        clip = currentMission.suspects[i].wrongWarn;
+                    }
+                    DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
+                    clips[0] = new DialogManager.Dialog(currentMission.suspects[i].playerWarning);
+                    clips[1] = new DialogManager.Dialog(clip);
 
-                dialogManager.setDialog(clips);
+                    dialogManager.setDialog(clips);
+                    character.warnPlayed = true;
+                }
             }
         }
     }

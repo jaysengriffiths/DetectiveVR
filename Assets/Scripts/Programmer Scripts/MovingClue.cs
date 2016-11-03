@@ -3,12 +3,12 @@ using System.Collections;
 
 public class MovingClue : MonoBehaviour
 {
-    //public GameObject correctClue;
-    private Mission mission;
     public float speed;
-    //public Character character;
-    // Use this for initialization
-    public Player player;
+    private Player player;
+    private SoundLookAt soundLook;
+    bool movingToTarget = false;
+    public AudioClip clueNoise;
+
     void Awake()
     {
    
@@ -16,19 +16,43 @@ public class MovingClue : MonoBehaviour
     void Start ()
     {
         player = FindObjectOfType<Player>();
-        gameObject.GetComponent<SoundLookAt>();
+        soundLook = GetComponent<SoundLookAt>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (soundLook.isActivated && !movingToTarget)
+        {
+            gameObject.transform.position = player.enkHoldingCloth.transform.position;
+            gameObject.transform.rotation = player.enkHoldingCloth.transform.rotation;
+            player.clueObject = this.gameObject;
+            gameObject.GetComponent<SoundLookAt>().enabled = false;
+            //gameObject.SetActive(false);
+        }
 
+        if(player.selectedCharacter == null)
+        {
+            movingToTarget = false;
+            player.clueComparisonPlayed = false;
+        }
     }
 
-    void MoveTowards()
+    public void MoveTowards(Character character)
     {
+        movingToTarget = true;
         float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, player.gameObject.transform.position, step);
+        Transform clueTransform = character.transform;
+        if (character.MovingClueLocation != null)
+            clueTransform = character.MovingClueLocation;
+        if ((transform.position - clueTransform.position).magnitude < 0.1f)
+        {
+            GetComponent<AudioSource>().clip = character.clothRip;
+            GetComponent<AudioSource>().Play();
+
+        }
+        else
+            transform.position = Vector3.MoveTowards(transform.position, clueTransform.position, step);
     }
 
 }

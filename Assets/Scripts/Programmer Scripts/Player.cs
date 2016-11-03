@@ -51,11 +51,12 @@ public class Player : MonoBehaviour
     private float minBounds = 10;
     private float maxBounds = 20;
     private float counter;
-    [HideInInspector]
+    //[HideInInspector]
     public float cameraAngle;
     public float speed = 0.01f;  //Kathy changed from 0.03;
     public float walkDelay;
     public AudioClip nameClip;
+    public Transform enkHoldingCloth;
 
     //setting new timers
     GazeTimer soundLookAtTimer = new GazeTimer(2);
@@ -69,7 +70,8 @@ public class Player : MonoBehaviour
 
     //clue obj setup
     public GameObject clueObject;
-
+    [HideInInspector]
+    public bool clueComparisonPlayed = false;
 
     //Footsteps 
     private float m_StepCycle;  //
@@ -87,6 +89,7 @@ public class Player : MonoBehaviour
     private CharacterController controller;
     private InventoryControl.Accumulator goHomeTimer;
     public Character selectedCharacter;
+    private GameObject enkModel;
 
 
 
@@ -98,6 +101,7 @@ public class Player : MonoBehaviour
             audioSource = mic.GetComponent<AudioSource>();
         controller = GetComponent<CharacterController>();
         goHomeTimer = new InventoryControl.Accumulator(2);
+        enkModel = GameObject.Find("gypsy_mesh");
     }
 
     void Start()
@@ -116,21 +120,23 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Quaternion q = UnityEngine.VR.InputTracking.GetLocalRotation(UnityEngine.VR.VRNode.Head);
-        Quaternion fwd = Camera.main.transform.rotation * q;
-
+        Quaternion fwd = Camera.main.transform.rotation;
+        enkModel.transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y ,0);
         cameraAngle = fwd.eulerAngles.x;
         //rb.velocity = new Vector3(0, 0, 0);
-        dialogManager.updateDialog();
-
-        LookAtSoundObjects();
-        if (dialogManager.pendingDialog.Length == 0 && (audioSource==null || !audioSource.isPlaying))
+        if (dialogManager != null)
         {
-            if (audioSource)
+            dialogManager.updateDialog();
+
+            LookAtSoundObjects();
+            if (dialogManager.pendingDialog.Length == 0 && (audioSource == null || !audioSource.isPlaying))
             {
-                walk();
+                if (audioSource)
+                {
+                    walk();
+                }
+                Look();
             }
-            Look();
         }
     }
 
@@ -184,7 +190,8 @@ public class Player : MonoBehaviour
 
         //Interaction with NPCs
         bool lookingAtGoldStar = false;
-
+        
+        //turn off viewing
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10))
         {
 
@@ -216,10 +223,14 @@ public class Player : MonoBehaviour
         if (goHomeTimer.IsFull(lookingAtGoldStar))
             SceneManager.LoadScene("HQ");
 
-        if (selectedCharacter != null && Vector3.Dot(Camera.main.transform.forward, selectedCharacter.transform.position - transform.position) < 0)
+        if (selectedCharacter != null) 
         {
-            Debug.Log("Looking Away");
-            selectedCharacter = null;
+            Vector3 v1 = Camera.main.transform.forward;
+            Vector3 v2 = selectedCharacter.transform.position - transform.position;
+            v1.y = 0;
+            v2.y = 0;
+            if (Vector3.Dot(v1,v2) < 0)
+                selectedCharacter = null;
         }
     }
 
@@ -246,12 +257,9 @@ public class Player : MonoBehaviour
 
     void isMoving()
     {
-        Quaternion q = UnityEngine.VR.InputTracking.GetLocalRotation(UnityEngine.VR.VRNode.Head);
-        Vector3 fwd = q * Camera.main.transform.forward;
-        //fwd.y = 0;
+        Vector3 fwd = Camera.main.transform.forward;
         controller.Move(speed * fwd);
-        ProgressStepCycle();  //Kathy
-        //Invoke(("PlaySound"), 2);   
+        ProgressStepCycle();
     }
     
     void ProgressStepCycle()  //Kathy this whole struct amended from Standard Assets character controller
@@ -272,13 +280,14 @@ public class Player : MonoBehaviour
         // pick & play a random footstep sound from the array,
         // excluding sound at index 0
         RaycastHit hit;
-        if (Physics.Raycast(transform.position + new Vector3(0,2,0), Vector3.down, out hit, 5))
+        if (Physics.Raycast(transform.position + new Vector3(0, 0, 0), Vector3.down, out hit, 20))
+            Debug.DrawRay(transform.position + new Vector3(0, 2, 0), Vector3.down, Color.green);  //Kathy
         {
             if (hit.collider.CompareTag("Ground"))
             {
                 int n = Random.Range(1, m_GroudFootstepSounds.Length);
                 feetSource.clip = m_GroudFootstepSounds[n];
-                feetSource.PlayOneShot(feetSource.clip);
+                feetSource.PlayOneShot(feetSource.clip, .5f);
                 //move picked sound to index 0 so it's not picked next time
                 m_GroudFootstepSounds[n] = m_GroudFootstepSounds[0];
                 m_GroudFootstepSounds[0] = feetSource.clip;
@@ -294,7 +303,7 @@ public class Player : MonoBehaviour
         {
             int n = Random.Range(1, m_GrassFootstepSounds.Length);
             feetSource.clip = m_GrassFootstepSounds[n];
-            feetSource.PlayOneShot(feetSource.clip);
+            feetSource.PlayOneShot(feetSource.clip, .5f);
 
             m_GrassFootstepSounds[n] = m_GrassFootstepSounds[0];
             m_GrassFootstepSounds[0] = feetSource.clip;
@@ -307,7 +316,7 @@ public class Player : MonoBehaviour
         {
             int n = Random.Range(1, m_MudFootstepSounds.Length);
             feetSource.clip = m_MudFootstepSounds[n];
-            feetSource.PlayOneShot(feetSource.clip);
+            feetSource.PlayOneShot(feetSource.clip, .5f);
 
             m_MudFootstepSounds[n] = m_MudFootstepSounds[0];
             m_MudFootstepSounds[0] = feetSource.clip;
