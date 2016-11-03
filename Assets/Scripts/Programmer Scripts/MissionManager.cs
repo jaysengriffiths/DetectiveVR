@@ -165,7 +165,7 @@ public class MissionManager : MonoBehaviour
                     clips[1] = new DialogManager.Dialog(arrestClip);
                     clips[2] = new DialogManager.Dialog(clip);
 
-                    dialogManager.setDialog(clips);
+                    dialogManager.setDialog(clips, DialogManager.DialogType.Arrest);
                     character.arrestPlayed = true;
                 }
                 
@@ -197,7 +197,7 @@ public class MissionManager : MonoBehaviour
                     clips[0] = new DialogManager.Dialog(currentMission.suspects[i].playerWarning);
                     clips[1] = new DialogManager.Dialog(clip);
 
-                    dialogManager.setDialog(clips);
+                    dialogManager.setDialog(clips, DialogManager.DialogType.Warning);
                     character.warnPlayed = true;
                 }
             }

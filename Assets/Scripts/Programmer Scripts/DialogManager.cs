@@ -8,6 +8,13 @@ public class DialogManager : MonoBehaviour {
     public float soundDelayTime = 0.5f;
     private bool relevationSpeechPlayed = false;
     private bool thankyouSpeechPlayed = false;
+    public enum DialogType
+    {
+        Normal,
+        Warning,
+        Arrest
+    };
+    DialogType currentDialogType = DialogType.Normal;
 
     public struct Dialog
     {
@@ -54,9 +61,21 @@ public class DialogManager : MonoBehaviour {
  
     }
 
-    public void setDialog(Dialog[] array)
+    public void setDialog(Dialog[] array, DialogType t = DialogType.Normal)
     {
         pendingDialog = array;
+        currentDialogType = t;
+    }
+
+    public void ClearDialog(Character _ch)
+    {
+        pendingDialog = new Dialog[0];
+        audioSource.Stop();
+        if (currentDialogType == DialogType.Warning)
+            _ch.warnPlayed = false;
+        if (currentDialogType == DialogType.Arrest)
+            _ch.arrestPlayed = false;
+        missionManager.state = MissionManager.MissionState.Ongoing;
     }
 
     public void updateDialog()
