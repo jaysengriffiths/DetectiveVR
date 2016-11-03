@@ -91,10 +91,9 @@ public class Player : MonoBehaviour
     private DialogManager dialogManager;
     private CharacterController controller;
     private InventoryControl.Accumulator goHomeTimer;
+    private InventoryControl.Accumulator puzzleSceneLoadTimer;
     public Character selectedCharacter;
     private GameObject enkModel;
-
-
 
     void Awake()
     {
@@ -106,6 +105,7 @@ public class Player : MonoBehaviour
             audioSource = mic.GetComponent<AudioSource>();
         controller = GetComponent<CharacterController>();
         goHomeTimer = new InventoryControl.Accumulator(2);
+        puzzleSceneLoadTimer = new InventoryControl.Accumulator(2);
         enkModel = GameObject.Find("gypsy_mesh");
     }
 
@@ -208,6 +208,7 @@ public class Player : MonoBehaviour
 
         //Interaction with NPCs
         bool lookingAtGoldStar = false;
+        bool lookingAtPuzzle = false;
         
         //turn off viewing
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10))
@@ -228,18 +229,26 @@ public class Player : MonoBehaviour
                 suspectGazeTimer.SetObject(null);
 
             //Interaction with returning to HQ
-            if (hit.collider.CompareTag("GoldStar"))
+            //if (hit.collider.CompareTag("GoldStar"))
+            //{
+            //    lookingAtGoldStar = true;
+            //}
+
+            if (hit.collider.CompareTag("Puzzle"))
             {
-                lookingAtGoldStar = true;
+                lookingAtPuzzle = true;
             }
         }
         else
         {
             suspectGazeTimer.SetObject(null);
         }
-
-        if (goHomeTimer.IsFull(lookingAtGoldStar))
-            SceneManager.LoadScene("HQ");
+        if (puzzleSceneLoadTimer.IsFull(lookingAtPuzzle))
+        {
+            SceneManager.LoadScene("JamiesSandBox");
+        }
+        //if (goHomeTimer.IsFull(lookingAtGoldStar))
+        //    SceneManager.LoadScene("HQ");
 
     }
 
