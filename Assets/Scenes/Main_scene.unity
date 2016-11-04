@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 934464740}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.57902706, g: 0.6958935, b: 0.74505454, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -212,7 +212,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -622,7 +621,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -778,7 +776,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -1141,7 +1138,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -1225,7 +1221,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -1388,7 +1383,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 100
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -1989,7 +1983,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -2251,7 +2244,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -2652,6 +2644,9 @@ MonoBehaviour:
   speed: 0.01
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   enkHoldingCloth: {fileID: 1602215043}
+  treeCollide: []
+  wallCollide: []
+  pigstyCollide: []
   complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
@@ -2775,7 +2770,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -3568,7 +3562,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -4292,7 +4285,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -4580,7 +4572,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -4834,7 +4825,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -5126,7 +5116,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -5282,7 +5271,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -5409,7 +5397,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 10
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -5615,7 +5602,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -6094,7 +6080,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -6318,6 +6303,8 @@ MonoBehaviour:
   clueStartPos: {fileID: 0}
   clueSpawned: {fileID: 0}
   enkSpawnPoint: {fileID: 0}
+  objDisable: []
+  soundObjDisable: []
 --- !u!4 &179168314 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010520689326, guid: f7e5b134f1f8a054da7d8e5931895316,
@@ -6524,6 +6511,8 @@ MonoBehaviour:
   clueStartPos: {fileID: 0}
   clueSpawned: {fileID: 0}
   enkSpawnPoint: {fileID: 0}
+  objDisable: []
+  soundObjDisable: []
 --- !u!1 &184272866
 GameObject:
   m_ObjectHideFlags: 0
@@ -6868,7 +6857,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -7189,6 +7177,9 @@ MonoBehaviour:
   speed: 1.5
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   enkHoldingCloth: {fileID: 810686392}
+  treeCollide: []
+  wallCollide: []
+  pigstyCollide: []
   complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
@@ -7682,7 +7673,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -8267,6 +8257,9 @@ MonoBehaviour:
   speed: 0.01
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   enkHoldingCloth: {fileID: 1544816775}
+  treeCollide: []
+  wallCollide: []
+  pigstyCollide: []
   complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
@@ -8467,7 +8460,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -8511,7 +8503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &266092986
 Transform:
   m_ObjectHideFlags: 0
@@ -8616,6 +8608,8 @@ MonoBehaviour:
   clueStartPos: {fileID: 7579080}
   clueSpawned: {fileID: 0}
   enkSpawnPoint: {fileID: 66394069}
+  objDisable: []
+  soundObjDisable: []
 --- !u!1 &269525234
 GameObject:
   m_ObjectHideFlags: 0
@@ -8911,7 +8905,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -9769,7 +9762,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -10202,7 +10194,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -10456,7 +10447,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -10903,7 +10893,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -11010,7 +10999,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -11526,7 +11514,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -11790,7 +11777,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -12325,7 +12311,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -12536,7 +12521,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -12692,7 +12676,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -13474,7 +13457,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 10
   activateDistance: 10
-  globalSound: 0
   isClue: 1
   isActivated: 0
   enkNameObject: 0
@@ -13941,7 +13923,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 10
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -14077,7 +14058,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -14398,7 +14378,6 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1779111801}
-  - {fileID: 1971336904}
   m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!1 &504478011
@@ -14805,7 +14784,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -15459,7 +15437,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -15741,7 +15718,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 10
   activateDistance: 10
-  globalSound: 0
   isClue: 1
   isActivated: 0
   enkNameObject: 0
@@ -16043,7 +16019,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -16360,7 +16335,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -16562,7 +16536,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -17051,7 +17024,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -17718,7 +17690,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -17831,6 +17802,9 @@ MonoBehaviour:
   speed: 1.5
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   enkHoldingCloth: {fileID: 871738401}
+  treeCollide: []
+  wallCollide: []
+  pigstyCollide: []
   complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
@@ -18031,7 +18005,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -18221,7 +18194,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -18539,7 +18511,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -18821,7 +18792,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -19054,7 +19024,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -19181,7 +19150,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -19762,7 +19730,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -20024,7 +19991,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -20539,7 +20505,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -20666,7 +20631,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 10
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -21348,7 +21312,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -21463,6 +21426,8 @@ MonoBehaviour:
   clueStartPos: {fileID: 0}
   clueSpawned: {fileID: 0}
   enkSpawnPoint: {fileID: 0}
+  objDisable: []
+  soundObjDisable: []
 --- !u!1 &780397480
 GameObject:
   m_ObjectHideFlags: 0
@@ -21699,7 +21664,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -22389,7 +22353,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -23041,6 +23004,8 @@ MonoBehaviour:
   clueStartPos: {fileID: 1993859719}
   clueSpawned: {fileID: 0}
   enkSpawnPoint: {fileID: 0}
+  objDisable: []
+  soundObjDisable: []
 --- !u!1001 &883338119
 Prefab:
   m_ObjectHideFlags: 0
@@ -23202,7 +23167,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 10
   activateDistance: 10
-  globalSound: 0
   isClue: 1
   isActivated: 0
   enkNameObject: 0
@@ -23459,6 +23423,8 @@ MonoBehaviour:
   clueStartPos: {fileID: 0}
   clueSpawned: {fileID: 0}
   enkSpawnPoint: {fileID: 0}
+  objDisable: []
+  soundObjDisable: []
 --- !u!1001 &897418205
 Prefab:
   m_ObjectHideFlags: 0
@@ -23930,7 +23896,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -24131,7 +24096,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 10
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -24564,7 +24528,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -25029,7 +24992,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 10
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -25163,7 +25125,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -25560,7 +25521,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -26192,7 +26152,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -26413,7 +26372,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -26570,7 +26528,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -26892,7 +26849,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -27048,7 +27004,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -27250,7 +27205,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -27488,7 +27442,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -27748,7 +27701,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -28033,7 +27985,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -28438,7 +28389,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -28535,7 +28485,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 10
   activateDistance: 10
-  globalSound: 0
   isClue: 1
   isActivated: 0
   enkNameObject: 0
@@ -29601,7 +29550,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -29925,7 +29873,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -30131,7 +30078,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -30404,7 +30350,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -30622,7 +30567,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -30844,7 +30788,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -30937,8 +30880,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: 147b25c33a2806a4d86f1d5f73a84028, type: 3}
   introClip: {fileID: 8300000, guid: 5e7c17ed1c697be468a83bafa937a704, type: 3}
-  clothRip: {fileID: 8300000, guid: cff741c5dacb29d46bfc45eb14fdebb8, type: 3}
-  MovingClueLocation: {fileID: 0}
+  awakeClip: {fileID: 0}
+  tornClothLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0
@@ -31108,7 +31051,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -31526,7 +31468,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -31675,7 +31616,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1163630735
 Transform:
   m_ObjectHideFlags: 0
@@ -31785,6 +31726,8 @@ MonoBehaviour:
   clueStartPos: {fileID: 447277190}
   clueSpawned: {fileID: 0}
   enkSpawnPoint: {fileID: 0}
+  objDisable: []
+  soundObjDisable: []
 --- !u!1 &1164186208
 GameObject:
   m_ObjectHideFlags: 0
@@ -32226,6 +32169,9 @@ MonoBehaviour:
   speed: 1.5
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   enkHoldingCloth: {fileID: 508791940}
+  treeCollide: []
+  wallCollide: []
+  pigstyCollide: []
   complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
@@ -32340,7 +32286,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -32433,8 +32378,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: 147b25c33a2806a4d86f1d5f73a84028, type: 3}
   introClip: {fileID: 8300000, guid: 5e7c17ed1c697be468a83bafa937a704, type: 3}
-  clothRip: {fileID: 8300000, guid: cff741c5dacb29d46bfc45eb14fdebb8, type: 3}
-  MovingClueLocation: {fileID: 0}
+  awakeClip: {fileID: 0}
+  tornClothLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0
@@ -33077,7 +33022,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -33491,6 +33435,9 @@ MonoBehaviour:
   speed: 0.01
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   enkHoldingCloth: {fileID: 209245148}
+  treeCollide: []
+  wallCollide: []
+  pigstyCollide: []
   complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
@@ -33794,7 +33741,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -34203,7 +34149,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -34742,7 +34687,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -34926,6 +34870,8 @@ MonoBehaviour:
   clueStartPos: {fileID: 0}
   clueSpawned: {fileID: 0}
   enkSpawnPoint: {fileID: 0}
+  objDisable: []
+  soundObjDisable: []
 --- !u!1 &1314556341
 GameObject:
   m_ObjectHideFlags: 0
@@ -35124,7 +35070,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -35422,7 +35367,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -36035,7 +35979,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -36463,7 +36406,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -37189,7 +37131,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -37384,7 +37325,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -37561,7 +37501,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 10
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -37748,7 +37687,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -37841,8 +37779,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: 25d7743082b1c844385c624a958f643a, type: 3}
   introClip: {fileID: 8300000, guid: 25f69591459845647a114da6fe3b1f61, type: 3}
-  clothRip: {fileID: 8300000, guid: e3322972ee4ab384aae84e7042383c70, type: 3}
-  MovingClueLocation: {fileID: 1779069575}
+  awakeClip: {fileID: 0}
+  tornClothLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0
@@ -38059,7 +37997,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -38374,7 +38311,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -38462,7 +38398,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -38717,7 +38652,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -38956,7 +38890,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -39483,7 +39416,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -39639,7 +39571,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -39795,7 +39726,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -40013,7 +39943,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -40335,7 +40264,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -40778,6 +40706,9 @@ MonoBehaviour:
   speed: 0.01
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   enkHoldingCloth: {fileID: 1561476862}
+  treeCollide: []
+  wallCollide: []
+  pigstyCollide: []
   complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
@@ -40937,6 +40868,9 @@ MonoBehaviour:
   speed: 1.5
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   enkHoldingCloth: {fileID: 2001362022}
+  treeCollide: []
+  wallCollide: []
+  pigstyCollide: []
   complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
@@ -41247,7 +41181,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -41502,7 +41435,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 10
   activateDistance: 10
-  globalSound: 0
   isClue: 1
   isActivated: 0
   enkNameObject: 0
@@ -41759,7 +41691,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -42805,7 +42736,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -43258,7 +43188,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -43851,7 +43780,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -44162,7 +44090,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -44400,7 +44327,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -44625,7 +44551,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -44859,7 +44784,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -44988,7 +44912,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -45466,7 +45389,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -45668,6 +45590,7 @@ Transform:
   - {fileID: 775438310}
   - {fileID: 184110820}
   - {fileID: 173942729}
+  - {fileID: 1971336904}
   m_Father: {fileID: 497117358}
   m_RootOrder: 0
 --- !u!1 &1780978086
@@ -45769,7 +45692,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -45986,7 +45908,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -46249,7 +46170,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -46406,7 +46326,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -46811,7 +46730,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -47100,7 +47018,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -47541,7 +47458,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -48582,7 +48498,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -49076,7 +48991,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -49431,7 +49345,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -49767,7 +49680,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -49995,6 +49907,9 @@ MonoBehaviour:
   speed: 0.01
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
   enkHoldingCloth: {fileID: 1315988257}
+  treeCollide: []
+  wallCollide: []
+  pigstyCollide: []
   complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
@@ -50437,7 +50352,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -50598,7 +50512,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -50725,8 +50638,8 @@ Transform:
   - {fileID: 159937146}
   - {fileID: 693526729}
   - {fileID: 332506250}
-  m_Father: {fileID: 497117358}
-  m_RootOrder: 1
+  m_Father: {fileID: 1779111801}
+  m_RootOrder: 8
 --- !u!114 &1971336905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50802,6 +50715,8 @@ MonoBehaviour:
   clueStartPos: {fileID: 0}
   clueSpawned: {fileID: 0}
   enkSpawnPoint: {fileID: 0}
+  objDisable: []
+  soundObjDisable: []
 --- !u!1 &1972674249
 GameObject:
   m_ObjectHideFlags: 0
@@ -50884,7 +50799,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -51182,7 +51096,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
@@ -52020,7 +51933,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -52152,7 +52064,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -52711,7 +52622,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -52940,7 +52850,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -53666,7 +53575,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 0
@@ -53900,7 +53808,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -54371,7 +54278,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -54798,7 +54704,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 1
   enkNameObject: 1
@@ -55105,7 +55010,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1

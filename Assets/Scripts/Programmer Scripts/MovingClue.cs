@@ -43,12 +43,12 @@ public class MovingClue : MonoBehaviour
         movingToTarget = true;
         float step = speed * Time.deltaTime;
         Transform clueTransform = character.transform;
-        if (character.MovingClueLocation != null)
-            clueTransform = character.MovingClueLocation;
+        if (character.tornClothLocation != null)
+            clueTransform = character.tornClothLocation;
         if ((transform.position - clueTransform.position).magnitude < 0.1f)
         {
-            GetComponent<AudioSource>().clip = character.clothRip;
-            GetComponent<AudioSource>().Play();
+            //GetComponent<AudioSource>().clip = character.clothRip;
+            //GetComponent<AudioSource>().Play();
             
         }
         else

@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
+using System;
+
 
 public class Character : MonoBehaviour
 {
     public AudioClip nameClip;
     public AudioClip introClip;
-    public AudioClip clothRip;
     public AudioClip awakeClip;
-    public Transform MovingClueLocation;
+    public Transform tornClothLocation;
     public bool introPlayed = false;
     public bool IsInteracted = false;
     //true if you're part of the current mission
