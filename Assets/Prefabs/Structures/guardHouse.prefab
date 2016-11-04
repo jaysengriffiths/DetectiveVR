@@ -19,26 +19,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013341742890}
-  - 114: {fileID: 114000011598294454}
+  - 33: {fileID: 33000011376340426}
+  - 23: {fileID: 23000012706820922}
   - 82: {fileID: 82000013800924840}
-  m_Layer: 0
-  m_Name: guardHouse
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1000010864039448
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000011972076656}
-  - 33: {fileID: 33000011905959514}
-  - 23: {fileID: 23000011449398324}
-  - 65: {fileID: 65000012248065428}
+  - 65: {fileID: 65000013666669782}
+  - 65: {fileID: 65000010981432348}
+  - 114: {fileID: 114000011598294454}
   m_Layer: 0
   m_Name: guardHouse
   m_TagString: BUILDING
@@ -46,39 +32,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &4000011972076656
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010864039448}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.505207, y: -5.74021, z: 30.614307}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 4000013341742890}
-  m_RootOrder: 0
 --- !u!4 &4000013341742890
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010831002402}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8621521, y: 7.103359, z: -4.419507}
+  m_LocalRotation: {x: -0, y: 0.1530932, z: -0, w: 0.9882118}
+  m_LocalPosition: {x: -44.3, y: 1.3631493, z: 26.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 4000011972076656}
+  m_LocalEulerAnglesHint: {x: 0, y: 17.306002, z: 0}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &23000011449398324
+--- !u!23 &23000012706820922
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010864039448}
+  m_GameObject: {fileID: 1000010831002402}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -102,25 +74,37 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33000011905959514
+--- !u!33 &33000011376340426
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010864039448}
+  m_GameObject: {fileID: 1000010831002402}
   m_Mesh: {fileID: 4300162, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
---- !u!65 &65000012248065428
+--- !u!65 &65000010981432348
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010864039448}
+  m_GameObject: {fileID: 1000010831002402}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.59, y: 2.84, z: 6.6}
+  m_Center: {x: -0.21, y: 0, z: -0.03}
+--- !u!65 &65000013666669782
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010831002402}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.45089, y: 2.7586405, z: 6.7012863}
-  m_Center: {x: -0.0000014305115, y: 0, z: -0.00000071525574}
+  m_Size: {x: 8.58, y: 2.83, z: 6.59}
+  m_Center: {x: -0.12, y: 0, z: -0.07}
 --- !u!82 &82000013800924840
 AudioSource:
   m_ObjectHideFlags: 1
@@ -130,7 +114,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9fec014a624010946b29b28747769017, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ed02bb42c89d9f74db6b7ac4a3396f19, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -206,15 +190,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soundDelay: 3
+  soundDelay: 1
   Idle:
   - {fileID: 0}
   activated: {fileID: 0}
-  enkNames: {fileID: 0}
+  enkNames: {fileID: 8300000, guid: 3249f54888b63b1498d7502d229858e2, type: 3}
   timesPlayed: 0
-  maxTimesPlayed: 0
+  maxTimesPlayed: 10
   activateDistance: 10
   globalSound: 0
   isClue: 0
-  isActivated: 0
-  enkNameObject: 0
+  isActivated: 1
+  enkNameObject: 1
