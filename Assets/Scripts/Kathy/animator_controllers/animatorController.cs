@@ -27,6 +27,11 @@ public class animatorController : MonoBehaviour
             anim.SetTrigger("isListening");
         }
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            anim.SetTrigger("transitionToTalk");
+        }
+
         if (Input.GetKeyDown(KeyCode.T))
         {
             anim.SetTrigger("isTalking");
@@ -40,6 +45,11 @@ public class animatorController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.U))
         {
             anim.SetTrigger("isUnHandcuffed");
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            anim.SetTrigger("torch");
         }
     }
 }

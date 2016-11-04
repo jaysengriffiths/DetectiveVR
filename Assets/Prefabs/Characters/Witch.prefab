@@ -297,6 +297,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000011865669520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012701571824}
+  - 33: {fileID: 33000011074886978}
+  - 23: {fileID: 23000013062863426}
+  m_Layer: 0
+  m_Name: witchtornDress_03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000011869189072
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,6 +1186,19 @@ Transform:
   - {fileID: 4000011463444700}
   m_Father: {fileID: 4000013452964736}
   m_RootOrder: 1
+--- !u!4 &4000012701571824
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011865669520}
+  m_LocalRotation: {x: 0.004678437, y: 0.05446243, z: 0.0071818773, w: -0.99847907}
+  m_LocalPosition: {x: 0.4754448, y: -1.0612785, z: 0.9083996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: -0.573, y: -186.066, z: -0.76900005}
+  m_Children: []
+  m_Father: {fileID: 4000013133943140}
+  m_RootOrder: 5
 --- !u!4 &4000012804932318
 Transform:
   m_ObjectHideFlags: 1
@@ -1244,8 +1274,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012880069448}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 45.29, y: 0, z: -8.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1254,6 +1284,7 @@ Transform:
   - {fileID: 4000011378836600}
   - {fileID: 4000011575830912}
   - {fileID: 4000011167166094}
+  - {fileID: 4000012701571824}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000013186230662
@@ -1439,6 +1470,42 @@ Transform:
   - {fileID: 4000013052265604}
   m_Father: {fileID: 4000012935763940}
   m_RootOrder: 0
+--- !u!23 &23000013062863426
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011865669520}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 241d33a6f160c104b8eee05ae99417c9, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &33000011074886978
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011865669520}
+  m_Mesh: {fileID: 4300000, guid: df7dd85ece97ea24c855cb68981b847a, type: 3}
 --- !u!82 &82000012838879002
 AudioSource:
   m_ObjectHideFlags: 1
@@ -1581,7 +1648,7 @@ MonoBehaviour:
   MovingClueLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
-  isSuspect: 1
+  isSuspect: 0
   arrestPlayed: 0
   warnPlayed: 0
 --- !u!136 &136000011313275892
