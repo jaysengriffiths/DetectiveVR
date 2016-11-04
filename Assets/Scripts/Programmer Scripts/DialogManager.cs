@@ -128,6 +128,8 @@ public class DialogManager : MonoBehaviour {
                         thankyouSpeechPlayed = true;
                         relevationSpeechPlayed = true;
                         mysterySpeechPlayed = true;
+                        
+                        //
                         missionManager.state = MissionManager.MissionState.MissionOver;
                     }
                 }
@@ -153,6 +155,8 @@ public class DialogManager : MonoBehaviour {
                     for (int i = 0; i < 5; i++)
                     {
                         missionManager.currentMission.suspects[i].character.isSuspect = false;
+                        //save data
+
                     }
                 }
 

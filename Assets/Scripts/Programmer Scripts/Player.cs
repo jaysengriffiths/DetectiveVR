@@ -5,18 +5,10 @@ using UnityEngine.UI;
 using Random = UnityEngine.Random;  //Kathy
 
 //TODO LIST
-//Fix collision with buildings, walls play correct audio
 //Fix interaction with handcuffs and warningbook
-//Correct dialog is played however is pause needed? what happens to characters
-//Fix cloth ripping when comparing clues
+//Mission dialog all correct, delay needed between final dialog
+//Fix cloth ripping when comparing
 
-//|          |  |-------        |
-//|\        /|  |               |
-//| \      / |  |               |
-//|  \    /  |  |-------        |
-//|   \  /   |  |               |
-//|    \/    |  |               |
-//|          |  |-------        |
 
 public class Player : MonoBehaviour
 {
@@ -65,6 +57,7 @@ public class Player : MonoBehaviour
     private float minBounds = 10;
     private float maxBounds = 20;
     private float counter;
+    private CharacterController characterController;
     //[HideInInspector]
     public float cameraAngle;
     private float footstepVolumeScale = 0.5f;
@@ -81,7 +74,10 @@ public class Player : MonoBehaviour
 
     //audio source set
     private AudioSource audioSource;
-   
+    public AudioClip[] treeCollide;
+    public AudioClip[] wallCollide;
+    public AudioClip[] pigstyCollide;
+
     //toggles initial complainant
     public bool complain = false;
 
@@ -111,6 +107,7 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
+        
         enkHoldingCloth = GameObject.Find("clothHolder").transform;
         feetSource = gameObject.GetComponentInChildren<AudioSource>();
         dialogManager = GetComponent<DialogManager>();
@@ -139,6 +136,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        characterController = gameObject.GetComponent<CharacterController>();
         Quaternion fwd = Camera.main.transform.rotation;
         enkModel.transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y ,0);
         cameraAngle = fwd.eulerAngles.x;
@@ -189,6 +187,7 @@ public class Player : MonoBehaviour
                         if (soundItem.timesPlayed < soundItem.maxTimesPlayed || soundItem.maxTimesPlayed == 0)
                         {
                             DialogManager.Dialog[] clips = new DialogManager.Dialog[2];  //Kathy
+
                             clips[0] = new DialogManager.Dialog(soundItem.activated, soundItem.transform);  //Kathy
                             clips[1] = new DialogManager.Dialog(soundItem.enkNames);  //Kathy
                             if (soundItem.isClue || soundItem.enkNameObject)
@@ -243,11 +242,12 @@ public class Player : MonoBehaviour
                 suspectGazeTimer.SetObject(null);
 
             //Interaction with returning to HQ
-            //if (hit.collider.CompareTag("GoldStar"))
-            //{
-            //    lookingAtGoldStar = true;
-            //}
+            if (hit.collider.CompareTag("GoldStar"))
+            {
+                lookingAtGoldStar = true;
+            }
 
+            //Interaction to travel to puzzle scene
             if (hit.collider.CompareTag("Puzzle"))
             {
                 lookingAtPuzzle = true;
@@ -261,8 +261,10 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene("JamiesSandBox");
         }
-        //if (goHomeTimer.IsFull(lookingAtGoldStar))
-        //    SceneManager.LoadScene("HQ");
+        if (goHomeTimer.IsFull(lookingAtGoldStar))
+        {
+            SceneManager.LoadScene("HQ");
+        }
 
     }
 
@@ -291,7 +293,12 @@ public class Player : MonoBehaviour
     {
         Vector3 fwd = Camera.main.transform.forward;
         controller.Move((speed  * Time.deltaTime) * fwd);
-        ProgressStepCycle();
+        Vector3 horizontalVelocity = new Vector3(characterController.velocity.x, 0, characterController.velocity.z);
+        float horizontalSpeed = horizontalVelocity.magnitude;
+        if (horizontalSpeed != 0)
+        {
+            ProgressStepCycle();
+        }
     }
     
     void ProgressStepCycle()  //Kathy this whole struct amended from Standard Assets character controller
@@ -357,20 +364,33 @@ public class Player : MonoBehaviour
             m_MudFootstepSounds[0] = feetSource.clip;
         }
     }
-    
-    //Handles the removing headset, resets scene though?
-    //private void OnApplicationPause(bool pauseStatus)
-    //{
-    //    SceneManager.LoadScene(0);
-    //    Camera.main.transform.localPosition = new Vector3(0, 2, 0);
-    //    transform.rotation = startRot;
-    //    Camera.main.transform.rotation = new Quaternion(0, 0, 0, 1);
-    //    transform.localPosition = startPos;
-    //    transform.rotation = new Quaternion(0, 0, 0, 1);
-    //}
 
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "TREE")
+        {
+            DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
+            clips[0] = new DialogManager.Dialog(treeCollide[0]);
+            clips[1] = new DialogManager.Dialog(treeCollide[1]);
+            dialogManager.setDialog(clips);
 
-    
+        }
+        if (other.tag == "WALL")
+        {
+            DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
+            clips[0] = new DialogManager.Dialog(wallCollide[0]);
+            clips[1] = new DialogManager.Dialog(wallCollide[1]);
+            dialogManager.setDialog(clips);
+        }
+
+        if (other.tag == "Pigsty")
+        {
+            DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
+            clips[0] = new DialogManager.Dialog(pigstyCollide[0]);
+            clips[1] = new DialogManager.Dialog(pigstyCollide[1]);
+            dialogManager.setDialog(clips);
+        }
+    }
 
 }

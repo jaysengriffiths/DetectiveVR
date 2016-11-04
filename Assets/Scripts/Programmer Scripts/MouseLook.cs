@@ -11,8 +11,6 @@ public class MouseLook : MonoBehaviour {
     public bool smooth;
     public float smoothTime = 5f;
     public bool lockCursor = true;
-
-
     private Quaternion m_CharacterTargetRot;
     private Quaternion m_CameraTargetRot;
     private bool m_cursorIsLocked = true;
@@ -24,6 +22,10 @@ public class MouseLook : MonoBehaviour {
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("pressed");
+        }
 //#if UNITY_ANDROID
 //#else
         LookRotation(transform, Camera.main.transform);

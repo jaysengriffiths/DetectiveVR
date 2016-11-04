@@ -6,6 +6,7 @@ public class Character : MonoBehaviour
     public AudioClip nameClip;
     public AudioClip introClip;
     public AudioClip clothRip;
+    public AudioClip awakeClip;
     public Transform MovingClueLocation;
     public bool introPlayed = false;
     public bool IsInteracted = false;

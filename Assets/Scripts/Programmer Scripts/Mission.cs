@@ -35,6 +35,8 @@ public class Mission : MonoBehaviour
     public Transform clueStartPos;
     public GameObject clueSpawned;
     public GameObject enkSpawnPoint;
+    public GameObject[] objDisable;
+    public GameObject[] soundObjDisable;
 
     //public Transform startMissionPosition;
     void OnActivate()
@@ -67,6 +69,7 @@ public class Mission : MonoBehaviour
     void Awake()
     {
         OnActivate();
+        TurnOffObj();
     }
     void Start ()
     {
@@ -78,5 +81,15 @@ public class Mission : MonoBehaviour
       
 	}
 
-
+    void TurnOffObj()
+    {
+        for (int i = 0; i < objDisable.Length; i++)
+        {
+            objDisable[i].SetActive(false);
+        }
+        for (int i = 0; i < soundObjDisable.Length; i++)
+        {
+            objDisable[i].GetComponent<AudioSource>().Pause();
+        }
+    }
 }
