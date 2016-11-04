@@ -11,17 +11,19 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1000013189562238}
   m_IsPrefabParent: 1
---- !u!1 &1000011617541298
+--- !u!1 &1000011319137698
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000010249646434}
-  - 33: {fileID: 33000012253751414}
-  - 65: {fileID: 65000014077994716}
-  - 23: {fileID: 23000010419661224}
+  - 4: {fileID: 4000011664867768}
+  - 33: {fileID: 33000012154161066}
+  - 23: {fileID: 23000010549438430}
+  - 95: {fileID: 95000011414663732}
+  - 65: {fileID: 65000011854302534}
+  - 65: {fileID: 65000013966578096}
   m_Layer: 0
   m_Name: houseCollider4
   m_TagString: Untagged
@@ -80,19 +82,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &4000010249646434
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011617541298}
-  m_LocalRotation: {x: -0, y: 0.20217662, z: -0, w: 0.97934914}
-  m_LocalPosition: {x: 27.447159, y: 3.313823, z: -34.013527}
-  m_LocalScale: {x: 5.819302, y: 1.9255128, z: 3.4151688}
-  m_LocalEulerAnglesHint: {x: 0, y: 23.111002, z: 0}
-  m_Children: []
-  m_Father: {fileID: 4000014088653034}
-  m_RootOrder: 2
 --- !u!4 &4000011300362028
 Transform:
   m_ObjectHideFlags: 1
@@ -119,6 +108,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000014088653034}
   m_RootOrder: 0
+--- !u!4 &4000011664867768
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011319137698}
+  m_LocalRotation: {x: -0, y: -0.54566896, z: -0, w: 0.8380009}
+  m_LocalPosition: {x: 27.62316, y: 3.363823, z: -34.102528}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: -66.344, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000014088653034}
+  m_RootOrder: 2
 --- !u!4 &4000014088653034
 Transform:
   m_ObjectHideFlags: 1
@@ -126,13 +128,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013189562238}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.253654, y: -3.012186, z: 45.428684}
+  m_LocalPosition: {x: -4.7371593, y: -2.363823, z: 39.353527}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000011443338158}
   - {fileID: 4000011300362028}
-  - {fileID: 4000010249646434}
+  - {fileID: 4000011664867768}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!23 &23000010071817624
@@ -164,26 +166,26 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!23 &23000010419661224
+--- !u!23 &23000010549438430
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011617541298}
-  m_Enabled: 0
+  m_GameObject: {fileID: 1000011319137698}
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 1765cedd9ee24374a87189fdb14193df, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_SelectedWireframeHidden: 0
@@ -236,24 +238,36 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012529720388}
   m_Mesh: {fileID: 4300032, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
---- !u!33 &33000012253751414
+--- !u!33 &33000012154161066
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011617541298}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65000014077994716
+  m_GameObject: {fileID: 1000011319137698}
+  m_Mesh: {fileID: 4300000, guid: 8d38fe59f4b20d2478eecfa04f646962, type: 3}
+--- !u!65 &65000011854302534
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011617541298}
+  m_GameObject: {fileID: 1000011319137698}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 3, y: 2, z: 4}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65000013966578096
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011319137698}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.01, y: 2.01, z: 4.01}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &82000010191457700
 AudioSource:
@@ -329,6 +343,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &95000011414663732
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011319137698}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 8d38fe59f4b20d2478eecfa04f646962, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114000010806478066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -340,12 +371,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Idle: {fileID: 0}
+  soundDelay: 3
+  Idle:
+  - {fileID: 0}
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 75b187d5fa3c46a46b323753d5dc556f, type: 3}
   timesPlayed: 0
   maxTimesPlayed: 0
+  activateDistance: 10
+  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 1
-  player: {fileID: 0}
