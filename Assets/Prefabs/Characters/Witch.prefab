@@ -506,11 +506,12 @@ GameObject:
   - 136: {fileID: 136000011313275892}
   - 95: {fileID: 95000013843694238}
   - 114: {fileID: 114000012715403782}
+  - 114: {fileID: 114000010621495876}
   - 114: {fileID: 114000012954719294}
   - 82: {fileID: 82000012838879002}
   - 114: {fileID: 114000012925932528}
   m_Layer: 0
-  m_Name: Witch
+  m_Name: witch
   m_TagString: SUSPECT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -911,10 +912,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012748934726}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.15380096, y: 0.8278497, z: -0.052300453}
-  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.004678437, y: 0.05446243, z: 0.0071818773, w: -0.99847907}
+  m_LocalPosition: {x: 0.4754448, y: -1.0612785, z: 0.9083996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: -0.573, y: -186.066, z: -0.76900005}
   m_Children: []
   m_Father: {fileID: 4000013133943140}
   m_RootOrder: 0
@@ -1274,8 +1275,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012880069448}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 45.29, y: 0, z: -8.84}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1483,7 +1484,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 241d33a6f160c104b8eee05ae99417c9, type: 2}
+  - {fileID: 2100000, guid: b15d60ca183d2b04f8fb53c1b2c39bed, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -1597,13 +1598,24 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114000012715403782
+--- !u!114 &114000010621495876
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012880069448}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad50986f7b7e59a49ba62928109da229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114000012715403782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012880069448}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15a17bb57d508f74c8c80e3328f8f100, type: 3}
   m_Name: 
@@ -1627,7 +1639,6 @@ MonoBehaviour:
   timesPlayed: 0
   maxTimesPlayed: 0
   activateDistance: 10
-  globalSound: 0
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -1644,8 +1655,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: 147b25c33a2806a4d86f1d5f73a84028, type: 3}
   introClip: {fileID: 8300000, guid: 5e7c17ed1c697be468a83bafa937a704, type: 3}
-  clothRip: {fileID: 8300000, guid: cff741c5dacb29d46bfc45eb14fdebb8, type: 3}
-  MovingClueLocation: {fileID: 0}
+  awakeClip: {fileID: 0}
+  tornClothLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0
@@ -1677,7 +1688,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d04411345fae9e94f88327d6e6b3124f, type: 2}
+  - {fileID: 2100000, guid: b15d60ca183d2b04f8fb53c1b2c39bed, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -1720,7 +1731,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d04411345fae9e94f88327d6e6b3124f, type: 2}
+  - {fileID: 2100000, guid: b15d60ca183d2b04f8fb53c1b2c39bed, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
