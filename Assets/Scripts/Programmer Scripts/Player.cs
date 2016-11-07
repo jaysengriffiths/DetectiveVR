@@ -136,6 +136,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 10;
+        }
+        else
+        {
+            speed = 1.5f;
+        }
         characterController = gameObject.GetComponent<CharacterController>();
         Quaternion fwd = Camera.main.transform.rotation;
         enkModel.transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y ,0);
