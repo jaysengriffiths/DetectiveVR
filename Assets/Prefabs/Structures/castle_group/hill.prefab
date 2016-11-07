@@ -21,7 +21,6 @@ GameObject:
   - 4: {fileID: 4000011581078954}
   - 33: {fileID: 33000012062892338}
   - 23: {fileID: 23000010297646170}
-  - 65: {fileID: 65000013362259808}
   m_Layer: 0
   m_Name: hill
   m_TagString: Untagged
@@ -78,15 +77,3 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011348490336}
   m_Mesh: {fileID: 4300004, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
---- !u!65 &65000013362259808
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000011348490336}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20.64605, y: 5.2916923, z: 18.563587}
-  m_Center: {x: -0.4312617, y: -1.5152427, z: 0}

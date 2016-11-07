@@ -44,7 +44,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4000010387847480
 Transform:
@@ -137,7 +137,7 @@ AudioSource:
   Loop: 0
   Mute: 0
   Spatialize: 1
-  Priority: 128
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 50
@@ -212,7 +212,7 @@ MonoBehaviour:
   enkNames: {fileID: 8300000, guid: 5f87fe8afc2661a48969099c360d6910, type: 3}
   timesPlayed: 0
   maxTimesPlayed: 10
-  activateDistance: 10
+  activateDistance: 50
   isClue: 0
   isActivated: 0
   enkNameObject: 1
