@@ -57,7 +57,7 @@ public class animatorController : MonoBehaviour
             anim.SetTrigger("sitDown");
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.B))
         {
             anim.SetTrigger("torch");
         }
