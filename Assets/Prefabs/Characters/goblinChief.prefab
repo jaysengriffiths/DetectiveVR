@@ -463,7 +463,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010555482474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -537,11 +537,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c55f50589cccb96499cc93351d3626b4, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 1
   Priority: 128
@@ -552,7 +552,7 @@ AudioSource:
   rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 1
+  BypassReverbZones: 0
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -654,8 +654,7 @@ MonoBehaviour:
   enkNames: {fileID: 8300000, guid: 47f58142ec07e514eb0f36043afb8d56, type: 3}
   timesPlayed: 0
   maxTimesPlayed: 0
-  activateDistance: 10
-  globalSound: 0
+  activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -683,8 +682,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: 47f58142ec07e514eb0f36043afb8d56, type: 3}
   introClip: {fileID: 8300000, guid: ea3151b31332c6446bc8bcda6206276c, type: 3}
-  clothRip: {fileID: 8300000, guid: 24b21af3080097447b5746415ba44afa, type: 3}
-  MovingClueLocation: {fileID: 4000010098477650}
+  awakeClip: {fileID: 8300000, guid: c1c9432ea1c9b7e459ff5a4a614460e3, type: 3}
+  tornClothLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0

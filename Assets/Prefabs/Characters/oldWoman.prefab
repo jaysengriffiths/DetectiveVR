@@ -2115,11 +2115,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b55a7a29a948ad54ab61dbee485a1b0a, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 1
   Priority: 128
@@ -2238,8 +2238,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: 6c7303edd8ff68a409e823e478dddd8d, type: 3}
   introClip: {fileID: 8300000, guid: 8caa63648cebf3f4b9a570fc4b3dce85, type: 3}
-  clothRip: {fileID: 0}
-  MovingClueLocation: {fileID: 0}
+  awakeClip: {fileID: 8300000, guid: bd0839c055fc2604e90ca0dea9582bd4, type: 3}
+  tornClothLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0
@@ -2263,8 +2263,7 @@ MonoBehaviour:
   enkNames: {fileID: 8300000, guid: 6c7303edd8ff68a409e823e478dddd8d, type: 3}
   timesPlayed: 0
   maxTimesPlayed: 0
-  activateDistance: 10
-  globalSound: 0
+  activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 0
