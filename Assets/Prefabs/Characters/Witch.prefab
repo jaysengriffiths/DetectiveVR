@@ -505,7 +505,6 @@ GameObject:
   - 4: {fileID: 4000013133943140}
   - 136: {fileID: 136000011313275892}
   - 95: {fileID: 95000013843694238}
-  - 114: {fileID: 114000012715403782}
   - 114: {fileID: 114000010621495876}
   - 114: {fileID: 114000012954719294}
   - 82: {fileID: 82000012838879002}
@@ -1275,7 +1274,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012880069448}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1516,11 +1515,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4d53844440e478e4186930caf8737a41, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 1
   Priority: 128
@@ -1609,17 +1608,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad50986f7b7e59a49ba62928109da229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114000012715403782
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012880069448}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a17bb57d508f74c8c80e3328f8f100, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000012925932528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1638,7 +1626,7 @@ MonoBehaviour:
   enkNames: {fileID: 8300000, guid: 147b25c33a2806a4d86f1d5f73a84028, type: 3}
   timesPlayed: 0
   maxTimesPlayed: 0
-  activateDistance: 10
+  activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 0
@@ -1655,7 +1643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameClip: {fileID: 8300000, guid: 147b25c33a2806a4d86f1d5f73a84028, type: 3}
   introClip: {fileID: 8300000, guid: 5e7c17ed1c697be468a83bafa937a704, type: 3}
-  awakeClip: {fileID: 0}
+  awakeClip: {fileID: 8300000, guid: 281c584c12af36a45b7cf6c94733dfac, type: 3}
   tornClothLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
