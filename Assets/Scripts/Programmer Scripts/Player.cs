@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
     public Transform enkHoldingCloth;
 
     //setting new timers
-    GazeTimer soundLookAtTimer = new GazeTimer(2);
+    GazeTimer soundLookAtTimer = new GazeTimer(1);
     GazeTimer suspectGazeTimer = new GazeTimer(2);
 
     //audio source set
