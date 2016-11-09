@@ -5,6 +5,7 @@ public class DialogManager : MonoBehaviour {
 
     private MissionManager missionManager;
     private AudioSource audioSource;
+    public GameObject mic;
     public float soundDelayTime = 0.5f;
     private bool relevationSpeechPlayed = false;
     private bool thankyouSpeechPlayed = false;
@@ -49,7 +50,6 @@ public class DialogManager : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        GameObject mic = GameObject.Find("Microphone");
         if (mic)
             audioSource = mic.GetComponent<AudioSource>();
         missionManager = FindObjectOfType<MissionManager>();

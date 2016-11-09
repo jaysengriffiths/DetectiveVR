@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;  //Kathy
+using VR = UnityEngine.VR;
 
 //TODO LIST
 //Fix interaction with handcuffs and warningbook
@@ -12,6 +13,7 @@ using Random = UnityEngine.Random;  //Kathy
 
 public class Player : MonoBehaviour
 {
+    
 
     class GazeTimer
     {
@@ -69,7 +71,7 @@ public class Player : MonoBehaviour
     public Transform enkHoldingCloth;
 
     //setting new timers
-    GazeTimer soundLookAtTimer = new GazeTimer(1);
+    GazeTimer soundLookAtTimer = new GazeTimer(0.5f);
     GazeTimer suspectGazeTimer = new GazeTimer(2);
 
     //audio source set
@@ -99,6 +101,7 @@ public class Player : MonoBehaviour
     //Getting other components required
     private MissionManager missionManager;
     private DialogManager dialogManager;
+    private DialogManager soundManager;
     private CharacterController controller;
     private InventoryControl.Accumulator goHomeTimer;
     private InventoryControl.Accumulator puzzleSceneLoadTimer;
@@ -111,7 +114,8 @@ public class Player : MonoBehaviour
         enkHoldingCloth = GameObject.Find("clothHolder").transform;
         feetSource = gameObject.GetComponentInChildren<AudioSource>();
         dialogManager = GetComponent<DialogManager>();
-        GameObject mic = GameObject.Find("Microphone");
+        soundManager = GameObject.Find("SoundManager").GetComponent<DialogManager>();
+        GameObject mic = GameObject.Find("DialogMicrophone");
         if (mic)
             audioSource = mic.GetComponent<AudioSource>();
         controller = GetComponent<CharacterController>();
@@ -182,7 +186,7 @@ public class Player : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 20))
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 15))
         {
             SoundLookAt soundItem = hit.collider.GetComponent<SoundLookAt>();
             soundLookAtTimer.SetObject(soundItem);
@@ -200,7 +204,8 @@ public class Player : MonoBehaviour
                             clips[1] = new DialogManager.Dialog(soundItem.enkNames);  //Kathy
                             if (soundItem.isClue || soundItem.enkNameObject)
                             {
-                                dialogManager.setDialog(clips);
+                                
+                                soundManager.setDialog(clips);
                                 soundItem.timesPlayed++;
                                 soundItem.isActivated = true;
                             }

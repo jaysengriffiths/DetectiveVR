@@ -26,7 +26,7 @@ public class MissionManager : MonoBehaviour
 
     void Awake()
     {
-        dialogManager = FindObjectOfType<DialogManager>();
+        dialogManager = GameObject.FindGameObjectWithTag("Player").GetComponent<DialogManager>();
         GameObject mic = GameObject.Find("Microphone");
         if (mic)
             audioSource = mic.GetComponent<AudioSource>();

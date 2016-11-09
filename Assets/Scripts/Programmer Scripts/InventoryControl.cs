@@ -17,6 +17,8 @@ public class InventoryControl : MonoBehaviour
         player = gameObject.GetComponent<Player>();
         missionManager = FindObjectOfType<MissionManager>();
         dialogManager = gameObject.GetComponent<DialogManager>();
+        HandCuffs.SetActive(false);
+        WarningBook.SetActive(false);
     }
 
     public class Accumulator
@@ -46,13 +48,25 @@ public class InventoryControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hintTimer.IsFull(player.cameraAngle > 270 && player.cameraAngle < 280))
+        if (player.cameraAngle > 65 && player.cameraAngle < 75)
         {
-            givingClue = true;
-            if (givingClue)
-                GiveClue();
+            HandCuffs.SetActive(true);
         }
 
+        else
+        {
+            HandCuffs.SetActive(false);
+        }
+
+        if (player.cameraAngle > 55 && player.cameraAngle < 65)
+        {
+            WarningBook.SetActive(true);
+        }
+        else
+        {
+            WarningBook.SetActive(false);
+        }
+   
         if (player.selectedCharacter != null && player.selectedCharacter.introClip && player.selectedCharacter.IsInteracted)
         {
             if (cuffTimer.IsFull(player.cameraAngle > 65 && player.cameraAngle < 70))
@@ -65,8 +79,13 @@ public class InventoryControl : MonoBehaviour
                 missionManager.Warn(player.selectedCharacter);
             }
         }
+        if (player.cameraAngle > 270 && player.cameraAngle < 280)
+        {
+            GiveClue();
+        }
+
     }
- 
+
 
     public void GiveClue()
     {
