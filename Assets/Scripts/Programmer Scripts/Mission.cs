@@ -71,6 +71,18 @@ public class Mission : MonoBehaviour
         OnActivate();
         TurnOffObj();
     }
+
+    public int GetIndexOfCharacter(Character ch)
+    {
+        for (int i = 0; i < suspects.Length; i++)
+        {
+            if (suspects[i].character == ch)
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
     void Start ()
     {
     

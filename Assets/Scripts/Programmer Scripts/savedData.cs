@@ -49,7 +49,7 @@ public class savedData : MonoBehaviour
        // PlayerPrefs.SetInt(mm.currentMission.name + "Done", 1); // could save out 1 = trophy 2 = present
     }
 
-    public void ReSetSave()
+    public void ResetSave()
     {
         PlayerPrefs.DeleteAll();
     }

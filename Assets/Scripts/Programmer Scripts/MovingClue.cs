@@ -7,7 +7,7 @@ public class MovingClue : MonoBehaviour
     private Player player;
     private SoundLookAt soundLook;
     bool movingToTarget = false;
-    public AudioClip clueNoise;
+    private MissionManager missionManager;
 
     void Awake()
     {
@@ -15,6 +15,7 @@ public class MovingClue : MonoBehaviour
     }
     void Start ()
     {
+        missionManager = FindObjectOfType<MissionManager>();
         player = FindObjectOfType<Player>();
         soundLook = GetComponent<SoundLookAt>();
     }
@@ -40,6 +41,7 @@ public class MovingClue : MonoBehaviour
 
     public void MoveTowards(Character character)
     {
+        DialogManager dialogManager = GameObject.FindGameObjectWithTag("Player").GetComponent<DialogManager>();
         movingToTarget = true;
         float step = speed * Time.deltaTime;
         Transform clueTransform = character.transform;
@@ -47,9 +49,11 @@ public class MovingClue : MonoBehaviour
             clueTransform = character.tornClothLocation;
         if ((transform.position - clueTransform.position).magnitude < 0.1f)
         {
-            //GetComponent<AudioSource>().clip = character.clothRip;
-            //GetComponent<AudioSource>().Play();
-            
+            DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
+            clips[0] = new DialogManager.Dialog(soundLook.clothNoise, player.selectedCharacter.tornClothLocation);
+            clips[1] = new DialogManager.Dialog(missionManager.currentMission.soundFX[missionManager.currentMission.GetIndexOfCharacter(player.selectedCharacter)], player.selectedCharacter.tornClothLocation);
+            dialogManager.setDialog(clips);
+
         }
         else
             transform.position = Vector3.MoveTowards(transform.position, clueTransform.position, step);

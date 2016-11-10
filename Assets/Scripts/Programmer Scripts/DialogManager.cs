@@ -11,6 +11,7 @@ public class DialogManager : MonoBehaviour {
     private bool thankyouSpeechPlayed = false;
     private bool mysterySpeechPlayed = false;
     private bool isDialog = false;
+    private savedData saveGame;
 
     public enum DialogType
     {
@@ -52,6 +53,7 @@ public class DialogManager : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        saveGame = GameObject.FindObjectOfType<savedData>();
 
         if (mic)
         {
@@ -161,7 +163,7 @@ public class DialogManager : MonoBehaviour {
                     for (int i = 0; i < 5; i++)
                     {
                         missionManager.currentMission.suspects[i].character.isSuspect = false;
-                        //save data
+                        saveGame.UpdateSave();
 
                     }
                 }
