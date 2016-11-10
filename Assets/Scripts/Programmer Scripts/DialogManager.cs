@@ -122,11 +122,7 @@ public class DialogManager : MonoBehaviour {
             }
             else
             {
-<<<<<<< HEAD
-                if (missionManager.state == MissionManager.MissionState.EndByWarning && isDialog)
-=======
-                if (missionManager != null && missionManager.state == MissionManager.MissionState.EndByWarning)
->>>>>>> 069721206b42e2a056e2bd082805ab7db93b1075
+                if (missionManager != null && missionManager.state == MissionManager.MissionState.EndByWarning && isDialog)
                 {
                     //Debug.Log("play thankyou");
                     if (!thankyouSpeechPlayed)
@@ -146,11 +142,7 @@ public class DialogManager : MonoBehaviour {
                     }
                 }
 
-<<<<<<< HEAD
-                if (missionManager.state == MissionManager.MissionState.EndByArrest && isDialog)
-=======
-                if (missionManager != null && missionManager.state == MissionManager.MissionState.EndByArrest)
->>>>>>> 069721206b42e2a056e2bd082805ab7db93b1075
+                if (missionManager != null && missionManager.state == MissionManager.MissionState.EndByArrest && isDialog)
                 {
                     if (!relevationSpeechPlayed)
                     {
@@ -166,12 +158,7 @@ public class DialogManager : MonoBehaviour {
                     }
 
                 }
-
-<<<<<<< HEAD
-                if (missionManager.state == MissionManager.MissionState.MissionOver && isDialog)
-=======
-                if (missionManager != null && missionManager.state == MissionManager.MissionState.MissionOver)
->>>>>>> 069721206b42e2a056e2bd082805ab7db93b1075
+                if (missionManager != null && missionManager.state == MissionManager.MissionState.MissionOver && isDialog)
                 {
                     for (int i = 0; i < 5; i++)
                     {

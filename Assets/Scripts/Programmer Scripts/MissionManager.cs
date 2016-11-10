@@ -7,11 +7,7 @@ public class MissionManager : MonoBehaviour
 {
     Player player;
     //public GameObject currentSuspectSelected;
-<<<<<<< HEAD
-    public Mission[] missions;
-=======
     public static Mission[] missions;
->>>>>>> 069721206b42e2a056e2bd082805ab7db93b1075
     private DialogManager dialogManager;
     private AudioSource audioSource;
     public AudioClip arrestClip;
@@ -38,10 +34,7 @@ public class MissionManager : MonoBehaviour
     }
     void Start()
     {
-<<<<<<< HEAD
         saveGame = GetComponent<savedData>();
-=======
->>>>>>> 069721206b42e2a056e2bd082805ab7db93b1075
         missions = FindObjectsOfType<Mission>();
         // load the mission name to activate from the save game
         string mission = PlayerPrefs.GetString("Mission");
@@ -50,12 +43,16 @@ public class MissionManager : MonoBehaviour
             GameObject missionObj = GameObject.Find(mission);
             currentMission = missionObj.GetComponent<Mission>();
         }
-
+        if (currentMission == null)
+        {
+            currentMission = missions[3];
+        }
         // turn off all missions excepot the current one
         for (int i = 0; i < missions.Length; i++)
             if (missions[i] != currentMission)
                 missions[i].gameObject.SetActive(false);
 
+       
         player = FindObjectOfType<Player>();
         player.transform.position = currentMission.enkSpawnPoint.transform.position;
     }
