@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     public AudioClip nameClip;
     public AudioClip introClip;
     public AudioClip awakeClip;
+    public AudioClip threatenedClip;
     public Transform tornClothLocation;
     public bool introPlayed = false;
     public bool IsInteracted = false;

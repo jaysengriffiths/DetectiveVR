@@ -60,6 +60,11 @@ public class InventoryControl : MonoBehaviour
 
         if (player.cameraAngle > 55 && player.cameraAngle < 65)
         {
+            AudioClip clip;
+            clip = player.selectedCharacter.threatenedClip;
+            DialogManager.Dialog[] clips = new DialogManager.Dialog[1];
+            clips[0] = new DialogManager.Dialog(clip, player.selectedCharacter); 
+            dialogManager.setDialog(clips);
             WarningBook.SetActive(true);
         }
         else

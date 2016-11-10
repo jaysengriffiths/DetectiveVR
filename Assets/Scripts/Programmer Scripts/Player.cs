@@ -198,14 +198,17 @@ public class Player : MonoBehaviour
                     {
                         if (soundItem.timesPlayed < soundItem.maxTimesPlayed || soundItem.maxTimesPlayed == 0)
                         {
-                            DialogManager.Dialog[] clips = new DialogManager.Dialog[2];  //Kathy
 
+                            DialogManager.Dialog[] clips = new DialogManager.Dialog[1];  //Kathy
+                            DialogManager.Dialog[] nameClips = new DialogManager.Dialog[1];
                             clips[0] = new DialogManager.Dialog(soundItem.activated, soundItem.transform);  //Kathy
-                            clips[1] = new DialogManager.Dialog(soundItem.enkNames);  //Kathy
+                            nameClips[0] = new DialogManager.Dialog(soundItem.enkNames);  //Kathy
                             if (soundItem.isClue || soundItem.enkNameObject)
                             {
-                                
+
                                 soundManager.setDialog(clips);
+                                dialogManager.setDialog(nameClips);
+
                                 soundItem.timesPlayed++;
                                 soundItem.isActivated = true;
                             }
