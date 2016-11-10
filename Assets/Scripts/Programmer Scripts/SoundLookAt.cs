@@ -15,8 +15,9 @@ public class SoundLookAt : MonoBehaviour
     //private Transform player;
     private bool isPlaying = false;
     private float nextTimeStamp = 0;
-    public bool globalSound = false;
+
     public bool isClue = false;
+    [HideInInspector]
     public bool isActivated = false;
     public bool enkNameObject = false;
     private GameObject player;
@@ -25,10 +26,6 @@ public class SoundLookAt : MonoBehaviour
     {
         Source = gameObject.GetComponent<AudioSource>();
         player = FindObjectOfType<Player>().gameObject;
-        if (globalSound == true)
-        {
-            activateDistance = 100;
-        }
     }
 
     // Update is called once per frame
@@ -50,6 +47,7 @@ public class SoundLookAt : MonoBehaviour
                 {
                     if (Idle.Length == 0)
                     {
+                        
                         Source.PlayOneShot(activated, 0.25f);
                     }
                     else

@@ -3,9 +3,17 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;  //Kathy
+using VR = UnityEngine.VR;
+
+//TODO LIST
+//Fix interaction with handcuffs and warningbook
+//Mission dialog all correct, delay needed between final dialog
+//Fix cloth ripping when comparing
+
 
 public class Player : MonoBehaviour
 {
+    
 
     class GazeTimer
     {
@@ -51,6 +59,7 @@ public class Player : MonoBehaviour
     private float minBounds = 10;
     private float maxBounds = 20;
     private float counter;
+    private CharacterController characterController;
     //[HideInInspector]
     public float cameraAngle;
     private float footstepVolumeScale = 0.5f;
@@ -62,12 +71,15 @@ public class Player : MonoBehaviour
     public Transform enkHoldingCloth;
 
     //setting new timers
-    GazeTimer soundLookAtTimer = new GazeTimer(2);
+    GazeTimer soundLookAtTimer = new GazeTimer(0.5f);
     GazeTimer suspectGazeTimer = new GazeTimer(2);
 
     //audio source set
     private AudioSource audioSource;
-   
+    public AudioClip[] treeCollide;
+    public AudioClip[] wallCollide;
+    public AudioClip[] pigstyCollide;
+
     //toggles initial complainant
     public bool complain = false;
 
@@ -89,6 +101,7 @@ public class Player : MonoBehaviour
     //Getting other components required
     private MissionManager missionManager;
     private DialogManager dialogManager;
+    private DialogManager soundManager;
     private CharacterController controller;
     private InventoryControl.Accumulator goHomeTimer;
     private InventoryControl.Accumulator puzzleSceneLoadTimer;
@@ -97,10 +110,12 @@ public class Player : MonoBehaviour
 
     void Awake()
     {
+        
         enkHoldingCloth = GameObject.Find("clothHolder").transform;
         feetSource = gameObject.GetComponentInChildren<AudioSource>();
         dialogManager = GetComponent<DialogManager>();
-        GameObject mic = GameObject.Find("Microphone");
+        soundManager = GameObject.Find("SoundManager").GetComponent<DialogManager>();
+        GameObject mic = GameObject.Find("DialogMicrophone");
         if (mic)
             audioSource = mic.GetComponent<AudioSource>();
         controller = GetComponent<CharacterController>();
@@ -125,6 +140,15 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 10;
+        }
+        else
+        {
+            speed = 1.5f;
+        }
+        characterController = gameObject.GetComponent<CharacterController>();
         Quaternion fwd = Camera.main.transform.rotation;
         enkModel.transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y ,0);
         cameraAngle = fwd.eulerAngles.x;
@@ -162,7 +186,7 @@ public class Player : MonoBehaviour
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 20))
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 15))
         {
             SoundLookAt soundItem = hit.collider.GetComponent<SoundLookAt>();
             soundLookAtTimer.SetObject(soundItem);
@@ -175,11 +199,13 @@ public class Player : MonoBehaviour
                         if (soundItem.timesPlayed < soundItem.maxTimesPlayed || soundItem.maxTimesPlayed == 0)
                         {
                             DialogManager.Dialog[] clips = new DialogManager.Dialog[2];  //Kathy
+
                             clips[0] = new DialogManager.Dialog(soundItem.activated, soundItem.transform);  //Kathy
                             clips[1] = new DialogManager.Dialog(soundItem.enkNames);  //Kathy
                             if (soundItem.isClue || soundItem.enkNameObject)
                             {
-                                dialogManager.setDialog(clips);
+                                
+                                soundManager.setDialog(clips);
                                 soundItem.timesPlayed++;
                                 soundItem.isActivated = true;
                             }
@@ -229,11 +255,12 @@ public class Player : MonoBehaviour
                 suspectGazeTimer.SetObject(null);
 
             //Interaction with returning to HQ
-            //if (hit.collider.CompareTag("GoldStar"))
-            //{
-            //    lookingAtGoldStar = true;
-            //}
+            if (hit.collider.CompareTag("GoldStar"))
+            {
+                lookingAtGoldStar = true;
+            }
 
+            //Interaction to travel to puzzle scene
             if (hit.collider.CompareTag("Puzzle"))
             {
                 lookingAtPuzzle = true;
@@ -247,8 +274,10 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene("JamiesSandBox");
         }
-        //if (goHomeTimer.IsFull(lookingAtGoldStar))
-        //    SceneManager.LoadScene("HQ");
+        if (goHomeTimer.IsFull(lookingAtGoldStar))
+        {
+            SceneManager.LoadScene("HQ");
+        }
 
     }
 
@@ -277,7 +306,12 @@ public class Player : MonoBehaviour
     {
         Vector3 fwd = Camera.main.transform.forward;
         controller.Move((speed  * Time.deltaTime) * fwd);
-        ProgressStepCycle();
+        Vector3 horizontalVelocity = new Vector3(characterController.velocity.x, 0, characterController.velocity.z);
+        float horizontalSpeed = horizontalVelocity.magnitude;
+        if (horizontalSpeed != 0)
+        {
+            ProgressStepCycle();
+        }
     }
     
     void ProgressStepCycle()  //Kathy this whole struct amended from Standard Assets character controller
@@ -343,20 +377,33 @@ public class Player : MonoBehaviour
             m_MudFootstepSounds[0] = feetSource.clip;
         }
     }
-    
-    //Handles the removing headset, resets scene though?
-    //private void OnApplicationPause(bool pauseStatus)
-    //{
-    //    SceneManager.LoadScene(0);
-    //    Camera.main.transform.localPosition = new Vector3(0, 2, 0);
-    //    transform.rotation = startRot;
-    //    Camera.main.transform.rotation = new Quaternion(0, 0, 0, 1);
-    //    transform.localPosition = startPos;
-    //    transform.rotation = new Quaternion(0, 0, 0, 1);
-    //}
 
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "TREE")
+        {
+            DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
+            clips[0] = new DialogManager.Dialog(treeCollide[0]);
+            clips[1] = new DialogManager.Dialog(treeCollide[1]);
+            dialogManager.setDialog(clips);
 
-    
+        }
+        if (other.tag == "WALL")
+        {
+            DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
+            clips[0] = new DialogManager.Dialog(wallCollide[0]);
+            clips[1] = new DialogManager.Dialog(wallCollide[1]);
+            dialogManager.setDialog(clips);
+        }
+
+        if (other.tag == "Pigsty")
+        {
+            DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
+            clips[0] = new DialogManager.Dialog(pigstyCollide[0]);
+            clips[1] = new DialogManager.Dialog(pigstyCollide[1]);
+            dialogManager.setDialog(clips);
+        }
+    }
 
 }

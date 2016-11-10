@@ -5,9 +5,11 @@ public class DialogManager : MonoBehaviour {
 
     private MissionManager missionManager;
     private AudioSource audioSource;
+    public GameObject mic;
     public float soundDelayTime = 0.5f;
     private bool relevationSpeechPlayed = false;
     private bool thankyouSpeechPlayed = false;
+    private bool mysterySpeechPlayed = false;
     public enum DialogType
     {
         Normal,
@@ -48,7 +50,6 @@ public class DialogManager : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        GameObject mic = GameObject.Find("Microphone");
         if (mic)
             audioSource = mic.GetComponent<AudioSource>();
         missionManager = FindObjectOfType<MissionManager>();
@@ -118,11 +119,17 @@ public class DialogManager : MonoBehaviour {
                     //Debug.Log("play thankyou");
                     if (!thankyouSpeechPlayed)
                     {
-                        DialogManager.Dialog[] clips = new DialogManager.Dialog[1];  //Kathy
-                        clips[1] = new DialogManager.Dialog(missionManager.currentMission.GetGuiltySuspect().thankyou);  //Kathy
+                        DialogManager.Dialog[] clips = new DialogManager.Dialog[3];  //Kathy
+                        clips[0] = new DialogManager.Dialog(missionManager.currentMission.GetGuiltySuspect().thankyou);  //Kathy
+                        clips[1] = new DialogManager.Dialog(missionManager.currentMission.revelationSpeech);  //Kathy
+                        clips[2] = new DialogManager.Dialog(missionManager.currentMission.mysterySpeech);  //Kathy
 
                         setDialog(clips);
                         thankyouSpeechPlayed = true;
+                        relevationSpeechPlayed = true;
+                        mysterySpeechPlayed = true;
+                        
+                        //
                         missionManager.state = MissionManager.MissionState.MissionOver;
                     }
                 }
@@ -131,11 +138,13 @@ public class DialogManager : MonoBehaviour {
                 {
                     if (!relevationSpeechPlayed)
                     {
-                        DialogManager.Dialog[] clips = new DialogManager.Dialog[1];  //Kathy
+                        DialogManager.Dialog[] clips = new DialogManager.Dialog[2];  //Kathy
                         clips[0] = new DialogManager.Dialog(missionManager.currentMission.revelationSpeech);  //Kathy
+                        clips[1] = new DialogManager.Dialog(missionManager.currentMission.mysterySpeech);  //Kathy
 
                         setDialog(clips);
                         relevationSpeechPlayed = true;
+                        mysterySpeechPlayed = true;
                         missionManager.state = MissionManager.MissionState.MissionOver;
                     }
 
@@ -146,6 +155,8 @@ public class DialogManager : MonoBehaviour {
                     for (int i = 0; i < 5; i++)
                     {
                         missionManager.currentMission.suspects[i].character.isSuspect = false;
+                        //save data
+
                     }
                 }
 

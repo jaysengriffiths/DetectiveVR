@@ -1,0 +1,282 @@
+fileFormatVersion: 2
+guid: 3be5cb3967e6cc548acf42f0de3b89a9
+timeCreated: 1478500004
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: arm_CTRL_GRP
+    100002: arm_L_CTRL
+    100004: arm_L_CTRL_GRP
+    100006: arm_L_IKH
+    100008: arm_R_CTRL
+    100010: arm_R_IKH
+    100012: chest_CTRL
+    100014: chest_CTRL_GRP
+    100016: chest_JNT
+    100018: clav1_L_JNT
+    100020: clav1_R_JNT
+    100022: clav2_L_JNT
+    100024: clav2_R_JNT
+    100026: clav3_L_END
+    100028: clav3_R_END
+    100030: CTRL_GRP
+    100032: elbow_L_CTRL
+    100034: elbow_L_CTRL_GRP
+    100036: elbow_L_JNT
+    100038: elbow_L_LOC
+    100040: elbow_L_LOC_GRP
+    100042: elbow_R_CTRL
+    100044: elbow_R_CTRL_GRP
+    100046: elbow_R_JNT
+    100048: elbow_R_LOC
+    100050: elbow_R_LOC_GRP
+    100052: head_CTRL
+    100054: head_CTRL_GRP
+    100056: head_JNT
+    100058: //RootNode
+    100060: LOM_hat
+    100062: LOM_lowpoly1
+    100064: LOM_RIG_ALL_GRP_zr
+    100066: LOM_rig_GLOBAL_CTRL
+    100068: neck_CTRL
+    100070: neck_CTRL_GRP
+    100072: neck_JNT
+    100074: root_CTRL
+    100076: root_CTRL_GRP
+    100078: root_JNT
+    100080: shoulder_L_JNT
+    100082: shoulder_R_JNT
+    100084: wrist_L_JNT
+    100086: wrist_R_JNT
+    400000: arm_CTRL_GRP
+    400002: arm_L_CTRL
+    400004: arm_L_CTRL_GRP
+    400006: arm_L_IKH
+    400008: arm_R_CTRL
+    400010: arm_R_IKH
+    400012: chest_CTRL
+    400014: chest_CTRL_GRP
+    400016: chest_JNT
+    400018: clav1_L_JNT
+    400020: clav1_R_JNT
+    400022: clav2_L_JNT
+    400024: clav2_R_JNT
+    400026: clav3_L_END
+    400028: clav3_R_END
+    400030: CTRL_GRP
+    400032: elbow_L_CTRL
+    400034: elbow_L_CTRL_GRP
+    400036: elbow_L_JNT
+    400038: elbow_L_LOC
+    400040: elbow_L_LOC_GRP
+    400042: elbow_R_CTRL
+    400044: elbow_R_CTRL_GRP
+    400046: elbow_R_JNT
+    400048: elbow_R_LOC
+    400050: elbow_R_LOC_GRP
+    400052: head_CTRL
+    400054: head_CTRL_GRP
+    400056: head_JNT
+    400058: //RootNode
+    400060: LOM_hat
+    400062: LOM_lowpoly1
+    400064: LOM_RIG_ALL_GRP_zr
+    400066: LOM_rig_GLOBAL_CTRL
+    400068: neck_CTRL
+    400070: neck_CTRL_GRP
+    400072: neck_JNT
+    400074: root_CTRL
+    400076: root_CTRL_GRP
+    400078: root_JNT
+    400080: shoulder_L_JNT
+    400082: shoulder_R_JNT
+    400084: wrist_L_JNT
+    400086: wrist_R_JNT
+    4300000: LOM_lowpoly1
+    4300002: LOM_hat
+    7400000: transitionToTalk
+    9500000: //RootNode
+    13700000: LOM_hat
+    13700002: LOM_lowpoly1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: transitionToTalk
+      takeName: Take 001
+      firstFrame: 130
+      lastFrame: 160
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: LOM_hat
+        weight: 1
+      - path: LOM_lowpoly1
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/arm_CTRL_GRP
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/arm_CTRL_GRP/arm_R_CTRL
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/arm_CTRL_GRP/arm_R_CTRL/arm_R_IKH
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/arm_L_CTRL_GRP
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/arm_L_CTRL_GRP/arm_L_CTRL
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/arm_L_CTRL_GRP/arm_L_CTRL/arm_L_IKH
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/elbow_L_CTRL_GRP
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/elbow_L_CTRL_GRP/elbow_L_CTRL
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/elbow_L_CTRL_GRP/elbow_L_CTRL/elbow_L_LOC_GRP
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/elbow_L_CTRL_GRP/elbow_L_CTRL/elbow_L_LOC_GRP/elbow_L_LOC
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/elbow_R_CTRL_GRP
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/elbow_R_CTRL_GRP/elbow_R_CTRL
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/elbow_R_CTRL_GRP/elbow_R_CTRL/elbow_R_LOC_GRP
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/elbow_R_CTRL_GRP/elbow_R_CTRL/elbow_R_LOC_GRP/elbow_R_LOC
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/root_CTRL_GRP
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/root_CTRL_GRP/root_CTRL
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL/neck_CTRL_GRP
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL/neck_CTRL_GRP/neck_CTRL
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL/neck_CTRL_GRP/neck_CTRL/head_CTRL_GRP
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/LOM_rig_GLOBAL_CTRL/CTRL_GRP/root_CTRL_GRP/root_CTRL/chest_CTRL_GRP/chest_CTRL/neck_CTRL_GRP/neck_CTRL/head_CTRL_GRP/head_CTRL
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT/clav1_L_JNT
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT/clav1_L_JNT/clav2_L_JNT
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT/clav1_L_JNT/clav2_L_JNT/clav3_L_END
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT/clav1_L_JNT/clav2_L_JNT/clav3_L_END/shoulder_L_JNT
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT/clav1_L_JNT/clav2_L_JNT/clav3_L_END/shoulder_L_JNT/elbow_L_JNT
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT/clav1_L_JNT/clav2_L_JNT/clav3_L_END/shoulder_L_JNT/elbow_L_JNT/wrist_L_JNT
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT/clav1_R_JNT
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT/clav1_R_JNT/clav2_R_JNT
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT/clav1_R_JNT/clav2_R_JNT/clav3_R_END
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT/clav1_R_JNT/clav2_R_JNT/clav3_R_END/shoulder_R_JNT
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT/clav1_R_JNT/clav2_R_JNT/clav3_R_END/shoulder_R_JNT/elbow_R_JNT
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT/clav1_R_JNT/clav2_R_JNT/clav3_R_END/shoulder_R_JNT/elbow_R_JNT/wrist_R_JNT
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT/neck_JNT
+        weight: 1
+      - path: LOM_RIG_ALL_GRP_zr/root_JNT/chest_JNT/neck_JNT/head_JNT
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 8ce2f0e627d5c574f8f7127619957588,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

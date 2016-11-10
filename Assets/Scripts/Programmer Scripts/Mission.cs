@@ -17,6 +17,7 @@ public class Mission : MonoBehaviour
         public AudioClip explanation;
         public AudioClip thankyou;
         public GameObject thanker;
+        public Transform spawnPoint;
     }
     
     //populate with characters from scene
@@ -28,10 +29,14 @@ public class Mission : MonoBehaviour
     public AudioClip interogateSpeech;
     public AudioClip clueDialogue;
     public AudioClip clueComparison;
+    [HideInInspector]
     public int guiltyIndex;
     public GameObject[] clueObjects;
     public Transform clueStartPos;
     public GameObject clueSpawned;
+    public GameObject enkSpawnPoint;
+    public GameObject[] objDisable;
+    public GameObject[] soundObjDisable;
 
     //public Transform startMissionPosition;
     void OnActivate()
@@ -48,6 +53,11 @@ public class Mission : MonoBehaviour
         for (int i = 0; i < suspects.Length; i++)
         {
             suspects[i].character.isSuspect = true;
+            Vector3 spawnPos = suspects[i].spawnPoint.position;
+            spawnPos.y = suspects[i].character.transform.position.y;
+            suspects[i].character.transform.position = spawnPos;
+            suspects[i].character.transform.rotation = suspects[i].spawnPoint.rotation;
+            suspects[i].character.gameObject.SetActive(true);
         }
     }
 
@@ -59,6 +69,7 @@ public class Mission : MonoBehaviour
     void Awake()
     {
         OnActivate();
+        TurnOffObj();
     }
     void Start ()
     {
@@ -70,5 +81,15 @@ public class Mission : MonoBehaviour
       
 	}
 
-
+    void TurnOffObj()
+    {
+        for (int i = 0; i < objDisable.Length; i++)
+        {
+            objDisable[i].SetActive(false);
+        }
+        for (int i = 0; i < soundObjDisable.Length; i++)
+        {
+            objDisable[i].GetComponent<AudioSource>().Pause();
+        }
+    }
 }
