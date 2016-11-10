@@ -186,6 +186,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000013609717320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010034868502}
+  m_Layer: 0
+  m_Name: farmwifeCatHairLocation
+  m_TagString: CLUE
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000014055592622
 GameObject:
   m_ObjectHideFlags: 1
@@ -203,6 +218,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4000010034868502
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013609717320}
+  m_LocalRotation: {x: 0.081645675, y: -0, z: -0, w: 0.9966615}
+  m_LocalPosition: {x: 0.1774, y: 1.429, z: -0.1041}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 9.311001, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000013190133598}
+  m_RootOrder: 4
 --- !u!4 &4000010214915330
 Transform:
   m_ObjectHideFlags: 1
@@ -341,6 +369,7 @@ Transform:
   - {fileID: 4000010999470056}
   - {fileID: 4000012315157924}
   - {fileID: 4000010504455002}
+  - {fileID: 4000010034868502}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000013410001394
@@ -487,9 +516,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 964da94a889ab734895ec4eab535bbea, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -502,7 +531,7 @@ AudioSource:
   rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
-  BypassReverbZones: 0
+  BypassReverbZones: 1
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -601,12 +630,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle:
-  - {fileID: 8300000, guid: 964da94a889ab734895ec4eab535bbea, type: 3}
+  Idle: []
   activated: {fileID: 8300000, guid: 4ea21db240959ef4891078022ec517ff, type: 3}
   enkNames: {fileID: 8300000, guid: 25d7743082b1c844385c624a958f643a, type: 3}
   timesPlayed: 0
-  maxTimesPlayed: 0
+  maxTimesPlayed: 100
   activateDistance: 5
   isClue: 0
   isActivated: 0

@@ -2152,7 +2152,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 27ab4e61502bb9b44ae90cdabfdbed45, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2257,12 +2257,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle:
-  - {fileID: 8300000, guid: 27ab4e61502bb9b44ae90cdabfdbed45, type: 3}
+  Idle: []
   activated: {fileID: 8300000, guid: 6f87e1708917aaf4a92e49ceaa8264c6, type: 3}
   enkNames: {fileID: 8300000, guid: e698b68e5d248ce4d937929c915eff8a, type: 3}
   timesPlayed: 0
-  maxTimesPlayed: 0
+  maxTimesPlayed: 100
   activateDistance: 5
   isClue: 0
   isActivated: 0

@@ -359,6 +359,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000012291360030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000011707907986}
+  m_Layer: 0
+  m_Name: witchCatHairLocation
+  m_TagString: CLUE
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000012299497242
 GameObject:
   m_ObjectHideFlags: 1
@@ -696,6 +711,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000013830700932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000013579386452}
+  m_Layer: 0
+  m_Name: witchGraffitPenLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000013866256118
 GameObject:
   m_ObjectHideFlags: 1
@@ -917,7 +947,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: -0.573, y: -186.066, z: -0.76900005}
   m_Children: []
   m_Father: {fileID: 4000013133943140}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &4000010812609590
 Transform:
   m_ObjectHideFlags: 1
@@ -970,7 +1000,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013133943140}
-  m_RootOrder: 4
+  m_RootOrder: 6
 --- !u!4 &4000011378836600
 Transform:
   m_ObjectHideFlags: 1
@@ -983,7 +1013,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013133943140}
-  m_RootOrder: 2
+  m_RootOrder: 4
 --- !u!4 &4000011420505262
 Transform:
   m_ObjectHideFlags: 1
@@ -1052,7 +1082,7 @@ Transform:
   - {fileID: 4000013572726946}
   - {fileID: 4000012423450674}
   m_Father: {fileID: 4000013133943140}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!4 &4000011623171628
 Transform:
   m_ObjectHideFlags: 1
@@ -1065,6 +1095,19 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010460960084}
+  m_RootOrder: 0
+--- !u!4 &4000011707907986
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012291360030}
+  m_LocalRotation: {x: -0.2060157, y: -0, z: -0, w: 0.9785487}
+  m_LocalPosition: {x: 0.1073, y: 1.4646, z: -0.0757}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: -23.746, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 4000013133943140}
   m_RootOrder: 0
 --- !u!4 &4000011942512704
 Transform:
@@ -1198,7 +1241,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: -0.573, y: -186.066, z: -0.76900005}
   m_Children: []
   m_Father: {fileID: 4000013133943140}
-  m_RootOrder: 5
+  m_RootOrder: 7
 --- !u!4 &4000012804932318
 Transform:
   m_ObjectHideFlags: 1
@@ -1279,8 +1322,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 4000011707907986}
   - {fileID: 4000010680198956}
   - {fileID: 4000013309994652}
+  - {fileID: 4000013579386452}
   - {fileID: 4000011378836600}
   - {fileID: 4000011575830912}
   - {fileID: 4000011167166094}
@@ -1327,7 +1372,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013133943140}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &4000013452964736
 Transform:
   m_ObjectHideFlags: 1
@@ -1386,6 +1431,19 @@ Transform:
   - {fileID: 4000012241779336}
   m_Father: {fileID: 4000011575830912}
   m_RootOrder: 0
+--- !u!4 &4000013579386452
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013830700932}
+  m_LocalRotation: {x: -0, y: -0, z: 0.334673, w: 0.94233435}
+  m_LocalPosition: {x: 0, y: 1.181, z: 0.151}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 39.370003}
+  m_Children: []
+  m_Father: {fileID: 4000013133943140}
+  m_RootOrder: 3
 --- !u!4 &4000013623554246
 Transform:
   m_ObjectHideFlags: 1
@@ -1515,7 +1573,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 4d53844440e478e4186930caf8737a41, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1620,12 +1678,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle:
-  - {fileID: 8300000, guid: 4d53844440e478e4186930caf8737a41, type: 3}
+  Idle: []
   activated: {fileID: 8300000, guid: e018a84e03ed6f046b245bb2e94602c2, type: 3}
   enkNames: {fileID: 8300000, guid: 147b25c33a2806a4d86f1d5f73a84028, type: 3}
   timesPlayed: 0
-  maxTimesPlayed: 0
+  maxTimesPlayed: 100
   activateDistance: 5
   isClue: 0
   isActivated: 0
