@@ -1472,7 +1472,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010212309258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.271, z: 0}
   m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1737,7 +1737,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c8391a02a6a9ff84680e680f1f69025f, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1831,11 +1831,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle: []
+  Idle:
+  - {fileID: 8300000, guid: c8391a02a6a9ff84680e680f1f69025f, type: 3}
   activated: {fileID: 8300000, guid: d7926d26455dff141bf126cbc5768742, type: 3}
   enkNames: {fileID: 8300000, guid: 63cab7c2d207647429cbd3d6229f5c5b, type: 3}
   timesPlayed: 0
-  maxTimesPlayed: 100
+  maxTimesPlayed: 0
   activateDistance: 5
   isClue: 0
   isActivated: 0

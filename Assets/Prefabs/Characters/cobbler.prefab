@@ -155,21 +155,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1000013305886662
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000011722860746}
-  m_Layer: 0
-  m_Name: graffitiPenLocation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1000013341619498
 GameObject:
   m_ObjectHideFlags: 1
@@ -271,7 +256,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 4000011722860746}
   - {fileID: 4000013058305846}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -383,19 +367,6 @@ Transform:
   - {fileID: 4000011396171488}
   m_Father: {fileID: 4000013058305846}
   m_RootOrder: 2
---- !u!4 &4000011722860746
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013305886662}
-  m_LocalRotation: {x: -0.22597408, y: -0.13360594, z: -0.83065146, w: -0.4910228}
-  m_LocalPosition: {x: -0.275, y: -0.427, z: 0.094}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: -0.002, y: 30.473001, z: -241.20999}
-  m_Children: []
-  m_Father: {fileID: 4000010071619766}
-  m_RootOrder: 0
 --- !u!4 &4000011914864436
 Transform:
   m_ObjectHideFlags: 1
@@ -469,7 +440,7 @@ Transform:
   - {fileID: 4000011382924976}
   - {fileID: 4000012021084904}
   m_Father: {fileID: 4000010071619766}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &4000013758823122
 Transform:
   m_ObjectHideFlags: 1
@@ -557,7 +528,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c55f50589cccb96499cc93351d3626b4, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -662,11 +633,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle: []
+  Idle:
+  - {fileID: 8300000, guid: c55f50589cccb96499cc93351d3626b4, type: 3}
   activated: {fileID: 8300000, guid: e8aa7afac99e05442bcd409e748d8b20, type: 3}
   enkNames: {fileID: 8300000, guid: 4c5a3a9a52cc5524281b16a504b77c09, type: 3}
   timesPlayed: 0
-  maxTimesPlayed: 100
+  maxTimesPlayed: 0
   activateDistance: 5
   isClue: 0
   isActivated: 0

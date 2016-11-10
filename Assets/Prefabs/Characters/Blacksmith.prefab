@@ -101,21 +101,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1000010376986422
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000013664387538}
-  m_Layer: 0
-  m_Name: blacksmithCatHairLocation
-  m_TagString: CLUE
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1000010558248092
 GameObject:
   m_ObjectHideFlags: 1
@@ -822,21 +807,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1000013131330492
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000010549137912}
-  m_Layer: 0
-  m_Name: blacksmithGraffitPenLocation
-  m_TagString: CLUE
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1000013133258932
 GameObject:
   m_ObjectHideFlags: 1
@@ -1222,19 +1192,6 @@ Transform:
   - {fileID: 4000011080595340}
   m_Father: {fileID: 4000013144098066}
   m_RootOrder: 1
---- !u!4 &4000010549137912
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013131330492}
-  m_LocalRotation: {x: -0, y: -0, z: 0.40139872, w: 0.9159035}
-  m_LocalPosition: {x: -0.078, y: 1.093, z: 0.4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 47.246002}
-  m_Children: []
-  m_Father: {fileID: 4000013669418496}
-  m_RootOrder: 2
 --- !u!4 &4000010560635114
 Transform:
   m_ObjectHideFlags: 1
@@ -1353,7 +1310,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013669418496}
-  m_RootOrder: 0
+  m_RootOrder: 2
 --- !u!4 &4000010868991218
 Transform:
   m_ObjectHideFlags: 1
@@ -1489,7 +1446,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013669418496}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!4 &4000011538886940
 Transform:
   m_ObjectHideFlags: 1
@@ -1949,19 +1906,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000012325942918}
   m_RootOrder: 0
---- !u!4 &4000013664387538
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010376986422}
-  m_LocalRotation: {x: -0.100111775, y: -0, z: -0, w: 0.9949762}
-  m_LocalPosition: {x: -0.204, y: 1.5396878, z: 0.13677949}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: -11.435, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 4000013669418496}
-  m_RootOrder: 1
 --- !u!4 &4000013669418496
 Transform:
   m_ObjectHideFlags: 1
@@ -1973,11 +1917,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 4000010868177042}
-  - {fileID: 4000013664387538}
-  - {fileID: 4000010549137912}
   - {fileID: 4000011365403140}
   - {fileID: 4000013935691798}
+  - {fileID: 4000010868177042}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000013670844718
@@ -2049,7 +1991,7 @@ Transform:
   - {fileID: 4000014179548352}
   - {fileID: 4000013144098066}
   m_Father: {fileID: 4000013669418496}
-  m_RootOrder: 4
+  m_RootOrder: 1
 --- !u!4 &4000013944388660
 Transform:
   m_ObjectHideFlags: 1
@@ -2143,7 +2085,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6d52b8fb1c60d5343873a20d8fa6f011, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2248,11 +2190,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle: []
+  Idle:
+  - {fileID: 8300000, guid: 6d52b8fb1c60d5343873a20d8fa6f011, type: 3}
   activated: {fileID: 8300000, guid: 4f80983b0b88f494a8d733cf5a1f46ed, type: 3}
   enkNames: {fileID: 8300000, guid: ecbe5258db35d834c91e90026f1193c7, type: 3}
   timesPlayed: 0
-  maxTimesPlayed: 100
+  maxTimesPlayed: 0
   activateDistance: 5
   isClue: 0
   isActivated: 0

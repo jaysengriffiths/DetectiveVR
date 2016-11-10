@@ -1333,7 +1333,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 632f84e36fbbdba41a17e14284422594, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1424,7 +1424,7 @@ Animator:
   m_GameObject: {fileID: 1000014288495706}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 8ce2f0e627d5c574f8f7127619957588, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9f16af955dbd499458aa381c4734dfd9, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1455,11 +1455,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle: []
+  Idle:
+  - {fileID: 8300000, guid: 632f84e36fbbdba41a17e14284422594, type: 3}
   activated: {fileID: 8300000, guid: 0a941307ee9c85c43b0eec13fc664406, type: 3}
   enkNames: {fileID: 8300000, guid: 84f2c06934a8b4a4aa2becd54f4099d1, type: 3}
   timesPlayed: 0
-  maxTimesPlayed: 100
+  maxTimesPlayed: 0
   activateDistance: 5
   isClue: 0
   isActivated: 0

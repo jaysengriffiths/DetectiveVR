@@ -153,21 +153,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1000012597157980
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000010939551126}
-  m_Layer: 0
-  m_Name: goblinchiefCatHairLocation
-  m_TagString: CLUE
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1000012623548126
 GameObject:
   m_ObjectHideFlags: 1
@@ -245,21 +230,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1000014112358804
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000010544911236}
-  m_Layer: 0
-  m_Name: graffitiPenLocation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1000014195807314
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +274,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000014152094640}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &4000010269696184
 Transform:
   m_ObjectHideFlags: 1
@@ -332,19 +302,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000014214643524}
   m_RootOrder: 0
---- !u!4 &4000010544911236
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014112358804}
-  m_LocalRotation: {x: -0.22597408, y: -0.13360594, z: -0.83065146, w: -0.4910228}
-  m_LocalPosition: {x: -0.275, y: -0.287, z: 0.094}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: -0.002, y: 30.473001, z: -241.20999}
-  m_Children: []
-  m_Father: {fileID: 4000014152094640}
-  m_RootOrder: 2
 --- !u!4 &4000010601884252
 Transform:
   m_ObjectHideFlags: 1
@@ -391,7 +348,7 @@ Transform:
   - {fileID: 4000012370511960}
   - {fileID: 4000010740427880}
   m_Father: {fileID: 4000014152094640}
-  m_RootOrder: 3
+  m_RootOrder: 0
 --- !u!4 &4000010830775276
 Transform:
   m_ObjectHideFlags: 1
@@ -405,19 +362,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000010601884252}
   m_RootOrder: 0
---- !u!4 &4000010939551126
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012597157980}
-  m_LocalRotation: {x: 0.081645675, y: -0, z: -0, w: 0.9966615}
-  m_LocalPosition: {x: -0.163, y: 0.22300005, z: -0.1041}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 9.311001, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 4000014152094640}
-  m_RootOrder: 1
 --- !u!4 &4000012006381406
 Transform:
   m_ObjectHideFlags: 1
@@ -523,10 +467,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 4000010098477650}
-  - {fileID: 4000010939551126}
-  - {fileID: 4000010544911236}
   - {fileID: 4000010775743292}
+  - {fileID: 4000010098477650}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000014214643524
@@ -595,7 +537,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0905fc9906f01df4b86a682be7c77f04, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -706,11 +648,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle: []
+  Idle:
+  - {fileID: 8300000, guid: 0905fc9906f01df4b86a682be7c77f04, type: 3}
   activated: {fileID: 8300000, guid: 7d92d5b2ad75a3c4d9450cbb35a21c54, type: 3}
   enkNames: {fileID: 8300000, guid: 47f58142ec07e514eb0f36043afb8d56, type: 3}
   timesPlayed: 0
-  maxTimesPlayed: 100
+  maxTimesPlayed: 0
   activateDistance: 5
   isClue: 0
   isActivated: 0
