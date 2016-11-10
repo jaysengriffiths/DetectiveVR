@@ -21,6 +21,8 @@ public class SoundLookAt : MonoBehaviour
     public bool isActivated = false;
     public bool enkNameObject = false;
     private GameObject player;
+
+    public string missionName;
     // Use this for initialization
     void Start()
     {

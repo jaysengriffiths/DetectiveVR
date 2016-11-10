@@ -37,6 +37,7 @@ public class Mission : MonoBehaviour
     public GameObject enkSpawnPoint;
     public GameObject[] objDisable;
     public GameObject[] soundObjDisable;
+    public bool complete = false;
 
     //public Transform startMissionPosition;
     void OnActivate()

@@ -73,6 +73,7 @@ public class Player : MonoBehaviour
     //setting new timers
     GazeTimer soundLookAtTimer = new GazeTimer(0.5f);
     GazeTimer suspectGazeTimer = new GazeTimer(2);
+    GazeTimer hqGazeTimer = new GazeTimer(3);
 
     //audio source set
     private AudioSource audioSource;
@@ -107,6 +108,7 @@ public class Player : MonoBehaviour
     private InventoryControl.Accumulator puzzleSceneLoadTimer;
     public Character selectedCharacter;
     private GameObject enkModel;
+    private bool puzzle = false;
 
     void Awake()
     {
@@ -140,13 +142,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (speed != 0)
         {
-            speed = 10;
-        }
-        else
-        {
-            speed = 1.5f;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                speed = 10;
+                
+            }
+            else
+            {
+                speed = 1.5f;
+            }
         }
         characterController = gameObject.GetComponent<CharacterController>();
         Quaternion fwd = Camera.main.transform.rotation;
@@ -182,6 +188,13 @@ public class Player : MonoBehaviour
         }
     }
 
+    void LoadMissionFromHQ(string mission)
+    {
+        PlayerPrefs.SetString("Mission", mission);
+        PlayerPrefs.Save();
+        SceneManager.LoadScene("Main_Scene");
+    }
+
     void LookAtSoundObjects()
     {
         RaycastHit hit;
@@ -190,8 +203,18 @@ public class Player : MonoBehaviour
         {
             SoundLookAt soundItem = hit.collider.GetComponent<SoundLookAt>();
             soundLookAtTimer.SetObject(soundItem);
+
+            // load the scene and set the mission after a delay
+            hqGazeTimer.SetObject(soundItem);
+            if (hqGazeTimer.IsExpired())
+            {
+                if (soundItem.missionName != "")
+                    LoadMissionFromHQ(soundItem.missionName);
+            }
+
             if (soundLookAtTimer.IsExpired())
             {
+
                 if (soundItem != null)
                 {
                     if (!audioSource.isPlaying)
@@ -215,6 +238,7 @@ public class Player : MonoBehaviour
                                 audioSource.Play();
                                 soundItem.isActivated = true;
                             }
+
                         }
                     }
 
@@ -270,9 +294,12 @@ public class Player : MonoBehaviour
         {
             suspectGazeTimer.SetObject(null);
         }
-        if (puzzleSceneLoadTimer.IsFull(lookingAtPuzzle))
+        if (puzzle)
         {
-            SceneManager.LoadScene("JamiesSandBox");
+            if (puzzleSceneLoadTimer.IsFull(lookingAtPuzzle))
+            {
+                SceneManager.LoadScene("JamiesSandBox");
+            }
         }
         if (goHomeTimer.IsFull(lookingAtGoldStar))
         {

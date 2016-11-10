@@ -5,10 +5,9 @@ using System.Collections;
 
 public class MissionManager : MonoBehaviour
 {
-
     Player player;
     //public GameObject currentSuspectSelected;
-    Mission[] missions;
+    public static Mission[] missions;
     private DialogManager dialogManager;
     private AudioSource audioSource;
     public AudioClip arrestClip;
@@ -19,11 +18,10 @@ public class MissionManager : MonoBehaviour
         EndByArrest,
         MissionOver
     }
-
     public MissionState state = MissionState.Ongoing;
-
     public Mission currentMission;
-
+   
+    //Set Mic and dialogmanager
     void Awake()
     {
         dialogManager = GameObject.FindGameObjectWithTag("Player").GetComponent<DialogManager>();
@@ -33,12 +31,22 @@ public class MissionManager : MonoBehaviour
     }
     void Start()
     {
-        
         missions = FindObjectsOfType<Mission>();
-        currentMission = missions[0];
+        // load the mission name to activate from the save game
+        string mission = PlayerPrefs.GetString("Mission");
+        if (mission != "")
+        {
+            GameObject missionObj = GameObject.Find(mission);
+            currentMission = missionObj.GetComponent<Mission>();
+        }
+
+        // turn off all missions excepot the current one
+        for (int i = 0; i < missions.Length; i++)
+            if (missions[i] != currentMission)
+                missions[i].gameObject.SetActive(false);
+
         player = FindObjectOfType<Player>();
         player.transform.position = currentMission.enkSpawnPoint.transform.position;
-        //player.transform.position = missions[0].startMissionPosition.transform.position;
     }
 
     void Update()
@@ -115,9 +123,6 @@ public class MissionManager : MonoBehaviour
                             }
                             ActivateMovingClue();
                             dialogManager.setDialog(clips);
-
-
-
                         }
                     }
                 }
@@ -146,8 +151,6 @@ public class MissionManager : MonoBehaviour
 
         dialogManager.setDialog(clips);
     }
-
-
     public void Arrest(Character character)
     {
         for (int i = 0; i < 5; i++)
@@ -173,14 +176,13 @@ public class MissionManager : MonoBehaviour
 
                     dialogManager.setDialog(clips, DialogManager.DialogType.Arrest);
                     character.arrestPlayed = true;
+                    
                 }
                 
             }
         }
 
     }
-
-
     public void Warn(Character character)
     {
         for (int i = 0; i < 5; i++)

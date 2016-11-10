@@ -114,7 +114,7 @@ public class DialogManager : MonoBehaviour {
             }
             else
             {
-                if (missionManager.state == MissionManager.MissionState.EndByWarning)
+                if (missionManager != null && missionManager.state == MissionManager.MissionState.EndByWarning)
                 {
                     //Debug.Log("play thankyou");
                     if (!thankyouSpeechPlayed)
@@ -128,13 +128,13 @@ public class DialogManager : MonoBehaviour {
                         thankyouSpeechPlayed = true;
                         relevationSpeechPlayed = true;
                         mysterySpeechPlayed = true;
-                        
+                        missionManager.currentMission.complete = true;
                         //
                         missionManager.state = MissionManager.MissionState.MissionOver;
                     }
                 }
 
-                if (missionManager.state == MissionManager.MissionState.EndByArrest)
+                if (missionManager != null && missionManager.state == MissionManager.MissionState.EndByArrest)
                 {
                     if (!relevationSpeechPlayed)
                     {
@@ -146,11 +146,12 @@ public class DialogManager : MonoBehaviour {
                         relevationSpeechPlayed = true;
                         mysterySpeechPlayed = true;
                         missionManager.state = MissionManager.MissionState.MissionOver;
+                        missionManager.currentMission.complete = true;
                     }
 
                 }
 
-                if (missionManager.state == MissionManager.MissionState.MissionOver)
+                if (missionManager != null && missionManager.state == MissionManager.MissionState.MissionOver)
                 {
                     for (int i = 0; i < 5; i++)
                     {

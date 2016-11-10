@@ -4,20 +4,28 @@ using System.Collections;
 public class savedData : MonoBehaviour
 {
 
+   // public bool[] missions = new bool[7];
 
-
-    // Use this for initialization
     void Start()
     {
         // read data back in
+        Mission[] missions = FindObjectsOfType<Mission>();
         Character[] characters = FindObjectsOfType<Character>();
+
+        foreach (Mission mi in MissionManager.missions)
+        {
+            mi.complete = PlayerPrefs.GetInt(mi.name + "Complete") != 0;
+        }
+
+
         foreach (Character ch in characters)
         {
             ch.introPlayed = PlayerPrefs.GetInt(ch.name + "Intro") != 0;
         }
+
+        
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -31,10 +39,12 @@ public class savedData : MonoBehaviour
         {
             PlayerPrefs.SetInt(ch.name + "Intro", ch.introPlayed ? 1 : 0);
         }
+        //PlayerPrefs.SetInt("rank",  );
 
         // save the fact that the current mission has been done
         MissionManager mm = FindObjectOfType<MissionManager>();
-        PlayerPrefs.SetInt(mm.currentMission.name + "Done", reward); // could save out 1 = trophy 2 = present
+        PlayerPrefs.SetInt(mm.currentMission.name, reward); // could save out 1 = trophy 2 = present
+        PlayerPrefs.Save();
     }
     public void UpdateSave()
     {
@@ -45,8 +55,9 @@ public class savedData : MonoBehaviour
         }
 
         // save the fact that the current mission has been done
-       // MissionManager mm = FindObjectOfType<MissionManager>();
-       // PlayerPrefs.SetInt(mm.currentMission.name + "Done", 1); // could save out 1 = trophy 2 = present
+        MissionManager mm = FindObjectOfType<MissionManager>();
+        PlayerPrefs.SetInt(mm.currentMission.name, 1); // could save out 1 = trophy 2 = present
+        PlayerPrefs.Save();
     }
 
     public void ReSetSave()
