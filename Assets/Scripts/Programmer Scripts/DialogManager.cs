@@ -122,7 +122,11 @@ public class DialogManager : MonoBehaviour {
             }
             else
             {
+<<<<<<< HEAD
                 if (missionManager.state == MissionManager.MissionState.EndByWarning && isDialog)
+=======
+                if (missionManager != null && missionManager.state == MissionManager.MissionState.EndByWarning)
+>>>>>>> 069721206b42e2a056e2bd082805ab7db93b1075
                 {
                     //Debug.Log("play thankyou");
                     if (!thankyouSpeechPlayed)
@@ -136,13 +140,17 @@ public class DialogManager : MonoBehaviour {
                         thankyouSpeechPlayed = true;
                         relevationSpeechPlayed = true;
                         mysterySpeechPlayed = true;
-                        
+                        missionManager.currentMission.complete = true;
                         //
                         missionManager.state = MissionManager.MissionState.MissionOver;
                     }
                 }
 
+<<<<<<< HEAD
                 if (missionManager.state == MissionManager.MissionState.EndByArrest && isDialog)
+=======
+                if (missionManager != null && missionManager.state == MissionManager.MissionState.EndByArrest)
+>>>>>>> 069721206b42e2a056e2bd082805ab7db93b1075
                 {
                     if (!relevationSpeechPlayed)
                     {
@@ -154,11 +162,16 @@ public class DialogManager : MonoBehaviour {
                         relevationSpeechPlayed = true;
                         mysterySpeechPlayed = true;
                         missionManager.state = MissionManager.MissionState.MissionOver;
+                        missionManager.currentMission.complete = true;
                     }
 
                 }
 
+<<<<<<< HEAD
                 if (missionManager.state == MissionManager.MissionState.MissionOver && isDialog)
+=======
+                if (missionManager != null && missionManager.state == MissionManager.MissionState.MissionOver)
+>>>>>>> 069721206b42e2a056e2bd082805ab7db93b1075
                 {
                     for (int i = 0; i < 5; i++)
                     {
