@@ -22,7 +22,7 @@ public class  plaqueManager : MonoBehaviour {
 
         missionsCompleted = 0;
 
-        GameObject root = GameObject.Find("MissionList");
+        GameObject root = GameObject.Find("Missions");
         SoundLookAt[] items = root.GetComponentsInChildren<SoundLookAt>();
         for (int i = 0; i < items.Length; i++)
         {

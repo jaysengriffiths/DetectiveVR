@@ -11,8 +11,8 @@ public class MissionManager : MonoBehaviour
     private DialogManager dialogManager;
     private AudioSource audioSource;
     public AudioClip arrestClip;
+    public AudioClip[] tutorialDialog;
     private savedData saveGame;
-    public Mission[] missionList;
 
     public enum MissionState
     {
@@ -27,13 +27,15 @@ public class MissionManager : MonoBehaviour
     //Set Mic and dialogmanager
     void Awake()
     {
-        dialogManager = GameObject.FindGameObjectWithTag("Player").GetComponent<DialogManager>();
-        GameObject mic = GameObject.Find("Microphone");
-        if (mic)
-            audioSource = mic.GetComponent<AudioSource>();
+
     }
     void Start()
     {
+        dialogManager = GameObject.FindGameObjectWithTag("Player").GetComponent<DialogManager>();
+        GameObject mic = GameObject.Find("DialogMicrophone");
+        if (mic)
+            audioSource = mic.GetComponent<AudioSource>();
+
         saveGame = GetComponent<savedData>();
         missions = FindObjectsOfType<Mission>();
         // load the mission name to activate from the save game
@@ -46,6 +48,15 @@ public class MissionManager : MonoBehaviour
         if (currentMission == null)
         {
             currentMission = missions[3];
+            currentMission.OnActivate();
+        }
+        if(mission == "M1_Cat")
+        {
+            TutorialDialog();
+        }
+        else
+        {
+            Complainant();
         }
         // turn off all missions excepot the current one
         for (int i = 0; i < missions.Length; i++)
@@ -59,6 +70,10 @@ public class MissionManager : MonoBehaviour
 
     void Update()
     {
+        //if (player.selectedCharacter)
+        //{
+        //    currentAnim = player.selectedCharacter.GetComponent<Animator>();
+        //}
 
         if (player.clueObject && player.clueComparisonPlayed && dialogManager.pendingDialog.Length < 1)
         {
@@ -154,14 +169,26 @@ public class MissionManager : MonoBehaviour
         player.clueObject.SetActive(true);
         
     }
+
+    public void TutorialDialog()
+    {
+        DialogManager.Dialog[] clips = new DialogManager.Dialog[tutorialDialog.Length];
+        for (int i = 0; i < tutorialDialog.Length; i++)
+        {
+            clips[i] = new DialogManager.Dialog(tutorialDialog[i]);
+        }
+        dialogManager.setDialog(clips);
+    
+    }
     public void Complainant()
     {
         AudioClip clip;
         clip = currentMission.complainantSpeech;
         DialogManager.Dialog[] clips = new DialogManager.Dialog[1];
-        clips[0] = new DialogManager.Dialog(clip);
+        clips[0] = new DialogManager.Dialog(clip, currentMission.suspects[0].character.transform);
 
         dialogManager.setDialog(clips);
+
     }
     public void Arrest(Character character)
     {

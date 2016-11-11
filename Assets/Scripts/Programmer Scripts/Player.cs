@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
     //[HideInInspector]
     public float cameraAngle;
     private float footstepVolumeScale = 0.5f;
-    public float speed = 1.5f;  //Kathy changed from 0.03;
+    public float speed;  //Kathy changed from 0.03;
     private float walkDelay = 0;
     public AudioClip nameClip;
 
@@ -80,9 +80,6 @@ public class Player : MonoBehaviour
     public AudioClip[] treeCollide;
     public AudioClip[] wallCollide;
     public AudioClip[] pigstyCollide;
-
-    //toggles initial complainant
-    public bool complain = false;
 
     //clue obj setup
     public GameObject clueObject;
@@ -133,10 +130,6 @@ public class Player : MonoBehaviour
       
         m_StepCycle = 0f;  //Kathy
 
-        if (complain)
-        {
-            missionManager.Complainant();
-        }
     }
 
     // Update is called once per frame
@@ -146,13 +139,15 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.LeftShift))
             {
-                speed = 10;
+                speed = 25;
                 
             }
             else
             {
-                speed = 1.5f;
+                speed = 0.75f;
             }
+
+
         }
         characterController = gameObject.GetComponent<CharacterController>();
         Quaternion fwd = Camera.main.transform.rotation;
@@ -168,7 +163,10 @@ public class Player : MonoBehaviour
             {
                 if (audioSource)
                 {
-                    walk();
+                    if (selectedCharacter == null)
+                    {
+                        walk();
+                    }
                 }
                 Look();
             }
@@ -265,6 +263,7 @@ public class Player : MonoBehaviour
             if (hit.collider.CompareTag("SUSPECT")) // we're looking at a charcter
             {
                 Character ch = hit.collider.gameObject.GetComponent<Character>();
+                selectedCharacter = ch;
                 suspectGazeTimer.SetObject(ch);
                 if (suspectGazeTimer.IsExpired())
                 {

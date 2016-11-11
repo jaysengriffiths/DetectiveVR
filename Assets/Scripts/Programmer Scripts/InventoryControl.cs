@@ -6,6 +6,7 @@ public class InventoryControl : MonoBehaviour
     public GameObject WarningBook;
     public GameObject SkyHint;
     public GameObject HandCuffs;
+    private AudioSource mic;
     private Player player;
     private MissionManager missionManager;
     private DialogManager dialogManager;
@@ -14,6 +15,7 @@ public class InventoryControl : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        mic = GameObject.Find("DialogMicrophone").GetComponent<AudioSource>();
         player = gameObject.GetComponent<Player>();
         missionManager = FindObjectOfType<MissionManager>();
         dialogManager = gameObject.GetComponent<DialogManager>();
@@ -48,35 +50,31 @@ public class InventoryControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.cameraAngle > 65 && player.cameraAngle < 75)
+        if (!mic.isPlaying)
         {
-            HandCuffs.SetActive(true);
-        }
 
-        else
-        {
-            HandCuffs.SetActive(false);
-        }
 
-        if (player.cameraAngle > 55 && player.cameraAngle < 65)
-        {
-            AudioClip clip;
-            if (player.selectedCharacter)
+            if (player.cameraAngle > 65 && player.cameraAngle < 75)
             {
-                clip = player.selectedCharacter.threatenedClip;
-                DialogManager.Dialog[] clips = new DialogManager.Dialog[1];
-                clips[0] = new DialogManager.Dialog(clip, player.selectedCharacter);
-                dialogManager.setDialog(clips);
+                HandCuffs.SetActive(true);
             }
-          
-            WarningBook.SetActive(true);
+
+            else
+            {
+                HandCuffs.SetActive(false);
+            }
+
+            if (player.cameraAngle > 55 && player.cameraAngle < 65)
+            {
+                ThreatenDialog();
+                WarningBook.SetActive(true);
+            }
+            else
+            {
+                WarningBook.SetActive(false);
+            }
         }
-        else
-        {
-            WarningBook.SetActive(false);
-        }
-   
-        if (player.selectedCharacter != null && player.selectedCharacter.introClip)
+        if (player.selectedCharacter != null)
         {
             if (cuffTimer.IsFull(player.cameraAngle > 65 && player.cameraAngle < 70))
             {
@@ -88,14 +86,24 @@ public class InventoryControl : MonoBehaviour
                 missionManager.Warn(player.selectedCharacter);
             }
         }
-        if (player.cameraAngle > 270 && player.cameraAngle < 280)
+        if (player.cameraAngle > 270 && player.cameraAngle < 300)
         {
             GiveClue();
         }
 
     }
 
-
+    public void ThreatenDialog()
+    {
+        AudioClip clip;
+        if (player.selectedCharacter)
+        {
+            clip = player.selectedCharacter.threatenedClip;
+            DialogManager.Dialog[] clips = new DialogManager.Dialog[1];
+            clips[0] = new DialogManager.Dialog(clip, player.selectedCharacter);
+            dialogManager.setDialog(clips);
+        }
+    }
     public void GiveClue()
     {
         AudioClip clip;

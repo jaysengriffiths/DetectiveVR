@@ -6,12 +6,14 @@ public class DialogManager : MonoBehaviour {
     private MissionManager missionManager;
     private AudioSource audioSource;
     public GameObject mic;
+    private Player player;
     public float soundDelayTime = 0.5f;
     private bool relevationSpeechPlayed = false;
     private bool thankyouSpeechPlayed = false;
     private bool mysterySpeechPlayed = false;
     private bool isDialog = false;
     private savedData saveGame;
+    Animator talker;
 
     public enum DialogType
     {
@@ -53,6 +55,7 @@ public class DialogManager : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        player = GameObject.Find("Enk").GetComponent<Player>();
         saveGame = GameObject.FindObjectOfType<savedData>();
 
         if (mic)
@@ -87,11 +90,21 @@ public class DialogManager : MonoBehaviour {
         missionManager.state = MissionManager.MissionState.Ongoing;
     }
 
+    
+
     public void updateDialog()
     {
         //if not playing
         if (audioSource && !audioSource.isPlaying)
         {
+            if (talker!=null)
+            {
+
+                talker.SetTrigger("isIdle"); // TODO
+  
+                talker = null;
+
+            }
             //and the length isnt 0
             if (pendingDialog.Length > 0)
             {
@@ -100,10 +113,17 @@ public class DialogManager : MonoBehaviour {
                 if (pendingDialog[0].transform == null)
                 {
                     audioSource.transform.position = transform.position; // snap to player
+
                 }
                 else
                 {
-                    audioSource.transform.position = pendingDialog[0].transform.position; // snap to player
+                    audioSource.transform.position = pendingDialog[0].transform.position; // snap to character
+                    talker = pendingDialog[0].transform.GetComponent<Animator>();
+                    if (talker)
+                    {
+                        talker.SetTrigger("isTalking");
+                        //talker.SetTrigger("isStartingToTalk");
+                    }
                 }
 
                 // audio clip = the first pending
@@ -144,6 +164,8 @@ public class DialogManager : MonoBehaviour {
 
                 if (missionManager != null && missionManager.state == MissionManager.MissionState.EndByArrest && isDialog)
                 {
+                    talker = player.selectedCharacter.GetComponent<Animator>();
+                    talker.SetTrigger("isHandcuffed");
                     if (!relevationSpeechPlayed)
                     {
                         DialogManager.Dialog[] clips = new DialogManager.Dialog[2];  //Kathy
@@ -163,7 +185,7 @@ public class DialogManager : MonoBehaviour {
                     for (int i = 0; i < 5; i++)
                     {
                         missionManager.currentMission.suspects[i].character.isSuspect = false;
-                        saveGame.UpdateSave();
+                        //saveGame.UpdateSave();
 
                     }
                 }

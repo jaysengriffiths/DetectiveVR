@@ -40,7 +40,7 @@ public class Mission : MonoBehaviour
     public bool complete = false;
 
     //public Transform startMissionPosition;
-    void OnActivate()
+    public void OnActivate()
     {
         guiltyIndex = Random.Range(0, 5);
         clueSpawned = clueObjects[guiltyIndex];
@@ -67,11 +67,7 @@ public class Mission : MonoBehaviour
         return suspects[guiltyIndex];
     }
     // Use this for initialization
-    void Awake()
-    {
-        OnActivate();
-        TurnOffObj();
-    }
+
 
     public int GetIndexOfCharacter(Character ch)
     {
@@ -84,10 +80,10 @@ public class Mission : MonoBehaviour
         }
         return -1;
     }
-    void Start ()
+    void Start()
     {
-    
-	}
+        TurnOffObj();
+    }
 	
 	void Update ()
     {
