@@ -21,13 +21,13 @@ GameObject:
   - 4: {fileID: 4000011712090900}
   - 33: {fileID: 33000014022554156}
   - 23: {fileID: 23000012887270992}
-  - 82: {fileID: 82000011757007556}
   - 65: {fileID: 65000010622803824}
   - 65: {fileID: 65000013283636644}
+  - 82: {fileID: 82000011757007556}
   - 114: {fileID: 114000012893608540}
   m_Layer: 0
   m_Name: stables
-  m_TagString: BUILDING
+  m_TagString: WALL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -38,10 +38,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012119077404}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.855751, y: 1.3631493, z: -23.35}
+  m_LocalRotation: {x: -0, y: 0.043988228, z: -0, w: 0.9990321}
+  m_LocalPosition: {x: 17.81, y: 1.3631493, z: -23.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 4.899, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -91,7 +91,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 13.647895, y: 2.7586405, z: 6.793703}
+  m_Size: {x: 15, y: 2.7586405, z: 7.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000013283636644
 BoxCollider:
@@ -103,8 +103,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 13.78, y: 2.77, z: 6.9}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 15.1, y: 2.77, z: 7.51}
+  m_Center: {x: 0, y: 0, z: 0.22541428}
 --- !u!82 &82000011757007556
 AudioSource:
   m_ObjectHideFlags: 1
@@ -114,11 +114,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 18b77212738fe8742bd68492871908e9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   Priority: 128
@@ -193,11 +193,11 @@ MonoBehaviour:
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 5a1f95e619be14044b612e18ea66399f, type: 3}
-  activated: {fileID: 8300000, guid: 18b77212738fe8742bd68492871908e9, type: 3}
+  activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: eb14aa0db09a32844a83e89a177b150a, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 10
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 1
+  missionName: 

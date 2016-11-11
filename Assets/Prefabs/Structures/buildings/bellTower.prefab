@@ -68,10 +68,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000011609251534}
-  - 82: {fileID: 82000014238210394}
-  - 114: {fileID: 114000010124343420}
   - 65: {fileID: 65000013690202536}
   - 65: {fileID: 65000010977046622}
+  - 82: {fileID: 82000014238210394}
+  - 114: {fileID: 114000010124343420}
   m_Layer: 0
   m_Name: bellTower
   m_TagString: BUILDING
@@ -284,8 +284,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.25, y: 10.630558, z: 4.46}
-  m_Center: {x: 0, y: 2.2652793, z: -0.29999924}
+  m_Size: {x: 6.93, y: 18.09, z: 7.33}
+  m_Center: {x: 0.45, y: 5.99, z: -0.44}
 --- !u!65 &65000013690202536
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -296,8 +296,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.24, y: 6, z: 4.45}
-  m_Center: {x: -0.00000023841858, y: 0, z: -0.3}
+  m_Size: {x: 6.49, y: 15.04, z: 6.71}
+  m_Center: {x: 0.42, y: 4.54, z: -0.43}
 --- !u!82 &82000010092776338
 AudioSource:
   m_ObjectHideFlags: 1
@@ -381,11 +381,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c144d721d51343e4981586f7db768815, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   Priority: 128
@@ -462,9 +462,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b53dbac84da46f9409a997c5f7106137, type: 3}
   activated: {fileID: 8300000, guid: c144d721d51343e4981586f7db768815, type: 3}
   enkNames: {fileID: 8300000, guid: b5095aadb6a82ed44a3ca747cdc42f45, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 10
+  clothNoise: {fileID: 0}
   activateDistance: 50
   isClue: 0
   isActivated: 1
   enkNameObject: 1
+  missionName: 

@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012029029446}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.29, y: 1.3631493, z: -18.97}
+  m_LocalPosition: {x: 6.29, y: 0.86, z: -18.97}
   m_LocalScale: {x: 3.4186332, y: 1.7532266, z: 3.2557325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -91,7 +91,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 1.2, y: 1, z: 1.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000013628713168
 BoxCollider:
@@ -103,7 +103,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0123689, y: 1.01, z: 1.0236489}
+  m_Size: {x: 1.21, y: 1.01, z: 1.21}
   m_Center: {x: -0.0061846236, y: 0, z: 0.011824658}
 --- !u!82 &82000011040090210
 AudioSource:
@@ -114,11 +114,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ec55859dc3c8d91429190c91295edd32, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   Priority: 128
@@ -193,11 +193,11 @@ MonoBehaviour:
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: ec55859dc3c8d91429190c91295edd32, type: 3}
-  activated: {fileID: 8300000, guid: ec55859dc3c8d91429190c91295edd32, type: 3}
+  activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 1d12e350199b30a4ea7e26a5d8943944, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 10
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 

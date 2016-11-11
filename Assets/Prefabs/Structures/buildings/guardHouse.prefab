@@ -91,7 +91,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.58, y: 2.83, z: 6.59}
+  m_Size: {x: 9.5, y: 2.83, z: 7}
   m_Center: {x: -0.12, y: 0, z: -0.07}
 --- !u!65 &65000013328202436
 BoxCollider:
@@ -103,7 +103,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8.59, y: 2.84, z: 6.6}
+  m_Size: {x: 9.51, y: 2.84, z: 7.01}
   m_Center: {x: -0.21, y: 0, z: -0.03}
 --- !u!82 &82000013385816880
 AudioSource:
@@ -114,11 +114,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ed02bb42c89d9f74db6b7ac4a3396f19, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   Priority: 128
@@ -193,11 +193,11 @@ MonoBehaviour:
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: ed02bb42c89d9f74db6b7ac4a3396f19, type: 3}
-  activated: {fileID: 8300000, guid: ed02bb42c89d9f74db6b7ac4a3396f19, type: 3}
+  activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 3249f54888b63b1498d7502d229858e2, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 10
+  clothNoise: {fileID: 0}
   activateDistance: 7
   isClue: 0
   isActivated: 1
   enkNameObject: 1
+  missionName: 

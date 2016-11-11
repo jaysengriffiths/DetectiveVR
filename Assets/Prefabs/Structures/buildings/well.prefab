@@ -4704,11 +4704,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 674fa3dfff71dc546818b9fa73edd388, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   Priority: 128
@@ -4783,14 +4783,14 @@ MonoBehaviour:
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 674fa3dfff71dc546818b9fa73edd388, type: 3}
-  activated: {fileID: 8300000, guid: 674fa3dfff71dc546818b9fa73edd388, type: 3}
+  activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: b2cd69c390d61df4791efb3cfe1ed90a, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!136 &136000013971812572
 CapsuleCollider:
   m_ObjectHideFlags: 1
