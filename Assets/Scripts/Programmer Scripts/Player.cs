@@ -206,7 +206,7 @@ public class Player : MonoBehaviour
 
             // load the scene and set the mission after a delay
             hqGazeTimer.SetObject(soundItem);
-            if (hqGazeTimer.IsExpired())
+            if (hqGazeTimer.IsExpired() && dialogManager.pendingDialog.Length == 0 && !audioSource.isPlaying)
             {
                 if (soundItem.missionName != "")
                     LoadMissionFromHQ(soundItem.missionName);
@@ -268,7 +268,7 @@ public class Player : MonoBehaviour
             {
                 Character ch = hit.collider.gameObject.GetComponent<Character>();
                 suspectGazeTimer.SetObject(ch);
-                if (suspectGazeTimer.IsExpired())
+                if (suspectGazeTimer.IsExpired() && missionManager != null)
                 {
                     // we've been starting at thisa one thing for three seconds...
                     missionManager.Interrogate(ch);
