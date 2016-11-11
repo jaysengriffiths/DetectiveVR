@@ -425,12 +425,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 43ed9d8c29ca9b24292872ac0c65ea58, type: 3}
   enkNames: {fileID: 8300000, guid: 948c0eea609df6240926050349abc913, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &38621614
 AudioSource:
   m_ObjectHideFlags: 0
@@ -632,7 +632,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010948715904, guid: 1b05ee1d7e2a1d24899f69463f19323c, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1000012762413572, guid: 1b05ee1d7e2a1d24899f69463f19323c, type: 2}
       propertyPath: m_IsActive
@@ -929,6 +929,7 @@ MonoBehaviour:
   objDisable:
   - {fileID: 2042269030}
   soundObjDisable: []
+  complete: 0
 --- !u!4 &64210397 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000010180276742, guid: e28c41057d540fd4c96b9a192ecde513,
@@ -1207,12 +1208,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 43ed9d8c29ca9b24292872ac0c65ea58, type: 3}
   enkNames: {fileID: 8300000, guid: 948c0eea609df6240926050349abc913, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &100660877
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1354,12 +1355,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 37ca4ad0e2944c746bdafc1bf91a90cf, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &105114708
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1745,6 +1746,48 @@ Transform:
   - {fileID: 830705793}
   m_Father: {fileID: 1246647473}
   m_RootOrder: 3
+--- !u!1001 &121465114
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1035381170}
+    m_Modifications:
+    - target: {fileID: 4000013725496314, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013725496314, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013725496314, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013725496314, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013725496314, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013725496314, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013725496314, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013725496314, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &130798903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,7 +2330,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013027198776, guid: 2af28cb3320a6fb48b0fc3923b43945f, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 4000010449560368, guid: 2af28cb3320a6fb48b0fc3923b43945f, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2548,12 +2591,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   activated: {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   enkNames: {fileID: 8300000, guid: 0f4300cd2cd60a246b0f00aae1200dee, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!82 &207093804
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3567,12 +3610,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   activated: {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   enkNames: {fileID: 8300000, guid: 0f4300cd2cd60a246b0f00aae1200dee, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!82 &268559201
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4036,12 +4079,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 9df3bab0a76b9654ea9f42ef1244f582, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &305305844
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4331,12 +4374,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: ab68ef3325d24804d86c72d0fd2e7548, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &328965587
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5166,12 +5209,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 43ed9d8c29ca9b24292872ac0c65ea58, type: 3}
   enkNames: {fileID: 8300000, guid: 948c0eea609df6240926050349abc913, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &385478564
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5318,12 +5361,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: cc872056c308d6240aa9f6ec9035c41c, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &395650146
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6245,7 +6288,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011275197008, guid: 98f9758e82bd1c5419dd310ded257d01, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1000011002717352, guid: 98f9758e82bd1c5419dd310ded257d01, type: 2}
       propertyPath: m_IsActive
@@ -6424,12 +6467,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: cc872056c308d6240aa9f6ec9035c41c, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &521389952
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6802,6 +6845,7 @@ MonoBehaviour:
   enkSpawnPoint: {fileID: 752929057}
   objDisable: []
   soundObjDisable: []
+  complete: 0
 --- !u!1 &546574477
 GameObject:
   m_ObjectHideFlags: 0
@@ -6947,12 +6991,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 9df3bab0a76b9654ea9f42ef1244f582, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &565083640
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7536,12 +7580,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: cc872056c308d6240aa9f6ec9035c41c, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &606597946
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7928,7 +7972,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010071666470, guid: 36243e9eb3477244087bbe829a4d2ec0, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36243e9eb3477244087bbe829a4d2ec0, type: 2}
@@ -7985,12 +8029,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 43ed9d8c29ca9b24292872ac0c65ea58, type: 3}
   enkNames: {fileID: 8300000, guid: 948c0eea609df6240926050349abc913, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &651446722
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8506,7 +8550,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013419688580, guid: 0cd7c0258d76b8d4591dc4ecbe785c45, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0cd7c0258d76b8d4591dc4ecbe785c45, type: 2}
@@ -9211,12 +9255,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 9df3bab0a76b9654ea9f42ef1244f582, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &776266231
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9524,12 +9568,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   activated: {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   enkNames: {fileID: 8300000, guid: 0f4300cd2cd60a246b0f00aae1200dee, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!82 &797876772
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10558,12 +10602,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   activated: {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   enkNames: {fileID: 8300000, guid: 0f4300cd2cd60a246b0f00aae1200dee, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!82 &890221344
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10783,12 +10827,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 2a49e0c0370591847be9cec3a7c3dfb0, type: 3}
   enkNames: {fileID: 8300000, guid: cb8d91e73e7b74a4f931e0098be544f7, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &891544265
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10934,12 +10978,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 43ed9d8c29ca9b24292872ac0c65ea58, type: 3}
   enkNames: {fileID: 8300000, guid: 948c0eea609df6240926050349abc913, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &894251459
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11439,12 +11483,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: ab68ef3325d24804d86c72d0fd2e7548, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &932673040
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12303,12 +12347,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   activated: {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   enkNames: {fileID: 8300000, guid: 0f4300cd2cd60a246b0f00aae1200dee, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!82 &1016169568
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12806,12 +12850,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 9df3bab0a76b9654ea9f42ef1244f582, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1057769951
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13312,12 +13356,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   activated: {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   enkNames: {fileID: 8300000, guid: 0f4300cd2cd60a246b0f00aae1200dee, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!82 &1086250709
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13527,12 +13571,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 43ed9d8c29ca9b24292872ac0c65ea58, type: 3}
   enkNames: {fileID: 8300000, guid: 948c0eea609df6240926050349abc913, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1090775339
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13850,12 +13894,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: b1177c9bc69b1484db845ef58cc298da, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1110856797
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14202,12 +14246,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 2a49e0c0370591847be9cec3a7c3dfb0, type: 3}
   enkNames: {fileID: 8300000, guid: cb8d91e73e7b74a4f931e0098be544f7, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1174082734
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14506,12 +14550,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: ab68ef3325d24804d86c72d0fd2e7548, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1190945083
 AudioSource:
   m_ObjectHideFlags: 0
@@ -14732,7 +14776,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012657934232, guid: d8fae6fc5f1fff44cafce927c95be4a3, type: 2}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d8fae6fc5f1fff44cafce927c95be4a3, type: 2}
@@ -14857,6 +14901,7 @@ MonoBehaviour:
   enkSpawnPoint: {fileID: 728381447}
   objDisable: []
   soundObjDisable: []
+  complete: 0
 --- !u!1 &1210613760
 GameObject:
   m_ObjectHideFlags: 0
@@ -14930,6 +14975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrestClip: {fileID: 8300000, guid: 662e8063fe96d994db46989c748460f0, type: 3}
+  missionList: []
   state: 0
   currentMission: {fileID: 0}
 --- !u!1 &1218457551
@@ -15333,12 +15379,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 2a49e0c0370591847be9cec3a7c3dfb0, type: 3}
   enkNames: {fileID: 8300000, guid: cb8d91e73e7b74a4f931e0098be544f7, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1246647475
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15987,12 +16033,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 2a49e0c0370591847be9cec3a7c3dfb0, type: 3}
   enkNames: {fileID: 8300000, guid: cb8d91e73e7b74a4f931e0098be544f7, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1307462761
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16138,12 +16184,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 43ed9d8c29ca9b24292872ac0c65ea58, type: 3}
   enkNames: {fileID: 8300000, guid: 948c0eea609df6240926050349abc913, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1308741025
 AudioSource:
   m_ObjectHideFlags: 0
@@ -16476,12 +16522,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   activated: {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   enkNames: {fileID: 8300000, guid: 0f4300cd2cd60a246b0f00aae1200dee, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!82 &1331998053
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17801,12 +17847,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 37ca4ad0e2944c746bdafc1bf91a90cf, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1393994800
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18295,7 +18341,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010830797682, guid: 5c6c0784b047913489c84f47f21b3aab, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c6c0784b047913489c84f47f21b3aab, type: 2}
@@ -18342,7 +18388,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011712090900, guid: c0fcf8d5ca286ca428a3b0dda74a6b3a, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 65000013283636644, guid: c0fcf8d5ca286ca428a3b0dda74a6b3a,
         type: 2}
@@ -18812,12 +18858,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: ab68ef3325d24804d86c72d0fd2e7548, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1469217390
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19259,12 +19305,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: b1177c9bc69b1484db845ef58cc298da, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1511535882
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19467,12 +19513,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   activated: {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   enkNames: {fileID: 8300000, guid: 0f4300cd2cd60a246b0f00aae1200dee, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!82 &1522715928
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19694,12 +19740,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 2a49e0c0370591847be9cec3a7c3dfb0, type: 3}
   enkNames: {fileID: 8300000, guid: cb8d91e73e7b74a4f931e0098be544f7, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1532631339
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19965,12 +20011,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: cc872056c308d6240aa9f6ec9035c41c, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1549172942
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20297,12 +20343,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 37ca4ad0e2944c746bdafc1bf91a90cf, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1582332695
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20479,12 +20525,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 2a49e0c0370591847be9cec3a7c3dfb0, type: 3}
   enkNames: {fileID: 8300000, guid: cb8d91e73e7b74a4f931e0098be544f7, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1588714378
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20984,12 +21030,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 2a49e0c0370591847be9cec3a7c3dfb0, type: 3}
   enkNames: {fileID: 8300000, guid: cb8d91e73e7b74a4f931e0098be544f7, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1619712086
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21533,12 +21579,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 2a49e0c0370591847be9cec3a7c3dfb0, type: 3}
   enkNames: {fileID: 8300000, guid: cb8d91e73e7b74a4f931e0098be544f7, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1638193836
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21754,6 +21800,7 @@ MonoBehaviour:
   - {fileID: 1343394619}
   soundObjDisable:
   - {fileID: 1637594610}
+  complete: 0
 --- !u!1 &1649955809 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010555482474, guid: a9e86c3fe6a17304ab121a499fe452c5,
@@ -21841,12 +21888,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 43ed9d8c29ca9b24292872ac0c65ea58, type: 3}
   enkNames: {fileID: 8300000, guid: 948c0eea609df6240926050349abc913, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 1
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1655248435
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22163,12 +22210,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: cc872056c308d6240aa9f6ec9035c41c, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1681416691
 AudioSource:
   m_ObjectHideFlags: 0
@@ -22453,12 +22500,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 9df3bab0a76b9654ea9f42ef1244f582, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1701708904
 AudioSource:
   m_ObjectHideFlags: 0
@@ -23314,53 +23361,11 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1762404376}
   m_Mesh: {fileID: 4300148, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
---- !u!1001 &1771826803
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1035381170}
-    m_Modifications:
-    - target: {fileID: 4000013453980174, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013453980174, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013453980174, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013453980174, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013453980174, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013453980174, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013453980174, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013453980174, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 5245f5fa26a39ac4995f4d8291935be8, type: 2}
-  m_IsPrefabParent: 0
 --- !u!4 &1771826804 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 4000013453980174, guid: 5245f5fa26a39ac4995f4d8291935be8,
+  m_PrefabParentObject: {fileID: 4000013725496314, guid: 5245f5fa26a39ac4995f4d8291935be8,
     type: 2}
-  m_PrefabInternal: {fileID: 1771826803}
+  m_PrefabInternal: {fileID: 121465114}
 --- !u!1 &1775092028
 GameObject:
   m_ObjectHideFlags: 0
@@ -23514,12 +23519,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 37ca4ad0e2944c746bdafc1bf91a90cf, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1787330604
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24097,12 +24102,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: ab68ef3325d24804d86c72d0fd2e7548, type: 3}
   enkNames: {fileID: 8300000, guid: 69e98f8dda1f17f428e3af52f81ba3e1, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 10
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1848440191
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24337,7 +24342,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013415671940, guid: d6a70ef9dc556b848ad82d4dd501e7e4, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6a70ef9dc556b848ad82d4dd501e7e4, type: 2}
@@ -24514,12 +24519,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   activated: {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   enkNames: {fileID: 8300000, guid: 0f4300cd2cd60a246b0f00aae1200dee, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!82 &1867160450
 AudioSource:
   m_ObjectHideFlags: 0
@@ -24791,7 +24796,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013924193174, guid: 511725eaec388a545a0a40e3525650a8, type: 2}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 511725eaec388a545a0a40e3525650a8, type: 2}
@@ -25151,12 +25156,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: b1177c9bc69b1484db845ef58cc298da, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &1920060067
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25732,12 +25737,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   activated: {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   enkNames: {fileID: 8300000, guid: 0f4300cd2cd60a246b0f00aae1200dee, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!82 &1951291029
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26248,12 +26253,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   activated: {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   enkNames: {fileID: 8300000, guid: 0f4300cd2cd60a246b0f00aae1200dee, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!82 &2031789280
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26594,12 +26599,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   activated: {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   enkNames: {fileID: 8300000, guid: 0f4300cd2cd60a246b0f00aae1200dee, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!82 &2053395332
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26804,12 +26809,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: b1177c9bc69b1484db845ef58cc298da, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &2063610096
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27044,7 +27049,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &2074922108
 GameObject:
   m_ObjectHideFlags: 0
@@ -27196,12 +27201,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   activated: {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   enkNames: {fileID: 8300000, guid: 0f4300cd2cd60a246b0f00aae1200dee, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!82 &2081972380
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27464,12 +27469,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   activated: {fileID: 8300000, guid: cbb66de18b4d57848b160b491d4280ba, type: 3}
   enkNames: {fileID: 8300000, guid: 0f4300cd2cd60a246b0f00aae1200dee, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!82 &2095736383
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27703,12 +27708,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: b1177c9bc69b1484db845ef58cc298da, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &2105550917
 AudioSource:
   m_ObjectHideFlags: 0
@@ -27946,12 +27951,12 @@ MonoBehaviour:
   Idle: []
   activated: {fileID: 8300000, guid: 37ca4ad0e2944c746bdafc1bf91a90cf, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!82 &2119888384
 AudioSource:
   m_ObjectHideFlags: 0
