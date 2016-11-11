@@ -114,7 +114,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 82d6d63185ff5e9458cf7293200927a1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -123,7 +123,7 @@ AudioSource:
   Spatialize: 1
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.6465111
   MaxDistance: 9
   Pan2D: 0
   rolloffMode: 1
@@ -191,13 +191,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle:
-  - {fileID: 8300000, guid: 82d6d63185ff5e9458cf7293200927a1, type: 3}
-  activated: {fileID: 8300000, guid: 82d6d63185ff5e9458cf7293200927a1, type: 3}
+  Idle: []
+  activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 04d4cdae7a1f45546a00ddc38b7821c9, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 10
-  activateDistance: 9
+  clothNoise: {fileID: 0}
+  activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
