@@ -219,27 +219,25 @@ public class Player : MonoBehaviour
                 {
                     if (!audioSource.isPlaying)
                     {
-                        if (soundItem.timesPlayed < soundItem.maxTimesPlayed || soundItem.maxTimesPlayed == 0)
+
+                        DialogManager.Dialog[] clips = new DialogManager.Dialog[2];  //Kathy
+
+                        clips[0] = new DialogManager.Dialog(soundItem.activated, soundItem.transform);  //Kathy
+                        clips[1] = new DialogManager.Dialog(soundItem.enkNames);  //Kathy
+                        if (soundItem.isClue || soundItem.enkNameObject)
                         {
-                            DialogManager.Dialog[] clips = new DialogManager.Dialog[2];  //Kathy
 
-                            clips[0] = new DialogManager.Dialog(soundItem.activated, soundItem.transform);  //Kathy
-                            clips[1] = new DialogManager.Dialog(soundItem.enkNames);  //Kathy
-                            if (soundItem.isClue || soundItem.enkNameObject)
-                            {
-                                
-                                soundManager.setDialog(clips);
-                                soundItem.timesPlayed++;
-                                soundItem.isActivated = true;
-                            }
-                            else
-                            {
-                                audioSource.clip = soundItem.activated;
-                                audioSource.Play();
-                                soundItem.isActivated = true;
-                            }
-
+                            soundManager.setDialog(clips);
+                            soundItem.isActivated = true;
                         }
+                        else
+                        {
+                            audioSource.clip = soundItem.activated;
+                            audioSource.Play();
+                            soundItem.isActivated = true;
+                        }
+
+
                     }
 
                 }

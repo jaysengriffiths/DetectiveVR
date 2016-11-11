@@ -7,9 +7,8 @@ public class SoundLookAt : MonoBehaviour
     public AudioClip[] Idle = new AudioClip[0];
     public AudioClip activated;
     public AudioClip enkNames;
+    public AudioClip clothNoise;
     [HideInInspector]
-    public int timesPlayed;
-    public int maxTimesPlayed;
     public int activateDistance = 10;
     private AudioSource Source;
     //private Transform player;
@@ -47,7 +46,7 @@ public class SoundLookAt : MonoBehaviour
             {
                 if (Time.time > nextTimeStamp)
                 {
-                    if (Idle.Length == 0)
+                    if (activated)
                     {
                         
                         Source.PlayOneShot(activated, 0.25f);

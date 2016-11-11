@@ -46,7 +46,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000011029837938
 GameObject:
   m_ObjectHideFlags: 1
@@ -517,8 +517,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8, y: 4.9, z: 2}
-  m_Center: {x: -0.00000011920929, y: 0, z: 0.00000011920929}
+  m_Size: {x: 2.01, y: 7.6, z: 2.01}
+  m_Center: {x: -0.00000011920929, y: 1.14, z: 0.00000011920929}
 --- !u!65 &65000012125045764
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -529,7 +529,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.762701, y: 4.792204, z: 1.8669872}
+  m_Size: {x: 2, y: 5, z: 2}
   m_Center: {x: -0.00000011920929, y: 0, z: 0.00000011920929}
 --- !u!65 &65000012614940836
 BoxCollider:
@@ -638,11 +638,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 052f0c8385a406e46af604128d30b0ff, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   Priority: 205
@@ -719,12 +719,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 052f0c8385a406e46af604128d30b0ff, type: 3}
   activated: {fileID: 8300000, guid: 4f21a8b19c601764ea3a042b06b24933, type: 3}
   enkNames: {fileID: 8300000, guid: b15c81cd73794454daf9f4006f48232c, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 60
   isClue: 0
   isActivated: 1
   enkNameObject: 1
+  missionName: 
 --- !u!114 &114000013579515252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -741,9 +741,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 052f0c8385a406e46af604128d30b0ff, type: 3}
   activated: {fileID: 8300000, guid: 4f21a8b19c601764ea3a042b06b24933, type: 3}
   enkNames: {fileID: 8300000, guid: b15c81cd73794454daf9f4006f48232c, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 60
   isClue: 0
   isActivated: 1
   enkNameObject: 1
+  missionName: 

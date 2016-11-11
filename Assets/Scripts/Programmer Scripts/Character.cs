@@ -8,7 +8,11 @@ public class Character : MonoBehaviour
     public AudioClip nameClip;
     public AudioClip introClip;
     public AudioClip awakeClip;
+    public AudioClip threatenedClip;
     public Transform tornClothLocation;
+    public Transform locketLocation;
+    public Transform graffitiLocation;
+    public Transform catHairLocation;
     public bool introPlayed = false;
     public bool IsInteracted = false;
     //true if you're part of the current mission

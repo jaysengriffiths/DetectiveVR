@@ -10,6 +10,9 @@ public class DialogManager : MonoBehaviour {
     private bool relevationSpeechPlayed = false;
     private bool thankyouSpeechPlayed = false;
     private bool mysterySpeechPlayed = false;
+    private bool isDialog = false;
+    private savedData saveGame;
+
     public enum DialogType
     {
         Normal,
@@ -50,10 +53,15 @@ public class DialogManager : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        saveGame = GameObject.FindObjectOfType<savedData>();
+
         if (mic)
+        {
+            isDialog = (mic.name == "DialogMicrophone");
             audioSource = mic.GetComponent<AudioSource>();
+        }
         missionManager = FindObjectOfType<MissionManager>();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update ()
@@ -114,7 +122,7 @@ public class DialogManager : MonoBehaviour {
             }
             else
             {
-                if (missionManager != null && missionManager.state == MissionManager.MissionState.EndByWarning)
+                if (missionManager != null && missionManager.state == MissionManager.MissionState.EndByWarning && isDialog)
                 {
                     //Debug.Log("play thankyou");
                     if (!thankyouSpeechPlayed)
@@ -134,7 +142,7 @@ public class DialogManager : MonoBehaviour {
                     }
                 }
 
-                if (missionManager != null && missionManager.state == MissionManager.MissionState.EndByArrest)
+                if (missionManager != null && missionManager.state == MissionManager.MissionState.EndByArrest && isDialog)
                 {
                     if (!relevationSpeechPlayed)
                     {
@@ -150,13 +158,12 @@ public class DialogManager : MonoBehaviour {
                     }
 
                 }
-
-                if (missionManager != null && missionManager.state == MissionManager.MissionState.MissionOver)
+                if (missionManager != null && missionManager.state == MissionManager.MissionState.MissionOver && isDialog)
                 {
                     for (int i = 0; i < 5; i++)
                     {
                         missionManager.currentMission.suspects[i].character.isSuspect = false;
-                        //save data
+                        saveGame.UpdateSave();
 
                     }
                 }

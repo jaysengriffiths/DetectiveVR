@@ -60,6 +60,15 @@ public class InventoryControl : MonoBehaviour
 
         if (player.cameraAngle > 55 && player.cameraAngle < 65)
         {
+            AudioClip clip;
+            if (player.selectedCharacter)
+            {
+                clip = player.selectedCharacter.threatenedClip;
+                DialogManager.Dialog[] clips = new DialogManager.Dialog[1];
+                clips[0] = new DialogManager.Dialog(clip, player.selectedCharacter);
+                dialogManager.setDialog(clips);
+            }
+          
             WarningBook.SetActive(true);
         }
         else
@@ -67,7 +76,7 @@ public class InventoryControl : MonoBehaviour
             WarningBook.SetActive(false);
         }
    
-        if (player.selectedCharacter != null && player.selectedCharacter.introClip && player.selectedCharacter.IsInteracted)
+        if (player.selectedCharacter != null && player.selectedCharacter.introClip)
         {
             if (cuffTimer.IsFull(player.cameraAngle > 65 && player.cameraAngle < 70))
             {

@@ -16,6 +16,8 @@ public class TilePuzzle : MonoBehaviour {
     public AudioSource soundSource;
     public Sprite[] mySprites;
     public AudioClip[] myAudio;
+    public AudioClip correctTileDing;
+    private AudioSource ding;
 
     float m_tileTimeStamp = 0;
     private int height = 8;
@@ -32,6 +34,7 @@ public class TilePuzzle : MonoBehaviour {
     public Transform m_tempPos;
 
 	void Start () {
+        ding = GameObject.Find("Ding").GetComponent<AudioSource>();
         m_tempPos = m_startPos;
         createTiles();
 	}
@@ -101,11 +104,19 @@ public class TilePuzzle : MonoBehaviour {
                         if (CheckMove())
                         {
                             Transform t = currentTile.transform.parent.Find("Marker");
-                          
+                            //add ding
+                            
+                            if (t.gameObject && !ding.isPlaying)
+                            {
+                                ding.PlayOneShot(correctTileDing);
+                            }
+                            
                             t.gameObject.SetActive(true);
+                            
                             // flipTile(currentTile);
                         }
-                        
+                     
+
                         else if( currentTile.person && !first)
                         {
                             Debug.Log("TEST");
@@ -147,13 +158,16 @@ public class TilePuzzle : MonoBehaviour {
     {
          if (tempTile.color == currentTile.color || tempTile.icon == currentTile.icon || tempTile.person == true)
         {
+            
             //if the temp and the current share a property
             if (CheckDist())
             {
+                
+                //add ding
                 //if the tile is next to or below
                 {
                     tempTile = currentTile;
-                    if(currentTile.pBag == true)
+                    if (currentTile.pBag == true)
                     {
                         reSetTiles();
                         SceneManager.LoadScene("Main_scene");

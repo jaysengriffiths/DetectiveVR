@@ -11,6 +11,9 @@ public class MissionManager : MonoBehaviour
     private DialogManager dialogManager;
     private AudioSource audioSource;
     public AudioClip arrestClip;
+    private savedData saveGame;
+    public Mission[] missionList;
+
     public enum MissionState
     {
         Ongoing,
@@ -31,6 +34,7 @@ public class MissionManager : MonoBehaviour
     }
     void Start()
     {
+        saveGame = GetComponent<savedData>();
         missions = FindObjectsOfType<Mission>();
         // load the mission name to activate from the save game
         string mission = PlayerPrefs.GetString("Mission");
@@ -39,24 +43,32 @@ public class MissionManager : MonoBehaviour
             GameObject missionObj = GameObject.Find(mission);
             currentMission = missionObj.GetComponent<Mission>();
         }
-
+        if (currentMission == null)
+        {
+            currentMission = missions[3];
+        }
         // turn off all missions excepot the current one
         for (int i = 0; i < missions.Length; i++)
             if (missions[i] != currentMission)
                 missions[i].gameObject.SetActive(false);
 
+       
         player = FindObjectOfType<Player>();
         player.transform.position = currentMission.enkSpawnPoint.transform.position;
     }
 
     void Update()
     {
-        if (player.clueComparisonPlayed && !audioSource.isPlaying)
+
+        if (player.clueObject && player.clueComparisonPlayed && dialogManager.pendingDialog.Length < 1)
         {
-            player.clueObject.GetComponent<MovingClue>().MoveTowards(player.selectedCharacter);
+            if (player.selectedCharacter)
+            {
+                player.clueObject.GetComponent<MovingClue>().MoveTowards(player.selectedCharacter);
+            }
 
             //player.clueObject.transform.eulerAngles = new Vector3(0, -90, 0);
-        }
+        }    
         //if (player.clueObject && player.clueObject.activeSelf == true && dialogManager.pendingDialog.Length == 0 && player.selectedCharacter != null)
         //{
            
@@ -102,7 +114,7 @@ public class MissionManager : MonoBehaviour
 
                             dialogManager.setDialog(clips);
                             currentMission.suspects[i].character.introPlayed = true;
-                            currentMission.suspects[i].character.IsInteracted = true;
+                            //currentMission.suspects[i].character.IsInteracted = true;
 
                         }
                         else
@@ -115,7 +127,7 @@ public class MissionManager : MonoBehaviour
                             clips[3] = new DialogManager.Dialog(currentMission.suspects[i].explanation, currentMission.suspects[i].character);
 
                             currentMission.suspects[i].character.introPlayed = true;
-                            currentMission.suspects[i].character.IsInteracted = true;
+                            //currentMission.suspects[i].character.IsInteracted = true;
                             if (player.clueObject)
                             {
                                 clips[4] = new DialogManager.Dialog(currentMission.clueComparison);
