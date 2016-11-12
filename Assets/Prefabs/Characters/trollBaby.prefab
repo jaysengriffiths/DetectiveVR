@@ -1472,7 +1472,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010212309258}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.271, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.0000005, y: 1, z: 1.0000005}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1737,11 +1737,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c8391a02a6a9ff84680e680f1f69025f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   Priority: 128
@@ -1831,8 +1831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle:
-  - {fileID: 8300000, guid: c8391a02a6a9ff84680e680f1f69025f, type: 3}
+  Idle: []
   activated: {fileID: 8300000, guid: d7926d26455dff141bf126cbc5768742, type: 3}
   enkNames: {fileID: 8300000, guid: 63cab7c2d207647429cbd3d6229f5c5b, type: 3}
   clothNoise: {fileID: 0}
@@ -1866,7 +1865,7 @@ MonoBehaviour:
   nameClip: {fileID: 8300000, guid: 63cab7c2d207647429cbd3d6229f5c5b, type: 3}
   introClip: {fileID: 8300000, guid: 8e45decb32013b74394f546979baf16f, type: 3}
   awakeClip: {fileID: 8300000, guid: 8600a15318a7c6b49a91f1fc1879c160, type: 3}
-  threatenedClip: {fileID: 0}
+  threatenedClip: {fileID: 8300000, guid: 63cab7c2d207647429cbd3d6229f5c5b, type: 3}
   tornClothLocation: {fileID: 0}
   locketLocation: {fileID: 0}
   graffitiLocation: {fileID: 0}

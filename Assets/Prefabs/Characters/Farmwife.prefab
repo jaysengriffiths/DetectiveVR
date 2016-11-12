@@ -223,7 +223,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012001749618}
   m_LocalRotation: {x: -0, y: -0.92562157, z: -0, w: 0.37845057}
-  m_LocalPosition: {x: 0, y: 1.192, z: 0}
+  m_LocalPosition: {x: -0.06, y: 0.877, z: 0.245}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -294,7 +294,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011571054382}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.921, z: 0}
+  m_LocalPosition: {x: -0.1283, y: 0.935, z: 0.203}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -487,11 +487,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3ebe978470077964e86fff1e6fba07a2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   Priority: 128
@@ -583,7 +583,7 @@ MonoBehaviour:
   nameClip: {fileID: 8300000, guid: 25d7743082b1c844385c624a958f643a, type: 3}
   introClip: {fileID: 8300000, guid: 25f69591459845647a114da6fe3b1f61, type: 3}
   awakeClip: {fileID: 8300000, guid: 980e99bafe2215042b5681d8aa35947b, type: 3}
-  threatenedClip: {fileID: 0}
+  threatenedClip: {fileID: 8300000, guid: 25d7743082b1c844385c624a958f643a, type: 3}
   tornClothLocation: {fileID: 0}
   locketLocation: {fileID: 0}
   graffitiLocation: {fileID: 0}
@@ -605,11 +605,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle:
-  - {fileID: 8300000, guid: 964da94a889ab734895ec4eab535bbea, type: 3}
-  activated: {fileID: 8300000, guid: 4ea21db240959ef4891078022ec517ff, type: 3}
+  Idle: []
+  activated: {fileID: 8300000, guid: c213c3294aa3dec44949abd0f107e22c, type: 3}
   enkNames: {fileID: 8300000, guid: 25d7743082b1c844385c624a958f643a, type: 3}
-  clothNoise: {fileID: 0}
+  clothNoise: {fileID: 8300000, guid: e3322972ee4ab384aae84e7042383c70, type: 3}
   activateDistance: 5
   isClue: 0
   isActivated: 0

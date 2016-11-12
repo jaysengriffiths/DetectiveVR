@@ -1901,11 +1901,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 83e59a126f0cd75409f8046b8b157e38, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   Priority: 128
@@ -2006,11 +2006,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle:
-  - {fileID: 8300000, guid: 4d53844440e478e4186930caf8737a41, type: 3}
-  activated: {fileID: 8300000, guid: e018a84e03ed6f046b245bb2e94602c2, type: 3}
+  Idle: []
+  activated: {fileID: 8300000, guid: 4aac356fe47584948bff32a2968fdaf8, type: 3}
   enkNames: {fileID: 8300000, guid: 147b25c33a2806a4d86f1d5f73a84028, type: 3}
-  clothNoise: {fileID: 0}
+  clothNoise: {fileID: 8300000, guid: cff741c5dacb29d46bfc45eb14fdebb8, type: 3}
   activateDistance: 5
   isClue: 0
   isActivated: 0

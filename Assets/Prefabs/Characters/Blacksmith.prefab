@@ -2085,11 +2085,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6d52b8fb1c60d5343873a20d8fa6f011, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   Priority: 128
@@ -2190,11 +2190,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle:
-  - {fileID: 8300000, guid: 6d52b8fb1c60d5343873a20d8fa6f011, type: 3}
-  activated: {fileID: 8300000, guid: 4f80983b0b88f494a8d733cf5a1f46ed, type: 3}
+  Idle: []
+  activated: {fileID: 8300000, guid: deb54e977a84f5d459f69e6b74dcce8b, type: 3}
   enkNames: {fileID: 8300000, guid: ecbe5258db35d834c91e90026f1193c7, type: 3}
-  clothNoise: {fileID: 0}
+  clothNoise: {fileID: 8300000, guid: 52bcfaf29d0d9e645afc0656902c7a78, type: 3}
   activateDistance: 5
   isClue: 0
   isActivated: 0
@@ -2214,7 +2213,7 @@ MonoBehaviour:
   nameClip: {fileID: 8300000, guid: ecbe5258db35d834c91e90026f1193c7, type: 3}
   introClip: {fileID: 8300000, guid: bd22ed2ad3e157c47afd96ad47136ca2, type: 3}
   awakeClip: {fileID: 8300000, guid: dcbb00fe785688349887c918521ec787, type: 3}
-  threatenedClip: {fileID: 0}
+  threatenedClip: {fileID: 8300000, guid: ecbe5258db35d834c91e90026f1193c7, type: 3}
   tornClothLocation: {fileID: 0}
   locketLocation: {fileID: 0}
   graffitiLocation: {fileID: 0}
