@@ -27,7 +27,7 @@ GameObject:
   - 114: {fileID: 114000012008865138}
   m_Layer: 0
   m_Name: tree
-  m_TagString: Untagged
+  m_TagString: TREE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -39,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012039134710}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.03, y: 0, z: -16.63}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -91,8 +91,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.61, y: 10.1, z: 0.61}
-  m_Center: {x: 0, y: 5, z: 0}
+  m_Size: {x: 1.39, y: 10.3, z: 1.23}
+  m_Center: {x: -0.15, y: 5, z: 0}
 --- !u!65 &65000011645748884
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -103,8 +103,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6, y: 10, z: 0.6}
-  m_Center: {x: 0, y: 5, z: 0}
+  m_Size: {x: 1.35, y: 10, z: 1.2}
+  m_Center: {x: -0.15, y: 5, z: 0}
 --- !u!82 &82000013893387102
 AudioSource:
   m_ObjectHideFlags: 1
@@ -114,11 +114,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   Priority: 180
@@ -191,13 +191,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle:
-  - {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
-  activated: {fileID: 8300000, guid: 25154bebb65233f479c4cfbb5bb63675, type: 3}
+  Idle: []
+  activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 7134c0ecc4bc0a04d99de4340bcfefe6, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
+  clothNoise: {fileID: 0}
   activateDistance: 2
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 

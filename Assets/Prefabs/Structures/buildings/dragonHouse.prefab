@@ -24,6 +24,7 @@ GameObject:
   - 65: {fileID: 65000012967180408}
   - 23: {fileID: 23000010337351496}
   - 82: {fileID: 82000010058202650}
+  - 114: {fileID: 114000012603893046}
   - 114: {fileID: 114000013137086106}
   m_Layer: 0
   m_Name: dragonHouse
@@ -126,7 +127,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 40
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -179,6 +180,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114000012603893046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013589791142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0caff85b8d15a4f92d5e4b63cd2903, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Dragon1_5: {fileID: 8300000, guid: 3cff1cb109782414ca1b5ed5334e40ca, type: 3}
+  Dragon2_4: {fileID: 8300000, guid: 9fdde863b44f815419713aaa5dcbb5f2, type: 3}
+  Dragon3_6: {fileID: 8300000, guid: a44043ce266eb14429a38a9ddf0bbb8b, type: 3}
+  sourceDragonH: {fileID: 82000010058202650}
 --- !u!114 &114000013137086106
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,10 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundDelay: 1
-  Idle:
-  - {fileID: 8300000, guid: 3cff1cb109782414ca1b5ed5334e40ca, type: 3}
-  - {fileID: 8300000, guid: 9fdde863b44f815419713aaa5dcbb5f2, type: 3}
-  - {fileID: 8300000, guid: a44043ce266eb14429a38a9ddf0bbb8b, type: 3}
+  Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 6e5505da926a1d142a01f7b0cb4f6e54, type: 3}
   clothNoise: {fileID: 0}
