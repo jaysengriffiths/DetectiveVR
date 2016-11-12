@@ -56,7 +56,7 @@ GameObject:
   - 82: {fileID: 82000013457559900}
   - 114: {fileID: 114000010523569530}
   m_Layer: 0
-  m_Name: trollBaby
+  m_Name: trollbaby
   m_TagString: SUSPECT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1835,12 +1835,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c8391a02a6a9ff84680e680f1f69025f, type: 3}
   activated: {fileID: 8300000, guid: d7926d26455dff141bf126cbc5768742, type: 3}
   enkNames: {fileID: 8300000, guid: 63cab7c2d207647429cbd3d6229f5c5b, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!114 &114000010595852164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1866,7 +1866,11 @@ MonoBehaviour:
   nameClip: {fileID: 8300000, guid: 63cab7c2d207647429cbd3d6229f5c5b, type: 3}
   introClip: {fileID: 8300000, guid: 8e45decb32013b74394f546979baf16f, type: 3}
   awakeClip: {fileID: 8300000, guid: 8600a15318a7c6b49a91f1fc1879c160, type: 3}
+  threatenedClip: {fileID: 0}
   tornClothLocation: {fileID: 0}
+  locketLocation: {fileID: 0}
+  graffitiLocation: {fileID: 0}
+  catHairLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 1

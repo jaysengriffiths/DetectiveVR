@@ -882,7 +882,7 @@ GameObject:
   - 82: {fileID: 82000010636497960}
   - 114: {fileID: 114000012721237192}
   m_Layer: 0
-  m_Name: Blacksmith
+  m_Name: blacksmith
   m_TagString: SUSPECT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2194,12 +2194,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6d52b8fb1c60d5343873a20d8fa6f011, type: 3}
   activated: {fileID: 8300000, guid: 4f80983b0b88f494a8d733cf5a1f46ed, type: 3}
   enkNames: {fileID: 8300000, guid: ecbe5258db35d834c91e90026f1193c7, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!114 &114000012947907416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2214,7 +2214,11 @@ MonoBehaviour:
   nameClip: {fileID: 8300000, guid: ecbe5258db35d834c91e90026f1193c7, type: 3}
   introClip: {fileID: 8300000, guid: bd22ed2ad3e157c47afd96ad47136ca2, type: 3}
   awakeClip: {fileID: 8300000, guid: dcbb00fe785688349887c918521ec787, type: 3}
+  threatenedClip: {fileID: 0}
   tornClothLocation: {fileID: 0}
+  locketLocation: {fileID: 0}
+  graffitiLocation: {fileID: 0}
+  catHairLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0

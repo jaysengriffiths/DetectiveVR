@@ -27,7 +27,7 @@ GameObject:
   - 82: {fileID: 82000010770578528}
   - 114: {fileID: 114000012423354204}
   m_Layer: 0
-  m_Name: goblinChief
+  m_Name: goblinchief
   m_TagString: SUSPECT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -652,12 +652,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0905fc9906f01df4b86a682be7c77f04, type: 3}
   activated: {fileID: 8300000, guid: 7d92d5b2ad75a3c4d9450cbb35a21c54, type: 3}
   enkNames: {fileID: 8300000, guid: 47f58142ec07e514eb0f36043afb8d56, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!114 &114000012823941214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -683,7 +683,11 @@ MonoBehaviour:
   nameClip: {fileID: 8300000, guid: 47f58142ec07e514eb0f36043afb8d56, type: 3}
   introClip: {fileID: 8300000, guid: ea3151b31332c6446bc8bcda6206276c, type: 3}
   awakeClip: {fileID: 8300000, guid: c1c9432ea1c9b7e459ff5a4a614460e3, type: 3}
+  threatenedClip: {fileID: 0}
   tornClothLocation: {fileID: 0}
+  locketLocation: {fileID: 0}
+  graffitiLocation: {fileID: 0}
+  catHairLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 1

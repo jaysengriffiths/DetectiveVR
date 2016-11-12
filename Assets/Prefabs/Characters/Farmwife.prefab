@@ -163,7 +163,7 @@ GameObject:
   - 82: {fileID: 82000013922267554}
   - 114: {fileID: 114000011885922966}
   m_Layer: 0
-  m_Name: Farmwife
+  m_Name: farmwife
   m_TagString: SUSPECT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -583,7 +583,11 @@ MonoBehaviour:
   nameClip: {fileID: 8300000, guid: 25d7743082b1c844385c624a958f643a, type: 3}
   introClip: {fileID: 8300000, guid: 25f69591459845647a114da6fe3b1f61, type: 3}
   awakeClip: {fileID: 8300000, guid: 980e99bafe2215042b5681d8aa35947b, type: 3}
+  threatenedClip: {fileID: 0}
   tornClothLocation: {fileID: 0}
+  locketLocation: {fileID: 0}
+  graffitiLocation: {fileID: 0}
+  catHairLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0
@@ -605,12 +609,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 964da94a889ab734895ec4eab535bbea, type: 3}
   activated: {fileID: 8300000, guid: 4ea21db240959ef4891078022ec517ff, type: 3}
   enkNames: {fileID: 8300000, guid: 25d7743082b1c844385c624a958f643a, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!114 &114000013840079878
 MonoBehaviour:
   m_ObjectHideFlags: 1

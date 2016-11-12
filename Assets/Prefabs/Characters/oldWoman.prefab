@@ -41,7 +41,7 @@ GameObject:
   - 82: {fileID: 82000011352552350}
   - 114: {fileID: 114000014279340628}
   m_Layer: 0
-  m_Name: oldWoman
+  m_Name: oldwoman
   m_TagString: SUSPECT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2239,7 +2239,11 @@ MonoBehaviour:
   nameClip: {fileID: 8300000, guid: 6c7303edd8ff68a409e823e478dddd8d, type: 3}
   introClip: {fileID: 8300000, guid: 8caa63648cebf3f4b9a570fc4b3dce85, type: 3}
   awakeClip: {fileID: 8300000, guid: bd0839c055fc2604e90ca0dea9582bd4, type: 3}
+  threatenedClip: {fileID: 0}
   tornClothLocation: {fileID: 0}
+  locketLocation: {fileID: 0}
+  graffitiLocation: {fileID: 0}
+  catHairLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0
@@ -2261,12 +2265,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: b55a7a29a948ad54ab61dbee485a1b0a, type: 3}
   activated: {fileID: 8300000, guid: 6bd1b318c963d5b4c9099783adbc1959, type: 3}
   enkNames: {fileID: 8300000, guid: 6c7303edd8ff68a409e823e478dddd8d, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!136 &136000010504125004
 CapsuleCollider:
   m_ObjectHideFlags: 1

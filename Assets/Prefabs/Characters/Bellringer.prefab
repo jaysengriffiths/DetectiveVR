@@ -1077,7 +1077,7 @@ GameObject:
   - 82: {fileID: 82000013978496512}
   - 114: {fileID: 114000011944352128}
   m_Layer: 0
-  m_Name: Bellringer
+  m_Name: bellringer
   m_TagString: SUSPECT
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2181,7 +2181,11 @@ MonoBehaviour:
   nameClip: {fileID: 8300000, guid: 539787f36b3f0594db3e5af393baeaa3, type: 3}
   introClip: {fileID: 8300000, guid: be48d6dcaf19bda4d99994248146f08f, type: 3}
   awakeClip: {fileID: 8300000, guid: f4881ab305e48e7478946b4b62446e12, type: 3}
+  threatenedClip: {fileID: 0}
   tornClothLocation: {fileID: 4000010439430636}
+  locketLocation: {fileID: 0}
+  graffitiLocation: {fileID: 0}
+  catHairLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
   isSuspect: 0
@@ -2203,12 +2207,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1cdc0f9dcbd76b240956f8cea480404a, type: 3}
   activated: {fileID: 8300000, guid: e0e0f09330e981e4a98655a6ddd91fba, type: 3}
   enkNames: {fileID: 8300000, guid: 539787f36b3f0594db3e5af393baeaa3, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 0
+  clothNoise: {fileID: 0}
   activateDistance: 5
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
 --- !u!114 &114000013591351682
 MonoBehaviour:
   m_ObjectHideFlags: 1
