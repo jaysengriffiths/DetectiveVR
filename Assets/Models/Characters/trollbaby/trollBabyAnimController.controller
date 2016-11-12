@@ -65,7 +65,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: isListening
+    m_ConditionEvent: isTalking
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102000010894446250}
@@ -148,7 +148,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 1.4287748
   m_TransitionOffset: 0
   m_ExitTime: 0.9120753
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -183,17 +183,20 @@ AnimatorStateTransition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: isTalking
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102000010894446250}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.7742703
-  m_TransitionOffset: 0
-  m_ExitTime: 0.684211
-  m_HasExitTime: 1
+  m_TransitionDuration: 0.3853807
+  m_TransitionOffset: 0.0133334
+  m_ExitTime: 0.7192986
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -204,10 +207,7 @@ AnimatorStateTransition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: isIdle
-    m_EventTreshold: 0
+  m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102000011603335700}
   m_Solo: 0
@@ -217,7 +217,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 1.3857268
   m_TransitionOffset: 0
   m_ExitTime: 0.68421096
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -276,7 +276,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: listen
+  m_Name: talking
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -326,7 +326,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: handcuff
+  m_Name: handcuffed
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -350,7 +350,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: unHandcuff
+  m_Name: unHandcuffed
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
