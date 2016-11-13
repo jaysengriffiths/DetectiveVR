@@ -772,7 +772,7 @@ MonoBehaviour:
     rightWarn: {fileID: 8300000, guid: af77617399282ff47bb7e9d52d86d8bb, type: 3}
     explanation: {fileID: 8300000, guid: 4dff46569e63b894295254bb61495868, type: 3}
     thankyou: {fileID: 8300000, guid: edf38679376722148888d161b7dfc0a9, type: 3}
-    thanker: {fileID: 0}
+    thanker: {fileID: 118894872}
     spawnPoint: {fileID: 2103816205}
   - character: {fileID: 670802454}
     wrongArrest: {fileID: 8300000, guid: 4aded3e57d00a4948b11d6357f7315b6, type: 3}
@@ -794,7 +794,7 @@ MonoBehaviour:
     thankyou: {fileID: 8300000, guid: 49e99f802f96edc4fb38ed6bba4fa1e5, type: 3}
     thanker: {fileID: 1649955809}
     spawnPoint: {fileID: 256175477}
-  - character: {fileID: 0}
+  - character: {fileID: 118894873}
     wrongArrest: {fileID: 8300000, guid: 4f690cf22ca45ad4792da71729989f10, type: 3}
     rightArrest: {fileID: 8300000, guid: abe75fc7086c7fa48a3ec8cd1913b23a, type: 3}
     playerWarning: {fileID: 8300000, guid: cd089cc46a2b72b49a544b9fe9eedf18, type: 3}
@@ -921,6 +921,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5993e79194f189e4ba46c76d53437fef, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &79162506 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011927309688, guid: 5993e79194f189e4ba46c76d53437fef,
+    type: 2}
+  m_PrefabInternal: {fileID: 79162505}
 --- !u!1 &97332755
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,6 +1592,17 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 52256815b369a6347ab99fb94f99df29, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &118894872 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011614180854, guid: 52256815b369a6347ab99fb94f99df29,
+    type: 2}
+  m_PrefabInternal: {fileID: 118894871}
+--- !u!114 &118894873 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010252869138, guid: 52256815b369a6347ab99fb94f99df29,
+    type: 2}
+  m_PrefabInternal: {fileID: 118894871}
+  m_Script: {fileID: 11500000, guid: a839c6c1b3df89e4a9484980c80b6289, type: 3}
 --- !u!1 &121325658
 GameObject:
   m_ObjectHideFlags: 0
@@ -5813,7 +5829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   suspects:
-  - character: {fileID: 0}
+  - character: {fileID: 975489274}
     wrongArrest: {fileID: 8300000, guid: 56de0c776234e374da1a609f83bd248d, type: 3}
     rightArrest: {fileID: 8300000, guid: 940687a93133654439ddcbb7ed34dd02, type: 3}
     playerWarning: {fileID: 8300000, guid: 9520eeee888e0e94dbab3d812d500dfa, type: 3}
@@ -5843,7 +5859,7 @@ MonoBehaviour:
     thankyou: {fileID: 8300000, guid: 9fa43f645417d524996706b6a682c4de, type: 3}
     thanker: {fileID: 670519588}
     spawnPoint: {fileID: 1918952771}
-  - character: {fileID: 0}
+  - character: {fileID: 118894873}
     wrongArrest: {fileID: 8300000, guid: f78ecf1fb93f2414da5b9833e2308fc6, type: 3}
     rightArrest: {fileID: 8300000, guid: a58099bbf2c7c4540b6723053d5a34f9, type: 3}
     playerWarning: {fileID: 8300000, guid: c4ff4d19cb30a884c9b65b31accd864d, type: 3}
@@ -5851,7 +5867,7 @@ MonoBehaviour:
     rightWarn: {fileID: 8300000, guid: 4c940d9adb2434444b13dec11f9e50bf, type: 3}
     explanation: {fileID: 8300000, guid: 9f826d261d6f98847900521aacaa599f, type: 3}
     thankyou: {fileID: 8300000, guid: a13cd40d1f08b0a4ea4a7bcb117731da, type: 3}
-    thanker: {fileID: 0}
+    thanker: {fileID: 975489275}
     spawnPoint: {fileID: 540125827}
   - character: {fileID: 32249800}
     wrongArrest: {fileID: 8300000, guid: 4ffeb0f45dd060d42bc24a36bf4a502f, type: 3}
@@ -5861,9 +5877,14 @@ MonoBehaviour:
     rightWarn: {fileID: 8300000, guid: 0ef8cbca99990184dad9fff78532ee3b, type: 3}
     explanation: {fileID: 8300000, guid: e61cfba70eff95340b223de008853518, type: 3}
     thankyou: {fileID: 8300000, guid: 61393b512f0732744b60b28b5f775af4, type: 3}
-    thanker: {fileID: 0}
+    thanker: {fileID: 118894872}
     spawnPoint: {fileID: 1247324714}
-  soundFX: []
+  soundFX:
+  - {fileID: 8300000, guid: d0f930b3846321047beb6545027ff4bb, type: 3}
+  - {fileID: 8300000, guid: f0c1ea795bd422449a26c64d999c351f, type: 3}
+  - {fileID: 8300000, guid: 36b7e1beb35677a449df3b52e2616414, type: 3}
+  - {fileID: 8300000, guid: df7bd91113605bf498a98af2c27c7f26, type: 3}
+  - {fileID: 8300000, guid: 86adf0770c057814ca598d661d548ac1, type: 3}
   mysterySpeech: {fileID: 8300000, guid: f25677dd863ea9e40b3c1e053a66bdd3, type: 3}
   revelationSpeech: {fileID: 8300000, guid: 14df80b3c12335d4ca81094a50b3278d, type: 3}
   complainantSpeech: {fileID: 8300000, guid: 900752abefd7e944496d170d253ea102, type: 3}
@@ -5881,7 +5902,8 @@ MonoBehaviour:
   clueSpawned: {fileID: 0}
   enkSpawnPoint: {fileID: 752929057}
   objDisable: []
-  soundObjDisable: []
+  soundObjDisable:
+  - {fileID: 79162506}
   complete: 0
 --- !u!1 &546574477
 GameObject:
@@ -10679,35 +10701,35 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010745109210, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.33523077
+      value: 0.33523074
       objectReference: {fileID: 0}
     - target: {fileID: 4000010745109210, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.2531745
+      value: -0.25317448
       objectReference: {fileID: 0}
     - target: {fileID: 4000010745109210, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.5469074
+      value: 0.54690737
       objectReference: {fileID: 0}
     - target: {fileID: 4000010745109210, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.7241653
+      value: 0.72416526
       objectReference: {fileID: 0}
     - target: {fileID: 4000013499225422, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.33523077
+      value: 0.33523074
       objectReference: {fileID: 0}
     - target: {fileID: 4000013499225422, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.2531745
+      value: -0.25317448
       objectReference: {fileID: 0}
     - target: {fileID: 4000013499225422, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.5469074
+      value: 0.54690737
       objectReference: {fileID: 0}
     - target: {fileID: 4000013499225422, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.7241653
+      value: 0.72416526
       objectReference: {fileID: 0}
     - target: {fileID: 1000012641600308, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
       propertyPath: m_IsActive
@@ -10716,6 +10738,17 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18e74bbc636dc2b49be659f888e2e5a8, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &975489274 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010245928270, guid: 18e74bbc636dc2b49be659f888e2e5a8,
+    type: 2}
+  m_PrefabInternal: {fileID: 975489273}
+  m_Script: {fileID: 11500000, guid: a839c6c1b3df89e4a9484980c80b6289, type: 3}
+--- !u!1 &975489275 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012641600308, guid: 18e74bbc636dc2b49be659f888e2e5a8,
+    type: 2}
+  m_PrefabInternal: {fileID: 975489273}
 --- !u!1001 &976544018
 Prefab:
   m_ObjectHideFlags: 0
@@ -12995,7 +13028,7 @@ MonoBehaviour:
     rightWarn: {fileID: 8300000, guid: e67aeee50feb9a64c8bfd1212af91219, type: 3}
     explanation: {fileID: 8300000, guid: a34ec1d27619a3a4989f3f97f102ea50, type: 3}
     thankyou: {fileID: 8300000, guid: d1bad5aa9a785404d8fc4bf0259931b7, type: 3}
-    thanker: {fileID: 0}
+    thanker: {fileID: 975489275}
     spawnPoint: {fileID: 1666652251}
   - character: {fileID: 2119617163}
     wrongArrest: {fileID: 8300000, guid: 3bdc6e3e50915d34589d1a43b9fdcf84, type: 3}
@@ -13027,7 +13060,7 @@ MonoBehaviour:
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
     spawnPoint: {fileID: 423246335}
-  - character: {fileID: 0}
+  - character: {fileID: 975489274}
     wrongArrest: {fileID: 8300000, guid: 2afdefe9e28f1e648bd604449369bbf7, type: 3}
     rightArrest: {fileID: 0}
     playerWarning: {fileID: 8300000, guid: 58bd32fc690aac245bc7abb5a94ae94b, type: 3}
@@ -19338,7 +19371,7 @@ MonoBehaviour:
     rightWarn: {fileID: 8300000, guid: 036f021a8f057cb49acfb6d526945bd6, type: 3}
     explanation: {fileID: 8300000, guid: 4ba9b1389d575d34e9c5efec284f416b, type: 3}
     thankyou: {fileID: 8300000, guid: 65e068c1d88a85c4c9bdcd80d38a56ef, type: 3}
-    thanker: {fileID: 0}
+    thanker: {fileID: 975489275}
     spawnPoint: {fileID: 555812697}
   - character: {fileID: 670802454}
     wrongArrest: {fileID: 8300000, guid: 55958bd07a80ad846ab0298e73bef773, type: 3}
@@ -19360,7 +19393,7 @@ MonoBehaviour:
     thankyou: {fileID: 8300000, guid: ce4c89ca04c3ee443a41c1df5aa98e19, type: 3}
     thanker: {fileID: 1972238673}
     spawnPoint: {fileID: 715466600}
-  - character: {fileID: 0}
+  - character: {fileID: 975489274}
     wrongArrest: {fileID: 8300000, guid: 7febb7b9c6da0b84a80e49e8aa068e06, type: 3}
     rightArrest: {fileID: 8300000, guid: 73b8cabc2c88ad947bb3681dcd5463fb, type: 3}
     playerWarning: {fileID: 8300000, guid: 8f437e66c333b2745ab415ab385d52e2, type: 3}
