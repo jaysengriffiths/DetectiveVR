@@ -96,7 +96,7 @@ GameObject:
   - 4: {fileID: 4000012351713508}
   - 95: {fileID: 95000012229481468}
   m_Layer: 0
-  m_Name: Handcuffs
+  m_Name: handcuffs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,6 +167,21 @@ GameObject:
   m_Layer: 0
   m_Name: cobbler
   m_TagString: SUSPECT
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1000011643551688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012751849016}
+  m_Layer: 0
+  m_Name: cobblerPenLocation
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,6 +424,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 4000012751849016}
   - {fileID: 4000012351713508}
   - {fileID: 4000013058305846}
   m_Father: {fileID: 0}
@@ -660,7 +676,7 @@ Transform:
   - {fileID: 4000011239778396}
   - {fileID: 4000011126487812}
   m_Father: {fileID: 4000010071619766}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!4 &4000012546198408
 Transform:
   m_ObjectHideFlags: 1
@@ -687,6 +703,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000013229400942}
   m_RootOrder: 0
+--- !u!4 &4000012751849016
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011643551688}
+  m_LocalRotation: {x: 0, y: 0, z: 0.5, w: 0.8660254}
+  m_LocalPosition: {x: 0, y: -0.288, z: 0.208}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 60}
+  m_Children: []
+  m_Father: {fileID: 4000010071619766}
+  m_RootOrder: 0
 --- !u!4 &4000013058305846
 Transform:
   m_ObjectHideFlags: 1
@@ -706,7 +735,7 @@ Transform:
   - {fileID: 4000011382924976}
   - {fileID: 4000012021084904}
   m_Father: {fileID: 4000010071619766}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!4 &4000013221524832
 Transform:
   m_ObjectHideFlags: 1
@@ -1005,7 +1034,7 @@ MonoBehaviour:
   threatenedClip: {fileID: 8300000, guid: 4c5a3a9a52cc5524281b16a504b77c09, type: 3}
   tornClothLocation: {fileID: 0}
   locketLocation: {fileID: 0}
-  graffitiLocation: {fileID: 0}
+  graffitiLocation: {fileID: 4000012751849016}
   catHairLocation: {fileID: 0}
   introPlayed: 0
   IsInteracted: 0
