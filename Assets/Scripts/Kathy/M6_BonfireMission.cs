@@ -9,7 +9,6 @@ public class M6_BonfireMission : MonoBehaviour
     //public Transform witchFreePos;
     public GameObject planeSupportingWitch;
     private bool logsSettled = false;
-    private int logSettleTime = 1;
 
     public Transform log;
     public Transform log1;
