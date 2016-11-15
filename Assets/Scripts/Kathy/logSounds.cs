@@ -3,8 +3,8 @@ using System.Collections;
 
 public class logSounds : MonoBehaviour
 {
-    //attach to each log so when log is hit, audio source instantiates at collision point, plays click sound depending on how hard hit(with random pitch), then self-destructs
-    //note that using PlayClipAtPoint precludes the ability to set volume of clip play or rotation of audio source
+    //attach to each log
+    public float speed;
 
     public AudioSource log_source;
 
@@ -21,11 +21,14 @@ public class logSounds : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         {
-            Debug.Log("log contact detected");
-            if (initialGroundContact == true)
+            //Debug.Log("log contact detected");
+
+            if (initialGroundContact == true) //don't play sound when mission starts and log first touches ground
             {
                 initialGroundContact = false;
             }
+
+            //when log is hit, audio source instantiates at collision point, plays click sound depending on how hard hit(with random pitch), then self-destructs
             else
             {
                 ContactPoint contact = collision.contacts[0];
