@@ -423,7 +423,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e7b34041c3528344181eceea7fb1b00b, type: 2}
+  - {fileID: 2100000, guid: 953b1906d0726264eac1f35eaa4701ad, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -695,7 +695,7 @@ AudioSource:
   Priority: 256
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 50
+  MaxDistance: 150
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -835,16 +835,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 5f87fe8afc2661a48969099c360d6910, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 10
   activateDistance: 50
   isClue: 0
   isActivated: 0
   enkNameObject: 1
+  missionName: 
 --- !u!114 &114000012894281672
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -856,13 +856,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 10
   activateDistance: 10
   isClue: 0
   isActivated: 0
   enkNameObject: 0
+  missionName: 
