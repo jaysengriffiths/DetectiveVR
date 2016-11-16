@@ -74,6 +74,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!1 &1000010934616376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000012275697466}
+  - 33: {fileID: 33000012433892844}
+  - 23: {fileID: 23000014189539582}
+  m_Layer: 0
+  m_Name: farmWalls
+  m_TagString: BUILDING
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
 --- !u!1 &1000011310420794
 GameObject:
   m_ObjectHideFlags: 1
@@ -251,23 +268,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!1 &1000012527037496
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 4000011297870672}
-  - 33: {fileID: 33000012624882036}
-  - 23: {fileID: 23000012511576140}
-  m_Layer: 0
-  m_Name: farmWall
-  m_TagString: BUILDING
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
 --- !u!1 &1000012610826636
 GameObject:
   m_ObjectHideFlags: 1
@@ -389,7 +389,7 @@ GameObject:
   - 114: {fileID: 114000011170917046}
   m_Layer: 0
   m_Name: brokenWallPiece
-  m_TagString: Untagged
+  m_TagString: WALL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -509,7 +509,7 @@ GameObject:
   - 114: {fileID: 114000013526404174}
   m_Layer: 0
   m_Name: farmWallInner1
-  m_TagString: BUILDING
+  m_TagString: WALL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -530,7 +530,7 @@ GameObject:
   - 114: {fileID: 114000010725399400}
   m_Layer: 0
   m_Name: gateWall2
-  m_TagString: BUILDING
+  m_TagString: WALL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -572,7 +572,7 @@ GameObject:
   - 114: {fileID: 114000010156127188}
   m_Layer: 0
   m_Name: gateWall1
-  m_TagString: BUILDING
+  m_TagString: WALL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -614,7 +614,7 @@ GameObject:
   - 114: {fileID: 114000012745818756}
   m_Layer: 0
   m_Name: farmWallInner2
-  m_TagString: BUILDING
+  m_TagString: WALL
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -738,21 +738,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000014245698904}
   m_RootOrder: 16
---- !u!4 &4000011297870672
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012527037496}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.831696, y: 0.47976857, z: 58.481915}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 4000014245698904}
-  - {fileID: 4000014107599968}
-  m_Father: {fileID: 4000013725496314}
-  m_RootOrder: 3
 --- !u!4 &4000011382103222
 Transform:
   m_ObjectHideFlags: 1
@@ -857,6 +842,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4000014245698904}
   m_RootOrder: 0
+--- !u!4 &4000012275697466
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010934616376}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 31.831696, y: 0.47976857, z: 58.481915}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 4000014245698904}
+  - {fileID: 4000014107599968}
+  m_Father: {fileID: 4000013725496314}
+  m_RootOrder: 3
 --- !u!4 &4000012283440120
 Transform:
   m_ObjectHideFlags: 1
@@ -1014,7 +1014,7 @@ Transform:
   - {fileID: 4000012783156822}
   - {fileID: 4000012894503802}
   - {fileID: 4000011424611430}
-  - {fileID: 4000011297870672}
+  - {fileID: 4000012275697466}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &4000013850106452
@@ -1048,7 +1048,7 @@ Transform:
   - {fileID: 4000012991564978}
   - {fileID: 4000012862137256}
   - {fileID: 4000013688255872}
-  m_Father: {fileID: 4000011297870672}
+  m_Father: {fileID: 4000012275697466}
   m_RootOrder: 1
 --- !u!4 &4000014143411236
 Transform:
@@ -1105,7 +1105,7 @@ Transform:
   - {fileID: 4000011405764738}
   - {fileID: 4000011161153118}
   - {fileID: 4000010007706358}
-  m_Father: {fileID: 4000011297870672}
+  m_Father: {fileID: 4000012275697466}
   m_RootOrder: 0
 --- !u!23 &23000010305291342
 MeshRenderer:
@@ -1600,35 +1600,6 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!23 &23000012511576140
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012527037496}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 6b7d04a3b9038d745a5f753e8cd807a2, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
 --- !u!23 &23000012671805698
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -1948,6 +1919,35 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!23 &23000014189539582
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010934616376}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 6b7d04a3b9038d745a5f753e8cd807a2, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!33 &33000010098614964
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -2081,6 +2081,13 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012849448900}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &33000012433892844
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010934616376}
+  m_Mesh: {fileID: 4300008, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
 --- !u!33 &33000012489984112
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -2095,13 +2102,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012610826636}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &33000012624882036
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012527037496}
-  m_Mesh: {fileID: 4300008, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
 --- !u!33 &33000012745268876
 MeshFilter:
   m_ObjectHideFlags: 1
@@ -2161,7 +2161,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000010298567872
 BoxCollider:
@@ -2185,7 +2185,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.06, y: 1, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000010457709926
 BoxCollider:
@@ -2209,7 +2209,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 1.1, z: 8.53}
+  m_Size: {x: 1.8, y: 1.4, z: 8.8}
   m_Center: {x: -0.00000090897083, y: 0, z: 0}
 --- !u!65 &65000010562739768
 BoxCollider:
@@ -2221,7 +2221,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 10.25}
+  m_Size: {x: 1.8, y: 1.2, z: 11.1}
   m_Center: {x: -0.0000007301569, y: -0.000000014901161, z: 0.0000019073486}
 --- !u!65 &65000010654585368
 BoxCollider:
@@ -2245,7 +2245,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000010811496696
 BoxCollider:
@@ -2257,7 +2257,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 1.1, z: 6.98}
+  m_Size: {x: 1.8, y: 1.2, z: 7.3}
   m_Center: {x: -0.00000016391277, y: 0, z: -0.00000071525574}
 --- !u!65 &65000010905000012
 BoxCollider:
@@ -2281,7 +2281,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 6.971695}
+  m_Size: {x: 1.5, y: 1.1, z: 7}
   m_Center: {x: -0.00000016391277, y: 0, z: -0.00000071525574}
 --- !u!65 &65000011060686316
 BoxCollider:
@@ -2317,7 +2317,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000011179383348
 BoxCollider:
@@ -2329,7 +2329,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 10.241051}
+  m_Size: {x: 1.5, y: 1.1, z: 10.8}
   m_Center: {x: -0.00000016391277, y: 0, z: -0.00000047683716}
 --- !u!65 &65000011366009054
 BoxCollider:
@@ -2341,7 +2341,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000011483912448
 BoxCollider:
@@ -2353,7 +2353,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 8.13}
+  m_Size: {x: 1.6, y: 1.3, z: 8.4}
   m_Center: {x: 0.00000017881393, y: 0, z: 0}
 --- !u!65 &65000011490212116
 BoxCollider:
@@ -2365,7 +2365,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 8.127777}
+  m_Size: {x: 1.3, y: 1, z: 8.127777}
   m_Center: {x: 0.00000017881393, y: 0, z: 0}
 --- !u!65 &65000011539784074
 BoxCollider:
@@ -2401,7 +2401,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.07, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000011668169362
 BoxCollider:
@@ -2437,7 +2437,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.5630687, z: 7.1522675}
+  m_Size: {x: 1.5, y: 0.8, z: 7.3}
   m_Center: {x: -0.00000016391277, y: 0, z: 0.00000166893}
 --- !u!65 &65000011928464546
 BoxCollider:
@@ -2461,7 +2461,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1, y: 0.57, z: 7.16}
+  m_Size: {x: 1.8, y: 0.9, z: 7.6}
   m_Center: {x: -0.00000016391277, y: 0, z: 0.00000166893}
 --- !u!65 &65000012014431728
 BoxCollider:
@@ -2473,7 +2473,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000012032558380
 BoxCollider:
@@ -2485,7 +2485,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000012161802772
 BoxCollider:
@@ -2497,7 +2497,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000012169964242
 BoxCollider:
@@ -2509,7 +2509,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.01, y: 2.01, z: 4.01}
+  m_Size: {x: 3.2, y: 2.2, z: 4.2}
   m_Center: {x: 0, y: 0.8734794, z: 0}
 --- !u!65 &65000012180415028
 BoxCollider:
@@ -2521,7 +2521,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000012294026008
 BoxCollider:
@@ -2557,7 +2557,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000012764889746
 BoxCollider:
@@ -2605,7 +2605,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.06, y: 1, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000012928529196
 BoxCollider:
@@ -2617,7 +2617,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000012939083754
 BoxCollider:
@@ -2641,7 +2641,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000013069790416
 BoxCollider:
@@ -2653,7 +2653,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000013079654408
 BoxCollider:
@@ -2677,7 +2677,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 12.671043}
+  m_Size: {x: 1.5, y: 1.1, z: 13}
   m_Center: {x: -0.0000004172325, y: -0.000000014901161, z: 0.00000047683716}
 --- !u!65 &65000013241533146
 BoxCollider:
@@ -2689,7 +2689,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000013271149142
 BoxCollider:
@@ -2701,7 +2701,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 8.527523}
+  m_Size: {x: 1.5, y: 1.3, z: 8.527523}
   m_Center: {x: -0.00000090897083, y: 0, z: 0}
 --- !u!65 &65000013474145054
 BoxCollider:
@@ -2725,7 +2725,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 12.68}
+  m_Size: {x: 1.8, y: 1.2, z: 13.3}
   m_Center: {x: -0.0000004172325, y: -0.000000014901161, z: 0.00000047683716}
 --- !u!65 &65000013537754276
 BoxCollider:
@@ -2737,7 +2737,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000013602777130
 BoxCollider:
@@ -2749,7 +2749,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000013922133808
 BoxCollider:
@@ -2761,7 +2761,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.07, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000013939116880
 BoxCollider:
@@ -2773,7 +2773,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 10.241043}
+  m_Size: {x: 1.5, y: 1.1, z: 10.8}
   m_Center: {x: -0.0000007301569, y: -0.000000014901161, z: 0.0000019073486}
 --- !u!65 &65000013945669486
 BoxCollider:
@@ -2785,7 +2785,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 1.01}
+  m_Size: {x: 1.01, y: 1.3, z: 1.3}
   m_Center: {x: -0.1, y: 0, z: 0}
 --- !u!65 &65000013953632140
 BoxCollider:
@@ -2797,7 +2797,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.01, y: 2.01, z: 4.01}
+  m_Size: {x: 3.2, y: 2.2, z: 4.2}
   m_Center: {x: 0, y: 0.8734794, z: 0}
 --- !u!65 &65000014209528224
 BoxCollider:
@@ -2809,7 +2809,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.01, y: 1.01, z: 10.25}
+  m_Size: {x: 1.8, y: 1.2, z: 11.1}
   m_Center: {x: -0.00000016391277, y: 0, z: -0.00000047683716}
 --- !u!82 &82000010103444172
 AudioSource:
@@ -4894,11 +4894,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -4915,11 +4915,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -4936,11 +4936,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -4957,11 +4957,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 0
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 97e0c621debd4e240b215a211cf29e0f, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -4978,11 +4978,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -4999,11 +4999,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5020,11 +5020,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5041,11 +5041,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5062,11 +5062,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5083,11 +5083,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 5200cc2752e68d744967ab5923222b62, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5104,11 +5104,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5125,11 +5125,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5146,11 +5146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5167,11 +5167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5188,11 +5188,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5209,11 +5209,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5230,11 +5230,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5251,11 +5251,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5272,11 +5272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5293,11 +5293,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5314,11 +5314,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5335,11 +5335,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5356,11 +5356,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5377,11 +5377,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5398,11 +5398,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5419,11 +5419,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5440,11 +5440,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 59490d44fb11c1e45a59bb6fa58dc53c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5461,11 +5461,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 04d4cdae7a1f45546a00ddc38b7821c9, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0

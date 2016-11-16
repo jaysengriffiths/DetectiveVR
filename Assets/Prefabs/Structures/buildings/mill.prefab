@@ -38,10 +38,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010282088288}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.054544948, z: -0, w: 0.9985113}
   m_LocalPosition: {x: 29.061512, y: 2.2026591, z: 45.03451}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 6.0790005, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -91,7 +91,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.51, y: 4.42, z: 4.51}
+  m_Size: {x: 4.8, y: 4.7, z: 4.8}
   m_Center: {x: 0.00000071525574, y: 0, z: 0.00000071525574}
 --- !u!65 &65000012430460096
 BoxCollider:
@@ -103,7 +103,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.5, y: 4.41039, z: 4.5}
+  m_Size: {x: 4.5, y: 4.4, z: 4.5}
   m_Center: {x: 0.00000071525574, y: 0, z: 0.00000071525574}
 --- !u!82 &82000011896357740
 AudioSource:
@@ -190,11 +190,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 24ad2cd79b8f0d64a8467f9cb3de6e50, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 30
   isClue: 0
   isActivated: 1

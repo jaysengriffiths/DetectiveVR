@@ -440,7 +440,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.52, y: 2.7, z: 6.75}
+  m_Size: {x: 4.8, y: 2.9, z: 7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000013925306576
 BoxCollider:
@@ -539,11 +539,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 1bda029334f06b2418efb1831e34ceba, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 4
   isClue: 0
   isActivated: 0

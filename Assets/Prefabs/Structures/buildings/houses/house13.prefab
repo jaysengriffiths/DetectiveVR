@@ -91,7 +91,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.51, y: 2.01, z: 4.51}
+  m_Size: {x: 4, y: 2.5, z: 5}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!65 &65000013670710610
 BoxCollider:
@@ -103,7 +103,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.5, y: 1.9999999, z: 4.51}
+  m_Size: {x: 3.5, y: 1.9999999, z: 4.5}
   m_Center: {x: 0, y: 1, z: 0}
 --- !u!82 &82000011309692874
 AudioSource:
@@ -116,7 +116,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ef3e719878b055b4ba80e37dc23bccf3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -124,7 +124,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 4
+  MaxDistance: 5
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -190,11 +190,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 75b187d5fa3c46a46b323753d5dc556f, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 4
   isClue: 0
   isActivated: 0

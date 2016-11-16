@@ -190,10 +190,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010518563790}
-  m_LocalRotation: {x: -0, y: -0.6035735, z: -0, w: 0.79730743}
-  m_LocalPosition: {x: 59.89, y: 1.4, z: 5.25}
+  m_LocalRotation: {x: -0, y: -0.1815394, z: -0, w: 0.9833837}
+  m_LocalPosition: {x: 48.4, y: 1.4, z: 26.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: -74.563, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -20.650002, z: 0}
   m_Children:
   - {fileID: 4000010558734394}
   - {fileID: 4000011701722302}
@@ -404,7 +404,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.52, y: 2.7, z: 6.75}
+  m_Size: {x: 4.8, y: 2.9, z: 7}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000012485395094
 BoxCollider:
@@ -539,11 +539,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: c7e0f134064232543a089702b8d72701, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 4
   isClue: 0
   isActivated: 0

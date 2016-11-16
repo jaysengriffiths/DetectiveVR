@@ -103,7 +103,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.01, y: 2.01, z: 4.01}
+  m_Size: {x: 3.2, y: 2.2, z: 4.2}
   m_Center: {x: 0, y: 0.8734794, z: 0}
 --- !u!82 &82000014266292654
 AudioSource:
@@ -190,11 +190,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 04d4cdae7a1f45546a00ddc38b7821c9, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
