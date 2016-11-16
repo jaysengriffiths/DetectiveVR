@@ -1,0 +1,213 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1000011325897466}
+  m_IsPrefabParent: 1
+--- !u!1 &1000011325897466
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010956823604}
+  - 114: {fileID: 114000011055905992}
+  m_Layer: 0
+  m_Name: M6BonfireMissionScript
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4000010956823604
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011325897466}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!114 &114000011055905992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011325897466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ae80d5dbfc4f954abfff070838443e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nightSkybox: {fileID: 2100000, guid: f7e871af11215bd4687597c1065c5c88, type: 2}
+  witchAnimator: {fileID: 0}
+  witch: {fileID: 0}
+  planeSupportingWitch: {fileID: 0}
+  log: {fileID: 0}
+  log1: {fileID: 0}
+  log2: {fileID: 0}
+  log3: {fileID: 0}
+  log4: {fileID: 0}
+  log5: {fileID: 0}
+  fireParticleEmitter: {fileID: 0}
+  ladyOfManorAnimator: {fileID: 0}
+  torch: {fileID: 0}
+  torchBoxCollider1: {fileID: 0}
+  torchBoxCollider2: {fileID: 0}
+  torchInHandPos: {x: 0.12, y: 1, z: 0.3}
+  torchLightFirePos: {x: 5.26, y: 0.61, z: 7.3}
+  speed: 1
+  log_source: {fileID: 0}
+  log1_source: {fileID: 0}
+  log2_source: {fileID: 0}
+  log3_source: {fileID: 0}
+  log4_source: {fileID: 0}
+  log5_source: {fileID: 0}
+  beekeeper_source: {fileID: 0}
+  bellringer_source: {fileID: 0}
+  blacksmith_source: {fileID: 0}
+  blacksmithwife_source: {fileID: 0}
+  carpenter_source: {fileID: 0}
+  cobbler_source: {fileID: 0}
+  dairytroll_source: {fileID: 0}
+  dragonkeeper_source: {fileID: 0}
+  enk_source: {fileID: 0}
+  farmer_source: {fileID: 0}
+  farmwife_source: {fileID: 0}
+  giantboy_source: {fileID: 0}
+  giantgirl_source: {fileID: 0}
+  goatherd_source: {fileID: 0}
+  goblinboy_source: {fileID: 0}
+  goblinchief_source: {fileID: 0}
+  goblingirl_source: {fileID: 0}
+  henkeeper_source: {fileID: 0}
+  ladyOfManor_source: {fileID: 0}
+  oldmiller_source: {fileID: 0}
+  oldwoman_source: {fileID: 0}
+  potter_source: {fileID: 0}
+  trinketseller_source: {fileID: 0}
+  trollbaby_source: {fileID: 0}
+  witch_source: {fileID: 0}
+  PC_Night_1: {fileID: 8300000, guid: e49ebf10030b43b499608fa878107703, type: 3}
+  M608_vBS_Burn_2: {fileID: 8300000, guid: cf878488f595ab54ab592b9046c3db0f, type: 3}
+  M609_vBW_Burn_2: {fileID: 8300000, guid: 694f6dcbf1cca234781af9f4d0057979, type: 3}
+  M610_vOM_Burn_2: {fileID: 8300000, guid: 3259d8fc506305b46b8f46d8c35dc467, type: 3}
+  M611_vP_Burn_3: {fileID: 8300000, guid: 77c6622fd81d86d40863cbc50765096b, type: 3}
+  M612_vC_Burn_2: {fileID: 8300000, guid: 8afd6f0bf4a1e6149a475b775aa3f67e, type: 3}
+  M613_vDK_Burn_3: {fileID: 8300000, guid: 051e37edcf7d55044b29abd750e065d6, type: 3}
+  M614_vHK_Burn_2: {fileID: 8300000, guid: cc6bb38a0e010754ca9e82f070fc8ba4, type: 3}
+  M615_vBR_Burn_2: {fileID: 8300000, guid: a7cd36283a6e75b44b2d12a63c6b1132, type: 3}
+  M616_vB_Burn_2: {fileID: 8300000, guid: ccce6584fa882d04f88dc8bb3acd76fe, type: 3}
+  M617_vG_Burn_2: {fileID: 8300000, guid: 61f12e3a88dd2be4f9a4d2fd4e728ce5, type: 3}
+  M619_gCOB_Burn_2: {fileID: 8300000, guid: 6e36d5850bc2da44f8fc89d9fc6ad722, type: 3}
+  M620_gTS_Burn_1: {fileID: 8300000, guid: f8082ef49153bec4b9666271ea887aba, type: 3}
+  M621_gB_Burn_2: {fileID: 8300000, guid: 836498393fa6a0941976c27961bca4f0, type: 3}
+  M622_gG_Burn_2: {fileID: 8300000, guid: 11168a67a90f7b14e911d2e70cc14977, type: 3}
+  M623_tF_Burn_2: {fileID: 8300000, guid: c911dc091c0b7bc43b8c7b4c76516beb, type: 3}
+  M624_tGH_Burn_2: {fileID: 8300000, guid: 8e417bc8c94edb44caa93969ff739ab0, type: 3}
+  M625_tBEE_Burn_2: {fileID: 8300000, guid: 5ad96653dd6a54f4bbbf0459a97a8df1, type: 3}
+  M626_tDT_Burn_2: {fileID: 8300000, guid: bf8cabca07c8bbf4fa52fce98b56c0db, type: 3}
+  M627_tBAB_Burn_2: {fileID: 8300000, guid: 5c66efee94abb79478e5f8da044b4ad8, type: 3}
+  M602_Lady_BurnDontSave_7: {fileID: 8300000, guid: f114b18c3ec56e34d92b108f531814e2,
+    type: 3}
+  M629_Lady_TorchToWood_6: {fileID: 8300000, guid: 4906a163b9f07134e9136ddc45b7cb52,
+    type: 3}
+  M630_Lady_DontGiveBack_3: {fileID: 8300000, guid: 8f82dad27494f7142ab1db323120f980,
+    type: 3}
+  M631_Lady_DontPickUpLogs_5: {fileID: 8300000, guid: f2033017607d2b042a6f595bef49dbfc,
+    type: 3}
+  M632_Lady_BonfireTogether_4: {fileID: 8300000, guid: 177bdfe86a40e5740895f7331ee536bd,
+    type: 3}
+  M633_PC_DecideSave_6: {fileID: 8300000, guid: c0c5ca2da194dbc41ab58b7f0166683a,
+    type: 3}
+  M634_Lady_SaveResponse_9: {fileID: 8300000, guid: eaf844dafdc159147aecd57690b8c48c,
+    type: 3}
+  M635_W_ResponseToSave_10: {fileID: 8300000, guid: 8bdb4df3fd5d8074c89ab3febf7cb272,
+    type: 3}
+  M636_PC_BehaveNow_2: {fileID: 8300000, guid: 57f59517c9f806c4dabab82392897a3b, type: 3}
+  M637_W_GoToMountains_12: {fileID: 8300000, guid: 2ec97bfb5d9451a4094d07ad8e610a63,
+    type: 3}
+  M638_Lady_Rubbish_14: {fileID: 8300000, guid: 3e54c72ee99f18645bfd1371e5b1d1d4,
+    type: 3}
+  M639_PC_AnyProof_1: {fileID: 8300000, guid: d3d9eb2d926b556459caafd2d8d0d4ca, type: 3}
+  M640_W_WoodFrom_2: {fileID: 8300000, guid: 69f458dadf0cbba4aa59bf5ad0856ef2, type: 3}
+  M641_tFW_FromMountain_2: {fileID: 8300000, guid: 545903368ef4d604b95bf028540409e5,
+    type: 3}
+  M644_gC_BegPCSave_11: {fileID: 8300000, guid: 7ab439c4d23bd034b9550b5010856a31,
+    type: 3}
+  M645_vBS_BegPCSave_4: {fileID: 8300000, guid: 099d95f307ade7b49b5d233124f3361a,
+    type: 3}
+  M646_tFW_BegPCSave_3: {fileID: 8300000, guid: 26c45019a8d2f0349a19e0eb4599bd70,
+    type: 3}
+  M647_Lady_LookAtMe_3: {fileID: 8300000, guid: c90ade7954627c543b94f47f532a493f,
+    type: 3}
+  M648_W_LookAtMe_2: {fileID: 8300000, guid: 5881869dd730e6145a5db88525f9b2f0, type: 3}
+  M649_PC_DecideLeaveAfterSave_7: {fileID: 8300000, guid: 064738462d2b88949a93f852f3f15aed,
+    type: 3}
+  M650_W_ResponseToLeaveAfterSave_2: {fileID: 8300000, guid: 4e9a4dbd2620dc34f8f64361fa47c704,
+    type: 3}
+  M651_Lady_ResponseToLeaveAfterSave_12: {fileID: 8300000, guid: fbbbd7384c769b84fb992a047bd66aeb,
+    type: 3}
+  M652_PC_DecideStayAfterSave_9: {fileID: 8300000, guid: 16af1aaa81d8563448474d3902a0996a,
+    type: 3}
+  M653_PC_DecideBurn_10: {fileID: 8300000, guid: d8341961c940a4b49a8fbf2aa66d1a69,
+    type: 3}
+  M654_W_ResponseToBurn_12: {fileID: 8300000, guid: 02df7eda0b5020f48846f27457432143,
+    type: 3}
+  M655_PC_ReturnToHQAfterBurn_2: {fileID: 8300000, guid: 5de6d50b6b773c54a8031e7e80ccdd80,
+    type: 3}
+  M656_Lady_ResponseToBurn_9: {fileID: 8300000, guid: a00b6c8eac6b7964a858ea48e3e3ded9,
+    type: 3}
+  M657_Lady_ResponseToBurn_14: {fileID: 8300000, guid: 54898a0999613d64ab0cb16649b6e7d9,
+    type: 3}
+  M658_Lady_LookAtTrophy_7: {fileID: 8300000, guid: b22e4b49f259b7945a3f7c8f480e9a68,
+    type: 3}
+  M659_Lady_DontLookAtMap_9: {fileID: 8300000, guid: 34eab95fe861446409d49a6915d95ec1,
+    type: 3}
+  M660_PC_DecideStayAfterBurn_7: {fileID: 8300000, guid: e9ba0a9279d36ca4c98a95a0fad63803,
+    type: 3}
+  M661_PC_DecideLeaveAfterBurn_7: {fileID: 8300000, guid: e0b970609ba59604d809da8ac660b269,
+    type: 3}
+  M662_Lady_ResponseToStayAfterBurn_14: {fileID: 8300000, guid: 7f5afe7e063f57a47a60e471ce010801,
+    type: 3}
+  M663_Lady_ResponseToLeaveAfterBurn_18: {fileID: 8300000, guid: 34e745544ac999046a41b490566bebf0,
+    type: 3}
+  M642_W_FrostGiantWood_8: {fileID: 8300000, guid: 53a03475c8b669e41b24a514e164f19e,
+    type: 3}
+  M643_W_OverarchingMystery_8: {fileID: 8300000, guid: 7a13a7358c9ed114c8678747964a4e60,
+    type: 3}
+  M664_vBS_ResponseToStayAfterSave_3: {fileID: 8300000, guid: 5eef0efa48622e348b0961f93618a0a5,
+    type: 3}
+  M665_vOW_Cheer_2: {fileID: 8300000, guid: 881328afbe5ef0f4ebdd7e281cfdc9b3, type: 3}
+  M666_vBW_Cheer_1: {fileID: 8300000, guid: aebbc0f3c4030e84ab5e1bab2c52f804, type: 3}
+  M667_vOM_Cheer_2: {fileID: 8300000, guid: 6ae68968f0c1cde4bb66641aaa1a5874, type: 3}
+  M668_vP_Cheer_2: {fileID: 8300000, guid: b8d9f43840210894f9d2adc99c573e88, type: 3}
+  M669_vC_Cheer_2: {fileID: 8300000, guid: 106d3b29d9c058240ac09c7ec662fe6e, type: 3}
+  M670_vDK_Cheer_2: {fileID: 8300000, guid: 5fb173429cd37c7499f2bd81247cab37, type: 3}
+  M671_vHK_Cheer_2: {fileID: 8300000, guid: 3a08d9a5b575cc249a633187a3b470e7, type: 3}
+  M672_vBR_Cheer_2: {fileID: 8300000, guid: 3a08d9a5b575cc249a633187a3b470e7, type: 3}
+  M673_vB_Cheer_2: {fileID: 8300000, guid: 3fa7545827ae26f41970663ce83fa700, type: 3}
+  M674_vG_Cheer_2: {fileID: 8300000, guid: 71a9fab2c3566144989e6d2d3b432f03, type: 3}
+  M675_gC_Cheer_2: {fileID: 8300000, guid: 32b1c28ad59210d47aab8b1843584c97, type: 3}
+  M676_gTS_Cheer_2: {fileID: 8300000, guid: 11ba858512a4d50448816d3b322e6cd4, type: 3}
+  M677_gB_Cheer_2: {fileID: 8300000, guid: 8968db4e61ce828478b7555bd6a38f60, type: 3}
+  M677_gCOB_Cheer_2: {fileID: 8300000, guid: d9b8ca3d262447642b84c275e69dc9d5, type: 3}
+  M678_gG_Cheer_3: {fileID: 8300000, guid: 324368e40cb20174b83693ce0c5beb9e, type: 3}
+  M679_tF_Cheer_2: {fileID: 8300000, guid: 76420413133df8c4981504c85782bbad, type: 3}
+  M680_tFW_Cheer_1: {fileID: 8300000, guid: 5ff5f4fa9e3fa9b48afe5b5b8f2d021d, type: 3}
+  M681_tGH_Cheer_2: {fileID: 8300000, guid: 6712dfb14a0471a41bc83048ca60952c, type: 3}
+  M682_tBEE_Cheer_2: {fileID: 8300000, guid: 5d1ac9cda8242ac488f5cc87b3e9260b, type: 3}
+  M683_tDT_Cheer_2: {fileID: 8300000, guid: e7e2178eed716604688d6828013e9ea2, type: 3}
+  M684_tBAB_Cheer_2: {fileID: 8300000, guid: 2faa01208da85c04d902e4c484abf98c, type: 3}
