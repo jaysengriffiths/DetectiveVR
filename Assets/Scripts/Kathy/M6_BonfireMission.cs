@@ -24,11 +24,8 @@ public class M6_BonfireMission : MonoBehaviour
 
     public Animator ladyOfManorAnimator;
     public GameObject torch;
-    public BoxCollider torchBoxCollider1;
-    public BoxCollider torchBoxCollider2;
-    public Vector3 torchInHandPos;  //need to do this without relying on arbitrary figures.  Need angle z = -30
-    public Vector3 torchLightFirePos;  //need to do this without relying on arbitrary figures.  Need angle z = -125
-    public float speed = 1.0f;
+    public GameObject torchLightFirePos;
+    //public float speed = 1.0f;
 
     public AudioSource log_source;
     public AudioSource log1_source;
@@ -241,8 +238,10 @@ public class M6_BonfireMission : MonoBehaviour
             if (hit.transform.gameObject.tag == "log")
             {
                 //stop torch working
-                torchBoxCollider1.enabled = false;
-                torchBoxCollider2.enabled = false;  //not sure how to distinguish 2 box colliders on same game object
+                foreach (BoxCollider boxCollider in torch.GetComponents<BoxCollider>())
+                {
+                    boxCollider.enabled = false;
+                }
 
                 StopCoroutine("Instructions");
                 StartCoroutine("WitchDescends");
@@ -368,7 +367,7 @@ public class M6_BonfireMission : MonoBehaviour
             ladyOfManor_source.PlayOneShot(M647_Lady_LookAtMe_3);
             yield return new WaitForSeconds(4);
 
-            //in future will look at warning book to stay or handcuffs to go but temporarily no choice but to stay
+            //in future will look at witch to stay or LadyOfManor to go but temporarily no choice but to stay
             enk_source.PlayOneShot(M652_PC_DecideStayAfterSave_9);
             yield return new WaitForSeconds(11);
             //cheering
@@ -426,7 +425,7 @@ public class M6_BonfireMission : MonoBehaviour
             //torch travels to fire and sets it alight
             yield return new WaitForSeconds(2);
             //torch.transform.position = Vector3.Lerp(torch.transform.position, torchLightFirePos, Time.deltaTime * speed); - can't use as not in Update
-            torch.transform.position = torchLightFirePos;
+            torch.transform.position = torchLightFirePos.transform.position;
             yield return new WaitForSeconds(2);
             ParticleSystem particleSystem = fireParticleEmitter.GetComponent<ParticleSystem>();
             var em = particleSystem.emission;

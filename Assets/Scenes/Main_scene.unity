@@ -5955,7 +5955,8 @@ MonoBehaviour:
   clueSpawned: {fileID: 0}
   enkSpawnPoint: {fileID: 752929057}
   objDisable: []
-  soundObjDisable: []
+  soundObjDisable:
+  - {fileID: 1561728679}
   complete: 0
   skybox: {fileID: 2100000, guid: 7b74f8b356f9ee14591fd71576f0892a, type: 2}
 --- !u!1001 &554891179
@@ -15858,7 +15859,7 @@ MonoBehaviour:
     playerWarning: {fileID: 8300000, guid: 1ed9a4f634e1b804899deed11d0bb13a, type: 3}
     wrongWarn: {fileID: 8300000, guid: 67c2b617d8b5b474eb1b3e9fc9e387e9, type: 3}
     rightWarn: {fileID: 8300000, guid: 05a42f3c95222bb47b787698e74b75ff, type: 3}
-    explanation: {fileID: 0}
+    explanation: {fileID: 8300000, guid: 444d1fd8f1b4862469fd0ba1ff813acb, type: 3}
     thankyou: {fileID: 8300000, guid: d25b2d0845520234fbaf4a54511e6ec7, type: 3}
     thanker: {fileID: 670519588}
     spawnPoint: {fileID: 1841128348}
@@ -16235,6 +16236,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013133943140, guid: 947a28bbb4267804a86016ece8ae87d7,
     type: 2}
   m_PrefabInternal: {fileID: 850585040}
+--- !u!1 &1561728679 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011927309688, guid: 5993e79194f189e4ba46c76d53437fef,
+    type: 2}
+  m_PrefabInternal: {fileID: 1974213042}
 --- !u!1001 &1570901735
 Prefab:
   m_ObjectHideFlags: 0
@@ -18737,6 +18743,11 @@ Prefab:
       propertyPath: witch_source
       value: 
       objectReference: {fileID: 451565939}
+    - target: {fileID: 114000011055905992, guid: 5a9b32b5c258b6e44bd58bc79dc3d623,
+        type: 2}
+      propertyPath: torchLightFirePos
+      value: 
+      objectReference: {fileID: 283365708}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a9b32b5c258b6e44bd58bc79dc3d623, type: 2}
   m_IsPrefabParent: 0
