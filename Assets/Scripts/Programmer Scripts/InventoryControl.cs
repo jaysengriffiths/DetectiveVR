@@ -6,6 +6,10 @@ public class InventoryControl : MonoBehaviour
     public GameObject WarningBook;
     public GameObject SkyHint;
     public GameObject HandCuffs;
+    public AudioClip handcuffIdle;
+    public AudioClip handcuffAwake;
+    public AudioClip bookIdle;
+    public AudioClip bookAwake;
     private AudioSource mic;
     private Player player;
     private MissionManager missionManager;
@@ -57,6 +61,17 @@ public class InventoryControl : MonoBehaviour
             if (player.cameraAngle > 65 && player.cameraAngle < 75)
             {
                 HandCuffs.SetActive(true);
+                AudioSource cuff = HandCuffs.GetComponent<AudioSource>();
+
+                if (!cuff.isPlaying)
+                {
+                    cuff.clip = handcuffIdle;
+                    cuff.PlayDelayed(0.5f);
+                    ThreatenDialog();
+                }
+
+          
+
             }
 
             else
@@ -66,8 +81,15 @@ public class InventoryControl : MonoBehaviour
 
             if (player.cameraAngle > 55 && player.cameraAngle < 65)
             {
-                ThreatenDialog();
                 WarningBook.SetActive(true);
+                AudioSource book = WarningBook.GetComponent<AudioSource>();
+                if (!book.isPlaying)
+                {
+                    book.clip = bookIdle;
+                    book.PlayDelayed(0.5f);
+                    ThreatenDialog();
+                }
+          
             }
             else
             {
@@ -76,12 +98,12 @@ public class InventoryControl : MonoBehaviour
         }
         if (player.selectedCharacter != null)
         {
-            if (cuffTimer.IsFull(player.cameraAngle > 65 && player.cameraAngle < 70))
+            if (cuffTimer.IsFull(player.cameraAngle > 65 && player.cameraAngle < 75))
             {
                 missionManager.Arrest(player.selectedCharacter);
             }
 
-            if (warningTimer.IsFull(player.cameraAngle > 60 && player.cameraAngle < 65))
+            if (warningTimer.IsFull(player.cameraAngle > 55 && player.cameraAngle < 65))
             {
                 missionManager.Warn(player.selectedCharacter);
             }

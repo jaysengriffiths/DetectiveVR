@@ -166,6 +166,7 @@ public class DialogManager : MonoBehaviour {
                 {
                     talker = player.selectedCharacter.GetComponent<Animator>();
                     talker.SetTrigger("isHandcuffed");
+                    player.selectedCharacter.transform.FindChild("handcuffs").gameObject.SetActive(true);
                     if (!relevationSpeechPlayed)
                     {
                         DialogManager.Dialog[] clips = new DialogManager.Dialog[2];  //Kathy

@@ -50,7 +50,7 @@ public class MovingClue : MonoBehaviour
         if ((transform.position - clueTransform.position).magnitude < 0.1f)
         {
             DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
-            clips[0] = new DialogManager.Dialog(soundLook.clothNoise, player.selectedCharacter.tornClothLocation);
+            clips[0] = new DialogManager.Dialog(soundLook.activated, player.selectedCharacter.tornClothLocation);
             clips[1] = new DialogManager.Dialog(missionManager.currentMission.soundFX[missionManager.currentMission.GetIndexOfCharacter(player.selectedCharacter)], player.selectedCharacter.tornClothLocation);
             dialogManager.setDialog(clips);
 

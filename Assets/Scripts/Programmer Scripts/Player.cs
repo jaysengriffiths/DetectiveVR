@@ -118,7 +118,7 @@ public class Player : MonoBehaviour
         if (mic)
             audioSource = mic.GetComponent<AudioSource>();
         controller = GetComponent<CharacterController>();
-        goHomeTimer = new InventoryControl.Accumulator(2);
+        goHomeTimer = new InventoryControl.Accumulator(3.5f);
         puzzleSceneLoadTimer = new InventoryControl.Accumulator(2);
         enkModel = GameObject.Find("gypsy_mesh");
     }
@@ -184,6 +184,16 @@ public class Player : MonoBehaviour
                 }
             }
         }
+
+        if (clueObject && clueComparisonPlayed && dialogManager.pendingDialog.Length < 1)
+        {
+            if (selectedCharacter)
+            {
+                clueObject.GetComponent<MovingClue>().MoveTowards(selectedCharacter);
+            }
+
+            //player.clueObject.transform.eulerAngles = new Vector3(0, -90, 0);
+        }
     }
 
     void LoadMissionFromHQ(string mission)
@@ -218,10 +228,15 @@ public class Player : MonoBehaviour
                     if (!audioSource.isPlaying)
                     {
 
-                        DialogManager.Dialog[] clips = new DialogManager.Dialog[2];  //Kathy
+                        DialogManager.Dialog[] clips = new DialogManager.Dialog[soundItem.additionalDialog ? 3 : 2];  //Kathy
 
                         clips[0] = new DialogManager.Dialog(soundItem.activated, soundItem.transform);  //Kathy
                         clips[1] = new DialogManager.Dialog(soundItem.enkNames);  //Kathy
+                        if(soundItem.additionalDialog)
+                        {
+                            DialogManager.Dialog[] clipss = new DialogManager.Dialog[1];  //Kathy
+                            clips[2] = new DialogManager.Dialog(soundItem.additionalDialog);  //Kathy
+                        }
                         if (soundItem.isClue || soundItem.enkNameObject)
                         {
 
@@ -263,7 +278,7 @@ public class Player : MonoBehaviour
             if (hit.collider.CompareTag("SUSPECT")) // we're looking at a charcter
             {
                 Character ch = hit.collider.gameObject.GetComponent<Character>();
-                selectedCharacter = ch;
+                //selectedCharacter = ch;
                 suspectGazeTimer.SetObject(ch);
                 if (suspectGazeTimer.IsExpired() && missionManager != null)
                 {
@@ -280,6 +295,8 @@ public class Player : MonoBehaviour
             {
                 lookingAtGoldStar = true;
             }
+            else
+                hqGazeTimer.SetObject(null);
 
             //Interaction to travel to puzzle scene
             if (hit.collider.CompareTag("Puzzle"))
@@ -407,9 +424,10 @@ public class Player : MonoBehaviour
     {
         if (other.tag == "TREE")
         {
-            DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
+            DialogManager.Dialog[] clips = new DialogManager.Dialog[3];
             clips[0] = new DialogManager.Dialog(treeCollide[0]);
             clips[1] = new DialogManager.Dialog(treeCollide[1]);
+            clips[2] = new DialogManager.Dialog(treeCollide[2]);
             dialogManager.setDialog(clips);
 
         }
@@ -418,6 +436,7 @@ public class Player : MonoBehaviour
             DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
             clips[0] = new DialogManager.Dialog(wallCollide[0]);
             clips[1] = new DialogManager.Dialog(wallCollide[1]);
+            clips[2] = new DialogManager.Dialog(wallCollide[2]);
             dialogManager.setDialog(clips);
         }
 
@@ -426,6 +445,7 @@ public class Player : MonoBehaviour
             DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
             clips[0] = new DialogManager.Dialog(pigstyCollide[0]);
             clips[1] = new DialogManager.Dialog(pigstyCollide[1]);
+            clips[2] = new DialogManager.Dialog(pigstyCollide[2]);
             dialogManager.setDialog(clips);
         }
     }

@@ -47,7 +47,7 @@ public class MissionManager : MonoBehaviour
         }
         if (currentMission == null)
         {
-            currentMission = missions[3];
+            currentMission = missions[5];
             currentMission.OnActivate();
         }
         if(mission == "M1_Cat")
@@ -56,38 +56,21 @@ public class MissionManager : MonoBehaviour
         }
         else
         {
-            Complainant();
+            //Complainant();
         }
         // turn off all missions excepot the current one
         for (int i = 0; i < missions.Length; i++)
             if (missions[i] != currentMission)
                 missions[i].gameObject.SetActive(false);
 
-       
         player = FindObjectOfType<Player>();
         player.transform.position = currentMission.enkSpawnPoint.transform.position;
     }
 
     void Update()
     {
-        //if (player.selectedCharacter)
-        //{
-        //    currentAnim = player.selectedCharacter.GetComponent<Animator>();
-        //}
 
-        if (player.clueObject && player.clueComparisonPlayed && dialogManager.pendingDialog.Length < 1)
-        {
-            if (player.selectedCharacter)
-            {
-                player.clueObject.GetComponent<MovingClue>().MoveTowards(player.selectedCharacter);
-            }
 
-            //player.clueObject.transform.eulerAngles = new Vector3(0, -90, 0);
-        }    
-        //if (player.clueObject && player.clueObject.activeSelf == true && dialogManager.pendingDialog.Length == 0 && player.selectedCharacter != null)
-        //{
-           
-        //}
     }
 
     void PlaySound(AudioClip sound)

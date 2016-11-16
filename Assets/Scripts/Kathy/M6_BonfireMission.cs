@@ -3,8 +3,6 @@ using System.Collections;
 
 public class M6_BonfireMission : MonoBehaviour
 {
-    public Material nightSkybox;
-
     public Animator witchAnimator;
     public GameObject witch;
     public GameObject planeSupportingWitch;
@@ -152,7 +150,6 @@ public class M6_BonfireMission : MonoBehaviour
     
     void Start()
     {
-        RenderSettings.skybox = nightSkybox;
         ladyOfManorAnimator.SetTrigger("torch");
         witchAnimator.SetTrigger("isListening");
         //logLastPos = log.position;

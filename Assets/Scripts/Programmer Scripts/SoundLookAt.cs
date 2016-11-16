@@ -3,11 +3,11 @@ using System.Collections;
 
 public class SoundLookAt : MonoBehaviour
 {
+    public AudioClip additionalDialog;
     public float soundDelay = 3;
     public AudioClip[] Idle = new AudioClip[0];
     public AudioClip activated;
     public AudioClip enkNames;
-    public AudioClip clothNoise;
     [HideInInspector]
     public int activateDistance = 10;
     private AudioSource Source;
@@ -21,6 +21,7 @@ public class SoundLookAt : MonoBehaviour
     public bool enkNameObject = false;
     private GameObject player;
 
+    [HideInInspector]
     public string missionName;
     // Use this for initialization
     void Start()

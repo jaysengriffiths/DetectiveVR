@@ -38,6 +38,7 @@ public class Mission : MonoBehaviour
     public GameObject[] objDisable;
     public GameObject[] soundObjDisable;
     public bool complete = false;
+    public Material skybox;
 
     //public Transform startMissionPosition;
     public void OnActivate()
@@ -60,6 +61,8 @@ public class Mission : MonoBehaviour
             suspects[i].character.transform.rotation = suspects[i].spawnPoint.rotation;
             suspects[i].character.gameObject.SetActive(true);
         }
+
+        RenderSettings.skybox = skybox;
     }
 
     public Suspect GetGuiltySuspect()
@@ -96,9 +99,10 @@ public class Mission : MonoBehaviour
         {
             objDisable[i].SetActive(false);
         }
+
         for (int i = 0; i < soundObjDisable.Length; i++)
         {
-            objDisable[i].GetComponent<AudioSource>().Pause();
+            soundObjDisable[i].GetComponent<AudioSource>().Pause();
         }
     }
 }
