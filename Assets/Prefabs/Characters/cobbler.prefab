@@ -169,8 +169,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000012167786954}
-  - 95: {fileID: 95000011055843488}
-  - 114: {fileID: 114000013923126752}
   m_Layer: 0
   m_Name: cobbler_Rig
   m_TagString: Untagged
@@ -459,6 +457,8 @@ GameObject:
   - 23: {fileID: 23000010380963616}
   - 136: {fileID: 136000011910831112}
   - 114: {fileID: 114000012854149284}
+  - 95: {fileID: 95000012749985236}
+  - 114: {fileID: 114000013964091454}
   - 82: {fileID: 82000014034762744}
   - 114: {fileID: 114000011453617970}
   m_Layer: 0
@@ -2189,13 +2189,13 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!95 &95000011055843488
+--- !u!95 &95000012749985236
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010522059894}
+  m_GameObject: {fileID: 1000011599172170}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 67af98d8fab71f84aa2913b942ce968b, type: 3}
   m_Controller: {fileID: 9100000, guid: cd1bfc2eee4c4e447935196e69816a87, type: 2}
@@ -2251,12 +2251,12 @@ MonoBehaviour:
   isSuspect: 0
   arrestPlayed: 0
   warnPlayed: 0
---- !u!114 &114000013923126752
+--- !u!114 &114000013964091454
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010522059894}
+  m_GameObject: {fileID: 1000011599172170}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad50986f7b7e59a49ba62928109da229, type: 3}
