@@ -147,13 +147,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 07611b1266d817a41824e96c8141b52f, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -355,12 +354,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 0
   Idle: []
   activated: {fileID: 8300000, guid: c11228fa8df5c27419472f8d7a86813b, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 5
   isClue: 0
   isActivated: 0
@@ -534,13 +532,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 278b86700d06f494589b20ab05efbf1a, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -862,12 +859,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: df715ece0e134fa4282251d917cb8199, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -883,7 +879,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1010,13 +1006,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: f9bf79a2af919834eb74a2bf9b290169, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -1188,13 +1183,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: e4cc916e3cc54ff46841c14a99e9d207, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -1363,6 +1357,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startGameStart: 0
+  ladyLeave: 0
+  ladyEnter: 0
   greetSounds:
   - {fileID: 8300000, guid: 5c9347be694ba8a4ebb57eb8cc184077, type: 3}
   - {fileID: 8300000, guid: 032c2036e16ffba45893a1bcaf8dbd9e, type: 3}
@@ -1374,6 +1370,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 33567c17834c15642a6b7aa234188b06, type: 3}
   - {fileID: 8300000, guid: 703fbd7ea2400804d855cf94202c5dd8, type: 3}
   - {fileID: 8300000, guid: 6acaaa6a7b045ec42aabf9f9abfc7d70, type: 3}
+  lady: {fileID: 1285151129}
+  startRotate: {fileID: 1581386494}
+  endRotate: {fileID: 1108391084}
 --- !u!1 &284886553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1418,13 +1417,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 8300000, guid: 5cffd4b54c96fa6408f859b7af583b98, type: 3}
   enkNames: {fileID: 8300000, guid: 20af423b1a7131f4c8041e0d0052b854, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -1583,12 +1581,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: c11228fa8df5c27419472f8d7a86813b, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 1
   isClue: 0
   isActivated: 0
@@ -1788,13 +1785,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 8300000, guid: c87961191aba40b4b88a52afceeb47e1, type: 3}
   enkNames: {fileID: 8300000, guid: 20af423b1a7131f4c8041e0d0052b854, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -1953,6 +1949,68 @@ Transform:
   - {fileID: 1345555036}
   m_Father: {fileID: 371509496}
   m_RootOrder: 0
+--- !u!1 &367384810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 367384813}
+  - 114: {fileID: 367384812}
+  - 114: {fileID: 367384811}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &367384811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367384810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1077351063, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &367384812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367384810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -619905303, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 5
+--- !u!4 &367384813
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367384810}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!1 &371509493
 GameObject:
   m_ObjectHideFlags: 0
@@ -2127,13 +2185,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 8300000, guid: 5cffd4b54c96fa6408f859b7af583b98, type: 3}
   enkNames: {fileID: 8300000, guid: 20af423b1a7131f4c8041e0d0052b854, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -2335,13 +2392,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 8300000, guid: 5cffd4b54c96fa6408f859b7af583b98, type: 3}
   enkNames: {fileID: 8300000, guid: 20af423b1a7131f4c8041e0d0052b854, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -2544,13 +2600,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 47e3a990d27ddbd4fa1ae762746d5621, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -2755,15 +2810,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000014073280812, guid: 78f48a6dd5d62e149b12cd5f1f355e97, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.5493457
+      value: 2.061712
       objectReference: {fileID: 0}
     - target: {fileID: 4000014073280812, guid: 78f48a6dd5d62e149b12cd5f1f355e97, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.2095077
+      value: 0.100000024
       objectReference: {fileID: 0}
     - target: {fileID: 4000014073280812, guid: 78f48a6dd5d62e149b12cd5f1f355e97, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -0.19503057
+      value: -0.024668872
       objectReference: {fileID: 0}
     - target: {fileID: 4000014073280812, guid: 78f48a6dd5d62e149b12cd5f1f355e97, type: 2}
       propertyPath: m_LocalRotation.x
@@ -2771,7 +2826,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014073280812, guid: 78f48a6dd5d62e149b12cd5f1f355e97, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0.6818942
+      value: -0.5373284
       objectReference: {fileID: 0}
     - target: {fileID: 4000014073280812, guid: 78f48a6dd5d62e149b12cd5f1f355e97, type: 2}
       propertyPath: m_LocalRotation.z
@@ -2779,7 +2834,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014073280812, guid: 78f48a6dd5d62e149b12cd5f1f355e97, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.7314509
+      value: 0.84337306
       objectReference: {fileID: 0}
     - target: {fileID: 4000014073280812, guid: 78f48a6dd5d62e149b12cd5f1f355e97, type: 2}
       propertyPath: m_RootOrder
@@ -2787,7 +2842,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014073280812, guid: 78f48a6dd5d62e149b12cd5f1f355e97, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -86.09901
+      value: -65.174
       objectReference: {fileID: 0}
     - target: {fileID: 114000013704155154, guid: 78f48a6dd5d62e149b12cd5f1f355e97,
         type: 2}
@@ -2801,6 +2856,21 @@ Prefab:
     - target: {fileID: 4000014073280812, guid: 78f48a6dd5d62e149b12cd5f1f355e97, type: 2}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000010246130540, guid: 78f48a6dd5d62e149b12cd5f1f355e97,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82000010246130540, guid: 78f48a6dd5d62e149b12cd5f1f355e97,
+        type: 2}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012030509834, guid: 78f48a6dd5d62e149b12cd5f1f355e97,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78f48a6dd5d62e149b12cd5f1f355e97, type: 2}
@@ -2893,10 +2963,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 696155076}
-  m_LocalRotation: {x: -0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.09000003, y: -0.05200006, z: -0.033}
+  m_LocalRotation: {x: 0.31282532, y: -0.31282532, z: 0.6341454, w: 0.6341454}
+  m_LocalPosition: {x: -0.09, y: -0.408, z: 0.287}
   m_LocalScale: {x: 0.04985137, y: 2.1890748, z: 0.91201496}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 52.506004, y: 0, z: 90.00001}
   m_Children: []
   m_Father: {fileID: 1331972082}
   m_RootOrder: 0
@@ -2911,12 +2981,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 609f629744809354e883a79459ff7cd6, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -2932,7 +3001,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3091,13 +3160,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: df7fa1c1c9c5f3847816f86c46cd0a91, type: 3}
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 32fb3c5cbfc4952448e1b930212923e2, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -3487,13 +3555,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 8300000, guid: 5cffd4b54c96fa6408f859b7af583b98, type: 3}
   enkNames: {fileID: 8300000, guid: 20af423b1a7131f4c8041e0d0052b854, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -3652,12 +3719,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: c11228fa8df5c27419472f8d7a86813b, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 1
   isClue: 0
   isActivated: 0
@@ -3830,12 +3896,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 0208d7a5c7985c34ba2ef216e3a796cd, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -3917,12 +3982,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: df715ece0e134fa4282251d917cb8199, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -4047,12 +4111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: c11228fa8df5c27419472f8d7a86813b, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 1
   isClue: 0
   isActivated: 0
@@ -4182,6 +4245,182 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &839190582
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 839190583}
+  - 33: {fileID: 839190588}
+  - 65: {fileID: 839190587}
+  - 23: {fileID: 839190586}
+  - 82: {fileID: 839190585}
+  - 114: {fileID: 839190584}
+  m_Layer: 0
+  m_Name: door_mesh (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &839190583
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 839190582}
+  m_LocalRotation: {x: 0.0051983097, y: -0.0051983097, z: 0.7070877, w: 0.7070877}
+  m_LocalPosition: {x: -0.09, y: -0.015, z: 0.432}
+  m_LocalScale: {x: 0.049851373, y: 2.189075, z: 0.91201496}
+  m_LocalEulerAnglesHint: {x: 0.83300006, y: 0, z: 90.00001}
+  m_Children: []
+  m_Father: {fileID: 1331972082}
+  m_RootOrder: 1
+--- !u!114 &839190584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 839190582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
+  soundDelay: 1
+  Idle: []
+  activated: {fileID: 0}
+  enkNames: {fileID: 8300000, guid: 609f629744809354e883a79459ff7cd6, type: 3}
+  activateDistance: 2
+  isClue: 0
+  isActivated: 0
+  enkNameObject: 1
+  missionName: 
+--- !u!82 &839190585
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 839190582}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 1
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 2
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!23 &839190586
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 839190582}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 62d8003a71f5afe4b8566bb7e9264182, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &839190587
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 839190582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &839190588
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 839190582}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &895580223
 GameObject:
   m_ObjectHideFlags: 0
@@ -4647,6 +4886,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mic: {fileID: 1509986095}
   soundDelayTime: 0.5
+--- !u!1 &1108391084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1108391085}
+  m_Layer: 0
+  m_Name: end
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1108391085
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1108391084}
+  m_LocalRotation: {x: -0, y: -0.9188871, z: -0, w: -0.39452082}
+  m_LocalPosition: {x: 2.456, y: 0.100000024, z: -0.221}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: -226.484, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1 &1132152196
 GameObject:
   m_ObjectHideFlags: 0
@@ -4728,13 +4995,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 0e8c48adeebf7654d8fc260664356b43, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -4906,13 +5172,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 8300000, guid: 5cffd4b54c96fa6408f859b7af583b98, type: 3}
   enkNames: {fileID: 8300000, guid: 20af423b1a7131f4c8041e0d0052b854, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -5046,10 +5311,10 @@ Transform:
   m_PrefabParentObject: {fileID: 400000, guid: e38ac1bf34db9db478ec5b6ec2c7a88e, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1358727936}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0.0064600697, y: -0.70767635, z: 0.005807761, w: 0.7064834}
   m_LocalPosition: {x: 0.197, y: 0.016000032, z: -0.12699997}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0.98300004, y: -90.094, z: -0.052}
   m_Children: []
   m_Father: {fileID: 1911762788}
   m_RootOrder: 2
@@ -5097,12 +5362,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 7cc7acadb40077b4cb37dd70427dbd3e, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -5281,6 +5545,10 @@ MonoBehaviour:
   WarningBook: {fileID: 1059497355}
   SkyHint: {fileID: 728418985}
   HandCuffs: {fileID: 371509493}
+  handcuffIdle: {fileID: 0}
+  handcuffAwake: {fileID: 0}
+  bookIdle: {fileID: 0}
+  bookAwake: {fileID: 0}
 --- !u!114 &1216565056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5311,7 +5579,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 772ed7b5c1a57254591107b3c77aa414, type: 3}
   - {fileID: 8300000, guid: f663bd6820fc2c9438cdf34beecf1be3, type: 3}
   - {fileID: 8300000, guid: 991dcd4af2cbf99459a21f3936971cf3, type: 3}
-  complain: 0
   clueObject: {fileID: 0}
   clueComparisonPlayed: 0
   m_GroudFootstepSounds:
@@ -5378,10 +5645,10 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1216565053}
-  m_LocalRotation: {x: 0, y: -0.13078578, z: 0, w: 0.9914107}
-  m_LocalPosition: {x: -0.081, y: -1.2094078, z: 0.162}
+  m_LocalRotation: {x: -0, y: -0.98916566, z: -0, w: 0.14680386}
+  m_LocalPosition: {x: -0.85, y: 0.10800004, z: 0.04}
   m_LocalScale: {x: 0.9000001, y: 0.90000004, z: 0.9000002}
-  m_LocalEulerAnglesHint: {x: 0, y: -15.03, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -163.42601, z: 0}
   m_Children:
   - {fileID: 728418988}
   - {fileID: 919225187}
@@ -5426,7 +5693,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1232756628}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7788572, y: 1.2095077, z: 0.8018421}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -5465,12 +5732,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: c11228fa8df5c27419472f8d7a86813b, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 1
   isClue: 0
   isActivated: 0
@@ -5604,6 +5870,11 @@ AudioSource:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 7bb0e82594487364f93be5f0a8864208, type: 3}
   m_PrefabInternal: {fileID: 1422983627}
+--- !u!1 &1285151129 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011527711978, guid: 78f48a6dd5d62e149b12cd5f1f355e97,
+    type: 2}
+  m_PrefabInternal: {fileID: 600651746}
 --- !u!1001 &1331972081
 Prefab:
   m_ObjectHideFlags: 0
@@ -5723,12 +5994,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: c11228fa8df5c27419472f8d7a86813b, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 1
   isClue: 0
   isActivated: 0
@@ -6105,6 +6375,139 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010071666470, guid: 36243e9eb3477244087bbe829a4d2ec0,
     type: 2}
   m_PrefabInternal: {fileID: 1902238709}
+--- !u!1 &1512082331
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1512082337}
+  - 223: {fileID: 1512082336}
+  - 114: {fileID: 1512082335}
+  - 114: {fileID: 1512082334}
+  - 222: {fileID: 1512082333}
+  - 114: {fileID: 1512082332}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1512082332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1512082331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: X
+--- !u!222 &1512082333
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1512082331}
+--- !u!114 &1512082334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1512082331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1512082335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1512082331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1512082336
+Canvas:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1512082331}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1512082337
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1512082331}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!1 &1553351465
 GameObject:
   m_ObjectHideFlags: 0
@@ -6135,12 +6538,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: c11228fa8df5c27419472f8d7a86813b, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 1
   isClue: 0
   isActivated: 0
@@ -6258,12 +6660,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: c11228fa8df5c27419472f8d7a86813b, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 1
   isClue: 0
   isActivated: 0
@@ -6393,6 +6794,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &1581386494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1581386495}
+  m_Layer: 0
+  m_Name: Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1581386495
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1581386494}
+  m_LocalRotation: {x: -0, y: -0.9340189, z: -0, w: 0.35722375}
+  m_LocalPosition: {x: 0.89529693, y: 0.100000024, z: 0.9030723}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: -137.98601, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!1 &1586682855
 GameObject:
   m_ObjectHideFlags: 0
@@ -6437,13 +6866,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 8300000, guid: 5cffd4b54c96fa6408f859b7af583b98, type: 3}
   enkNames: {fileID: 8300000, guid: 20af423b1a7131f4c8041e0d0052b854, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -6650,13 +7078,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 7a6e232f6c9dc12499807837f935274d, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -6871,13 +7298,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 8300000, guid: 5cffd4b54c96fa6408f859b7af583b98, type: 3}
   enkNames: {fileID: 8300000, guid: 20af423b1a7131f4c8041e0d0052b854, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -7036,12 +7462,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: c11228fa8df5c27419472f8d7a86813b, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 1
   isClue: 0
   isActivated: 0
@@ -7215,12 +7640,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: b9341394b2b6b9e488ae6619eef4bc64, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -7236,7 +7660,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d766b32cf62a1d046bfc538e29fc923d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -7425,13 +7849,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: eb31d62c1e534f847a69e0d9884a921b, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -7603,13 +8026,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: d57eaaa99f6eedb4891b1f90db16e572, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0
@@ -7767,12 +8189,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: c11228fa8df5c27419472f8d7a86813b, type: 3}
   enkNames: {fileID: 0}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 1
   isClue: 0
   isActivated: 0
@@ -8089,13 +8510,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle:
   - {fileID: 8300000, guid: 135bae402216166438c3a5947b056c73, type: 3}
   activated: {fileID: 8300000, guid: 5cffd4b54c96fa6408f859b7af583b98, type: 3}
   enkNames: {fileID: 8300000, guid: 20af423b1a7131f4c8041e0d0052b854, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 100
   activateDistance: 2
   isClue: 0
   isActivated: 0

@@ -21,13 +21,31 @@ public class SoundLookAt : MonoBehaviour
     public bool enkNameObject = false;
     private GameObject player;
 
-    [HideInInspector]
     public string missionName;
     // Use this for initialization
     void Start()
     {
         Source = gameObject.GetComponent<AudioSource>();
         player = FindObjectOfType<Player>().gameObject;
+
+        // turn off if this is a mission marker in HQ, and the previous mission hasn't been completed
+        if (missionName != "")
+        {
+            string[] missionNames = { "M1_Cat", "M2_BellSabotaged", "M3_MarketUpended", "M4_TrollBabyStolen", "M5_PoisonedWell" };
+            string prevName = "";
+            // start at 2 because the first two are always unlocked
+            for (int i = 2; i < missionNames.Length; i++)
+            {
+                if (missionName == missionNames[i])
+                    prevName = missionNames[i - 1];
+            }
+
+            if (prevName != "")
+            {
+                if (PlayerPrefs.GetInt(prevName) == 0)
+                    gameObject.SetActive(false);
+            }
+        }
     }
 
     // Update is called once per frame

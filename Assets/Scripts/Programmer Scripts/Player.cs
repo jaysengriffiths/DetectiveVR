@@ -214,7 +214,7 @@ public class Player : MonoBehaviour
 
             // load the scene and set the mission after a delay
             hqGazeTimer.SetObject(soundItem);
-            if (hqGazeTimer.IsExpired() && dialogManager.pendingDialog.Length == 0 && !audioSource.isPlaying)
+            if (hqGazeTimer.IsExpired() && dialogManager.pendingDialog.Length == 0  )
             {
                 if (soundItem.missionName != "")
                     LoadMissionFromHQ(soundItem.missionName);
