@@ -23,7 +23,7 @@ public class HQManager : MonoBehaviour {
 
         startGameStart = Time.time+5;
         ladyEnter = Time.time + 4;
-        ladyLeave = Time.time + 50;
+        ladyLeave = Time.time + 48;
         manager = FindObjectOfType<DialogManager>();
 
         PlayerPrefs.SetInt("Greetings", 0);

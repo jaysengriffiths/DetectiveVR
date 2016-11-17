@@ -47,9 +47,9 @@ public class MissionManager : MonoBehaviour
         if (currentMission == null)
         {
             currentMission = missions[5];
-            currentMission.OnActivate();
         }
-        if(mission == "M1_Cat")
+        currentMission.OnActivate();
+        if (mission == "M1_Cat")
         {
             TutorialDialog();
         }

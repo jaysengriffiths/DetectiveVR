@@ -16,6 +16,7 @@ public class InventoryControl : MonoBehaviour
     private Player player;
     private MissionManager missionManager;
     private DialogManager dialogManager;
+    public bool threatened = false;
     private bool givingClue = false;
 
     // Use this for initialization
@@ -52,52 +53,64 @@ public class InventoryControl : MonoBehaviour
     Accumulator warningTimer = new Accumulator(2);
     Accumulator cuffTimer = new Accumulator(2);
     Accumulator hintTimer = new Accumulator(2);
+    Accumulator threatenTimer = new Accumulator(1);
 
     // Update is called once per frame
     void Update()
     {
-        if (!mic.isPlaying)
+        if (player.cameraAngle > 65 && player.cameraAngle < 75)
         {
+            HandCuffs.SetActive(true);
+            AudioSource cuff = HandCuffs.GetComponent<AudioSource>();
 
-
-            if (player.cameraAngle > 65 && player.cameraAngle < 75)
+            if (!cuff.isPlaying)
             {
-                HandCuffs.SetActive(true);
-                AudioSource cuff = HandCuffs.GetComponent<AudioSource>();
-
-                if (!cuff.isPlaying)
-                {
-                    cuff.clip = handcuffIdle;
-                    cuff.PlayDelayed(0.5f);
-                    ThreatenDialog();
-                }
-
-          
+                cuff.clip = handcuffIdle;
+                cuff.PlayDelayed(0.5f);
 
             }
 
-            else
-            {
-                HandCuffs.SetActive(false);
-            }
 
-            if (player.cameraAngle > 55 && player.cameraAngle < 65)
+
+        }
+
+        else
+        {
+            threatened = false;
+            HandCuffs.SetActive(false);
+        }
+
+        if (player.cameraAngle > 55 && player.cameraAngle < 75)
+        {
+            if (threatened == false)
             {
-                WarningBook.SetActive(true);
-                AudioSource book = WarningBook.GetComponent<AudioSource>();
-                if (!book.isPlaying)
-                {
-                    book.clip = bookIdle;
-                    book.PlayDelayed(0.5f);
-                    ThreatenDialog();
-                }
-          
-            }
-            else
-            {
-                WarningBook.SetActive(false);
+                ThreatenDialog();
+                threatened = true;
             }
         }
+        else
+        {
+            threatened = false;
+        }
+
+        if (player.cameraAngle > 55 && player.cameraAngle < 65)
+        {
+            WarningBook.SetActive(true);
+            AudioSource book = WarningBook.GetComponent<AudioSource>();
+            if (!book.isPlaying)
+            {
+                book.clip = bookIdle;
+                book.PlayDelayed(0.5f);
+            }
+
+        }
+
+        else
+        {
+            WarningBook.SetActive(false);
+            threatened = false;
+        }
+
         if (player.selectedCharacter != null)
         {
             if (cuffTimer.IsFull(player.cameraAngle > 65 && player.cameraAngle < 75))
@@ -118,7 +131,7 @@ public class InventoryControl : MonoBehaviour
                     AudioSource book = WarningBook.GetComponent<AudioSource>();
                     book.PlayOneShot(bookAwake);
                 }
-                    bookAwakePlayed = true;
+                bookAwakePlayed = true;
                 missionManager.Warn(player.selectedCharacter);
             }
         }
@@ -129,9 +142,9 @@ public class InventoryControl : MonoBehaviour
         }
         if (player.cameraAngle > 270 && player.cameraAngle < 300)
         {
+            
             GiveClue();
         }
-
     }
 
     public void ThreatenDialog()
