@@ -170,6 +170,7 @@ public class TilePuzzle : MonoBehaviour {
                     if (currentTile.pBag == true)
                     {
                         reSetTiles();
+                        PlayerPrefs.SetInt("puzzleDone", 1);
                         SceneManager.LoadScene("Main_scene");
                         return false;
                     }

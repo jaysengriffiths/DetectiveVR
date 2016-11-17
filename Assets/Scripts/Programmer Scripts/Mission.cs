@@ -44,9 +44,13 @@ public class Mission : MonoBehaviour
     public void OnActivate()
     {
         guiltyIndex = Random.Range(0, 5);
-        clueSpawned = clueObjects[guiltyIndex];
-        clueSpawned.SetActive(true);
-        clueSpawned.transform.position = clueStartPos.position;
+
+        if (clueObjects != null && clueObjects.Length > guiltyIndex)
+        {
+            clueSpawned = clueObjects[guiltyIndex];
+            clueSpawned.SetActive(true);
+            clueSpawned.transform.position = clueStartPos.position;
+        }
         // find all characters and set their suspect flag to false
         Character[] allCharacters = GameObject.FindObjectsOfType<Character>();
         for (int i = 0; i < allCharacters.Length; i++)

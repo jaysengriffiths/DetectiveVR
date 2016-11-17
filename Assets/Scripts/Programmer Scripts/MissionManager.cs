@@ -13,7 +13,6 @@ public class MissionManager : MonoBehaviour
     public AudioClip arrestClip;
     public AudioClip[] tutorialDialog;
     private savedData saveGame;
-
     public enum MissionState
     {
         Ongoing,
@@ -31,7 +30,7 @@ public class MissionManager : MonoBehaviour
     }
     void Start()
     {
-        dialogManager = GameObject.FindGameObjectWithTag("Player").GetComponent<DialogManager>();
+        dialogManager = GameObject.Find("Enk").GetComponent<DialogManager>();
         GameObject mic = GameObject.Find("DialogMicrophone");
         if (mic)
             audioSource = mic.GetComponent<AudioSource>();

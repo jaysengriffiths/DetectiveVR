@@ -10,6 +10,8 @@ public class InventoryControl : MonoBehaviour
     public AudioClip handcuffAwake;
     public AudioClip bookIdle;
     public AudioClip bookAwake;
+    private bool bookAwakePlayed;
+    private bool handcuffAwakePlayed;
     private AudioSource mic;
     private Player player;
     private MissionManager missionManager;
@@ -100,13 +102,30 @@ public class InventoryControl : MonoBehaviour
         {
             if (cuffTimer.IsFull(player.cameraAngle > 65 && player.cameraAngle < 75))
             {
+                if (!handcuffAwakePlayed)
+                {
+                    AudioSource cuff = HandCuffs.GetComponent<AudioSource>();
+                    cuff.PlayOneShot(handcuffAwake);
+                }
+                handcuffAwakePlayed = true;
                 missionManager.Arrest(player.selectedCharacter);
             }
 
             if (warningTimer.IsFull(player.cameraAngle > 55 && player.cameraAngle < 65))
             {
+                if (!bookAwakePlayed)
+                {
+                    AudioSource book = WarningBook.GetComponent<AudioSource>();
+                    book.PlayOneShot(bookAwake);
+                }
+                    bookAwakePlayed = true;
                 missionManager.Warn(player.selectedCharacter);
             }
+        }
+        else
+        {
+            bookAwakePlayed = false;
+            handcuffAwakePlayed = false;
         }
         if (player.cameraAngle > 270 && player.cameraAngle < 300)
         {
