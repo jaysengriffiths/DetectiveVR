@@ -3304,30 +3304,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 715038636}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 595f5227b53b5f94eb16a648dbfaad77, type: 3}
+  m_Script: {fileID: 11500000, guid: b7d3113a448d1a64d9e590167e317671, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myPlaqueSays: {fileID: 0}
-  plaqueSigns:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  plaqueSounds:
-  - {fileID: 8300000, guid: 7cc7acadb40077b4cb37dd70427dbd3e, type: 3}
-  - {fileID: 8300000, guid: e7cdf7b4c7491d74989d40be38f5bfe5, type: 3}
-  - {fileID: 8300000, guid: 4cf5f8c6098149842b00543743c86848, type: 3}
-  - {fileID: 8300000, guid: bb5d4910745557f4f8f931fd0ba0cbbc, type: 3}
-  - {fileID: 8300000, guid: a781525d78e23054f8c446e6a2d1c5ba, type: 3}
-  - {fileID: 8300000, guid: 06eeb9df65172e54993a1d8e2efb631e, type: 3}
-  - {fileID: 8300000, guid: 4a34c907634efa4408d1e85409321bb8, type: 3}
-  - {fileID: 8300000, guid: bb50823d5725d3e4687967418d4f709b, type: 3}
+  plaqueSigns: []
+  plaqueSounds: []
   currentSign: {fileID: 0}
   currentSound: {fileID: 0}
 --- !u!33 &715038644
@@ -5600,6 +5584,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
   selectedCharacter: {fileID: 0}
+  puzzle: 0
 --- !u!143 &1216565057
 CharacterController:
   m_ObjectHideFlags: 0
