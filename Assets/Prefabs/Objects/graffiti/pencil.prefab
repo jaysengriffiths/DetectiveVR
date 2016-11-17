@@ -25,6 +25,7 @@ GameObject:
   - 65: {fileID: 65000013329940952}
   - 82: {fileID: 82000013849877432}
   - 114: {fileID: 114000011502742564}
+  - 114: {fileID: 114000011745098958}
   m_Layer: 0
   m_Name: pencil
   m_TagString: CLUE
@@ -91,7 +92,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.15, z: 0.45}
+  m_Size: {x: 1, y: 0.25, z: 0.55}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000013424965266
 BoxCollider:
@@ -194,9 +195,21 @@ MonoBehaviour:
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
-  enkNames: {fileID: 8300000, guid: eb31d62c1e534f847a69e0d9884a921b, type: 3}
+  enkNames: {fileID: 0}
   activateDistance: 10
   isClue: 1
   isActivated: 0
-  enkNameObject: 1
+  enkNameObject: 0
   missionName: 
+--- !u!114 &114000011745098958
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010535759594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b124ea90f2023946b96c5f536b935a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

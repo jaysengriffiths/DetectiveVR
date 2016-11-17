@@ -24,9 +24,10 @@ GameObject:
   - 23: {fileID: 23000013640758356}
   - 82: {fileID: 82000014162524278}
   - 114: {fileID: 114000014050030936}
+  - 114: {fileID: 114000011486736736}
   m_Layer: 0
   m_Name: millerMedal
-  m_TagString: Untagged
+  m_TagString: CLUE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,11 +102,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 36b7e1beb35677a449df3b52e2616414, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   Priority: 2
@@ -166,6 +167,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114000011486736736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011122879272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b124ea90f2023946b96c5f536b935a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!114 &114000014050030936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -177,13 +190,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 0
   Idle: []
   activated: {fileID: 8300000, guid: 36b7e1beb35677a449df3b52e2616414, type: 3}
   enkNames: {fileID: 8300000, guid: 16e65f00934376e4b92beb62569ea327, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 10
   activateDistance: 10
-  isClue: 0
+  isClue: 1
   isActivated: 0
   enkNameObject: 1
+  missionName: 

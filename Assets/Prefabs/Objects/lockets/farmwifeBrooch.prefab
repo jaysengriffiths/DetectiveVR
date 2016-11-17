@@ -20,13 +20,14 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013497476180}
   - 33: {fileID: 33000011477101914}
-  - 65: {fileID: 65000012767206084}
   - 23: {fileID: 23000010461626666}
+  - 65: {fileID: 65000012767206084}
   - 82: {fileID: 82000011063617974}
   - 114: {fileID: 114000013307799294}
+  - 114: {fileID: 114000014093984496}
   m_Layer: 0
   m_Name: farmwifeBrooch
-  m_TagString: Untagged
+  m_TagString: CLUE
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,9 +38,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011195440818}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0667927, y: 0.44081375, z: 6.788611}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 0.005}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -57,13 +58,13 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 8cfb8ec2cd2773545b58fe1ba0680eba, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_SelectedWireframeHidden: 0
@@ -79,7 +80,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011195440818}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 4300000, guid: c456eb4a0a731594b82bbc85b29c2531, type: 3}
 --- !u!65 &65000012767206084
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -101,11 +102,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d0f930b3846321047beb6545027ff4bb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 1
   Priority: 2
@@ -177,13 +178,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 0
   Idle: []
   activated: {fileID: 8300000, guid: d0f930b3846321047beb6545027ff4bb, type: 3}
   enkNames: {fileID: 8300000, guid: a5f65e1eccbfc334291176b23b661336, type: 3}
-  timesPlayed: 0
-  maxTimesPlayed: 10
   activateDistance: 10
-  isClue: 0
+  isClue: 1
   isActivated: 0
   enkNameObject: 1
+  missionName: 
+--- !u!114 &114000014093984496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011195440818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b124ea90f2023946b96c5f536b935a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

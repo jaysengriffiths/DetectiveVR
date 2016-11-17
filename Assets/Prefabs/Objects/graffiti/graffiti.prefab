@@ -24,6 +24,7 @@ GameObject:
   - 65: {fileID: 65000014212588458}
   - 82: {fileID: 82000011773177342}
   - 114: {fileID: 114000013589579382}
+  - 114: {fileID: 114000013123144326}
   m_Layer: 0
   m_Name: graffiti
   m_TagString: Untagged
@@ -166,6 +167,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114000013123144326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012136930082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b124ea90f2023946b96c5f536b935a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!114 &114000013589579382
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -177,13 +190,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: a565af5c22e2da8499ce646e96984012, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
-  isClue: 0
+  isClue: 1
   isActivated: 0
   enkNameObject: 1
   missionName: 

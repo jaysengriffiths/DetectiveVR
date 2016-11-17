@@ -24,6 +24,7 @@ GameObject:
   - 65: {fileID: 65000012384865996}
   - 82: {fileID: 82000013927674954}
   - 114: {fileID: 114000013753217104}
+  - 114: {fileID: 114000013971668258}
   m_Layer: 0
   m_Name: catHairs
   m_TagString: CLUE
@@ -177,13 +178,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: 500a385a1410a4e409b505589e05da39, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
-  isClue: 0
+  isClue: 1
   isActivated: 0
   enkNameObject: 1
   missionName: 
+--- !u!114 &114000013971668258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011762397224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b124ea90f2023946b96c5f536b935a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

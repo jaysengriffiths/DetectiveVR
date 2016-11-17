@@ -25,6 +25,7 @@ GameObject:
   - 65: {fileID: 65000013329940952}
   - 82: {fileID: 82000013849877432}
   - 114: {fileID: 114000011502742564}
+  - 114: {fileID: 114000010527553070}
   m_Layer: 0
   m_Name: quill
   m_TagString: CLUE
@@ -91,7 +92,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.15, z: 0.45}
+  m_Size: {x: 1, y: 0.25, z: 0.55}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000013424965266
 BoxCollider:
@@ -114,7 +115,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7d89e1abd1628104c8aad6b7ddb8e240, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 52626bbc3a8e11d4a897516720dd1e64, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -179,6 +180,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114000010527553070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010535759594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b124ea90f2023946b96c5f536b935a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!114 &114000011502742564
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -190,11 +203,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: eb31d62c1e534f847a69e0d9884a921b, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 1
   isActivated: 0
