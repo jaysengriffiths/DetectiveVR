@@ -105,7 +105,8 @@ public class Player : MonoBehaviour
     private InventoryControl.Accumulator puzzleSceneLoadTimer;
     public Character selectedCharacter;
     private GameObject enkModel;
-    private bool puzzle = false;
+
+    public bool puzzle = false;
 
     void Awake()
     {
@@ -301,7 +302,12 @@ public class Player : MonoBehaviour
             //Interaction to travel to puzzle scene
             if (hit.collider.CompareTag("Puzzle"))
             {
+                puzzle = true;
                 lookingAtPuzzle = true;
+            }
+            else
+            {
+                puzzle = false;
             }
         }
         else
@@ -312,7 +318,10 @@ public class Player : MonoBehaviour
         {
             if (puzzleSceneLoadTimer.IsFull(lookingAtPuzzle))
             {
-                SceneManager.LoadScene("JamiesSandBox");
+                if (PlayerPrefs.GetInt("puzzleDone") == 0)
+                {
+                    SceneManager.LoadScene("JamiesSandBox");
+                }
             }
         }
         if (goHomeTimer.IsFull(lookingAtGoldStar))
