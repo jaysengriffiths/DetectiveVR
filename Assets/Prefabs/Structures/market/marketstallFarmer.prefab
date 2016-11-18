@@ -37,9 +37,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000012343811944}
   - 65: {fileID: 65000013729456304}
-  - 65: {fileID: 65000012195053204}
   - 82: {fileID: 82000011998063718}
   - 114: {fileID: 114000013837815718}
+  - 65: {fileID: 65000012195053204}
   m_Layer: 0
   m_Name: marketstallFarmer
   m_TagString: Untagged
@@ -66,10 +66,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012916112652}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0.5, z: 0, w: 0.8660254}
+  m_LocalPosition: {x: 59.15, y: 0, z: 6.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -60, z: 0}
   m_Children:
   - {fileID: 4000010067479304}
   m_Father: {fileID: 0}
@@ -87,7 +87,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 2e9101b5a08b5c047b092159d783cf2d, type: 2}
+  - {fileID: 2100000, guid: a0d5e6297ce9fad4ba97fe73cea800dc, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -117,11 +117,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012916112652}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.58, y: 2.5, z: 3.56}
-  m_Center: {x: -0.17, y: 1.2, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000013729456304
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -129,11 +129,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012916112652}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.31, y: 2.3889787, z: 3.05}
-  m_Center: {x: -0.54, y: 1.148992, z: 0}
+  m_Size: {x: 3.58, y: 2.5, z: 3.56}
+  m_Center: {x: -0.17, y: 1.2, z: 0}
 --- !u!82 &82000011998063718
 AudioSource:
   m_ObjectHideFlags: 1

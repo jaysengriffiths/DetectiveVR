@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000013064059374}
   - 65: {fileID: 65000012775534628}
-  - 65: {fileID: 65000011245680286}
   - 82: {fileID: 82000012671394852}
   - 114: {fileID: 114000010826234346}
+  - 65: {fileID: 65000011245680286}
   m_Layer: 0
   m_Name: marketstalWeaver
   m_TagString: Untagged
@@ -66,10 +66,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010411411676}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0.17364825, z: 0, w: 0.9848078}
+  m_LocalPosition: {x: 53.12, y: 0, z: 15.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -20, z: 0}
   m_Children:
   - {fileID: 4000012809644844}
   m_Father: {fileID: 0}
@@ -117,11 +117,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010411411676}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.58, y: 2.5, z: 3.56}
-  m_Center: {x: -0.17, y: 1.2, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65000012775534628
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -129,11 +129,11 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010411411676}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.31, y: 2.3889787, z: 3.05}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.58, y: 2.5, z: 3.56}
+  m_Center: {x: -0.17, y: 1.2, z: 0}
 --- !u!82 &82000012671394852
 AudioSource:
   m_ObjectHideFlags: 1
