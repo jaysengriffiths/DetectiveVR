@@ -67,31 +67,17 @@ public class InventoryControl : MonoBehaviour
             {
                 cuff.clip = handcuffIdle;
                 cuff.PlayDelayed(0.5f);
-
             }
-
+            ThreatenDialog();
 
 
         }
 
         else
         {
-            threatened = false;
             HandCuffs.SetActive(false);
         }
 
-        if (player.cameraAngle > 55 && player.cameraAngle < 75)
-        {
-            if (threatened == false)
-            {
-                ThreatenDialog();
-                threatened = true;
-            }
-        }
-        else
-        {
-            threatened = false;
-        }
 
         if (player.cameraAngle > 55 && player.cameraAngle < 65)
         {
@@ -102,13 +88,12 @@ public class InventoryControl : MonoBehaviour
                 book.clip = bookIdle;
                 book.PlayDelayed(0.5f);
             }
+            ThreatenDialog();
 
         }
-
         else
         {
             WarningBook.SetActive(false);
-            threatened = false;
         }
 
         if (player.selectedCharacter != null)
@@ -150,12 +135,13 @@ public class InventoryControl : MonoBehaviour
     public void ThreatenDialog()
     {
         AudioClip clip;
-        if (player.selectedCharacter)
+        if (player.selectedCharacter && !player.selectedCharacter.threatenedPlayed)
         {
             clip = player.selectedCharacter.threatenedClip;
             DialogManager.Dialog[] clips = new DialogManager.Dialog[1];
             clips[0] = new DialogManager.Dialog(clip, player.selectedCharacter);
             dialogManager.setDialog(clips);
+            player.selectedCharacter.threatenedPlayed = true;
         }
     }
     public void GiveClue()

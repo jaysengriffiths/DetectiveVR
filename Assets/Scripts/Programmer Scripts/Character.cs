@@ -13,12 +13,10 @@ public class Character : MonoBehaviour
     public Transform locketLocation;
     public Transform graffitiLocation;
     public Transform catHairLocation;
-    public bool introPlayed = false;
-    public bool IsInteracted = false;
-    //true if you're part of the current mission
-    public bool isSuspect = false;
-    public bool arrestPlayed = false;
-    public bool warnPlayed = false;
+
+    [HideInInspector]
+    public bool introPlayed, IsInteracted, isSuspect, arrestPlayed,
+        warnPlayed, threatenedPlayed = false;
     //public string spawnPointName;
 
     // Use this for initialization

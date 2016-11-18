@@ -25,6 +25,7 @@ public class MouseLook : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.P))
         {
             Debug.Log("pressed");
+            PlayerPrefs.SetInt("M1_Cat", 1);
         }
 //#if UNITY_ANDROID
 //#else

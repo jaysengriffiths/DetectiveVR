@@ -76,7 +76,7 @@ public class SoundLookAt : MonoBehaviour
                         if (Idle.Length != 0)
                         {
                             
-                            Source.PlayOneShot(Idle[index], 0.25f);
+                            Source.PlayOneShot(Idle[index], 1.0f);
                         }
                     }
                 }

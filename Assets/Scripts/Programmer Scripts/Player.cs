@@ -179,9 +179,11 @@ public class Player : MonoBehaviour
                 v1.y = 0;
                 v2.y = 0;
                 if (Vector3.Dot(v1, v2) < 0)
-                {                  
+                {
+                    selectedCharacter.threatenedPlayed = false;
                     dialogManager.ClearDialog(selectedCharacter);
                     selectedCharacter = null;
+                    
                 }
             }
         }

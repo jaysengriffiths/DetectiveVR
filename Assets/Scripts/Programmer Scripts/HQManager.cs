@@ -11,15 +11,11 @@ public class HQManager : MonoBehaviour {
     public GameObject lady;
     public GameObject startRotate;
     public GameObject endRotate;
-
-
     DialogManager manager;
 
 	// Use this for initialization
-	void Start () {
-
-    
-
+	void Start ()
+    {
 
         startGameStart = Time.time+5;
         ladyEnter = Time.time + 4;
@@ -27,6 +23,11 @@ public class HQManager : MonoBehaviour {
         manager = FindObjectOfType<DialogManager>();
 
         PlayerPrefs.SetInt("Greetings", 0);
+
+        if(PlayerPrefs.GetInt("M1_Cat") == 1)
+        {
+            lady.SetActive(false);
+        } 
     }
 	
 	// Update is called once per frame
@@ -34,7 +35,6 @@ public class HQManager : MonoBehaviour {
 
         if (PlayerPrefs.GetInt("Greetings") == 0)
         {
-
             if (startGameStart < Time.time)
             {
                
@@ -48,6 +48,7 @@ public class HQManager : MonoBehaviour {
 
             }
         }
+        
         if (ladyEnter < Time.time)
         {
 

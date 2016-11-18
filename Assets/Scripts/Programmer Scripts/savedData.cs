@@ -43,7 +43,7 @@ public class savedData : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public void ReSetSave()
+    public void ResetSave()
     {
         PlayerPrefs.DeleteAll();
     }
