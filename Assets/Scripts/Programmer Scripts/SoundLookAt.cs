@@ -16,7 +16,6 @@ public class SoundLookAt : MonoBehaviour
     private float nextTimeStamp = 0;
 
     public bool isClue = false;
-    [HideInInspector]
     public bool isActivated = false;
     public bool enkNameObject = false;
     private GameObject player;
@@ -31,7 +30,7 @@ public class SoundLookAt : MonoBehaviour
         // turn off if this is a mission marker in HQ, and the previous mission hasn't been completed
         if (missionName != "")
         {
-            string[] missionNames = { "M1_Cat", "M2_BellSabotaged", "M3_MarketUpended", "M4_TrollBabyStolen", "M5_PoisonedWell" };
+            string[] missionNames = { "M1_Cat", "M2_BellSabotaged", "M3_MStalls", "M4_Lockets", "M5_Well" };
             string prevName = "";
             // start at 2 because the first two are always unlocked
             for (int i = 2; i < missionNames.Length; i++)
@@ -65,9 +64,8 @@ public class SoundLookAt : MonoBehaviour
             {
                 if (Time.time > nextTimeStamp)
                 {
-                    if (activated)
+                    if (isActivated && activated)
                     {
-                        
                         Source.PlayOneShot(activated, 0.25f);
                     }
                     else

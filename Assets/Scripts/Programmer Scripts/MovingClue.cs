@@ -28,6 +28,7 @@ public class MovingClue : MonoBehaviour
             gameObject.transform.position = player.enkHoldingCloth.transform.position;
             gameObject.transform.rotation = player.enkHoldingCloth.transform.rotation;
             player.clueObject = this.gameObject;
+            gameObject.GetComponent<AudioSource>().Stop();
             //gameObject.GetComponent<SoundLookAt>().enabled = false;
             //gameObject.SetActive(false);
         }

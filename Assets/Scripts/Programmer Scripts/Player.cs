@@ -26,10 +26,22 @@ public class Player : MonoBehaviour
         public float timeInterval;
         private Object obj;
 
-        public void SetObject(Object o)
+        public void SetObject(Object o, Color? c = null)
         {
             if (o != obj)
             {
+                if (c != null)
+                {
+                    MonoBehaviour go = obj as MonoBehaviour;
+                    if (go)
+                        //go.GetComponent<MeshRenderer>().material.color = Color.white;
+                        go.transform.localScale *= 0.909f;
+                    MonoBehaviour go2 = o as MonoBehaviour;
+                    if (go2)
+                        //go2.GetComponent<MeshRenderer>().material.color = Color.yellow;
+                        go2.transform.localScale *= 1.1f;
+                }
+
                 obj = o;
                 if (o == null)
                 {
@@ -56,33 +68,37 @@ public class Player : MonoBehaviour
     }
 
     //Player movement
+    //camera angle used for inventory control
+    [HideInInspector]
+    public float cameraAngle;
     private float minBounds = 10;
     private float maxBounds = 20;
+    public float speed;  //Kathy changed from 0.03;
     private float counter;
     private CharacterController characterController;
-    //[HideInInspector]
-    public float cameraAngle;
     private float footstepVolumeScale = 0.5f;
-    public float speed;  //Kathy changed from 0.03;
+    [HideInInspector]
     private float walkDelay = 0;
     public AudioClip nameClip;
 
-    [HideInInspector]
-    public Transform enkHoldingCloth;
 
     //setting new timers
     GazeTimer soundLookAtTimer = new GazeTimer(0.5f);
     GazeTimer suspectGazeTimer = new GazeTimer(2);
     GazeTimer hqGazeTimer = new GazeTimer(3);
-
+    
     //audio source set
     private AudioSource audioSource;
+    public AudioClip[,] collideSounds;
     public AudioClip[] treeCollide;
     public AudioClip[] wallCollide;
     public AudioClip[] pigstyCollide;
 
-    //clue obj setup
+    //Clueholder on enk
+    [HideInInspector]
     public GameObject clueObject;
+    [HideInInspector]
+    public Transform enkHoldingCloth;
     [HideInInspector]
     public bool clueComparisonPlayed = false;
 
@@ -103,14 +119,20 @@ public class Player : MonoBehaviour
     private CharacterController controller;
     private InventoryControl.Accumulator goHomeTimer;
     private InventoryControl.Accumulator puzzleSceneLoadTimer;
+    
+    //Current selected character
     public Character selectedCharacter;
     private GameObject enkModel;
-
+    [HideInInspector]
+    public bool sceneLoaded;
+    [HideInInspector]
     public bool puzzle = false;
+    private bool loadScene;
+    private bool canLoad = false;
+    public Camera mainCam;
 
     void Awake()
     {
-        
         enkHoldingCloth = GameObject.Find("clothHolder").transform;
         feetSource = gameObject.GetComponentInChildren<AudioSource>();
         dialogManager = GetComponent<DialogManager>();
@@ -133,9 +155,29 @@ public class Player : MonoBehaviour
 
     }
 
+    IEnumerator LoadNewScene()
+    {
+        yield return new WaitForSeconds(0);
+
+        AsyncOperation async = SceneManager.LoadSceneAsync("Main_Scene");
+        
+        while(!async.isDone)
+        {
+            yield return null;
+
+        }
+    }
     // Update is called once per frame
     void Update()
     {
+        if(canLoad && loadScene == false)
+        {
+            loadScene = true;
+            Text loading = GameObject.Find("Canvas").GetComponent<Text>();
+            loading.text = "Loading.......";
+            loading.color = new Color(loading.color.r, loading.color.g, loading.color.b, Mathf.PingPong(Time.time, 1));
+            StartCoroutine(LoadNewScene());
+        }
         if (speed != 0)
         {
             if (Input.GetKey(KeyCode.LeftShift))
@@ -151,9 +193,13 @@ public class Player : MonoBehaviour
 
         }
         characterController = gameObject.GetComponent<CharacterController>();
-        Quaternion fwd = Camera.main.transform.rotation;
-        enkModel.transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y ,0);
-        cameraAngle = fwd.eulerAngles.x;
+        if (Camera.main)
+        {
+            Quaternion fwd = Camera.main.transform.rotation;
+            enkModel.transform.eulerAngles = new Vector3(0, Camera.main.transform.eulerAngles.y, 0);
+            cameraAngle = fwd.eulerAngles.x;
+        }
+   
         //rb.velocity = new Vector3(0, 0, 0);
         if (dialogManager != null)
         {
@@ -203,17 +249,24 @@ public class Player : MonoBehaviour
     {
         PlayerPrefs.SetString("Mission", mission);
         PlayerPrefs.Save();
-        SceneManager.LoadScene("Main_Scene");
+        canLoad = true;
+        mainCam.enabled = false;
+        //Camera cam = Find<Camera>();
+        //cam.gameObject.SetActive(false);
+
+        //SceneManager.LoadScene("Main_Scene");
     }
 
     void LookAtSoundObjects()
     {
         RaycastHit hit;
 
+        if (Camera.main == null)
+            return;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 15))
         {
             SoundLookAt soundItem = hit.collider.GetComponent<SoundLookAt>();
-            soundLookAtTimer.SetObject(soundItem);
+            soundLookAtTimer.SetObject(soundItem, Color.yellow);
 
             // load the scene and set the mission after a delay
             hqGazeTimer.SetObject(soundItem);
@@ -242,7 +295,6 @@ public class Player : MonoBehaviour
                         }
                         if (soundItem.isClue || soundItem.enkNameObject)
                         {
-
                             soundManager.setDialog(clips);
                             soundItem.isActivated = true;
                         }
@@ -261,7 +313,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            soundLookAtTimer.SetObject(null);
+            soundLookAtTimer.SetObject(null, Color.yellow);
         }
 
     }

@@ -29,6 +29,7 @@ public class MouseLook : MonoBehaviour {
         }
 //#if UNITY_ANDROID
 //#else
+        if(Camera.main)
         LookRotation(transform, Camera.main.transform);
 //#endif
       

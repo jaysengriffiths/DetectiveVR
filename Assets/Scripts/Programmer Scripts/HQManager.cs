@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class HQManager : MonoBehaviour {
 
@@ -12,19 +13,19 @@ public class HQManager : MonoBehaviour {
     public GameObject startRotate;
     public GameObject endRotate;
     DialogManager manager;
+    public Camera loading;
 
 	// Use this for initialization
 	void Start ()
     {
-
         startGameStart = Time.time+5;
         ladyEnter = Time.time + 4;
         ladyLeave = Time.time + 48;
         manager = FindObjectOfType<DialogManager>();
 
-        PlayerPrefs.SetInt("Greetings", 0);
+        PlayerPrefs.SetInt("Greetings", 1);
 
-        if(PlayerPrefs.GetInt("M1_Cat") == 1)
+        if(PlayerPrefs.GetInt("Greetings") == 1)
         {
             lady.SetActive(false);
         } 
