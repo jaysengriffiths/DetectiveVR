@@ -23,9 +23,10 @@ public class HQManager : MonoBehaviour {
         ladyLeave = Time.time + 48;
         manager = FindObjectOfType<DialogManager>();
 
-        PlayerPrefs.SetInt("Greetings", 1);
+        PlayerPrefs.SetInt("Greetings", 0);  //Kathy and Adam
 
-        if(PlayerPrefs.GetInt("Greetings") == 1)
+        if(PlayerPrefs.GetInt("M1_Cat") == 1)  //Kathy and Adam
+        //if(PlayerPrefs.GetInt("Greetings") == 1)
         {
             lady.SetActive(false);
         } 

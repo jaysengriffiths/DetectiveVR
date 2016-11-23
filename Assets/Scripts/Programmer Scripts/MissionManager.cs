@@ -55,7 +55,7 @@ public class MissionManager : MonoBehaviour
         }
         else
         {
-            //Complainant();
+            Complainant();
         }
         // turn off all missions excepot the current one
         for (int i = 0; i < missions.Length; i++)
