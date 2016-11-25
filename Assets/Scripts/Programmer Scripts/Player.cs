@@ -80,12 +80,18 @@ public class Player : MonoBehaviour
     [HideInInspector]
     private float walkDelay = 0;
     public AudioClip nameClip;
+    public int rayCastToSoundLookAt = 20;
+    public int rayCastToSuspectLookAt = 10;
+
+    public float soundLookAtTimeInSeconds = 0.5f;
+    public float suspectLookAtTimeInSeconds =  1;
+    public float hqGazeLookAtTimeInSeconds = 1;
 
 
     //setting new timers
-    GazeTimer soundLookAtTimer = new GazeTimer(0.5f);
-    GazeTimer suspectGazeTimer = new GazeTimer(2);
-    GazeTimer hqGazeTimer = new GazeTimer(3);
+    GazeTimer soundLookAtTimer;
+    GazeTimer suspectGazeTimer;
+    GazeTimer hqGazeTimer;
     
     //audio source set
     private AudioSource audioSource;
@@ -141,13 +147,16 @@ public class Player : MonoBehaviour
         if (mic)
             audioSource = mic.GetComponent<AudioSource>();
         controller = GetComponent<CharacterController>();
-        goHomeTimer = new InventoryControl.Accumulator(3.5f);
+        goHomeTimer = new InventoryControl.Accumulator(1f);
         puzzleSceneLoadTimer = new InventoryControl.Accumulator(2);
         enkModel = GameObject.Find("gypsy_mesh");
     }
 
     void Start()
     {
+        soundLookAtTimer = new GazeTimer(soundLookAtTimeInSeconds);
+        suspectGazeTimer = new GazeTimer(suspectLookAtTimeInSeconds);
+        hqGazeTimer = new GazeTimer(hqGazeLookAtTimeInSeconds);
         missionManager = FindObjectOfType<MissionManager>();
         counter = 0;
       
@@ -263,7 +272,7 @@ public class Player : MonoBehaviour
 
         if (Camera.main == null)
             return;
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 15))
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, rayCastToSoundLookAt))
         {
             SoundLookAt soundItem = hit.collider.GetComponent<SoundLookAt>();
             soundLookAtTimer.SetObject(soundItem, Color.yellow);
@@ -327,7 +336,7 @@ public class Player : MonoBehaviour
         bool lookingAtPuzzle = false;
         
         //turn off viewing
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 10))
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, rayCastToSuspectLookAt))
         {
 
             if (hit.collider.CompareTag("SUSPECT")) // we're looking at a charcter

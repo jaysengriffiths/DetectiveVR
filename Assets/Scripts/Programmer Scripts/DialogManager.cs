@@ -6,12 +6,14 @@ public class DialogManager : MonoBehaviour {
     private MissionManager missionManager;
     private AudioSource audioSource;
     public GameObject mic;
+    public float soundDelayAfterDialogSpokenInSeconds = 1;
+    private float nextTimeStamp = 0;
     private Player player;
-    public float soundDelayTime = 0.5f;
     private bool relevationSpeechPlayed = false;
     private bool thankyouSpeechPlayed = false;
     private bool mysterySpeechPlayed = false;
     private bool isDialog = false;
+    private bool isPlaying = false;
     private savedData saveGame;
     Animator talker;
 
@@ -126,19 +128,34 @@ public class DialogManager : MonoBehaviour {
                     }
                 }
 
-                // audio clip = the first pending
-                audioSource.clip = pendingDialog[0].clip;
-                audioSource.PlayDelayed(soundDelayTime);
-
-                //copy non playing left over audio into temp array tha twill become the pending once play is over 
-                Dialog[] dialog = new Dialog[pendingDialog.Length - 1];
-
-                for (int i = 0; i < dialog.Length; i++)
+                if (audioSource.isPlaying == false)
                 {
+                    if (isPlaying)
+                    {
+                        nextTimeStamp = Time.time + soundDelayAfterDialogSpokenInSeconds;
+                    }
 
-                    dialog[i] = pendingDialog[i + 1];
+                    if (Time.time > nextTimeStamp)
+                    {
+                        // audio clip = the first pending
+                        audioSource.clip = pendingDialog[0].clip;
+                        audioSource.Play();
+
+                        //copy non playing left over audio into temp array tha twill become the pending once play is over 
+                        Dialog[] dialog = new Dialog[pendingDialog.Length - 1];
+
+                        for (int i = 0; i < dialog.Length; i++)
+                        {
+
+                            dialog[i] = pendingDialog[i + 1];
+                        }
+                        pendingDialog = dialog;
+                    }
+
+
                 }
-                pendingDialog = dialog;
+                isPlaying = audioSource.isPlaying;
+
             }
             else
             {
@@ -167,6 +184,7 @@ public class DialogManager : MonoBehaviour {
                     talker = player.selectedCharacter.GetComponent<Animator>();
                     talker.SetTrigger("isHandcuffed");
                     player.selectedCharacter.transform.FindChild("handcuffs").gameObject.SetActive(true);
+                    player.selectedCharacter = null;
                     if (!relevationSpeechPlayed)
                     {
                         DialogManager.Dialog[] clips = new DialogManager.Dialog[2];  //Kathy

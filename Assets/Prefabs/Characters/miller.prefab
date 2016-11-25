@@ -2490,9 +2490,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 5
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -2608,7 +2608,7 @@ MonoBehaviour:
   nameClip: {fileID: 8300000, guid: e698b68e5d248ce4d937929c915eff8a, type: 3}
   introClip: {fileID: 8300000, guid: 8c5dfe2e30a410b409b8886c1cc62e36, type: 3}
   awakeClip: {fileID: 8300000, guid: 61ed0b1ad90a266489c6757a9a1bb3b4, type: 3}
-  threatenedClip: {fileID: 8300000, guid: e698b68e5d248ce4d937929c915eff8a, type: 3}
+  threatenedClip: {fileID: 8300000, guid: d6ffdcf5edab82b4f944a2b00afd7b53, type: 3}
   tornClothLocation: {fileID: 0}
   locketLocation: {fileID: 4000010720697174}
   graffitiLocation: {fileID: 0}
@@ -2618,6 +2618,7 @@ MonoBehaviour:
   isSuspect: 0
   arrestPlayed: 0
   warnPlayed: 0
+  threatenedPlayed: 0
 --- !u!136 &136000013561867412
 CapsuleCollider:
   m_ObjectHideFlags: 1

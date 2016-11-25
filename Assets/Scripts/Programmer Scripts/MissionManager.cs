@@ -185,10 +185,13 @@ public class MissionManager : MonoBehaviour
                     {
                         clip = currentMission.suspects[i].rightArrest;
                         state = MissionState.EndByArrest;
+                        player.selectedCharacter = null;
+
                     }
                     else
                     {
                         clip = currentMission.suspects[i].wrongArrest;
+                        player.selectedCharacter = null;
                     }
                     DialogManager.Dialog[] clips = new DialogManager.Dialog[3];
                     clips[0] = new DialogManager.Dialog(currentMission.suspects[i].character.nameClip);

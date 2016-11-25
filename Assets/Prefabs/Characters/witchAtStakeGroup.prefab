@@ -4074,7 +4074,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 5
+  MaxDistance: 20
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -4191,11 +4191,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: 2a16ae582b12bc24c9e5de9ecf67c944, type: 3}
   enkNames: {fileID: 8300000, guid: acfd6c9d153f42e498f80bed9e648f3c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -4212,11 +4212,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: 2a16ae582b12bc24c9e5de9ecf67c944, type: 3}
   enkNames: {fileID: 8300000, guid: acfd6c9d153f42e498f80bed9e648f3c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -4233,11 +4233,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: 2a16ae582b12bc24c9e5de9ecf67c944, type: 3}
   enkNames: {fileID: 8300000, guid: acfd6c9d153f42e498f80bed9e648f3c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -4299,11 +4299,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
   enkNames: {fileID: 8300000, guid: f85ecb7ecedbfe448be3dfdabc7de4ef, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -4320,11 +4320,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: 2a16ae582b12bc24c9e5de9ecf67c944, type: 3}
   enkNames: {fileID: 8300000, guid: acfd6c9d153f42e498f80bed9e648f3c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -4352,11 +4352,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: 2a16ae582b12bc24c9e5de9ecf67c944, type: 3}
   enkNames: {fileID: 8300000, guid: acfd6c9d153f42e498f80bed9e648f3c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -4373,11 +4373,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: 2a16ae582b12bc24c9e5de9ecf67c944, type: 3}
   enkNames: {fileID: 8300000, guid: acfd6c9d153f42e498f80bed9e648f3c, type: 3}
-  clothNoise: {fileID: 0}
   activateDistance: 10
   isClue: 0
   isActivated: 0
@@ -4409,11 +4409,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
   activated: {fileID: 8300000, guid: 4aac356fe47584948bff32a2968fdaf8, type: 3}
   enkNames: {fileID: 8300000, guid: 147b25c33a2806a4d86f1d5f73a84028, type: 3}
-  clothNoise: {fileID: 8300000, guid: cff741c5dacb29d46bfc45eb14fdebb8, type: 3}
   activateDistance: 5
   isClue: 0
   isActivated: 0
@@ -4458,6 +4458,7 @@ MonoBehaviour:
   isSuspect: 0
   arrestPlayed: 0
   warnPlayed: 0
+  threatenedPlayed: 0
 --- !u!114 &114000014293392600
 MonoBehaviour:
   m_ObjectHideFlags: 1

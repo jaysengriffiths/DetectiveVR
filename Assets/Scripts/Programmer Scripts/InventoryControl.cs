@@ -50,10 +50,10 @@ public class InventoryControl : MonoBehaviour
         }
     }
 
-    Accumulator warningTimer = new Accumulator(2);
-    Accumulator cuffTimer = new Accumulator(2);
-    Accumulator hintTimer = new Accumulator(2);
-    Accumulator threatenTimer = new Accumulator(1);
+    Accumulator warningTimer = new Accumulator(1);
+    Accumulator cuffTimer = new Accumulator(1);
+    Accumulator hintTimer = new Accumulator(1);
+    Accumulator threatenTimer = new Accumulator(.25f);
 
     // Update is called once per frame
     void Update()
@@ -125,10 +125,13 @@ public class InventoryControl : MonoBehaviour
             bookAwakePlayed = false;
             handcuffAwakePlayed = false;
         }
-        if (player.cameraAngle > 270 && player.cameraAngle < 300)
+        if (missionManager.state != MissionManager.MissionState.MissionOver)
         {
-            
-            GiveClue();
+            if (player.cameraAngle > 270 && player.cameraAngle < 300)
+            {
+
+                GiveClue();
+            }
         }
     }
 

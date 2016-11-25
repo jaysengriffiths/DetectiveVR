@@ -386,7 +386,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &135548586
 AudioListener:
   m_ObjectHideFlags: 0
@@ -502,7 +502,7 @@ MonoBehaviour:
   additionalDialog: {fileID: 0}
   soundDelay: 1
   Idle: []
-  activated: {fileID: 8300000, guid: c11228fa8df5c27419472f8d7a86813b, type: 3}
+  activated: {fileID: 8300000, guid: e9709bee07f45f744b3a2c26d7301323, type: 3}
   enkNames: {fileID: 0}
   activateDistance: 5
   isClue: 0
@@ -519,8 +519,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.049999997, y: -0.13187183, z: 0.049999997}
-  m_Center: {x: 0.00000065565115, y: 0.06593609, z: -5.684342e-14}
+  m_Size: {x: 0.15, y: 0.3, z: 0.15}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &148958362
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1588,7 +1588,7 @@ MonoBehaviour:
   isClue: 0
   isActivated: 0
   enkNameObject: 0
-  missionName: M5_PoisonedWell
+  missionName: M5_Well
 --- !u!65 &290005411
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1599,8 +1599,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.049999997, y: 0.05, z: 0.049999997}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.15, y: 0.3, z: 0.15}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &290005412
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1713,19 +1713,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!4 &300144686
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: e38ac1bf34db9db478ec5b6ec2c7a88e, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 819293379}
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.047, y: -0.044, z: -0.014}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
-  m_Children: []
-  m_Father: {fileID: 1911762788}
-  m_RootOrder: 6
 --- !u!4 &337434025
 Transform:
   m_ObjectHideFlags: 0
@@ -1916,6 +1903,184 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 357329704}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &358674923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: b6bb562a2823c0f42a38170e3f10f790, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 358674924}
+  - 33: {fileID: 358674929}
+  - 23: {fileID: 358674928}
+  - 65: {fileID: 358674927}
+  - 114: {fileID: 358674926}
+  - 82: {fileID: 358674925}
+  m_Layer: 0
+  m_Name: missionMarker5_stake
+  m_TagString: Untagged
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &358674924
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: b6bb562a2823c0f42a38170e3f10f790, type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 358674923}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.11700001, y: 0.016000032, z: 0.003000021}
+  m_LocalScale: {x: 1.0000007, y: 1.0000005, z: 1.0000002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_Children: []
+  m_Father: {fileID: 1911762788}
+  m_RootOrder: 6
+--- !u!82 &358674925
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 358674923}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!114 &358674926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 358674923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
+  soundDelay: 1
+  Idle: []
+  activated: {fileID: 8300000, guid: c11228fa8df5c27419472f8d7a86813b, type: 3}
+  enkNames: {fileID: 0}
+  activateDistance: 1
+  isClue: 0
+  isActivated: 0
+  enkNameObject: 0
+  missionName: M5_Well
+--- !u!65 &358674927
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 358674923}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15, y: 0.3, z: 0.15}
+  m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!23 &358674928
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 2300000, guid: b6bb562a2823c0f42a38170e3f10f790,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 358674923}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 2f0eb09dbfedb8847a33ec0bade99bc0, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &358674929
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 3300000, guid: b6bb562a2823c0f42a38170e3f10f790,
+    type: 3}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 358674923}
+  m_Mesh: {fileID: 4300000, guid: b6bb562a2823c0f42a38170e3f10f790, type: 3}
 --- !u!1 &359987384
 GameObject:
   m_ObjectHideFlags: 0
@@ -2910,7 +3075,7 @@ GameObject:
   - 82: {fileID: 696155079}
   - 114: {fileID: 696155078}
   m_Layer: 0
-  m_Name: door_mesh
+  m_Name: door_mesh_open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2923,7 +3088,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 696155076}
   m_LocalRotation: {x: 0.31282532, y: -0.31282532, z: 0.6341454, w: 0.6341454}
-  m_LocalPosition: {x: -0.09, y: -0.408, z: 0.287}
+  m_LocalPosition: {x: -0.09, y: -0.408, z: -0.074}
   m_LocalScale: {x: 0.04985137, y: 2.1890748, z: 0.91201496}
   m_LocalEulerAnglesHint: {x: 52.506004, y: 0, z: 90.00001}
   m_Children: []
@@ -3678,171 +3843,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 813127576}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &819293379
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: e38ac1bf34db9db478ec5b6ec2c7a88e, type: 3}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 300144686}
-  - 33: {fileID: 819293383}
-  - 23: {fileID: 819293382}
-  - 65: {fileID: 819293381}
-  - 114: {fileID: 819293380}
-  - 82: {fileID: 819293384}
-  m_Layer: 0
-  m_Name: missionMarker6_stake
-  m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &819293380
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 819293379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  additionalDialog: {fileID: 0}
-  soundDelay: 1
-  Idle: []
-  activated: {fileID: 8300000, guid: c11228fa8df5c27419472f8d7a86813b, type: 3}
-  enkNames: {fileID: 0}
-  activateDistance: 1
-  isClue: 0
-  isActivated: 0
-  enkNameObject: 0
-  missionName: 
---- !u!65 &819293381
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 819293379}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.049999997, y: 1.11022296e-17, z: 0.049999997}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &819293382
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 2300000, guid: e38ac1bf34db9db478ec5b6ec2c7a88e,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 819293379}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 2100000, guid: 51ad0c689de32aa47ab69d8cc63736b2, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!33 &819293383
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 3300000, guid: e38ac1bf34db9db478ec5b6ec2c7a88e,
-    type: 3}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 819293379}
-  m_Mesh: {fileID: 4300000, guid: e38ac1bf34db9db478ec5b6ec2c7a88e, type: 3}
---- !u!82 &819293384
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 819293379}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!1 &827889352
 GameObject:
   m_ObjectHideFlags: 0
@@ -3984,7 +3984,7 @@ MonoBehaviour:
   isClue: 0
   isActivated: 0
   enkNameObject: 0
-  missionName: M4_TrollBabyStolen
+  missionName: M4_Lockets
 --- !u!65 &838903155
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3995,8 +3995,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.049999997, y: 0.05, z: 0.049999997}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.15, y: 0.3, z: 0.15}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &838903156
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4123,7 +4123,7 @@ GameObject:
   - 82: {fileID: 839190585}
   - 114: {fileID: 839190584}
   m_Layer: 0
-  m_Name: door_mesh (1)
+  m_Name: door_mesh_closed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4135,10 +4135,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 839190582}
-  m_LocalRotation: {x: 0.0051983097, y: -0.0051983097, z: 0.7070877, w: 0.7070877}
-  m_LocalPosition: {x: -0.09, y: -0.015, z: 0.432}
-  m_LocalScale: {x: 0.049851373, y: 2.189075, z: 0.91201496}
-  m_LocalEulerAnglesHint: {x: 0.83300006, y: 0, z: 90.00001}
+  m_LocalRotation: {x: 0.003543306, y: -0.003543306, z: 0.70709795, w: 0.70709795}
+  m_LocalPosition: {x: -0.09, y: 0.013, z: 0.432}
+  m_LocalScale: {x: 0.049851373, y: 2.189075, z: 1.4022951}
+  m_LocalEulerAnglesHint: {x: 0.568, y: 0, z: 90.00001}
   m_Children: []
   m_Father: {fileID: 1331972082}
   m_RootOrder: 1
@@ -4250,7 +4250,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 62d8003a71f5afe4b8566bb7e9264182, type: 2}
+  - {fileID: 2100000, guid: dca8c41978f9db842be88f4fd282b221, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -4749,7 +4749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mic: {fileID: 1509986095}
-  soundDelayTime: 0.5
+  soundDelayAfterDialogSpokenInSeconds: 1
 --- !u!1 &1108391084
 GameObject:
   m_ObjectHideFlags: 0
@@ -5393,7 +5393,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mic: {fileID: 1509986095}
-  soundDelayTime: 0.5
+  soundDelayAfterDialogSpokenInSeconds: 1
 --- !u!114 &1216565055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5401,7 +5401,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1216565053}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 789abe599e2481e488395c265a9cd7c5, type: 3}
   m_Name: 
@@ -5429,6 +5429,11 @@ MonoBehaviour:
   cameraAngle: 0
   speed: 0
   nameClip: {fileID: 8300000, guid: 742cd6479d434ad4ca640a6d59c01b90, type: 3}
+  rayCastToSoundLookAt: 20
+  rayCastToSuspectLookAt: 10
+  soundLookAtTimeInSeconds: 0.5
+  suspectLookAtTimeInSeconds: 1
+  hqGazeLookAtTimeInSeconds: 1
   treeCollide:
   - {fileID: 8300000, guid: 8a5aec4659cba5945b4a076f8ec4bd6d, type: 3}
   - {fileID: 8300000, guid: 2854aedb81eb1714b97eb751f8bb2930, type: 3}
@@ -5610,7 +5615,7 @@ MonoBehaviour:
   isClue: 0
   isActivated: 0
   enkNameObject: 0
-  missionName: M3_MarketUpended
+  missionName: M3_MStalls
 --- !u!65 &1272206799
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5621,8 +5626,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.049999997, y: 0.05, z: 0.049999997}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.15, y: 0.3, z: 0.15}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1272206800
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5883,8 +5888,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.049999997, y: 0.05, z: 0.05}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.15, y: 0.3, z: 0.15}
+  m_Center: {x: 0, y: 0.1, z: 0}
 --- !u!23 &1358727939
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6353,7 +6358,7 @@ MonoBehaviour:
   isClue: 0
   isActivated: 0
   enkNameObject: 0
-  missionName: 
+  missionName: MD_Pumpkins
 --- !u!65 &1553351467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6475,7 +6480,7 @@ MonoBehaviour:
   isClue: 0
   isActivated: 0
   enkNameObject: 0
-  missionName: 
+  missionName: MA_Tracks
 --- !u!65 &1580524329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7277,7 +7282,7 @@ MonoBehaviour:
   isClue: 0
   isActivated: 0
   enkNameObject: 0
-  missionName: 
+  missionName: MC_Graffiti
 --- !u!65 &1837729424
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8004,7 +8009,7 @@ MonoBehaviour:
   isClue: 0
   isActivated: 0
   enkNameObject: 0
-  missionName: 
+  missionName: MB_Jewel
 --- !u!65 &1900692503
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8129,7 +8134,7 @@ Transform:
   - {fileID: 1224013083}
   - {fileID: 1915147344}
   - {fileID: 6676607}
-  - {fileID: 300144686}
+  - {fileID: 358674924}
   - {fileID: 768800599}
   - {fileID: 337434025}
   - {fileID: 1492725203}

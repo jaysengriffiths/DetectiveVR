@@ -2307,9 +2307,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 5
+  MaxDistance: 10
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -2403,6 +2403,7 @@ MonoBehaviour:
   isSuspect: 0
   arrestPlayed: 0
   warnPlayed: 0
+  threatenedPlayed: 0
 --- !u!114 &114000010619364204
 MonoBehaviour:
   m_ObjectHideFlags: 1
