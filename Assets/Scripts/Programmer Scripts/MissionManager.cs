@@ -185,7 +185,7 @@ public class MissionManager : MonoBehaviour
                     {
                         clip = currentMission.suspects[i].rightArrest;
                         state = MissionState.EndByArrest;
-                        player.selectedCharacter = null;
+
 
                     }
                     else

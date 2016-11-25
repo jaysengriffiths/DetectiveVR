@@ -23,7 +23,8 @@ public class HQManager : MonoBehaviour {
         ladyLeave = Time.time + 48;
         manager = FindObjectOfType<DialogManager>();
 
-        PlayerPrefs.SetInt("Greetings", 0);  //Kathy and Adam
+        //uncomment for lady to appear in every visit to hq
+        //PlayerPrefs.SetInt("Greetings", 0);  //Kathy and Adam
 
         if(PlayerPrefs.GetInt("M1_Cat") == 1)  //Kathy and Adam
         //if(PlayerPrefs.GetInt("Greetings") == 1)
