@@ -9,77 +9,76 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1000012287069762}
+  m_RootGameObject: {fileID: 1000010626512234}
   m_IsPrefabParent: 1
---- !u!1 &1000012287069762
+--- !u!1 &1000010626512234
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000012528426410}
-  - 65: {fileID: 65000011710212214}
-  - 82: {fileID: 82000013430356292}
-  - 114: {fileID: 114000014182139096}
-  - 65: {fileID: 65000013265762164}
+  - 4: {fileID: 4000011399484844}
+  - 65: {fileID: 65000014286914096}
+  - 82: {fileID: 82000013558357314}
+  - 114: {fileID: 114000011540430010}
   m_Layer: 0
-  m_Name: marketstallTrinketseller
+  m_Name: castle
   m_TagString: BUILDING
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!1 &1000013158343650
+--- !u!1 &1000012548822332
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 4000010267827894}
-  - 33: {fileID: 33000013634131080}
-  - 23: {fileID: 23000012511812186}
+  - 4: {fileID: 4000010237775364}
+  - 33: {fileID: 33000012162807772}
+  - 23: {fileID: 23000010324978602}
   m_Layer: 0
-  m_Name: Markets_02
+  m_Name: castle_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!4 &4000010267827894
+--- !u!4 &4000010237775364
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013158343650}
+  m_GameObject: {fileID: 1000012548822332}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.54003614, y: -1.376519, z: -0.06774469}
+  m_LocalScale: {x: 0.4154127, y: 0.7733254, z: 0.29454762}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 4000012528426410}
+  m_Father: {fileID: 4000011399484844}
   m_RootOrder: 0
---- !u!4 &4000012528426410
+--- !u!4 &4000011399484844
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012287069762}
-  m_LocalRotation: {x: 0, y: -0.258819, z: 0, w: 0.9659259}
-  m_LocalPosition: {x: 55.5, y: 0, z: 10.57}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: -30, z: 0}
+  m_GameObject: {fileID: 1000010626512234}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 39.61, y: 10.45, z: -67.65}
+  m_LocalScale: {x: 2.4072447, y: 1.2931168, z: 3.395037}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 4000010267827894}
+  - {fileID: 4000010237775364}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!23 &23000012511812186
+--- !u!23 &23000010324978602
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013158343650}
+  m_GameObject: {fileID: 1000012548822332}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -87,7 +86,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d90fd3d0cf9637445afa092d0501c083, type: 2}
+  - {fileID: 2100000, guid: 953b1906d0726264eac1f35eaa4701ad, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -103,43 +102,31 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33000013634131080
+--- !u!33 &33000012162807772
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000013158343650}
-  m_Mesh: {fileID: 4300000, guid: da9e1e7fe6c486e48aa55d6027b863a1, type: 3}
---- !u!65 &65000011710212214
+  m_GameObject: {fileID: 1000012548822332}
+  m_Mesh: {fileID: 4300000, guid: 3c54f90977b1bd7448ed70b0311b434b, type: 3}
+--- !u!65 &65000014286914096
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012287069762}
+  m_GameObject: {fileID: 1000010626512234}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.58, y: 2.5, z: 3.56}
-  m_Center: {x: -0.17, y: 1.2, z: 0}
---- !u!65 &65000013265762164
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012287069762}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!82 &82000013430356292
+  m_Size: {x: 11.907478, y: 12.4575815, z: 8.743725}
+  m_Center: {x: 0, y: -2, z: 0}
+--- !u!82 &82000013558357314
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012287069762}
+  m_GameObject: {fileID: 1000010626512234}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -150,10 +137,10 @@ AudioSource:
   Loop: 0
   Mute: 0
   Spatialize: 1
-  Priority: 128
+  Priority: 256
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 4
+  MaxDistance: 150
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -208,12 +195,12 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114000014182139096
+--- !u!114 &114000011540430010
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012287069762}
+  m_GameObject: {fileID: 1000010626512234}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
@@ -223,8 +210,8 @@ MonoBehaviour:
   soundDelay: 1
   Idle: []
   activated: {fileID: 0}
-  enkNames: {fileID: 8300000, guid: 1bda029334f06b2418efb1831e34ceba, type: 3}
-  activateDistance: 4
+  enkNames: {fileID: 8300000, guid: 5f87fe8afc2661a48969099c360d6910, type: 3}
+  activateDistance: 50
   isClue: 0
   isActivated: 0
   enkNameObject: 1
