@@ -83,8 +83,8 @@ public class Player : MonoBehaviour
     public int rayCastToSoundLookAt = 20;
     public int rayCastToSuspectLookAt = 10;
 
-    public float soundLookAtTimeInSeconds = 0.5f;
-    public float suspectLookAtTimeInSeconds =  1;
+    public float soundLookAtTimeInSeconds = 0.25f;  //Kathy changed from 0.5f
+    public float suspectLookAtTimeInSeconds =  0.25f;  //Kathy changed from 1
     public float hqGazeLookAtTimeInSeconds = 1;
 
 
@@ -185,6 +185,9 @@ public class Player : MonoBehaviour
             Text loading = GameObject.Find("Canvas").GetComponent<Text>();
             loading.text = "Loading.......";
             loading.color = new Color(loading.color.r, loading.color.g, loading.color.b, Mathf.PingPong(Time.time, 1));
+
+            //TODO add heartbeat
+
             StartCoroutine(LoadNewScene());
         }
         if (speed != 0)
@@ -293,14 +296,14 @@ public class Player : MonoBehaviour
                     if (!audioSource.isPlaying)
                     {
 
-                        DialogManager.Dialog[] clips = new DialogManager.Dialog[soundItem.additionalDialog ? 3 : 2];  //Kathy
+                        DialogManager.Dialog[] clips = new DialogManager.Dialog[soundItem.additionalDialog ? 3 : 2];
 
-                        clips[0] = new DialogManager.Dialog(soundItem.activated, soundItem.transform);  //Kathy
-                        clips[1] = new DialogManager.Dialog(soundItem.enkNames);  //Kathy
+                        clips[0] = new DialogManager.Dialog(soundItem.activated, soundItem.transform);
+                        clips[1] = new DialogManager.Dialog(soundItem.enkNames);
                         if(soundItem.additionalDialog)
                         {
-                            DialogManager.Dialog[] clipss = new DialogManager.Dialog[1];  //Kathy
-                            clips[2] = new DialogManager.Dialog(soundItem.additionalDialog);  //Kathy
+                            DialogManager.Dialog[] clipss = new DialogManager.Dialog[1];
+                            clips[2] = new DialogManager.Dialog(soundItem.additionalDialog);
                         }
                         if (soundItem.isClue || soundItem.enkNameObject)
                         {
@@ -346,7 +349,7 @@ public class Player : MonoBehaviour
                 suspectGazeTimer.SetObject(ch);
                 if (suspectGazeTimer.IsExpired() && missionManager != null)
                 {
-                    // we've been starting at thisa one thing for three seconds...
+                    // we've been starting at thisa one thing for three seconds...  //Kathy quarter of a second
                     missionManager.Interrogate(ch);
                     selectedCharacter = ch;
                 }
