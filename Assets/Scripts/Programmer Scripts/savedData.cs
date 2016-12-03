@@ -7,7 +7,7 @@ public class savedData : MonoBehaviour
     void Start()
     {
         // read data back in
-        Mission[] missions = FindObjectsOfType<Mission>();
+        Mission[] missions = FindObjectsOfType<Mission>();      //the variable 'missions' is assigned but its value is never used
         Character[] characters = FindObjectsOfType<Character>();
         //get missons 
         foreach (Mission mi in MissionManager.missions)

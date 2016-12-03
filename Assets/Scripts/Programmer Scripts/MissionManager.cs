@@ -9,10 +9,10 @@ public class MissionManager : MonoBehaviour
     //public GameObject currentSuspectSelected;
     public static Mission[] missions;
     private DialogManager dialogManager;
-    private AudioSource audioSource;
+    private AudioSource audioSource;        //The private field `MissionManager.audioSource' is assigned but its value is never used
     public AudioClip arrestClip;
     public AudioClip[] tutorialDialog;
-    private savedData saveGame;
+    private savedData saveGame;     //The private field `MissionManager.saveGame' is assigned but its value is never used
     public enum MissionState
     {
         Ongoing,

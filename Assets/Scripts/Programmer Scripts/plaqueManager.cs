@@ -3,8 +3,8 @@ using System.Collections;
 
 public class  plaqueManager : MonoBehaviour {
 
-    int ranking = 0;
-    bool missionComplete = false;
+    int ranking = 0;        //The private field `plaqueManager.ranking' is assigned but its value is never used
+    bool missionComplete = false;       //The private field `plaqueManager.missionComplete' is assigned but its value is never used
     public AudioClip myPlaqueSays;
     public Sprite[] plaqueSigns;
     public AudioClip[] plaqueSounds;

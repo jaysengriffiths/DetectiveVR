@@ -232,19 +232,19 @@ public class TilePuzzle : MonoBehaviour {
         {
             case 1:
                 return Games.game1;
-                break;
+                break;                  //Unreachable code detected
             case 2:
                 return Games.game1;
-                break;
+                break;                  //Unreachable code detected
             case 3:
                 return Games.game1;
-                break;
+                break;                  //Unreachable code detected
             case 4:
                 return Games.game1;
-                break;
+                break;                  //Unreachable code detected
             case 5:
                 return Games.game1;
-                break;
+                break;                  //Unreachable code detected
             default:
                 return Games.game1;
 

@@ -11,10 +11,10 @@ public class DialogManager : MonoBehaviour {
     private Player player;
     private bool relevationSpeechPlayed = false;
     private bool thankyouSpeechPlayed = false;
-    private bool mysterySpeechPlayed = false;
+    private bool mysterySpeechPlayed = false;  //The private field `DialogManager.mysterySpeechPlayed' is assigned but its value is never used
     private bool isDialog = false;
     private bool isPlaying = false;
-    private savedData saveGame;
+    private savedData saveGame;     // The private field `DialogManager.saveGame' is assigned but its value is never used
     Animator talker;
 
     public enum DialogType
@@ -123,7 +123,7 @@ public class DialogManager : MonoBehaviour {
                     talker = pendingDialog[0].transform.GetComponent<Animator>();
                     if (talker)
                     {
-                        talker.SetTrigger("isTalking");
+                        talker.SetTrigger("isTalking");  //brings up error: Animator has not been initialized
                         //talker.SetTrigger("isStartingToTalk");
                     }
                 }

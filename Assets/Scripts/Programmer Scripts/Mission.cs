@@ -106,7 +106,7 @@ public class Mission : MonoBehaviour
 
         for (int i = 0; i < soundObjDisable.Length; i++)
         {
-            soundObjDisable[i].GetComponent<AudioSource>().Pause();
+            soundObjDisable[i].GetComponent<AudioSource>().Pause();  //brings up NullReferenceExceptions
         }
     }
 }

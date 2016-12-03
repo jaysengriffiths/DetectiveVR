@@ -12,12 +12,12 @@ public class InventoryControl : MonoBehaviour
     public AudioClip bookAwake;
     private bool bookAwakePlayed;
     private bool handcuffAwakePlayed;
-    private AudioSource mic;
+    private AudioSource mic;        //The private field `InventoryControl.mic' is assigned but its value is never used
     private Player player;
     private MissionManager missionManager;
     private DialogManager dialogManager;
     public bool threatened = false;
-    private bool givingClue = false;
+    private bool givingClue = false;        //The private field `InventoryControl.givingClue' is assigned but its value is never used
 
     // Use this for initialization
     void Start()
@@ -52,8 +52,8 @@ public class InventoryControl : MonoBehaviour
 
     Accumulator warningTimer = new Accumulator(1);
     Accumulator cuffTimer = new Accumulator(1);
-    Accumulator hintTimer = new Accumulator(1);
-    Accumulator threatenTimer = new Accumulator(.25f);
+    Accumulator hintTimer = new Accumulator(1);     //The private field `InventoryControl.hintTimer' is assigned but its value is never used
+    Accumulator threatenTimer = new Accumulator(.25f);      //The private field `InventoryControl.threatenTimer' is assigned but its value is never used
 
     // Update is called once per frame
     void Update()
