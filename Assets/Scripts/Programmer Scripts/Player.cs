@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Random = UnityEngine.Random;  //Kathy
+using Random = UnityEngine.Random;
 using VR = UnityEngine.VR;
 
 //TODO LIST
@@ -109,9 +109,9 @@ public class Player : MonoBehaviour
     public bool clueComparisonPlayed = false;
 
     //Footsteps 
-    private float m_StepCycle;  //
-    private AudioSource feetSource;  //Kathy
-    private float m_StepPeriod = 0.6f;//Kathy
+    private float m_StepCycle;
+    private AudioSource feetSource;
+    private float m_StepPeriod = 0.6f;
  
     [SerializeField]
     public AudioClip[] m_GroudFootstepSounds;    // an array of footstep sounds that will be randomly selected from - Kathy copied from Standard Assets character script
@@ -160,7 +160,7 @@ public class Player : MonoBehaviour
         missionManager = FindObjectOfType<MissionManager>();
         counter = 0;
       
-        m_StepCycle = 0f;  //Kathy
+        m_StepCycle = 0f;  //Kathy made 0
 
     }
 
@@ -430,7 +430,7 @@ public class Player : MonoBehaviour
         }
     }
     
-    void ProgressStepCycle()  //Kathy this whole struct amended from Standard Assets character controller
+    void ProgressStepCycle()  //Kathy this whole method amended from Standard Assets character controller
     {
         m_StepCycle += Time.deltaTime;
        
@@ -443,13 +443,13 @@ public class Player : MonoBehaviour
         m_StepCycle = 0;
     }
 
-    void PlayFootStepAudio() //Kathy this whole struct amended from Standard Assets character controller
+    void PlayFootStepAudio() //Kathy this whole method amended from Standard Assets character controller
     {
         // pick & play a random footstep sound from the array,
         // excluding sound at index 0
         RaycastHit hit;
         if (Physics.Raycast(transform.position + new Vector3(0, 0, 0), Vector3.down, out hit, 20))
-            Debug.DrawRay(transform.position + new Vector3(0, 2, 0), Vector3.down, Color.green);  //Kathy
+            Debug.DrawRay(transform.position + new Vector3(0, 2, 0), Vector3.down, Color.green);  //Kathy - not working, can't see green
         {
             if (hit.collider.CompareTag("Ground"))
             {

@@ -164,10 +164,10 @@ public class DialogManager : MonoBehaviour {
                     //Debug.Log("play thankyou");
                     if (!thankyouSpeechPlayed)
                     {
-                        DialogManager.Dialog[] clips = new DialogManager.Dialog[3];  //Kathy
-                        clips[0] = new DialogManager.Dialog(missionManager.currentMission.GetGuiltySuspect().thankyou);  //Kathy
-                        clips[1] = new DialogManager.Dialog(missionManager.currentMission.revelationSpeech);  //Kathy
-                        clips[2] = new DialogManager.Dialog(missionManager.currentMission.mysterySpeech);  //Kathy
+                        DialogManager.Dialog[] clips = new DialogManager.Dialog[3];
+                        clips[0] = new DialogManager.Dialog(missionManager.currentMission.GetGuiltySuspect().thankyou);
+                        clips[1] = new DialogManager.Dialog(missionManager.currentMission.revelationSpeech);
+                        clips[2] = new DialogManager.Dialog(missionManager.currentMission.mysterySpeech);
 
                         setDialog(clips);
                         thankyouSpeechPlayed = true;
@@ -183,13 +183,14 @@ public class DialogManager : MonoBehaviour {
                 {
                     talker = player.selectedCharacter.GetComponent<Animator>();
                     talker.SetTrigger("isHandcuffed");
-                    player.selectedCharacter.transform.FindChild("handcuffs").gameObject.SetActive(true);
+                    player.selectedCharacter.transform.FindChild("handcuffs").gameObject.SetActive(true);  //note Lady of Manor does not have handcuffs and is never arrested
                     player.selectedCharacter = null;
                     if (!relevationSpeechPlayed)
                     {
-                        DialogManager.Dialog[] clips = new DialogManager.Dialog[2];  //Kathy
-                        clips[0] = new DialogManager.Dialog(missionManager.currentMission.revelationSpeech);  //Kathy
-                        clips[1] = new DialogManager.Dialog(missionManager.currentMission.mysterySpeech);  //Kathy
+                        DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
+                        clips[0] = new DialogManager.Dialog(missionManager.currentMission.revelationSpeech);
+                        clips[1] = new DialogManager.Dialog(missionManager.currentMission.mysterySpeech);
+
 
                         setDialog(clips);
                         relevationSpeechPlayed = true;

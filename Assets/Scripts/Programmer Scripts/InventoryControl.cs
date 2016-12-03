@@ -151,8 +151,8 @@ public class InventoryControl : MonoBehaviour
     {
         AudioClip clip;
         clip = missionManager.currentMission.clueDialogue;
-        DialogManager.Dialog[] clips = new DialogManager.Dialog[1];  //Kathy
-        clips[0] = new DialogManager.Dialog(clip, SkyHint.transform);  //Kathy
+        DialogManager.Dialog[] clips = new DialogManager.Dialog[1];
+        clips[0] = new DialogManager.Dialog(clip, SkyHint.transform);
         dialogManager.setDialog(clips);
     }
 

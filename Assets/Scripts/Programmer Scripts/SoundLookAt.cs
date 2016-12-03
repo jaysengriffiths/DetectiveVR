@@ -4,7 +4,7 @@ using System.Collections;
 public class SoundLookAt : MonoBehaviour
 {
     public AudioClip additionalDialog;
-    public float soundDelay = 3;
+    public float soundDelay = 1;
     public AudioClip[] Idle = new AudioClip[0];
     public AudioClip activated;
     public AudioClip enkNames;
