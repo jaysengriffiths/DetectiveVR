@@ -8,8 +8,10 @@ public class savedData : MonoBehaviour
     {
         // read data back in
 
-        // Mission[] missions = FindObjectsOfType<Mission>();      //commented out because the variable 'missions' is assigned but its value is never used
+            // Mission[] missions = FindObjectsOfType<Mission>();      //commented out because the variable 'missions' is assigned but its value is never used
         
+        // Mission string is saved to PlayerPrefs in Player script
+
         //get missons 
         foreach (Mission mi in MissionManager.missions)
         {
@@ -31,20 +33,10 @@ public class savedData : MonoBehaviour
 
     }
 
-    // this should get called in Main scene when the mission is complete
+    // this should get called in Main scene when the mission is complete           //it happens in DialogManager
   public  void UpdateSave(int reward = 0)
     {
-        Character[] characters = FindObjectsOfType<Character>();
-        foreach (Character ch in characters)
-        {
-            PlayerPrefs.SetInt(ch.name + "Intro", ch.introPlayed ? 1 : 0); 
-        }
-        //PlayerPrefs.SetInt("rank",  );
-
-        // save the fact that the current mission has been done
-        MissionManager mm = FindObjectOfType<MissionManager>();
-        PlayerPrefs.SetInt(mm.currentMission.name, reward); // could save out 1 = trophy 2 = present
-        PlayerPrefs.Save();
+        //the fact that the current mission is complete is saved in the MissionManager with  1 = trophy 2 = present
     }
 
     public void ResetSave()
@@ -52,5 +44,14 @@ public class savedData : MonoBehaviour
         PlayerPrefs.DeleteAll();
     }
 
+    private void UpdateCharacterIntro (int played = 0)
+    {
+        //save the fact that this character has said their intro
+        Character[] characters = FindObjectsOfType<Character>();
+        foreach (Character ch in characters)
+        {
+            PlayerPrefs.SetInt(ch.name + "Intro", ch.introPlayed ? 1 : 0);  //in Character script, every character has introPlayed = false; in MissionManager, if character.introPlayed...
+        }
 
+    }
 }

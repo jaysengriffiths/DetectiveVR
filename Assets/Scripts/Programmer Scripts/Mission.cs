@@ -9,24 +9,26 @@ public class Mission : MonoBehaviour
     {
 
         public Character character;
+        public AudioClip explanation;
         public AudioClip wrongArrest;
         public AudioClip rightArrest;
         public AudioClip playerWarning; 
         public AudioClip wrongWarn;
         public AudioClip rightWarn;
-        public AudioClip explanation;
         public AudioClip thankyou;
         public GameObject thanker;
         public Transform spawnPoint;
     }
-    
+
     //populate with characters from scene
+    public int missionName;
+    private GameObject mission;
     public Suspect[] suspects;
     public AudioClip[] soundFX;
     public AudioClip mysterySpeech;
     public AudioClip revelationSpeech;
     public AudioClip complainantSpeech;
-    public AudioClip interogateSpeech;
+    public AudioClip interrogateSpeech;
     public AudioClip clueDialogue;
     public AudioClip clueComparison;
     [HideInInspector]

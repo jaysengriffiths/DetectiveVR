@@ -12,17 +12,17 @@ public class InventoryControl : MonoBehaviour
     public AudioClip bookAwake;
     private bool bookAwakePlayed;
     private bool handcuffAwakePlayed;
-    private AudioSource mic;        //The private field `InventoryControl.mic' is assigned but its value is never used
+    // private AudioSource mic;        //commented out as the private field `InventoryControl.mic' is assigned but its value is never used
     private Player player;
     private MissionManager missionManager;
     private DialogManager dialogManager;
     public bool threatened = false;
-    private bool givingClue = false;        //The private field `InventoryControl.givingClue' is assigned but its value is never used
+    private bool givingHint = false;
 
     // Use this for initialization
     void Start()
     {
-        mic = GameObject.Find("DialogMicrophone").GetComponent<AudioSource>();
+        // mic = GameObject.Find("DialogMicrophone").GetComponent<AudioSource>();
         player = gameObject.GetComponent<Player>();
         missionManager = FindObjectOfType<MissionManager>();
         dialogManager = gameObject.GetComponent<DialogManager>();
@@ -52,8 +52,8 @@ public class InventoryControl : MonoBehaviour
 
     Accumulator warningTimer = new Accumulator(1);
     Accumulator cuffTimer = new Accumulator(1);
-    Accumulator hintTimer = new Accumulator(1);     //The private field `InventoryControl.hintTimer' is assigned but its value is never used
-    Accumulator threatenTimer = new Accumulator(.25f);      //The private field `InventoryControl.threatenTimer' is assigned but its value is never used
+    // Accumulator hintTimer = new Accumulator(1);     //commented out as the private field `InventoryControl.hintTimer' is assigned but its value is never used
+    // Accumulator threatenTimer = new Accumulator(.25f);      //commented out as the private field `InventoryControl.threatenTimer' is assigned but its value is never used
 
     // Update is called once per frame
     void Update()
@@ -125,12 +125,14 @@ public class InventoryControl : MonoBehaviour
             bookAwakePlayed = false;
             handcuffAwakePlayed = false;
         }
-        if (missionManager.state != MissionManager.MissionState.MissionOver)
+        if ((missionManager.state != MissionManager.MissionState.EndByArrest) || (missionManager.state != MissionManager.MissionState.EndByWarning))
         {
             if (player.cameraAngle > 270 && player.cameraAngle < 300)
             {
-
-                GiveClue();
+                if (givingHint == false)
+                {
+                    GiveHint();
+                }
             }
         }
     }
@@ -147,8 +149,9 @@ public class InventoryControl : MonoBehaviour
             player.selectedCharacter.threatenedPlayed = true;
         }
     }
-    public void GiveClue()
+    public void GiveHint()
     {
+        givingHint = true;
         AudioClip clip;
         clip = missionManager.currentMission.clueDialogue;
         DialogManager.Dialog[] clips = new DialogManager.Dialog[1];

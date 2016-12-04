@@ -9,21 +9,21 @@ public class MissionManager : MonoBehaviour
     //public GameObject currentSuspectSelected;
     public static Mission[] missions;
     private DialogManager dialogManager;
-    private AudioSource audioSource;        //The private field `MissionManager.audioSource' is assigned but its value is never used
+    // private AudioSource audioSource;        // commented out as the private field `MissionManager.audioSource' is assigned but its value is never used
     public AudioClip arrestClip;
     public AudioClip[] tutorialDialog;
-    // private savedData saveGame;     //  Commented out because the private field `MissionManager.saveGame' is assigned but its value is never used
+    // private savedData saveGame;     //  commented out because the private field `MissionManager.saveGame' is assigned but its value is never used
     public enum MissionState
     {
         Ongoing,
         EndByWarning,
-        EndByArrest,
-        MissionOver
+        EndByArrest
+        //MissionOver           //commented out as not letting End events happen
     }
     public MissionState state = MissionState.Ongoing;
     public Mission currentMission;
    
-    //Set Mic and dialogmanager
+    //Set dialogmanager
     void Awake()
     {
 
@@ -31,22 +31,34 @@ public class MissionManager : MonoBehaviour
     void Start()
     {
         dialogManager = GameObject.Find("Enk").GetComponent<DialogManager>();
-        GameObject mic = GameObject.Find("DialogMicrophone");
-        if (mic)
-            audioSource = mic.GetComponent<AudioSource>();
+        //mic commented out as its value is never used
+        /* 
+            GameObject mic = GameObject.Find("DialogMicrophone");
 
-        // saveGame = GetComponent<savedData>();        //Commented out because the private field `MissionManager.saveGame' is assigned but its value is never used
+            if (mic)
+            {
+                audioSource = mic.GetComponent<AudioSource>();
+            }
+        */
+
+        // saveGame = GetComponent<savedData>();        //commented out because the private field `MissionManager.saveGame' is assigned but its value is never used
         missions = FindObjectsOfType<Mission>();
-        // load the mission name to activate from the save game
+        // load the mission name to activate from the save game         //don't think save game works
         string mission = PlayerPrefs.GetString("Mission");
-        if (mission != "")
+        Debug.Log("Mission =  " + mission);
+
+
+
+
+            if (mission != "")
         {
             GameObject missionObj = GameObject.Find(mission);
             currentMission = missionObj.GetComponent<Mission>();
         }
         if (currentMission == null)
         {
-            currentMission = missions[5];
+            //return to HQ
+            //currentMission = missions[5];
         }
         currentMission.OnActivate();
         if (mission == "M1_Cat")
@@ -89,7 +101,7 @@ public class MissionManager : MonoBehaviour
                     {
                         int num = player.clueObject ? 3 : 2;
                         DialogManager.Dialog[] clips = new DialogManager.Dialog[num];
-                        clips[0] = new DialogManager.Dialog(currentMission.interogateSpeech);
+                        clips[0] = new DialogManager.Dialog(currentMission.interrogateSpeech);
                         clips[1] = new DialogManager.Dialog(currentMission.suspects[i].explanation, currentMission.suspects[i].character);
 
                         if (player.clueObject)
@@ -119,7 +131,7 @@ public class MissionManager : MonoBehaviour
                             int num = player.clueObject ? 5 : 4;
                             DialogManager.Dialog[] clips = new DialogManager.Dialog[num];
                             clips[0] = new DialogManager.Dialog(player.nameClip);
-                            clips[1] = new DialogManager.Dialog(currentMission.interogateSpeech);
+                            clips[1] = new DialogManager.Dialog(currentMission.interrogateSpeech);
                             clips[2] = new DialogManager.Dialog(currentMission.suspects[i].character.introClip, currentMission.suspects[i].character);
                             clips[3] = new DialogManager.Dialog(currentMission.suspects[i].explanation, currentMission.suspects[i].character);
 
@@ -185,7 +197,10 @@ public class MissionManager : MonoBehaviour
                     {
                         clip = currentMission.suspects[i].rightArrest;
                         state = MissionState.EndByArrest;
-
+                        PlayerPrefs.SetInt("missionManager.currentMission", 1); //Kathy
+                        PlayerPrefs.Save();                                     //Kathy
+                        print(PlayerPrefs.GetInt("missionManager.currentMission")); //Kathy
+                        currentMission.complete = true;
 
                     }
                     else
@@ -219,7 +234,9 @@ public class MissionManager : MonoBehaviour
                     if (i == currentMission.guiltyIndex)
                     {
                         clip = currentMission.suspects[i].rightWarn;
-                        state = MissionState.EndByWarning;
+                        PlayerPrefs.SetInt("missionManager.currentMission", 2); //Kathy
+                        PlayerPrefs.Save(); //Kathy
+                        state = MissionState.EndByWarning;//Kathy
                     }
                     else
                     {
@@ -231,6 +248,7 @@ public class MissionManager : MonoBehaviour
 
                     dialogManager.setDialog(clips, DialogManager.DialogType.Warning);
                     character.warnPlayed = true;
+                    currentMission.complete = true;
                 }
             }
         }

@@ -17,15 +17,16 @@ public class HQManager : MonoBehaviour {
 
     void Awake()
     {
-        PlayerPrefs.SetInt("Greetings", 0);  //doesn't work
+        PlayerPrefs.SetInt("Greetings", 0);
     }
 
 	// Use this for initialization
 	void Start ()
     {
+        lady.SetActive(false);
         startGameStart = Time.time+5;
         ladyEnter = Time.time + 4;
-        ladyLeave = Time.time + 48;
+        ladyLeave = Time.time + 57; //Kathy changed from 48 to 53 to 57
         manager = FindObjectOfType<DialogManager>();
 
         /*
@@ -35,10 +36,13 @@ public class HQManager : MonoBehaviour {
             if (PlayerPrefs.GetInt("M1_Cat") == 1)  //Kathy and Adam
             //if(PlayerPrefs.GetInt("Greetings") == 1)
         */
-        if(PlayerPrefs.GetInt("Greetings") == 1)
+
+        /*
+        if(PlayerPrefs.GetInt("Greetings") == 1)    //does not prevent lady appearing in all HQ visits
         {
-            lady.SetActive(false);
-        } 
+            lady.SetActive(false);  //will this mean she won't appear in Mission 6?
+        }
+        */
     }
 	
 	// Update is called once per frame
@@ -46,6 +50,7 @@ public class HQManager : MonoBehaviour {
 
         if (PlayerPrefs.GetInt("Greetings") == 0)
         {
+            lady.SetActive(true);
             if (startGameStart < Time.time)
             {
                

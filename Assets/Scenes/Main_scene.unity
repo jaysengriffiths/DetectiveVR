@@ -1218,54 +1218,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb8e09b39036e6428967b78d293ab59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missionNumber: 0
   suspects:
   - character: {fileID: 147945545}
+    explanation: {fileID: 8300000, guid: feaabee869009274b841ea72b1a12742, type: 3}
     wrongArrest: {fileID: 8300000, guid: 783ebbdbffabb7d43897342ab16d71cd, type: 3}
     rightArrest: {fileID: 8300000, guid: 7550b7597b5767e4abb0a33dff5d90ee, type: 3}
     playerWarning: {fileID: 8300000, guid: d86ea0824fcf57f4b825c832b8a4cad0, type: 3}
     wrongWarn: {fileID: 8300000, guid: 7002f315cdfbb374193ab589fdc4bbdd, type: 3}
     rightWarn: {fileID: 8300000, guid: 94327c7734e9b014f86ec851eaf9d95f, type: 3}
-    explanation: {fileID: 8300000, guid: feaabee869009274b841ea72b1a12742, type: 3}
     thankyou: {fileID: 8300000, guid: 1f358e1f7ac984340900f4fcf0757cf1, type: 3}
     thanker: {fileID: 1694195180}
     spawnPoint: {fileID: 779183687}
   - character: {fileID: 891475735}
+    explanation: {fileID: 8300000, guid: 4dff46569e63b894295254bb61495868, type: 3}
     wrongArrest: {fileID: 8300000, guid: 797ae969569ecce48b6a8fe68b689495, type: 3}
     rightArrest: {fileID: 8300000, guid: 43a577c25368e724393b067f0b71412a, type: 3}
     playerWarning: {fileID: 8300000, guid: e4a0779684afaf840b319bed58d26b3e, type: 3}
     wrongWarn: {fileID: 8300000, guid: c82e8271263928e409173124023dcb39, type: 3}
     rightWarn: {fileID: 8300000, guid: af77617399282ff47bb7e9d52d86d8bb, type: 3}
-    explanation: {fileID: 8300000, guid: 4dff46569e63b894295254bb61495868, type: 3}
     thankyou: {fileID: 8300000, guid: edf38679376722148888d161b7dfc0a9, type: 3}
     thanker: {fileID: 118894872}
     spawnPoint: {fileID: 2103816205}
   - character: {fileID: 670802454}
+    explanation: {fileID: 8300000, guid: 72378b826ea06564481d9948d8a6f7bb, type: 3}
     wrongArrest: {fileID: 8300000, guid: 4aded3e57d00a4948b11d6357f7315b6, type: 3}
     rightArrest: {fileID: 8300000, guid: 5d11d72cfaadeb44d866a29f3ddf1452, type: 3}
     playerWarning: {fileID: 8300000, guid: bc52d879b90a6de429647bffad03b16c, type: 3}
     wrongWarn: {fileID: 8300000, guid: 237257908c95ca44f8e9e53bed82cdce, type: 3}
     rightWarn: {fileID: 8300000, guid: a3eb5081063db0d47a76782e7bf8fa3c, type: 3}
-    explanation: {fileID: 8300000, guid: 72378b826ea06564481d9948d8a6f7bb, type: 3}
     thankyou: {fileID: 8300000, guid: 257d56f3de8054943a8ad05d06a9807e, type: 3}
     thanker: {fileID: 670519588}
     spawnPoint: {fileID: 1980802418}
   - character: {fileID: 1544739189}
+    explanation: {fileID: 8300000, guid: c8096fd78a261a84fbc4b7cc018a19a1, type: 3}
     wrongArrest: {fileID: 8300000, guid: 7bda3b2b0760a9c4eb1695aaaed4d856, type: 3}
     rightArrest: {fileID: 8300000, guid: d5214da0aed817a4c9831e0f4ba8d7d9, type: 3}
     playerWarning: {fileID: 8300000, guid: c5381e10f8bf4bd42aad011c5bb21ece, type: 3}
     wrongWarn: {fileID: 8300000, guid: 167b79416b3d6ce44ad237249b2d50e6, type: 3}
     rightWarn: {fileID: 8300000, guid: 0d348772c181ef44a8cb52492452f5fe, type: 3}
-    explanation: {fileID: 8300000, guid: c8096fd78a261a84fbc4b7cc018a19a1, type: 3}
     thankyou: {fileID: 8300000, guid: 49e99f802f96edc4fb38ed6bba4fa1e5, type: 3}
     thanker: {fileID: 147945547}
     spawnPoint: {fileID: 256175477}
   - character: {fileID: 118894873}
+    explanation: {fileID: 8300000, guid: 5cbd1bdf5d4a5954f8ac3b4e09833ad1, type: 3}
     wrongArrest: {fileID: 8300000, guid: 4f690cf22ca45ad4792da71729989f10, type: 3}
     rightArrest: {fileID: 8300000, guid: abe75fc7086c7fa48a3ec8cd1913b23a, type: 3}
     playerWarning: {fileID: 8300000, guid: cd089cc46a2b72b49a544b9fe9eedf18, type: 3}
     wrongWarn: {fileID: 8300000, guid: 626d0637936f5cb488568773d04869a4, type: 3}
     rightWarn: {fileID: 8300000, guid: 509ecaaf321a804419e70062f1cae36f, type: 3}
-    explanation: {fileID: 8300000, guid: 5cbd1bdf5d4a5954f8ac3b4e09833ad1, type: 3}
     thankyou: {fileID: 8300000, guid: 893985988675a8842bc7e6bf746df056, type: 3}
     thanker: {fileID: 1544739182}
     spawnPoint: {fileID: 1869054977}
@@ -1278,7 +1279,7 @@ MonoBehaviour:
   mysterySpeech: {fileID: 8300000, guid: dfbf9d9c1a8c6db40963f53c8595da9d, type: 3}
   revelationSpeech: {fileID: 8300000, guid: 5a33632ed86ff2c439f0cc5d69577687, type: 3}
   complainantSpeech: {fileID: 8300000, guid: ba5e81350e712c949a52e73c9bf27d61, type: 3}
-  interogateSpeech: {fileID: 8300000, guid: f6433ec86b32eea46b1ed9623b82b043, type: 3}
+  interrogateSpeech: {fileID: 0}
   clueDialogue: {fileID: 8300000, guid: 2f49582eeb69fb642856290c18fbd1dc, type: 3}
   clueComparison: {fileID: 8300000, guid: f31d4dbe92ed8be4c8cf16cb3e2505fa, type: 3}
   guiltyIndex: 0
@@ -2873,8 +2874,8 @@ Transform:
   - {fileID: 1493269298}
   - {fileID: 720661668}
   - {fileID: 788847311}
-  m_Father: {fileID: 637290622}
-  m_RootOrder: 7
+  m_Father: {fileID: 1957747143}
+  m_RootOrder: 1
 --- !u!114 &155943588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2886,54 +2887,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb8e09b39036e6428967b78d293ab59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missionNumber: 0
   suspects:
   - character: {fileID: 1544739189}
+    explanation: {fileID: 8300000, guid: 626f48c2b39624949bc4cb3c45ff3302, type: 3}
     wrongArrest: {fileID: 8300000, guid: e04735d4df5d804498a00bcecc98e3e2, type: 3}
     rightArrest: {fileID: 8300000, guid: 6940a444b7c0a8e4db1011a3d243fd6c, type: 3}
     playerWarning: {fileID: 8300000, guid: 888a93a31d28af54ba2c92fb230fd15d, type: 3}
     wrongWarn: {fileID: 8300000, guid: 519b5d53c5c1575449da1956ee634b33, type: 3}
     rightWarn: {fileID: 8300000, guid: a39f75f399e91284d99c9b6a97a57b0e, type: 3}
-    explanation: {fileID: 8300000, guid: 626f48c2b39624949bc4cb3c45ff3302, type: 3}
     thankyou: {fileID: 8300000, guid: 60f1357fe1967ee4b8bde636d5836092, type: 3}
     thanker: {fileID: 147945547}
     spawnPoint: {fileID: 266672762}
   - character: {fileID: 891475735}
+    explanation: {fileID: 8300000, guid: 811aecc0f1989654fb39fff42d7e9ff4, type: 3}
     wrongArrest: {fileID: 8300000, guid: 9dce57f8f942da84e96914a6cb5318b7, type: 3}
     rightArrest: {fileID: 8300000, guid: 19cbc76ea959d464b93458a8b241cc5f, type: 3}
     playerWarning: {fileID: 8300000, guid: 1075f713c11437d4cb74bbd53281bceb, type: 3}
     wrongWarn: {fileID: 8300000, guid: ea4eb20b940ebb0468e8c7c771f39225, type: 3}
     rightWarn: {fileID: 8300000, guid: 590ce92a92f63464f8f559ce57620724, type: 3}
-    explanation: {fileID: 8300000, guid: 811aecc0f1989654fb39fff42d7e9ff4, type: 3}
     thankyou: {fileID: 8300000, guid: b906b2e58b897d74c9bfce8373179f25, type: 3}
     thanker: {fileID: 1544739182}
     spawnPoint: {fileID: 1847750388}
   - character: {fileID: 670802454}
+    explanation: {fileID: 8300000, guid: e12af3d03cc6fe342bfd1c9922bab478, type: 3}
     wrongArrest: {fileID: 8300000, guid: ee8718acb3ce6ed4990f28c033fe0f13, type: 3}
     rightArrest: {fileID: 8300000, guid: fc686a70a8a8561458e05ad8b7f4327f, type: 3}
     playerWarning: {fileID: 8300000, guid: 0087b52476651404ca60681a337e9331, type: 3}
     wrongWarn: {fileID: 8300000, guid: 50f95382329928645ab720d3472abeb6, type: 3}
     rightWarn: {fileID: 8300000, guid: 9ef2a84437b28434cb3e2a8e451b1c9c, type: 3}
-    explanation: {fileID: 8300000, guid: e12af3d03cc6fe342bfd1c9922bab478, type: 3}
     thankyou: {fileID: 8300000, guid: 37142a131f6464a4ba91bed3ad2f1f72, type: 3}
     thanker: {fileID: 670519588}
     spawnPoint: {fileID: 1009275573}
   - character: {fileID: 1972238676}
+    explanation: {fileID: 8300000, guid: 8ff93aea067036743a18ffa56b8dea3d, type: 3}
     wrongArrest: {fileID: 8300000, guid: e34ac835e60a26349a49c9e8a226ffa6, type: 3}
     rightArrest: {fileID: 8300000, guid: 25aed927d7a4145418b11a548337ba65, type: 3}
     playerWarning: {fileID: 8300000, guid: a95d728bfdcb783488e3dee2ba001e75, type: 3}
     wrongWarn: {fileID: 8300000, guid: 1de008774d3f76148acb1e7b3a52070c, type: 3}
     rightWarn: {fileID: 8300000, guid: 7dbe3a1d8363853419f28e38b74ed992, type: 3}
-    explanation: {fileID: 8300000, guid: 8ff93aea067036743a18ffa56b8dea3d, type: 3}
     thankyou: {fileID: 8300000, guid: a4e0ec02d4880b34aae9f153ebe72e8b, type: 3}
     thanker: {fileID: 1694195180}
     spawnPoint: {fileID: 900768214}
   - character: {fileID: 147945545}
+    explanation: {fileID: 8300000, guid: bbb61011fa15464499c98961d797c73f, type: 3}
     wrongArrest: {fileID: 8300000, guid: 561929aec9303f349a68e27cbc21c776, type: 3}
     rightArrest: {fileID: 8300000, guid: a39f75f399e91284d99c9b6a97a57b0e, type: 3}
     playerWarning: {fileID: 8300000, guid: 5629eb1fe46b92b4aae9561e47e4c93d, type: 3}
     wrongWarn: {fileID: 8300000, guid: fb69dd6f0107db54798c08a1ba889a79, type: 3}
     rightWarn: {fileID: 8300000, guid: 2da2c30187c19a84896c1b9b2e2ded21, type: 3}
-    explanation: {fileID: 8300000, guid: bbb61011fa15464499c98961d797c73f, type: 3}
     thankyou: {fileID: 8300000, guid: a4e0ec02d4880b34aae9f153ebe72e8b, type: 3}
     thanker: {fileID: 1694195180}
     spawnPoint: {fileID: 396285714}
@@ -2946,7 +2948,7 @@ MonoBehaviour:
   mysterySpeech: {fileID: 0}
   revelationSpeech: {fileID: 0}
   complainantSpeech: {fileID: 8300000, guid: 2dc97466890afd740bd6cf63c6a22097, type: 3}
-  interogateSpeech: {fileID: 8300000, guid: 3833f1f0c3d9e3f449de6a6b43f661e8, type: 3}
+  interrogateSpeech: {fileID: 0}
   clueDialogue: {fileID: 8300000, guid: 189e65d31d58cbf4293a1e2e6f91282a, type: 3}
   clueComparison: {fileID: 8300000, guid: 2630b063d34805541957667680033e9e, type: 3}
   guiltyIndex: 0
@@ -3570,8 +3572,8 @@ Transform:
   - {fileID: 658522554}
   - {fileID: 616136496}
   - {fileID: 908078333}
-  m_Father: {fileID: 637290622}
-  m_RootOrder: 6
+  m_Father: {fileID: 1957747143}
+  m_RootOrder: 0
 --- !u!114 &206056246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3583,54 +3585,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb8e09b39036e6428967b78d293ab59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missionNumber: 0
   suspects:
   - character: {fileID: 670802454}
+    explanation: {fileID: 8300000, guid: c392823d73f89414d9c18da7db3a127e, type: 3}
     wrongArrest: {fileID: 8300000, guid: fc8819b17bbd19c45aa359903b112feb, type: 3}
     rightArrest: {fileID: 8300000, guid: 897bd12f2b9e4584caaf909a7e20d264, type: 3}
     playerWarning: {fileID: 8300000, guid: 518fc8f3f4a7a544fa30f49ba27a1b6c, type: 3}
     wrongWarn: {fileID: 8300000, guid: b850942bc1e46d942a95ec94c63b8f18, type: 3}
     rightWarn: {fileID: 8300000, guid: 55f9683c71640ff44a8cd671a408fb3e, type: 3}
-    explanation: {fileID: 8300000, guid: c392823d73f89414d9c18da7db3a127e, type: 3}
     thankyou: {fileID: 8300000, guid: 902d9758b764acd4eb6b1ca6d2e1b81f, type: 3}
     thanker: {fileID: 670519588}
     spawnPoint: {fileID: 85048209}
   - character: {fileID: 891475735}
+    explanation: {fileID: 8300000, guid: 66d6d7c851f32cb459f6affc3cb77f1a, type: 3}
     wrongArrest: {fileID: 8300000, guid: b1bae6b0b2edda745bd64d1d640d9ba9, type: 3}
     rightArrest: {fileID: 8300000, guid: 7b1171f2d94492641b38a265336960b9, type: 3}
     playerWarning: {fileID: 8300000, guid: 162670c9c04465d488e49a0d35384014, type: 3}
     wrongWarn: {fileID: 8300000, guid: 863b9ad26b5439a42b1115bd2bd399ff, type: 3}
     rightWarn: {fileID: 8300000, guid: 4f30ebd271d39714ca83e3c03c115c6f, type: 3}
-    explanation: {fileID: 8300000, guid: 66d6d7c851f32cb459f6affc3cb77f1a, type: 3}
     thankyou: {fileID: 8300000, guid: 87b7b1dab23d60e4292e25a1838166ee, type: 3}
     thanker: {fileID: 975489275}
     spawnPoint: {fileID: 2108255454}
   - character: {fileID: 1972238676}
+    explanation: {fileID: 8300000, guid: 71651258b4befe042b452d9c3755bf42, type: 3}
     wrongArrest: {fileID: 8300000, guid: 00b35d32d7c0c4b46a36894a4a628966, type: 3}
     rightArrest: {fileID: 8300000, guid: 0680c2016e631554d969140b9f435116, type: 3}
     playerWarning: {fileID: 8300000, guid: b7a09c947bcc10d409333d13b8e24dd9, type: 3}
     wrongWarn: {fileID: 8300000, guid: c5323dfd88bce7b40befebcc0bf63775, type: 3}
     rightWarn: {fileID: 8300000, guid: a0a41185e49b760458a4324d10745365, type: 3}
-    explanation: {fileID: 8300000, guid: 71651258b4befe042b452d9c3755bf42, type: 3}
     thankyou: {fileID: 8300000, guid: 85911b26a4ddbc94abf4d339d04bfcba, type: 3}
     thanker: {fileID: 1694195180}
     spawnPoint: {fileID: 132361751}
   - character: {fileID: 1544739189}
+    explanation: {fileID: 8300000, guid: d4032ed1a6348b4439059c922af2edb2, type: 3}
     wrongArrest: {fileID: 8300000, guid: 35504d68c2b354b45afc4cc579c71b2e, type: 3}
     rightArrest: {fileID: 8300000, guid: 4673209d94712e9459a80ee389b19df8, type: 3}
     playerWarning: {fileID: 8300000, guid: 8bfc1697adf231d4d8a9770abb51f77c, type: 3}
     wrongWarn: {fileID: 8300000, guid: cd904e803d397964099eb853493d1f46, type: 3}
     rightWarn: {fileID: 8300000, guid: 33ade7406013bf047870be1b41e39696, type: 3}
-    explanation: {fileID: 8300000, guid: d4032ed1a6348b4439059c922af2edb2, type: 3}
     thankyou: {fileID: 8300000, guid: 18527e1f7452aaf4fbcaf13ea7920ab0, type: 3}
     thanker: {fileID: 1972238673}
     spawnPoint: {fileID: 133749210}
   - character: {fileID: 975489274}
+    explanation: {fileID: 8300000, guid: 883c1d4776613ab43915bd2b5dfbeb24, type: 3}
     wrongArrest: {fileID: 8300000, guid: c7f4d0f48f6f6bf4a85065f3cee8a6d2, type: 3}
     rightArrest: {fileID: 8300000, guid: ba3b582e42d4b8844908abdace19bf4d, type: 3}
     playerWarning: {fileID: 8300000, guid: 22cf515fd763f2943b7288bf719c858d, type: 3}
     wrongWarn: {fileID: 8300000, guid: 84346735fe78487429b162097f467492, type: 3}
     rightWarn: {fileID: 8300000, guid: b3264360312c59547b7dfadd4f84af42, type: 3}
-    explanation: {fileID: 8300000, guid: 883c1d4776613ab43915bd2b5dfbeb24, type: 3}
     thankyou: {fileID: 8300000, guid: e0bdf8b833e513b499a77c6963bb5a19, type: 3}
     thanker: {fileID: 1544739182}
     spawnPoint: {fileID: 122767646}
@@ -3638,7 +3641,7 @@ MonoBehaviour:
   mysterySpeech: {fileID: 0}
   revelationSpeech: {fileID: 0}
   complainantSpeech: {fileID: 8300000, guid: 50f816fa9806d5c4f8305f7e703e48e9, type: 3}
-  interogateSpeech: {fileID: 8300000, guid: 1f501b29c330db84381936040baf3a5e, type: 3}
+  interrogateSpeech: {fileID: 0}
   clueDialogue: {fileID: 8300000, guid: 4f07968afb307be4397f6fc33dfe9908, type: 3}
   clueComparison: {fileID: 0}
   guiltyIndex: 0
@@ -9358,54 +9361,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb8e09b39036e6428967b78d293ab59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missionNumber: 0
   suspects:
   - character: {fileID: 975489274}
+    explanation: {fileID: 8300000, guid: 4d3bdd39dbc499c479b7fc37350b9eff, type: 3}
     wrongArrest: {fileID: 8300000, guid: 56de0c776234e374da1a609f83bd248d, type: 3}
     rightArrest: {fileID: 8300000, guid: 940687a93133654439ddcbb7ed34dd02, type: 3}
     playerWarning: {fileID: 8300000, guid: 9520eeee888e0e94dbab3d812d500dfa, type: 3}
     wrongWarn: {fileID: 8300000, guid: f8706123bd3e7084f9dd3ca0a06ac428, type: 3}
     rightWarn: {fileID: 8300000, guid: dd2690ee8e96e784ebb717a2159f3ac1, type: 3}
-    explanation: {fileID: 8300000, guid: 4d3bdd39dbc499c479b7fc37350b9eff, type: 3}
     thankyou: {fileID: 8300000, guid: a72eca027ed7e1341a6c6e6a9f807d02, type: 3}
     thanker: {fileID: 1530621508}
     spawnPoint: {fileID: 27788845}
   - character: {fileID: 891475735}
+    explanation: {fileID: 8300000, guid: c8617c4d86ecd6349a11119ca1f7444b, type: 3}
     wrongArrest: {fileID: 8300000, guid: 8c5568b2e8ec11a48987b488a85aa795, type: 3}
     rightArrest: {fileID: 8300000, guid: 28405d5e22b4b7b4c933f396d08fe897, type: 3}
     playerWarning: {fileID: 8300000, guid: 4e054d9d9277d5c45b651f36c6c90251, type: 3}
     wrongWarn: {fileID: 8300000, guid: f1d0712bdc809ab419a7678836b6bd22, type: 3}
     rightWarn: {fileID: 8300000, guid: 9ae4e046fc68e2d499e76d6ff6c33644, type: 3}
-    explanation: {fileID: 8300000, guid: c8617c4d86ecd6349a11119ca1f7444b, type: 3}
     thankyou: {fileID: 8300000, guid: 11ca9c3aaa9f7b949964a2e88cdc9c30, type: 3}
     thanker: {fileID: 32249797}
     spawnPoint: {fileID: 246348851}
   - character: {fileID: 1530621511}
+    explanation: {fileID: 8300000, guid: e1435010b50709940af1ac04f5a0deb6, type: 3}
     wrongArrest: {fileID: 8300000, guid: 64337c1747f10944eb5d015f0567e2c6, type: 3}
     rightArrest: {fileID: 8300000, guid: 34cc602a0ea2ec344bc38772c17ff84e, type: 3}
     playerWarning: {fileID: 8300000, guid: 0dceeade0d300ef4892d22b0412a6b0f, type: 3}
     wrongWarn: {fileID: 8300000, guid: 94da11b71edb5ad479788fef10d52d31, type: 3}
     rightWarn: {fileID: 8300000, guid: 47ae15994cc28a7498deb9f8b23f0538, type: 3}
-    explanation: {fileID: 8300000, guid: e1435010b50709940af1ac04f5a0deb6, type: 3}
     thankyou: {fileID: 8300000, guid: 9fa43f645417d524996706b6a682c4de, type: 3}
     thanker: {fileID: 670519588}
     spawnPoint: {fileID: 1918952771}
   - character: {fileID: 118894873}
+    explanation: {fileID: 8300000, guid: 9f826d261d6f98847900521aacaa599f, type: 3}
     wrongArrest: {fileID: 8300000, guid: f78ecf1fb93f2414da5b9833e2308fc6, type: 3}
     rightArrest: {fileID: 8300000, guid: a58099bbf2c7c4540b6723053d5a34f9, type: 3}
     playerWarning: {fileID: 8300000, guid: c4ff4d19cb30a884c9b65b31accd864d, type: 3}
     wrongWarn: {fileID: 8300000, guid: 7666ab59ecdfa904684f39c78980e356, type: 3}
     rightWarn: {fileID: 8300000, guid: 4c940d9adb2434444b13dec11f9e50bf, type: 3}
-    explanation: {fileID: 8300000, guid: 9f826d261d6f98847900521aacaa599f, type: 3}
     thankyou: {fileID: 8300000, guid: a13cd40d1f08b0a4ea4a7bcb117731da, type: 3}
     thanker: {fileID: 975489275}
     spawnPoint: {fileID: 540125827}
   - character: {fileID: 32249800}
+    explanation: {fileID: 8300000, guid: e61cfba70eff95340b223de008853518, type: 3}
     wrongArrest: {fileID: 8300000, guid: 4ffeb0f45dd060d42bc24a36bf4a502f, type: 3}
     rightArrest: {fileID: 8300000, guid: 85e4c39d3d36f9a439f7774252312979, type: 3}
     playerWarning: {fileID: 8300000, guid: 29f938a73bc9854488c35dbb5560a944, type: 3}
     wrongWarn: {fileID: 8300000, guid: 62ccf2e47fb361042b8a721ac134a1f5, type: 3}
     rightWarn: {fileID: 8300000, guid: 0ef8cbca99990184dad9fff78532ee3b, type: 3}
-    explanation: {fileID: 8300000, guid: e61cfba70eff95340b223de008853518, type: 3}
     thankyou: {fileID: 8300000, guid: 61393b512f0732744b60b28b5f775af4, type: 3}
     thanker: {fileID: 118894872}
     spawnPoint: {fileID: 1247324714}
@@ -9418,7 +9422,7 @@ MonoBehaviour:
   mysterySpeech: {fileID: 8300000, guid: f25677dd863ea9e40b3c1e053a66bdd3, type: 3}
   revelationSpeech: {fileID: 8300000, guid: 14df80b3c12335d4ca81094a50b3278d, type: 3}
   complainantSpeech: {fileID: 8300000, guid: 900752abefd7e944496d170d253ea102, type: 3}
-  interogateSpeech: {fileID: 8300000, guid: 1d713145c3215304dbde21fee9c2bbd0, type: 3}
+  interrogateSpeech: {fileID: 0}
   clueDialogue: {fileID: 8300000, guid: 43cff7254a651ac419d6d8d09ef90914, type: 3}
   clueComparison: {fileID: 8300000, guid: 32d4c27b48d1f0d4a9a187d2ce8b7dad, type: 3}
   guiltyIndex: 0
@@ -10869,8 +10873,7 @@ Transform:
   - {fileID: 543775600}
   - {fileID: 1206604905}
   - {fileID: 1245954080}
-  - {fileID: 206056245}
-  - {fileID: 155943587}
+  - {fileID: 1957747143}
   m_Father: {fileID: 1217309896}
   m_RootOrder: 0
 --- !u!1 &640295540
@@ -20042,54 +20045,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb8e09b39036e6428967b78d293ab59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missionNumber: 0
   suspects:
   - character: {fileID: 891475735}
+    explanation: {fileID: 8300000, guid: a34ec1d27619a3a4989f3f97f102ea50, type: 3}
     wrongArrest: {fileID: 0}
     rightArrest: {fileID: 8300000, guid: 848ebcef8dcea3c4f8ee1392df596b37, type: 3}
     playerWarning: {fileID: 8300000, guid: c7375d1d5411985409a30238d056dd59, type: 3}
     wrongWarn: {fileID: 0}
     rightWarn: {fileID: 8300000, guid: e67aeee50feb9a64c8bfd1212af91219, type: 3}
-    explanation: {fileID: 8300000, guid: a34ec1d27619a3a4989f3f97f102ea50, type: 3}
     thankyou: {fileID: 8300000, guid: d1bad5aa9a785404d8fc4bf0259931b7, type: 3}
     thanker: {fileID: 975489275}
     spawnPoint: {fileID: 1666652251}
   - character: {fileID: 2119617163}
+    explanation: {fileID: 8300000, guid: 168d32b8e0cacdc4f81c2364fdf6bb56, type: 3}
     wrongArrest: {fileID: 8300000, guid: 3bdc6e3e50915d34589d1a43b9fdcf84, type: 3}
     rightArrest: {fileID: 0}
     playerWarning: {fileID: 8300000, guid: 29373dc1d08ed0d40a73562c6cc6c60f, type: 3}
     wrongWarn: {fileID: 8300000, guid: 58fea9a61aade8d428527b119e79409a, type: 3}
     rightWarn: {fileID: 0}
-    explanation: {fileID: 8300000, guid: 168d32b8e0cacdc4f81c2364fdf6bb56, type: 3}
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
     spawnPoint: {fileID: 436175056}
   - character: {fileID: 1972238676}
+    explanation: {fileID: 8300000, guid: 6b377224d62b0594884b711629807232, type: 3}
     wrongArrest: {fileID: 8300000, guid: 985b2e2e13c175e4e872faa76b931eb3, type: 3}
     rightArrest: {fileID: 0}
     playerWarning: {fileID: 8300000, guid: bb45bf57be2a55246a22f09f27f0780c, type: 3}
     wrongWarn: {fileID: 8300000, guid: 13fbcde27fd3a724990dd022f51949ff, type: 3}
     rightWarn: {fileID: 0}
-    explanation: {fileID: 8300000, guid: 6b377224d62b0594884b711629807232, type: 3}
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
     spawnPoint: {fileID: 1165701799}
   - character: {fileID: 147945545}
+    explanation: {fileID: 8300000, guid: 2f088327878798245994c302b85c8dc5, type: 3}
     wrongArrest: {fileID: 8300000, guid: 9391454fb19a7e34f987c484e4afa8ce, type: 3}
     rightArrest: {fileID: 0}
     playerWarning: {fileID: 8300000, guid: cf3c70581b6201749bc58a27b239641c, type: 3}
     wrongWarn: {fileID: 8300000, guid: 099bd257554e10347baef93e4b2c68c1, type: 3}
     rightWarn: {fileID: 0}
-    explanation: {fileID: 8300000, guid: 2f088327878798245994c302b85c8dc5, type: 3}
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
     spawnPoint: {fileID: 423246335}
   - character: {fileID: 975489274}
+    explanation: {fileID: 8300000, guid: 07916221921395c45bcae2756ce79ced, type: 3}
     wrongArrest: {fileID: 8300000, guid: 2afdefe9e28f1e648bd604449369bbf7, type: 3}
     rightArrest: {fileID: 0}
     playerWarning: {fileID: 8300000, guid: 58bd32fc690aac245bc7abb5a94ae94b, type: 3}
     wrongWarn: {fileID: 8300000, guid: d06dacc7ee9962847a055abe904c066d, type: 3}
     rightWarn: {fileID: 0}
-    explanation: {fileID: 8300000, guid: 07916221921395c45bcae2756ce79ced, type: 3}
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
     spawnPoint: {fileID: 1292726524}
@@ -20097,7 +20101,7 @@ MonoBehaviour:
   mysterySpeech: {fileID: 8300000, guid: 59d8539a12e013647a81f3f80af12432, type: 3}
   revelationSpeech: {fileID: 8300000, guid: e2abc08ccd60c4a4db8ab174be3c8e46, type: 3}
   complainantSpeech: {fileID: 8300000, guid: 031667204159a7a4e8b90a9dd90d86ef, type: 3}
-  interogateSpeech: {fileID: 8300000, guid: dc300d693f6cc644f8c12784cec0dd60, type: 3}
+  interrogateSpeech: {fileID: 0}
   clueDialogue: {fileID: 8300000, guid: 1fad129c689114a49bc70b33030051b2, type: 3}
   clueComparison: {fileID: 8300000, guid: 9c5a3f6028ca9f746bcd80db43335b1b, type: 3}
   guiltyIndex: 0
@@ -20565,54 +20569,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb8e09b39036e6428967b78d293ab59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missionNumber: 0
   suspects:
   - character: {fileID: 287079091}
+    explanation: {fileID: 8300000, guid: 5f7c09e341d2b2e4f88747c32225fdd0, type: 3}
     wrongArrest: {fileID: 0}
     rightArrest: {fileID: 0}
     playerWarning: {fileID: 0}
     wrongWarn: {fileID: 0}
     rightWarn: {fileID: 0}
-    explanation: {fileID: 8300000, guid: 5f7c09e341d2b2e4f88747c32225fdd0, type: 3}
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
     spawnPoint: {fileID: 454259598}
   - character: {fileID: 891475735}
+    explanation: {fileID: 8300000, guid: b2eb0c9c1bd0b1b448d52b3309610d0e, type: 3}
     wrongArrest: {fileID: 0}
     rightArrest: {fileID: 0}
     playerWarning: {fileID: 0}
     wrongWarn: {fileID: 0}
     rightWarn: {fileID: 0}
-    explanation: {fileID: 8300000, guid: b2eb0c9c1bd0b1b448d52b3309610d0e, type: 3}
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
     spawnPoint: {fileID: 1834429754}
   - character: {fileID: 2119617163}
+    explanation: {fileID: 8300000, guid: ccb85012721b89c4380e63d6537bddd7, type: 3}
     wrongArrest: {fileID: 0}
     rightArrest: {fileID: 0}
     playerWarning: {fileID: 0}
     wrongWarn: {fileID: 0}
     rightWarn: {fileID: 0}
-    explanation: {fileID: 8300000, guid: ccb85012721b89c4380e63d6537bddd7, type: 3}
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
     spawnPoint: {fileID: 357444440}
   - character: {fileID: 147945545}
+    explanation: {fileID: 8300000, guid: e0c1cd108a2319848a1667ce2c959af2, type: 3}
     wrongArrest: {fileID: 0}
     rightArrest: {fileID: 0}
     playerWarning: {fileID: 0}
     wrongWarn: {fileID: 0}
     rightWarn: {fileID: 0}
-    explanation: {fileID: 8300000, guid: e0c1cd108a2319848a1667ce2c959af2, type: 3}
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
     spawnPoint: {fileID: 843692709}
   - character: {fileID: 975489274}
+    explanation: {fileID: 8300000, guid: 5d5bdc1e01c82374e8d0c4b796e41354, type: 3}
     wrongArrest: {fileID: 0}
     rightArrest: {fileID: 0}
     playerWarning: {fileID: 0}
     wrongWarn: {fileID: 0}
     rightWarn: {fileID: 0}
-    explanation: {fileID: 8300000, guid: 5d5bdc1e01c82374e8d0c4b796e41354, type: 3}
     thankyou: {fileID: 0}
     thanker: {fileID: 0}
     spawnPoint: {fileID: 1048119664}
@@ -20620,7 +20625,7 @@ MonoBehaviour:
   mysterySpeech: {fileID: 0}
   revelationSpeech: {fileID: 0}
   complainantSpeech: {fileID: 8300000, guid: bc9afbfdb906be146ab98fc8dcbb1ca8, type: 3}
-  interogateSpeech: {fileID: 8300000, guid: efb4e646391185a4596d9918d06974a6, type: 3}
+  interrogateSpeech: {fileID: 0}
   clueDialogue: {fileID: 8300000, guid: f114b18c3ec56e34d92b108f531814e2, type: 3}
   clueComparison: {fileID: 0}
   guiltyIndex: 0
@@ -25247,54 +25252,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb8e09b39036e6428967b78d293ab59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missionNumber: 0
   suspects:
   - character: {fileID: 2119617163}
+    explanation: {fileID: 8300000, guid: 444d1fd8f1b4862469fd0ba1ff813acb, type: 3}
     wrongArrest: {fileID: 8300000, guid: 87f8a36d8dfedb8429049e5b437b8afb, type: 3}
     rightArrest: {fileID: 8300000, guid: 27bf1fbe62eccbe438159e634a66931e, type: 3}
     playerWarning: {fileID: 8300000, guid: 1ed9a4f634e1b804899deed11d0bb13a, type: 3}
     wrongWarn: {fileID: 8300000, guid: 67c2b617d8b5b474eb1b3e9fc9e387e9, type: 3}
     rightWarn: {fileID: 8300000, guid: 05a42f3c95222bb47b787698e74b75ff, type: 3}
-    explanation: {fileID: 8300000, guid: 444d1fd8f1b4862469fd0ba1ff813acb, type: 3}
     thankyou: {fileID: 8300000, guid: d25b2d0845520234fbaf4a54511e6ec7, type: 3}
     thanker: {fileID: 670519588}
     spawnPoint: {fileID: 1841128348}
   - character: {fileID: 891475735}
+    explanation: {fileID: 8300000, guid: 629663a5997f61a4c86486f5eae82d3a, type: 3}
     wrongArrest: {fileID: 8300000, guid: 2c0a26dfb37ad5540ab75d9ed4b56907, type: 3}
     rightArrest: {fileID: 8300000, guid: 1313101278fa73d4a8321ea3c3327585, type: 3}
     playerWarning: {fileID: 8300000, guid: 0f3ca4abede843d408b75efef5a98023, type: 3}
     wrongWarn: {fileID: 8300000, guid: d34128e5a513a3646ae8313966c042dd, type: 3}
     rightWarn: {fileID: 8300000, guid: f38f30a55a99f6844a29ae17dffa5ab8, type: 3}
-    explanation: {fileID: 8300000, guid: 629663a5997f61a4c86486f5eae82d3a, type: 3}
     thankyou: {fileID: 8300000, guid: 8a2bfb3182e814e44a787f9f33fb1c88, type: 3}
     thanker: {fileID: 975489275}
     spawnPoint: {fileID: 174544606}
   - character: {fileID: 670802454}
+    explanation: {fileID: 8300000, guid: 47a6176fa330e3e43868453d66c51c57, type: 3}
     wrongArrest: {fileID: 8300000, guid: 754ea251715400040aa189d43491d997, type: 3}
     rightArrest: {fileID: 8300000, guid: 939cc57f196d59049b58e536f5d00fd6, type: 3}
     playerWarning: {fileID: 8300000, guid: 6cb3f2423e10b8b4ab0adb6184de5bd0, type: 3}
     wrongWarn: {fileID: 8300000, guid: 7adacf621322cc449820e78502894a2f, type: 3}
     rightWarn: {fileID: 8300000, guid: b3056a68118d5dd4ea2fbf065dedf14d, type: 3}
-    explanation: {fileID: 8300000, guid: 47a6176fa330e3e43868453d66c51c57, type: 3}
     thankyou: {fileID: 8300000, guid: 817b625da4f729145bb4be4750044b4e, type: 3}
     thanker: {fileID: 254858154}
     spawnPoint: {fileID: 647011381}
   - character: {fileID: 147945545}
+    explanation: {fileID: 8300000, guid: 116875e6bfc61314a99de57150fa2789, type: 3}
     wrongArrest: {fileID: 8300000, guid: a37b39a3e518c374c81b0ff8a5234cd0, type: 3}
     rightArrest: {fileID: 8300000, guid: a0ba4c6217df1c448aaa45c57c65c2cc, type: 3}
     playerWarning: {fileID: 8300000, guid: 84cbe92507ef0c34bbb4ba271899ddf9, type: 3}
     wrongWarn: {fileID: 8300000, guid: 1bd92a7298cb4754ea6c4d95f8aa925a, type: 3}
     rightWarn: {fileID: 8300000, guid: d0cd79a6fd06f82499e88fe3277207d9, type: 3}
-    explanation: {fileID: 8300000, guid: 116875e6bfc61314a99de57150fa2789, type: 3}
     thankyou: {fileID: 8300000, guid: 0a389d9126c1e1041b312a9ec1e455eb, type: 3}
     thanker: {fileID: 1694195180}
     spawnPoint: {fileID: 649136940}
   - character: {fileID: 975489274}
+    explanation: {fileID: 8300000, guid: 4c6d2952448c00c48b60f6983459253a, type: 3}
     wrongArrest: {fileID: 8300000, guid: eb4c8dbbf4bc232458feb1c7ac0beef6, type: 3}
     rightArrest: {fileID: 8300000, guid: 19b22f382c797564ab7b7db5567a64ad, type: 3}
     playerWarning: {fileID: 8300000, guid: e42e8f5d11b086840824fbfd0ad7355e, type: 3}
     wrongWarn: {fileID: 8300000, guid: 294345d8123091b4ab50dcc64cf8d420, type: 3}
     rightWarn: {fileID: 8300000, guid: 14285ec622b25594595a5fa0952cf5ba, type: 3}
-    explanation: {fileID: 8300000, guid: 4c6d2952448c00c48b60f6983459253a, type: 3}
     thankyou: {fileID: 8300000, guid: ccbd96f2cc1aecf49a91317648ae0ad3, type: 3}
     thanker: {fileID: 147945547}
     spawnPoint: {fileID: 1873871252}
@@ -25303,7 +25309,7 @@ MonoBehaviour:
   mysterySpeech: {fileID: 8300000, guid: 4682bb8a9a39a8b4f9493d5183c98835, type: 3}
   revelationSpeech: {fileID: 8300000, guid: bc9c0653cdd696943b2c809d3b5dc58a, type: 3}
   complainantSpeech: {fileID: 8300000, guid: ba970cfb975da19408bd44953a14cb9c, type: 3}
-  interogateSpeech: {fileID: 8300000, guid: d43cb063ba59ecd4bb5a6976c96007ff, type: 3}
+  interrogateSpeech: {fileID: 0}
   clueDialogue: {fileID: 8300000, guid: a945332222c17bc44a0787694e05bd4d, type: 3}
   clueComparison: {fileID: 8300000, guid: 66ad4bba61b2cfe4fb283571cc3fe260, type: 3}
   guiltyIndex: 0
@@ -27746,54 +27752,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb8e09b39036e6428967b78d293ab59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missionNumber: 0
   suspects:
   - character: {fileID: 1972238676}
+    explanation: {fileID: 8300000, guid: 228a01f7f2daa7e49a2effcaa9be62c8, type: 3}
     wrongArrest: {fileID: 8300000, guid: 2c595cb8133ab1347a9ff53f7141bcf5, type: 3}
     rightArrest: {fileID: 8300000, guid: d4c872e81ef4f2743b818845b9dd36b1, type: 3}
     playerWarning: {fileID: 8300000, guid: 2138592bfcefd444eb90bdcdcbb065f6, type: 3}
     wrongWarn: {fileID: 8300000, guid: 16013defcf0fa7144b726a92ccfe100b, type: 3}
     rightWarn: {fileID: 8300000, guid: d9fded49613194049ad8cbc0119239e3, type: 3}
-    explanation: {fileID: 8300000, guid: 228a01f7f2daa7e49a2effcaa9be62c8, type: 3}
     thankyou: {fileID: 8300000, guid: 6ea56c79cc92765409adc7b16dd6c0ba, type: 3}
     thanker: {fileID: 1694195180}
     spawnPoint: {fileID: 1463972759}
   - character: {fileID: 891475735}
+    explanation: {fileID: 8300000, guid: 4ba9b1389d575d34e9c5efec284f416b, type: 3}
     wrongArrest: {fileID: 8300000, guid: 2b2458bb1adc2cb498fcdb6f95f74b97, type: 3}
     rightArrest: {fileID: 8300000, guid: e49d0f4b32ba65a47becc501466e448d, type: 3}
     playerWarning: {fileID: 8300000, guid: 48b961dee6bd9244da0df5e53ff887c0, type: 3}
     wrongWarn: {fileID: 8300000, guid: 5ea611d92ac597b4d9454ea147c14df2, type: 3}
     rightWarn: {fileID: 8300000, guid: 036f021a8f057cb49acfb6d526945bd6, type: 3}
-    explanation: {fileID: 8300000, guid: 4ba9b1389d575d34e9c5efec284f416b, type: 3}
     thankyou: {fileID: 8300000, guid: 65e068c1d88a85c4c9bdcd80d38a56ef, type: 3}
     thanker: {fileID: 975489275}
     spawnPoint: {fileID: 555812697}
   - character: {fileID: 670802454}
+    explanation: {fileID: 8300000, guid: 022c98c3ac9796f46b3f7f767ce771b6, type: 3}
     wrongArrest: {fileID: 8300000, guid: 55958bd07a80ad846ab0298e73bef773, type: 3}
     rightArrest: {fileID: 8300000, guid: 6b21b069bdc3af44f809333899b7056f, type: 3}
     playerWarning: {fileID: 8300000, guid: 5e9be270488095049a50565aad2fd20e, type: 3}
     wrongWarn: {fileID: 8300000, guid: f85a9e14d61918e49ab0348aa0bbf732, type: 3}
     rightWarn: {fileID: 8300000, guid: 6c34c856678ad074eaea5b214c8df40d, type: 3}
-    explanation: {fileID: 8300000, guid: 022c98c3ac9796f46b3f7f767ce771b6, type: 3}
     thankyou: {fileID: 8300000, guid: e383d06170e6bf449a18c80932686a2a, type: 3}
     thanker: {fileID: 670519588}
     spawnPoint: {fileID: 2124173670}
   - character: {fileID: 147945545}
+    explanation: {fileID: 8300000, guid: cb63d54bcc1340f4096ce1d328ddeeba, type: 3}
     wrongArrest: {fileID: 8300000, guid: e4d5bc9e8900c784baaf53f5deccfbbc, type: 3}
     rightArrest: {fileID: 8300000, guid: 063b46459e8fd944a8eeefb65c7455a2, type: 3}
     playerWarning: {fileID: 8300000, guid: 943d35ac4b878d6439c3b186127ef8e6, type: 3}
     wrongWarn: {fileID: 8300000, guid: dafc01b67a6141e40ae2bd44c67a1738, type: 3}
     rightWarn: {fileID: 8300000, guid: c62fceccf2a36394baf6a380a006c5db, type: 3}
-    explanation: {fileID: 8300000, guid: cb63d54bcc1340f4096ce1d328ddeeba, type: 3}
     thankyou: {fileID: 8300000, guid: ce4c89ca04c3ee443a41c1df5aa98e19, type: 3}
     thanker: {fileID: 1972238673}
     spawnPoint: {fileID: 715466600}
   - character: {fileID: 975489274}
+    explanation: {fileID: 8300000, guid: 6dd788f227d0d1143893021f55fa1f58, type: 3}
     wrongArrest: {fileID: 8300000, guid: 7febb7b9c6da0b84a80e49e8aa068e06, type: 3}
     rightArrest: {fileID: 8300000, guid: 73b8cabc2c88ad947bb3681dcd5463fb, type: 3}
     playerWarning: {fileID: 8300000, guid: 8f437e66c333b2745ab415ab385d52e2, type: 3}
     wrongWarn: {fileID: 8300000, guid: 8cd06344b5b78994d94798c0e056611b, type: 3}
     rightWarn: {fileID: 8300000, guid: 52386ca274e06474bb8de58f9d8c80c3, type: 3}
-    explanation: {fileID: 8300000, guid: 6dd788f227d0d1143893021f55fa1f58, type: 3}
     thankyou: {fileID: 8300000, guid: b41108dd3de57d8479a4db1d51d262ff, type: 3}
     thanker: {fileID: 147945547}
     spawnPoint: {fileID: 444439824}
@@ -27806,7 +27813,7 @@ MonoBehaviour:
   mysterySpeech: {fileID: 8300000, guid: bcada48850c66634bb3a9959f3b72947, type: 3}
   revelationSpeech: {fileID: 8300000, guid: 1bdae065a82fc514ba20da16db58366c, type: 3}
   complainantSpeech: {fileID: 8300000, guid: 01547d6a32b316840ad9b13012ca4282, type: 3}
-  interogateSpeech: {fileID: 8300000, guid: a5e18a8fed9436f418c799d482e1b91e, type: 3}
+  interrogateSpeech: {fileID: 0}
   clueDialogue: {fileID: 8300000, guid: 999aab327bfac944ea492d5b97d6f20f, type: 3}
   clueComparison: {fileID: 8300000, guid: 0ab056071812af84999f7b482c273f10, type: 3}
   guiltyIndex: 0
@@ -33081,6 +33088,36 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013133943140, guid: 947a28bbb4267804a86016ece8ae87d7,
     type: 2}
   m_PrefabInternal: {fileID: 1619759055}
+--- !u!1 &1957747142
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1957747143}
+  m_Layer: 0
+  m_Name: NotUsed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1957747143
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1957747142}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 206056245}
+  - {fileID: 155943587}
+  m_Father: {fileID: 637290622}
+  m_RootOrder: 6
 --- !u!1 &1957975466
 GameObject:
   m_ObjectHideFlags: 0

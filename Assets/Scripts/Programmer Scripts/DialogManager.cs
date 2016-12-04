@@ -11,7 +11,7 @@ public class DialogManager : MonoBehaviour {
     private Player player;
     private bool relevationSpeechPlayed = false;
     private bool thankyouSpeechPlayed = false;
-    private bool mysterySpeechPlayed = false;  //The private field `DialogManager.mysterySpeechPlayed' is assigned but its value is never used
+    // private bool mysterySpeechPlayed = false;  //commented out because the private field `DialogManager.mysterySpeechPlayed' is assigned but its value is never used
     private bool isDialog = false;
     private bool isPlaying = false;
     // private savedData saveGame;     // commented out because the private field `DialogManager.saveGame' is assigned but its value is never used
@@ -141,7 +141,7 @@ public class DialogManager : MonoBehaviour {
                         audioSource.clip = pendingDialog[0].clip;
                         audioSource.Play();
 
-                        //copy non playing left over audio into temp array tha twill become the pending once play is over 
+                        //copy non playing left over audio into temp array that will become the pending once play is over 
                         Dialog[] dialog = new Dialog[pendingDialog.Length - 1];
 
                         for (int i = 0; i < dialog.Length; i++)
@@ -172,10 +172,9 @@ public class DialogManager : MonoBehaviour {
                         setDialog(clips);
                         thankyouSpeechPlayed = true;
                         relevationSpeechPlayed = true;
-                        mysterySpeechPlayed = true;
-                        missionManager.currentMission.complete = true;
-                        //
-                        missionManager.state = MissionManager.MissionState.MissionOver;
+                        // mysterySpeechPlayed = true;
+                        //missionManager.currentMission.complete = true;  //already done in MissionManager
+                        // missionManager.state = MissionManager.MissionState.MissionOver;
                     }
                 }
 
@@ -194,13 +193,13 @@ public class DialogManager : MonoBehaviour {
 
                         setDialog(clips);
                         relevationSpeechPlayed = true;
-                        mysterySpeechPlayed = true;
-                        missionManager.state = MissionManager.MissionState.MissionOver;
-                        missionManager.currentMission.complete = true;
+                        // mysterySpeechPlayed = true;
+                        // missionManager.state = MissionManager.MissionState.MissionOver;
+                        // missionManager.currentMission.complete = true;  //already done in MissionManager
                     }
 
                 }
-                if (missionManager != null && missionManager.state == MissionManager.MissionState.MissionOver && isDialog)
+                if (missionManager != null && (missionManager.state == MissionManager.MissionState.EndByWarning || missionManager.state == MissionManager.MissionState.EndByArrest) && isDialog)
                 {
                     for (int i = 0; i < 5; i++)
                     {

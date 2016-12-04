@@ -166,6 +166,8 @@ public class Player : MonoBehaviour
 
     IEnumerator LoadNewScene()
     {
+        loadScene = false;  // Kathy new line
+
         yield return new WaitForSeconds(0);
 
         AsyncOperation async = SceneManager.LoadSceneAsync("Main_Scene");
@@ -190,6 +192,7 @@ public class Player : MonoBehaviour
 
             StartCoroutine(LoadNewScene());
         }
+
         if (speed != 0)
         {
             if (Input.GetKey(KeyCode.LeftShift))
@@ -257,7 +260,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void LoadMissionFromHQ(string mission)
+    void LoadMissionFromHQ(string mission)  // see LookAtSoundObjects method below
     {
         PlayerPrefs.SetString("Mission", mission);
         PlayerPrefs.Save();
@@ -282,10 +285,10 @@ public class Player : MonoBehaviour
 
             // load the scene and set the mission after a delay
             hqGazeTimer.SetObject(soundItem);
-            if (hqGazeTimer.IsExpired() && dialogManager.pendingDialog.Length == 0  )
+            if (hqGazeTimer.IsExpired() && dialogManager.pendingDialog.Length == 0  )   //this means mission will not load while dialogue is being spoken, for example, "My map"
             {
                 if (soundItem.missionName != "")
-                    LoadMissionFromHQ(soundItem.missionName);
+                    LoadMissionFromHQ(soundItem.missionName);   // see LoadMissionFromHQ(string) above
             }
 
             if (soundLookAtTimer.IsExpired())
