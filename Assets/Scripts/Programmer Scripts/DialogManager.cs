@@ -21,7 +21,7 @@ public class DialogManager : MonoBehaviour {
     {
         Normal,
         Warning,
-        Arrest
+        Arrest,
     };
     DialogType currentDialogType = DialogType.Normal;
 
@@ -172,9 +172,9 @@ public class DialogManager : MonoBehaviour {
                         setDialog(clips);
                         thankyouSpeechPlayed = true;
                         relevationSpeechPlayed = true;
-                        // mysterySpeechPlayed = true;
+                        // mysterySpeechPlayed = true;  //commented out as never used
                         //missionManager.currentMission.complete = true;  //already done in MissionManager
-                        // missionManager.state = MissionManager.MissionState.MissionOver;
+                        missionManager.state = MissionManager.MissionState.MissionOver;
                     }
                 }
 
@@ -193,13 +193,13 @@ public class DialogManager : MonoBehaviour {
 
                         setDialog(clips);
                         relevationSpeechPlayed = true;
-                        // mysterySpeechPlayed = true;
-                        // missionManager.state = MissionManager.MissionState.MissionOver;
+                        // mysterySpeechPlayed = true;  //commented out as never used
+                        missionManager.state = MissionManager.MissionState.MissionOver;
                         // missionManager.currentMission.complete = true;  //already done in MissionManager
                     }
 
                 }
-                if (missionManager != null && (missionManager.state == MissionManager.MissionState.EndByWarning || missionManager.state == MissionManager.MissionState.EndByArrest) && isDialog)
+                if (missionManager != null && missionManager.state == MissionManager.MissionState.MissionOver && isDialog)
                 {
                     for (int i = 0; i < 5; i++)
                     {

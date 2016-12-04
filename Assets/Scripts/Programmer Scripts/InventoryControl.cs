@@ -125,13 +125,14 @@ public class InventoryControl : MonoBehaviour
             bookAwakePlayed = false;
             handcuffAwakePlayed = false;
         }
-        if ((missionManager.state != MissionManager.MissionState.EndByArrest) || (missionManager.state != MissionManager.MissionState.EndByWarning))
+        if ((missionManager.state != MissionManager.MissionState.EndByArrest) || (missionManager.state != MissionManager.MissionState.EndByWarning) || (missionManager.state != MissionManager.MissionState.MissionOver))   //Kathy ended hint earlier
         {
             if (player.cameraAngle > 270 && player.cameraAngle < 300)
             {
-                if (givingHint == false)
+                if (givingHint == false)    //Kathy trying to prevent hint playing twice in succession
                 {
                     GiveHint();
+                    givingHint = true;
                 }
             }
         }
@@ -140,7 +141,7 @@ public class InventoryControl : MonoBehaviour
     public void ThreatenDialog()
     {
         AudioClip clip;
-        if (player.selectedCharacter && !player.selectedCharacter.threatenedPlayed)
+        if (player.selectedCharacter)       //Kathy took out && !player.selectedCharacter.threatenedPlayed as character can be threatened more than once
         {
             clip = player.selectedCharacter.threatenedClip;
             DialogManager.Dialog[] clips = new DialogManager.Dialog[1];
@@ -151,7 +152,6 @@ public class InventoryControl : MonoBehaviour
     }
     public void GiveHint()
     {
-        givingHint = true;
         AudioClip clip;
         clip = missionManager.currentMission.clueDialogue;
         DialogManager.Dialog[] clips = new DialogManager.Dialog[1];

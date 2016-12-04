@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 //JG to work on
 
@@ -17,11 +18,13 @@ public class MissionManager : MonoBehaviour
     {
         Ongoing,
         EndByWarning,
-        EndByArrest
-        //MissionOver           //commented out as not letting End events happen
+        EndByArrest,
+        MissionOver
     }
     public MissionState state = MissionState.Ongoing;
     public Mission currentMission;
+    public GameObject SkyHint;
+    public bool congratulationsPlayed = false;  //Kathy
    
     //Set dialogmanager
     void Awake()
@@ -43,44 +46,48 @@ public class MissionManager : MonoBehaviour
 
         // saveGame = GetComponent<savedData>();        //commented out because the private field `MissionManager.saveGame' is assigned but its value is never used
         missions = FindObjectsOfType<Mission>();
-        // load the mission name to activate from the save game         //don't think save game works
+        // load the mission name to activate from the save game         //this was already commented out.  Don't think save game works
         string mission = PlayerPrefs.GetString("Mission");
-        Debug.Log("Mission =  " + mission);
-
-
-
-
-            if (mission != "")
+            Debug.Log("Mission =  " + mission); //Kathy
+        if (mission != "")
         {
             GameObject missionObj = GameObject.Find(mission);
             currentMission = missionObj.GetComponent<Mission>();
+            Debug.Log("currentMission = " + currentMission);    //Kathy
         }
         if (currentMission == null)
         {
-            //return to HQ
-            //currentMission = missions[5];
+            //currentMission = missions[5]; //commented out as this always starts TornCloth mission
+            SceneManager.LoadScene("HQ");
         }
-        currentMission.OnActivate();
-        if (mission == "M1_Cat")
-        {
-            TutorialDialog();
-        }
-        else
-        {
-            Complainant();
-        }
-        // turn off all missions excepot the current one
-        for (int i = 0; i < missions.Length; i++)
-            if (missions[i] != currentMission)
-                missions[i].gameObject.SetActive(false);
 
-        player = FindObjectOfType<Player>();
-        player.transform.position = currentMission.enkSpawnPoint.transform.position;
+        if (currentMission != null) //Kathy
+        {
+            currentMission.OnActivate();
+            if (mission == "M1_Cat")
+            {
+                TutorialDialog();
+            }
+            else
+            {
+                Complainant();
+            }
+            // turn off all missions except the current one>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> turn them back on after missionOVer
+            for (int i = 0; i < missions.Length; i++)
+                if (missions[i] != currentMission)
+                    missions[i].gameObject.SetActive(false);
+
+            player = FindObjectOfType<Player>();
+            player.transform.position = currentMission.enkSpawnPoint.transform.position;
+        }
     }
 
     void Update()
     {
-
+        if (state == MissionState.MissionOver)  //Kathy
+        {
+            StartCoroutine(MissionOverActions());
+        }
 
     }
 
@@ -254,15 +261,24 @@ public class MissionManager : MonoBehaviour
         }
     }
 
-    void UpdateSkybox()
+    IEnumerator MissionOverActions()   //Kathy
     {
+        if (!congratulationsPlayed)
+        {
+            yield return null;
+
+            DialogManager.Dialog[] clips = new DialogManager.Dialog[1];
+            clips[0] = new DialogManager.Dialog(currentMission.congratulationSpeech, SkyHint.transform);
+           
+            dialogManager.setDialog(clips);
+            congratulationsPlayed = true;
+        }
+        
+        //increase range of LadyOfManor homeplace audiosource
+        
+        
+        
         //Setup skybox for mission environment
         //upon mission completion change skybox to night
     }
-
-
-    void AwardObject()
-    {
-        //
-    }  
 }

@@ -29,6 +29,7 @@ public class Mission : MonoBehaviour
     public AudioClip revelationSpeech;
     public AudioClip complainantSpeech;
     public AudioClip interrogateSpeech;
+    public AudioClip congratulationSpeech;
     public AudioClip clueDialogue;
     public AudioClip clueComparison;
     [HideInInspector]
@@ -108,14 +109,20 @@ public class Mission : MonoBehaviour
 
     void TurnOffObj()
     {
-        for (int i = 0; i < objDisable.Length; i++)
+        if (objDisable.Length > 0)  //Kathy
         {
-            objDisable[i].SetActive(false);
+            for (int i = 0; i < objDisable.Length; i++)
+            {
+                objDisable[i].SetActive(false);
+            }
         }
 
-        for (int i = 0; i < soundObjDisable.Length; i++)
+        if (soundObjDisable.Length > 0 )    //Kathy
         {
-            soundObjDisable[i].GetComponent<AudioSource>().Pause();  //brings up NullReferenceExceptions
+            for (int i = 0; i < soundObjDisable.Length; i++)
+            {
+                soundObjDisable[i].GetComponent<AudioSource>().Pause();  //brings up NullReferenceException for Mission 6 Bonfire because this keeps autopopulating Size = 1 so I populated it with witch and ladyOfManor ordinary characters which get replaced by special ones in this mission
+            }
         }
     }
 }

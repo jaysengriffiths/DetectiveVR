@@ -25,7 +25,9 @@ public class MouseLook : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.P))
         {
             Debug.Log("pressed");
-            PlayerPrefs.SetInt("M1_Cat", 1);
+            //PlayerPrefs.SetInt("M1_Cat", 1);    //sets tutorial mission as complete
+            //currentMission complete
+
         }
 //#if UNITY_ANDROID
 //#else
