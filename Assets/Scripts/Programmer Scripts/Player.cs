@@ -114,7 +114,7 @@ public class Player : MonoBehaviour
     private float m_StepPeriod = 0.6f;
  
     [SerializeField]
-    public AudioClip[] m_GroudFootstepSounds;    // an array of footstep sounds that will be randomly selected from - Kathy copied from Standard Assets character script
+    public AudioClip[] m_GroundFootstepSounds;    // an array of footstep sounds that will be randomly selected from - Kathy copied from Standard Assets character script
     public AudioClip[] m_MudFootstepSounds;
     public AudioClip[] m_GrassFootstepSounds;
     
@@ -125,6 +125,7 @@ public class Player : MonoBehaviour
     private CharacterController controller;
     private InventoryControl.Accumulator goHomeTimer;
     private InventoryControl.Accumulator puzzleSceneLoadTimer;
+    // private string missionName; //Kathy - commented out as now using mission in PlayerPrefs
     
     //Current selected character
     public Character selectedCharacter;
@@ -166,7 +167,7 @@ public class Player : MonoBehaviour
 
     IEnumerator LoadNewScene()
     {
-        loadScene = false;  // Kathy new line
+        loadScene = false;  // Kathy
 
         yield return new WaitForSeconds(0);
 
@@ -371,8 +372,13 @@ public class Player : MonoBehaviour
             //Interaction to travel to puzzle scene
             if (hit.collider.CompareTag("Puzzle"))
             {
-                puzzle = true;
-                lookingAtPuzzle = true;
+                string mission = PlayerPrefs.GetString("Mission");          //Kathy - puzzle sounds were playing in all missions
+
+                if (mission == "M5_Well")                                   //Kathy
+                {
+                    puzzle = true;
+                    lookingAtPuzzle = true;
+                }
             }
             else
             {
@@ -456,15 +462,15 @@ public class Player : MonoBehaviour
         {
             if (hit.collider.CompareTag("Ground"))
             {
-                int n = Random.Range(1, m_GroudFootstepSounds.Length);
-                feetSource.clip = m_GroudFootstepSounds[n];
+                int n = Random.Range(1, m_GroundFootstepSounds.Length);
+                feetSource.clip = m_GroundFootstepSounds[n];
                 feetSource.PlayOneShot(feetSource.clip, footstepVolumeScale);
                 //move picked sound to index 0 so it's not picked next time
-                m_GroudFootstepSounds[n] = m_GroudFootstepSounds[0];
-                m_GroudFootstepSounds[0] = feetSource.clip;
+                m_GroundFootstepSounds[n] = m_GroundFootstepSounds[0];
+                m_GroundFootstepSounds[0] = feetSource.clip;
 
-                m_GroudFootstepSounds[n] = m_GroudFootstepSounds[0];
-                m_GroudFootstepSounds[0] = feetSource.clip;
+                m_GroundFootstepSounds[n] = m_GroundFootstepSounds[0];
+                m_GroundFootstepSounds[0] = feetSource.clip;
 
             }
         }

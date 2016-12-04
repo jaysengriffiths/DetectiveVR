@@ -21,7 +21,7 @@ public class Mission : MonoBehaviour
     }
 
     //populate with characters from scene
-    public int missionName;
+    public string missionName;
     private GameObject mission;
     public Suspect[] suspects;
     public AudioClip[] soundFX;
@@ -70,6 +70,13 @@ public class Mission : MonoBehaviour
 
         RenderSettings.skybox = skybox;
     }
+
+    /*
+    public string missionName() //Kathy
+             {
+                return missionName
+             }
+    */
 
     public Suspect GetGuiltySuspect()
     {

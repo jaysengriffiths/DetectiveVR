@@ -40,7 +40,7 @@ public class HQManager : MonoBehaviour {
         /*
         if(PlayerPrefs.GetInt("Greetings") == 1)    //does not prevent lady appearing in all HQ visits
         {
-            lady.SetActive(false);  //will this mean she won't appear in Mission 6?
+            lady.SetActive(false);                                                                           //will this mean she won't appear in Mission 6?
         }
         */
     }
