@@ -6,20 +6,14 @@ public class M6_BonfireMission : MonoBehaviour
     public Animator witchAnimator;
     public GameObject witch;
     public GameObject planeSupportingWitch;
-    private bool logsSettled = false;
+    //private bool logsFallen = false;
     public Transform log;
     public Transform log1;
     public Transform log2;
     public Transform log3;
     public Transform log4;
     public Transform log5;
-    //private Vector3 logLastPos;
-    //private Vector3 log1LastPos;
-    //private Vector3 log2LastPos;
-    //private Vector3 log3LastPos;
-    //private Vector3 log4LastPos;
-    //private Vector3 log5LastPos;
-    //private float threshold = 0.1f; //minimum displacement before movement recognised
+
     public GameObject fireParticleEmitter;
 
     public Animator ladyOfManorAnimator;
@@ -147,14 +141,16 @@ public class M6_BonfireMission : MonoBehaviour
     
     void Start()
     {
+        log.GetComponent<Rigidbody>().isKinematic = false;
+        log1.GetComponent<Rigidbody>().isKinematic = false;
+        log2.GetComponent<Rigidbody>().isKinematic = false;
+        log3.GetComponent<Rigidbody>().isKinematic = false;
+        log4.GetComponent<Rigidbody>().isKinematic = false;
+        log5.GetComponent<Rigidbody>().isKinematic = false;
+
         ladyOfManorAnimator.SetTrigger("torch");
         witchAnimator.SetTrigger("isListening");
-        //logLastPos = log.position;
-        //log1LastPos = log1.position;
-        //log2LastPos = log2.position;
-        //log3LastPos = log3.position;
-       // log4LastPos = log4.position;
-       // log5LastPos = log5.position;
+
         StartCoroutine("Instructions");
     }
 
@@ -224,19 +220,17 @@ public class M6_BonfireMission : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 0.01f))
 
-        /*detected movement but Enk does not hit hard enough in gameplay
-        Vector3 offset = log.position - logLastPos;
-        Vector3 offset1 = log1.position - log1LastPos;
-        Vector3 offset2 = log2.position - log2LastPos;
-        Vector3 offset3 = log3.position - log3LastPos;
-        Vector3 offset4 = log4.position - log4LastPos;
-        Vector3 offset5 = log5.position - log5LastPos;
-        if ((offset.y > threshold) || (offset1.y > threshold) || (offset2.y > threshold) || (offset3.y > threshold) || (offset4.y > threshold) || (offset5.y > threshold))
-        */
-
         {
             if (hit.transform.gameObject.tag == "log")
             {
+                //allow logs to fall
+                log.GetComponent<Rigidbody>().isKinematic = true;
+                log1.GetComponent<Rigidbody>().isKinematic = true;
+                log2.GetComponent<Rigidbody>().isKinematic = true;
+                log3.GetComponent<Rigidbody>().isKinematic = true;
+                log4.GetComponent<Rigidbody>().isKinematic = true;
+                log5.GetComponent<Rigidbody>().isKinematic = true;
+
                 //stop torch working
                 foreach (BoxCollider boxCollider in torch.GetComponents<BoxCollider>())
                 {
@@ -255,34 +249,29 @@ public class M6_BonfireMission : MonoBehaviour
         {
             if (hit1.transform.gameObject.tag == "torch")
             {
-                //stop logs falling
-                log.GetComponent<Rigidbody>().isKinematic = false;
-                log1.GetComponent<Rigidbody>().isKinematic = false;
-                log2.GetComponent<Rigidbody>().isKinematic = false;
-                log3.GetComponent<Rigidbody>().isKinematic = false;
-                log4.GetComponent<Rigidbody>().isKinematic = false;
-                log5.GetComponent<Rigidbody>().isKinematic = false;
-
-            StopCoroutine("Instructions");
-            StartCoroutine("BurnWitch");
+                StopCoroutine("Instructions");
+                StartCoroutine("BurnWitch");
             }
         }
      }
 
     private IEnumerator WitchDescends() //two seconds after first log drops, witch descends
     {
-        if (logsSettled == false)
+        /*if (logsFallen == false)
         {
             yield return new WaitForSeconds(1);
-            logsSettled = true;
+            logsFallen = true;
         }
 
         else
+                */
+
         {
             yield return new WaitForSeconds(2);
 
             planeSupportingWitch.SetActive(false);
-            //stop checking
+
+            yield return new WaitForSeconds(2);
 
             log_source.mute = true;  //temporarily mute audio source until figure out how to disable it
             log1_source.mute = true;

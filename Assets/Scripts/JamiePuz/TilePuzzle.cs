@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+
 public class TilePuzzle : MonoBehaviour {
 
     public List<GameObject> m_gameTiles = new List<GameObject>();
@@ -227,28 +228,26 @@ public class TilePuzzle : MonoBehaviour {
 
     public string[,] grabGame()
     {
-        int num = UnityEngine.Random.Range(1, 5);
+        int num = Random.Range(1, 6);       //Kathy took out Unity.Engine reference here    //Kathy changed 5 to 6 as last integer not included in range
         switch (num)
         {
             case 1:
-                return Games.game1;
-                break;                  //Unreachable code detected
+                return Games.game1;          //Kathy took out all breaks as return occurs before break reached
+                
             case 2:
-                return Games.game1;
-                break;                  //Unreachable code detected
+                return Games.game2;
+                
             case 3:
-                return Games.game1;
-                break;                  //Unreachable code detected
+                return Games.game3;
+                
             case 4:
-                return Games.game1;
-                break;                  //Unreachable code detected
+                return Games.game4;
+                
             case 5:
-                return Games.game1;
-                break;                  //Unreachable code detected
+                return Games.game5;
+
             default:
                 return Games.game1;
-
-
         }
     } 
 

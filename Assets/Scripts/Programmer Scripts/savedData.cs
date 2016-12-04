@@ -7,14 +7,18 @@ public class savedData : MonoBehaviour
     void Start()
     {
         // read data back in
-        Mission[] missions = FindObjectsOfType<Mission>();      //the variable 'missions' is assigned but its value is never used
-        Character[] characters = FindObjectsOfType<Character>();
+
+        // Mission[] missions = FindObjectsOfType<Mission>();      //commented out because the variable 'missions' is assigned but its value is never used
+        
         //get missons 
         foreach (Mission mi in MissionManager.missions)
         {
             mi.complete = PlayerPrefs.GetInt(mi.name + "Complete") != 0;
         }
+
         //get intros
+
+        Character[] characters = FindObjectsOfType<Character>();
         foreach (Character ch in characters)
         {
             ch.introPlayed = PlayerPrefs.GetInt(ch.name + "Intro") != 0;

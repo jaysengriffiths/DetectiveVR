@@ -12,7 +12,7 @@ public class MissionManager : MonoBehaviour
     private AudioSource audioSource;        //The private field `MissionManager.audioSource' is assigned but its value is never used
     public AudioClip arrestClip;
     public AudioClip[] tutorialDialog;
-    private savedData saveGame;     //The private field `MissionManager.saveGame' is assigned but its value is never used
+    // private savedData saveGame;     //  Commented out because the private field `MissionManager.saveGame' is assigned but its value is never used
     public enum MissionState
     {
         Ongoing,
@@ -35,7 +35,7 @@ public class MissionManager : MonoBehaviour
         if (mic)
             audioSource = mic.GetComponent<AudioSource>();
 
-        saveGame = GetComponent<savedData>();
+        // saveGame = GetComponent<savedData>();        //Commented out because the private field `MissionManager.saveGame' is assigned but its value is never used
         missions = FindObjectsOfType<Mission>();
         // load the mission name to activate from the save game
         string mission = PlayerPrefs.GetString("Mission");

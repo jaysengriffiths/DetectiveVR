@@ -30,7 +30,7 @@ public class SoundLookAt : MonoBehaviour
         // turn off if this is a mission marker in HQ, and the previous mission hasn't been completed
         if (missionName != "")
         {
-            string[] missionNames = { "M1_Cat", "M2_BellSabotaged", "M3_MStalls", "M4_Lockets", "M5_Well" };
+            string[] missionNames = { "M1_Cat", "M2_TornCloth", "M3_MStalls", "M4_Lockets", "M5_Well", "M6_Bonfire", MA_Tracks, MC_Graffiti};
             string prevName = "";
             // start at 2 because the first two are always unlocked
             for (int i = 2; i < missionNames.Length; i++)

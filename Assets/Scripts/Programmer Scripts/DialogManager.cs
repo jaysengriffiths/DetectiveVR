@@ -14,7 +14,7 @@ public class DialogManager : MonoBehaviour {
     private bool mysterySpeechPlayed = false;  //The private field `DialogManager.mysterySpeechPlayed' is assigned but its value is never used
     private bool isDialog = false;
     private bool isPlaying = false;
-    private savedData saveGame;     // The private field `DialogManager.saveGame' is assigned but its value is never used
+    // private savedData saveGame;     // commented out because the private field `DialogManager.saveGame' is assigned but its value is never used
     Animator talker;
 
     public enum DialogType
@@ -58,7 +58,7 @@ public class DialogManager : MonoBehaviour {
     void Start ()
     {
         player = GameObject.Find("Enk").GetComponent<Player>();
-        saveGame = GameObject.FindObjectOfType<savedData>();
+        // saveGame = GameObject.FindObjectOfType<savedData>();  //// commented out because the private field `DialogManager.saveGame' is assigned but its value is never used
 
         if (mic)
         {

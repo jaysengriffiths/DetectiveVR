@@ -302,7 +302,7 @@ public class Player : MonoBehaviour
                         clips[1] = new DialogManager.Dialog(soundItem.enkNames);
                         if(soundItem.additionalDialog)
                         {
-                            DialogManager.Dialog[] clipss = new DialogManager.Dialog[1];  //this value is never used - try clips
+                            //DialogManager.Dialog[] clipss = new DialogManager.Dialog[1];  //this value is never used - Kathy commented out
                             clips[2] = new DialogManager.Dialog(soundItem.additionalDialog);
                         }
                         if (soundItem.isClue || soundItem.enkNameObject)
