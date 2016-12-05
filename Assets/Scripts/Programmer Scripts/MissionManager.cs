@@ -98,66 +98,67 @@ public class MissionManager : MonoBehaviour
 
     public void Interrogate(Character character)
     {
-        for (int i = 0; i < 5; i++)
+        if (currentMission.complete == false) //Kathy
         {
-            if (currentMission.suspects[i].character == character)
+            for (int i = 0; i < 5; i++)
             {
-                if (!character.arrestPlayed && !character.warnPlayed)
+                if (currentMission.suspects[i].character == character)
                 {
-                    if (currentMission.suspects[i].character.introPlayed)
+                    if (!character.arrestPlayed && !character.warnPlayed)
                     {
-                        int num = player.clueObject ? 3 : 2;
-                        DialogManager.Dialog[] clips = new DialogManager.Dialog[num];
-                        clips[0] = new DialogManager.Dialog(currentMission.interrogateSpeech);
-                        clips[1] = new DialogManager.Dialog(currentMission.suspects[i].explanation, currentMission.suspects[i].character);
-
-                        if (player.clueObject)
+                        if (currentMission.suspects[i].character.introPlayed)
                         {
-                            clips[2] = new DialogManager.Dialog(currentMission.clueComparison);
-                            player.clueComparisonPlayed = true;
-                        }
-                        ActivateMovingClue();
-
-                        dialogManager.setDialog(clips);
-                    }
-                    else
-                    {
-                        if (i == 0)
-                        {
-                            DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
-                            clips[0] = new DialogManager.Dialog(player.nameClip);
-                            clips[1] = new DialogManager.Dialog(currentMission.suspects[i].character.introClip, currentMission.suspects[i].character);
-
-                            dialogManager.setDialog(clips);
-                            currentMission.suspects[i].character.introPlayed = true;
-                            //currentMission.suspects[i].character.IsInteracted = true;
-
-                        }
-                        else
-                        {
-                            int num = player.clueObject ? 5 : 4;
+                            int num = player.clueObject ? 3 : 2;
                             DialogManager.Dialog[] clips = new DialogManager.Dialog[num];
-                            clips[0] = new DialogManager.Dialog(player.nameClip);
-                            clips[1] = new DialogManager.Dialog(currentMission.interrogateSpeech);
-                            clips[2] = new DialogManager.Dialog(currentMission.suspects[i].character.introClip, currentMission.suspects[i].character);
-                            clips[3] = new DialogManager.Dialog(currentMission.suspects[i].explanation, currentMission.suspects[i].character);
+                            clips[0] = new DialogManager.Dialog(currentMission.interrogateSpeech);
+                            clips[1] = new DialogManager.Dialog(currentMission.suspects[i].explanation, currentMission.suspects[i].character);
 
-                            currentMission.suspects[i].character.introPlayed = true;
-                            //currentMission.suspects[i].character.IsInteracted = true;
                             if (player.clueObject)
                             {
-                                clips[4] = new DialogManager.Dialog(currentMission.clueComparison);
+                                clips[2] = new DialogManager.Dialog(currentMission.clueComparison);
                                 player.clueComparisonPlayed = true;
                             }
                             ActivateMovingClue();
+
                             dialogManager.setDialog(clips);
+                        }
+                        else
+                        {
+                            if (i == 0)
+                            {
+                                DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
+                                clips[0] = new DialogManager.Dialog(player.nameClip);
+                                clips[1] = new DialogManager.Dialog(currentMission.suspects[i].character.introClip, currentMission.suspects[i].character);
+
+                                dialogManager.setDialog(clips);
+                                currentMission.suspects[i].character.introPlayed = true;
+                                //currentMission.suspects[i].character.IsInteracted = true;
+
+                            }
+                            else
+                            {
+                                int num = player.clueObject ? 5 : 4;
+                                DialogManager.Dialog[] clips = new DialogManager.Dialog[num];
+                                clips[0] = new DialogManager.Dialog(player.nameClip);
+                                clips[1] = new DialogManager.Dialog(currentMission.interrogateSpeech);
+                                clips[2] = new DialogManager.Dialog(currentMission.suspects[i].character.introClip, currentMission.suspects[i].character);
+                                clips[3] = new DialogManager.Dialog(currentMission.suspects[i].explanation, currentMission.suspects[i].character);
+
+                                currentMission.suspects[i].character.introPlayed = true;
+                                //currentMission.suspects[i].character.IsInteracted = true;
+                                if (player.clueObject)
+                                {
+                                    clips[4] = new DialogManager.Dialog(currentMission.clueComparison);
+                                    player.clueComparisonPlayed = true;
+                                }
+                                ActivateMovingClue();
+                                dialogManager.setDialog(clips);
+                            }
                         }
                     }
                 }
-            }
-        
-        }
-     
+            }      
+        }     
     }
 
     public void ActivateMovingClue()
@@ -199,30 +200,32 @@ public class MissionManager : MonoBehaviour
             {
                 if (!character.arrestPlayed)
                 {
-                    AudioClip clip;
-                    if (i == currentMission.guiltyIndex)
+                    if (currentMission.complete == false) //Kathy)
                     {
-                        clip = currentMission.suspects[i].rightArrest;
-                        state = MissionState.EndByArrest;
-                        PlayerPrefs.SetInt("missionManager.currentMission", 1); //Kathy
-                        PlayerPrefs.Save();                                     //Kathy
-                        print(PlayerPrefs.GetInt("missionManager.currentMission")); //Kathy
-                        currentMission.complete = true;
+                        AudioClip clip;
+                        if (i == currentMission.guiltyIndex)
+                        {
+                            clip = currentMission.suspects[i].rightArrest;
+                            state = MissionState.EndByArrest;
+                            PlayerPrefs.SetInt("missionManager.currentMission", 1); //Kathy
+                            PlayerPrefs.Save();                                     //Kathy
+                            print(PlayerPrefs.GetInt("missionManager.currentMission")); //Kathy
+                            currentMission.complete = true;
 
-                    }
-                    else
-                    {
-                        clip = currentMission.suspects[i].wrongArrest;
-                        player.selectedCharacter = null;
-                    }
-                    DialogManager.Dialog[] clips = new DialogManager.Dialog[3];
-                    clips[0] = new DialogManager.Dialog(currentMission.suspects[i].character.nameClip);
-                    clips[1] = new DialogManager.Dialog(arrestClip);
-                    clips[2] = new DialogManager.Dialog(clip);
+                        }
+                        else
+                        {
+                            clip = currentMission.suspects[i].wrongArrest;
+                            player.selectedCharacter = null;
+                        }
+                        DialogManager.Dialog[] clips = new DialogManager.Dialog[3];
+                        clips[0] = new DialogManager.Dialog(currentMission.suspects[i].character.nameClip);
+                        clips[1] = new DialogManager.Dialog(arrestClip);
+                        clips[2] = new DialogManager.Dialog(clip);
 
-                    dialogManager.setDialog(clips, DialogManager.DialogType.Arrest);
-                    character.arrestPlayed = true;
-                    
+                        dialogManager.setDialog(clips, DialogManager.DialogType.Arrest);
+                        character.arrestPlayed = true;
+                    } 
                 }
                 
             }
@@ -236,27 +239,31 @@ public class MissionManager : MonoBehaviour
             if (currentMission.suspects[i].character == character)
             {
                 if (!character.warnPlayed)
-                {
-                    AudioClip clip;
-                    if (i == currentMission.guiltyIndex)
-                    {
-                        clip = currentMission.suspects[i].rightWarn;
-                        PlayerPrefs.SetInt("missionManager.currentMission", 2); //Kathy
-                        PlayerPrefs.Save(); //Kathy
-                        state = MissionState.EndByWarning;//Kathy
-                    }
-                    else
-                    {
-                        clip = currentMission.suspects[i].wrongWarn;
-                    }
-                    DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
-                    clips[0] = new DialogManager.Dialog(currentMission.suspects[i].playerWarning);
-                    clips[1] = new DialogManager.Dialog(clip);
 
-                    dialogManager.setDialog(clips, DialogManager.DialogType.Warning);
-                    character.warnPlayed = true;
-                    currentMission.complete = true;
-                }
+                    if (currentMission.complete == false) //Kathy
+                    {
+                        {
+                            AudioClip clip;
+                            if (i == currentMission.guiltyIndex)
+                            {
+                                clip = currentMission.suspects[i].rightWarn;
+                                PlayerPrefs.SetInt("missionManager.currentMission", 2); //Kathy
+                                PlayerPrefs.Save(); //Kathy
+                                state = MissionState.EndByWarning;//Kathy
+                            }
+                            else
+                            {
+                                clip = currentMission.suspects[i].wrongWarn;
+                            }
+                            DialogManager.Dialog[] clips = new DialogManager.Dialog[2];
+                            clips[0] = new DialogManager.Dialog(currentMission.suspects[i].playerWarning);
+                            clips[1] = new DialogManager.Dialog(clip);
+
+                            dialogManager.setDialog(clips, DialogManager.DialogType.Warning);
+                            character.warnPlayed = true;
+                            currentMission.complete = true;
+                        }
+                    }
             }
         }
     }

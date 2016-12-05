@@ -1001,6 +1001,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
+  M118_PC_SheInChimney_2: {fileID: 0}
+  chimneyDialogPlace: {x: 0, y: 0, z: 0}
   selectedCharacter: {fileID: 0}
   sceneLoaded: 0
   puzzle: 0
@@ -3860,6 +3862,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
+  M118_PC_SheInChimney_2: {fileID: 0}
+  chimneyDialogPlace: {x: 0, y: 0, z: 0}
   selectedCharacter: {fileID: 0}
   sceneLoaded: 0
   puzzle: 0
@@ -3990,48 +3994,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 933969785}
   m_RootOrder: 0
---- !u!1001 &220870793
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 06706099abbc5144aabe6cda001e2080, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.18744755
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06706099abbc5144aabe6cda001e2080, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.044068918
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06706099abbc5144aabe6cda001e2080, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.81466675
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06706099abbc5144aabe6cda001e2080, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06706099abbc5144aabe6cda001e2080, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06706099abbc5144aabe6cda001e2080, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06706099abbc5144aabe6cda001e2080, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 06706099abbc5144aabe6cda001e2080, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 06706099abbc5144aabe6cda001e2080, type: 3}
-  m_IsPrefabParent: 0
 --- !u!1 &227678836
 GameObject:
   m_ObjectHideFlags: 0
@@ -4412,6 +4374,180 @@ Transform:
   m_PrefabParentObject: {fileID: 4000010616774278, guid: abe482c88947c344ba88958c6360f8a2,
     type: 2}
   m_PrefabInternal: {fileID: 1889125337}
+--- !u!1 &254706415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1000011901779454, guid: 5993e79194f189e4ba46c76d53437fef,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 254706416}
+  - 33: {fileID: 254706421}
+  - 23: {fileID: 254706420}
+  - 65: {fileID: 254706419}
+  - 82: {fileID: 254706418}
+  - 114: {fileID: 254706417}
+  m_Layer: 0
+  m_Name: chimney (1)
+  m_TagString: Chimney
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &254706416
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4000012965044408, guid: 5993e79194f189e4ba46c76d53437fef,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254706415}
+  m_LocalRotation: {x: -0, y: 0.52713084, z: -0, w: 0.84978414}
+  m_LocalPosition: {x: -41.82, y: 1.5, z: 10.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 63.748005, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1535514139}
+  m_RootOrder: 6
+--- !u!114 &254706417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254706415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a7e308f6a60ab240a973fdb9658ef8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chimneyDialogPlace: {x: -41, y: 1, z: 10.55}
+  M118_PC_SheInChimney_2: {fileID: 8300000, guid: 822d17a681812af40946753935b96456,
+    type: 3}
+--- !u!82 &254706418
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254706415}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 1
+  Priority: 8
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 20
+  Pan2D: 0
+  rolloffMode: 1
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+--- !u!65 &254706419
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 65000013510651606, guid: 5993e79194f189e4ba46c76d53437fef,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254706415}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.12, y: 3, z: 1.59}
+  m_Center: {x: 0, y: 0, z: 0.08}
+--- !u!23 &254706420
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 23000014034709436, guid: 5993e79194f189e4ba46c76d53437fef,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254706415}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 0
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 2baaa6168f074d9448729efebdd15b6f, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &254706421
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 33000013530595344, guid: 5993e79194f189e4ba46c76d53437fef,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254706415}
+  m_Mesh: {fileID: 4300480, guid: d4834b4a70a077b42951a0dada94fa9f, type: 3}
 --- !u!1 &254858154 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000010551382442, guid: d58ae7013f815a14ab9d46a0f636d94a,
@@ -4764,6 +4900,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
+  M118_PC_SheInChimney_2: {fileID: 0}
+  chimneyDialogPlace: {x: 0, y: 0, z: 0}
   selectedCharacter: {fileID: 0}
   sceneLoaded: 0
   puzzle: 0
@@ -6383,6 +6521,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
+  M118_PC_SheInChimney_2: {fileID: 0}
+  chimneyDialogPlace: {x: 0, y: 0, z: 0}
   selectedCharacter: {fileID: 0}
   sceneLoaded: 0
   puzzle: 0
@@ -11271,7 +11411,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010071666470, guid: 36243e9eb3477244087bbe829a4d2ec0, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36243e9eb3477244087bbe829a4d2ec0, type: 2}
@@ -11670,6 +11810,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
+  M118_PC_SheInChimney_2: {fileID: 0}
+  chimneyDialogPlace: {x: 0, y: 0, z: 0}
   selectedCharacter: {fileID: 0}
   sceneLoaded: 0
   puzzle: 0
@@ -16096,7 +16238,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1001 &935350406
 Prefab:
   m_ObjectHideFlags: 0
@@ -16246,7 +16388,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011271342414, guid: d1a7a857d62a20b40ae0346edac8431d, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 65000011010490288, guid: d1a7a857d62a20b40ae0346edac8431d,
         type: 2}
@@ -17262,7 +17404,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000014187647034, guid: debb17e5ad069764f9f29494d6e59538, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1000011762397224, guid: debb17e5ad069764f9f29494d6e59538, type: 2}
       propertyPath: m_IsActive
@@ -17673,6 +17815,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
+  M118_PC_SheInChimney_2: {fileID: 0}
+  chimneyDialogPlace: {x: 0, y: 0, z: 0}
   selectedCharacter: {fileID: 0}
   sceneLoaded: 0
   puzzle: 0
@@ -17875,7 +18019,7 @@ Transform:
   - {fileID: 1337582499}
   - {fileID: 1957560114}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1057769948
 GameObject:
   m_ObjectHideFlags: 0
@@ -19036,10 +19180,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1140573524}
-  m_LocalRotation: {x: 0, y: -0.9396926, z: 0, w: 0.34202018}
+  m_LocalRotation: {x: 0, y: -0.17364825, z: 0, w: 0.9848078}
   m_LocalPosition: {x: -37.92, y: 0, z: 11.36}
   m_LocalScale: {x: 0.9, y: 0.90000004, z: 0.9}
-  m_LocalEulerAnglesHint: {x: 0, y: -140, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -20, z: 0}
   m_Children: []
   m_Father: {fileID: 1638432804}
   m_RootOrder: 0
@@ -19208,7 +19352,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011462876884, guid: 5993e79194f189e4ba46c76d53437fef, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5993e79194f189e4ba46c76d53437fef, type: 2}
@@ -20242,7 +20386,7 @@ Transform:
   m_Children:
   - {fileID: 637290622}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!114 &1217309897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20276,7 +20420,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 3f050ddd5c1618c48867c09d178b6381, type: 3}
   state: 0
   currentMission: {fileID: 0}
-  SkyHint: {fileID: 0}
+  SkyHint: {fileID: 1552181976}
   congratulationsPlayed: 0
 --- !u!1 &1221889169
 GameObject:
@@ -20557,7 +20701,7 @@ Transform:
   - {fileID: 591940830}
   - {fileID: 228330770}
   m_Father: {fileID: 1535514139}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!4 &1243161607 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000013190133598, guid: 18e74bbc636dc2b49be659f888e2e5a8,
@@ -20887,6 +21031,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
+  M118_PC_SheInChimney_2: {fileID: 0}
+  chimneyDialogPlace: {x: 0, y: 0, z: 0}
   selectedCharacter: {fileID: 0}
   sceneLoaded: 0
   puzzle: 0
@@ -21537,6 +21683,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
+  M118_PC_SheInChimney_2: {fileID: 0}
+  chimneyDialogPlace: {x: 0, y: 0, z: 0}
   selectedCharacter: {fileID: 0}
   sceneLoaded: 0
   puzzle: 0
@@ -22082,6 +22230,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013133943140, guid: 947a28bbb4267804a86016ece8ae87d7,
     type: 2}
   m_PrefabInternal: {fileID: 51592159}
+--- !u!1 &1327248662 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011901779454, guid: 5993e79194f189e4ba46c76d53437fef,
+    type: 2}
+  m_PrefabInternal: {fileID: 1163138758}
 --- !u!1 &1327737853
 GameObject:
   m_ObjectHideFlags: 0
@@ -22629,6 +22782,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
+  M118_PC_SheInChimney_2: {fileID: 0}
+  chimneyDialogPlace: {x: 0, y: 0, z: 0}
   selectedCharacter: {fileID: 0}
   sceneLoaded: 0
   puzzle: 0
@@ -25265,6 +25420,7 @@ Transform:
   - {fileID: 360753834}
   - {fileID: 2096786657}
   - {fileID: 366959837}
+  - {fileID: 254706416}
   - {fileID: 997389631}
   - {fileID: 938928892}
   - {fileID: 1832374834}
@@ -25345,11 +25501,17 @@ MonoBehaviour:
   clueDialogue: {fileID: 8300000, guid: a945332222c17bc44a0787694e05bd4d, type: 3}
   clueComparison: {fileID: 8300000, guid: 66ad4bba61b2cfe4fb283571cc3fe260, type: 3}
   guiltyIndex: 0
-  clueObjects: []
+  clueObjects:
+  - {fileID: 997389632}
+  - {fileID: 997389632}
+  - {fileID: 997389632}
+  - {fileID: 997389632}
+  - {fileID: 997389632}
   clueStartPos: {fileID: 360753834}
   clueSpawned: {fileID: 997389632}
   enkSpawnPoint: {fileID: 1140573524}
-  objDisable: []
+  objDisable:
+  - {fileID: 1327248662}
   soundObjDisable: []
   complete: 0
   skybox: {fileID: 2100000, guid: 4b23657536b33e146b0906906ba9e1b8, type: 2}
@@ -27464,7 +27626,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1001 &1624482387
 Prefab:
   m_ObjectHideFlags: 0
@@ -29082,7 +29244,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!1 &1710209744
 GameObject:
   m_ObjectHideFlags: 0
@@ -29284,6 +29446,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
+  M118_PC_SheInChimney_2: {fileID: 0}
+  chimneyDialogPlace: {x: 0, y: 0, z: 0}
   selectedCharacter: {fileID: 0}
   sceneLoaded: 0
   puzzle: 0
@@ -30892,36 +31056,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 450180, guid: 3592d784d976bda449a48c9e396b36e7, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 6564120, guid: 3592d784d976bda449a48c9e396b36e7, type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 450180, guid: 3592d784d976bda449a48c9e396b36e7, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.20000009
-      objectReference: {fileID: 0}
-    - target: {fileID: 450180, guid: 3592d784d976bda449a48c9e396b36e7, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.25000012
-      objectReference: {fileID: 0}
-    - target: {fileID: 8204244, guid: 3592d784d976bda449a48c9e396b36e7, type: 2}
-      propertyPath: Spatialize
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8204244, guid: 3592d784d976bda449a48c9e396b36e7, type: 2}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8204244, guid: 3592d784d976bda449a48c9e396b36e7, type: 2}
-      propertyPath: rolloffMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8204244, guid: 3592d784d976bda449a48c9e396b36e7, type: 2}
-      propertyPath: MaxDistance
-      value: 5
-      objectReference: {fileID: 0}
+    - target: {fileID: 114000012073484900, guid: 3592d784d976bda449a48c9e396b36e7,
+        type: 2}
+      propertyPath: sourceEnk
+      value: 
+      objectReference: {fileID: 2112454023}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3592d784d976bda449a48c9e396b36e7, type: 2}
   m_IsPrefabParent: 0
@@ -30929,53 +31070,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 450180, guid: 3592d784d976bda449a48c9e396b36e7, type: 2}
   m_PrefabInternal: {fileID: 1832374833}
---- !u!1 &1832374835 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 187480, guid: 3592d784d976bda449a48c9e396b36e7, type: 2}
-  m_PrefabInternal: {fileID: 1832374833}
---- !u!82 &1832374836 stripped
-AudioSource:
-  m_PrefabParentObject: {fileID: 8204244, guid: 3592d784d976bda449a48c9e396b36e7,
-    type: 2}
-  m_PrefabInternal: {fileID: 1832374833}
---- !u!114 &1832374837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1832374835}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  additionalDialog: {fileID: 0}
-  soundDelay: 1
-  Idle: []
-  activated: {fileID: 0}
-  enkNames: {fileID: 0}
-  activateDistance: 10
-  isClue: 0
-  isActivated: 0
-  enkNameObject: 0
-  missionName: 
---- !u!114 &1832374838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1832374835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f19273a94bd1bf54a9ec4052a3ad6f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Cat_Chimney0_2: {fileID: 8300000, guid: 87b6abff20f777e43b70ba4d2c482a14, type: 3}
-  Cat_Chimney1_5: {fileID: 8300000, guid: 845b841ec90f7b24d8b737db6b1480e3, type: 3}
-  Cat_Chimney2_1: {fileID: 8300000, guid: e9709bee07f45f744b3a2c26d7301323, type: 3}
-  Cat_Chimney3_4: {fileID: 8300000, guid: b56464c70146dcc4bae4770acccea868, type: 3}
-  Cat_Chimney4_2: {fileID: 8300000, guid: 4728e4a7e8659aa4297dace7f755825f, type: 3}
-  sourceCat: {fileID: 1832374836}
 --- !u!1 &1834429753
 GameObject:
   m_ObjectHideFlags: 0
@@ -31558,6 +31652,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
+  M118_PC_SheInChimney_2: {fileID: 0}
+  chimneyDialogPlace: {x: 0, y: 0, z: 0}
   selectedCharacter: {fileID: 0}
   sceneLoaded: 0
   puzzle: 0
@@ -34751,7 +34847,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!1 &2077906721
 GameObject:
   m_ObjectHideFlags: 0
@@ -35789,6 +35885,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
+  M118_PC_SheInChimney_2: {fileID: 0}
+  chimneyDialogPlace: {x: 0, y: 0, z: 0}
   selectedCharacter: {fileID: 0}
   sceneLoaded: 0
   puzzle: 0

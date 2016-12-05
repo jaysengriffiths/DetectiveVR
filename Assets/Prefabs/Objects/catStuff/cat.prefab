@@ -13,7 +13,7 @@ GameObject:
   - 23: {fileID: 2359620}
   - 82: {fileID: 8204244}
   - 114: {fileID: 114000012073484900}
-  - 114: {fileID: 114000010604227980}
+  - 114: {fileID: 114000014006471686}
   m_Layer: 0
   m_Name: cat
   m_TagString: Untagged
@@ -27,9 +27,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 187480}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.20000017, y: 0.2, z: 0.25000027}
+  m_LocalRotation: {x: -0, y: 0.5313579, z: -0, w: 0.8471475}
+  m_LocalPosition: {x: -45.01, y: 2.1913335, z: 7.042}
+  m_LocalScale: {x: 0.20000009, y: 0.2, z: 0.25000012}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -167,27 +167,6 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 187480}
   m_IsPrefabParent: 1
---- !u!114 &114000010604227980
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 187480}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundDelay: 1
-  Idle: []
-  activated: {fileID: 0}
-  enkNames: {fileID: 0}
-  clothNoise: {fileID: 0}
-  activateDistance: 10
-  isClue: 0
-  isActivated: 0
-  enkNameObject: 0
-  missionName: 
 --- !u!114 &114000012073484900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -204,4 +183,28 @@ MonoBehaviour:
   Cat_Chimney2_1: {fileID: 8300000, guid: e9709bee07f45f744b3a2c26d7301323, type: 3}
   Cat_Chimney3_4: {fileID: 8300000, guid: b56464c70146dcc4bae4770acccea868, type: 3}
   Cat_Chimney4_2: {fileID: 8300000, guid: 4728e4a7e8659aa4297dace7f755825f, type: 3}
+  M118_PC_SheInChimney_2: {fileID: 8300000, guid: 822d17a681812af40946753935b96456,
+    type: 3}
+  sourceEnk: {fileID: 0}
   sourceCat: {fileID: 8204244}
+--- !u!114 &114000014006471686
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187480}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53c3472a046f13a418398b9cfb090209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  additionalDialog: {fileID: 0}
+  soundDelay: 3
+  Idle: []
+  activated: {fileID: 0}
+  enkNames: {fileID: 8300000, guid: 822d17a681812af40946753935b96456, type: 3}
+  activateDistance: 10
+  isClue: 0
+  isActivated: 0
+  enkNameObject: 1
+  missionName: 

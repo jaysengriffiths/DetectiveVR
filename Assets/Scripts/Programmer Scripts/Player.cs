@@ -429,16 +429,13 @@ public class Player : MonoBehaviour
 
     void isMoving()
     {
-        if (mainCam.enabled == true)   //Kathy
-            {
-            Vector3 fwd = Camera.main.transform.forward;
-            controller.Move((speed * Time.deltaTime) * fwd);
-            Vector3 horizontalVelocity = new Vector3(characterController.velocity.x, 0, characterController.velocity.z);
-            float horizontalSpeed = horizontalVelocity.magnitude;
-            if (horizontalSpeed != 0)
-            {
-                ProgressStepCycle();
-            }
+        Vector3 fwd = Camera.main.transform.forward;
+        controller.Move((speed  * Time.deltaTime) * fwd);
+        Vector3 horizontalVelocity = new Vector3(characterController.velocity.x, 0, characterController.velocity.z);
+        float horizontalSpeed = horizontalVelocity.magnitude;
+        if (horizontalSpeed != 0)
+        {
+            ProgressStepCycle();
         }
     }
     

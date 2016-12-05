@@ -121,7 +121,7 @@ public class Mission : MonoBehaviour
         {
             for (int i = 0; i < soundObjDisable.Length; i++)
             {
-                soundObjDisable[i].GetComponent<AudioSource>().Pause();  //brings up NullReferenceException for Mission 6 Bonfire because this keeps autopopulating Size = 1 so I populated it with witch and ladyOfManor ordinary characters which get replaced by special ones in this mission
+                soundObjDisable[i].GetComponent<AudioSource>().Pause();
             }
         }
     }

@@ -8,7 +8,9 @@ public class catSounds : MonoBehaviour
     public AudioClip Cat_Chimney2_1;
     public AudioClip Cat_Chimney3_4;
     public AudioClip Cat_Chimney4_2;
+    public AudioClip M118_PC_SheInChimney_2;
 
+    public AudioSource sourceEnk;
     public AudioSource sourceCat;
     int i;
 
