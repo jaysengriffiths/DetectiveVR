@@ -99,6 +99,8 @@ public class Player : MonoBehaviour
     public AudioClip[] treeCollide;
     public AudioClip[] wallCollide;
     public AudioClip[] pigstyCollide;
+    public AudioSource heartbeatSource;
+    public AudioClip Heartbeat_Medium_12;
 
     //Clueholder on enk
     [HideInInspector]
@@ -136,7 +138,7 @@ public class Player : MonoBehaviour
     public bool puzzle = false;
     private bool loadScene;
     private bool canLoad = false;
-    public Camera mainCam;
+    //public Camera mainCam; do not need public variable to find main camera which Unity already recognises from its tag
 
     void Awake()
     {
@@ -169,27 +171,27 @@ public class Player : MonoBehaviour
     {
         loadScene = false;  // Kathy
 
-        yield return new WaitForSeconds(0);
-
         AsyncOperation async = SceneManager.LoadSceneAsync("Main_Scene");
         
         while(!async.isDone)
         {
             yield return null;
-
+            heartbeatSource.PlayOneShot(Heartbeat_Medium_12);
         }
+        
+       // yield return new WaitForSeconds(12);
     }
+
     // Update is called once per frame
     void Update()
     {
-        if(canLoad && loadScene == false)
+        if(canLoad == true && loadScene == false)
         {
+            canLoad = false;  //Kathy
             loadScene = true;
             Text loading = GameObject.Find("Canvas").GetComponent<Text>();
             loading.text = "Loading.......";
             loading.color = new Color(loading.color.r, loading.color.g, loading.color.b, Mathf.PingPong(Time.time, 1));
-
-            //TODO add heartbeat
 
             StartCoroutine(LoadNewScene());
         }
@@ -266,7 +268,9 @@ public class Player : MonoBehaviour
         PlayerPrefs.SetString("Mission", mission);
         PlayerPrefs.Save();
         canLoad = true;
-        mainCam.enabled = false;
+        // mainCam.enabled = false; replaced with reference to Camera.main for clarity and to obviate the need for a public variable here
+        Camera.main.enabled = false;
+
         //Camera cam = Find<Camera>();
         //cam.gameObject.SetActive(false);
 
@@ -335,8 +339,10 @@ public class Player : MonoBehaviour
     }
     public void Look()
     {
+        if (Camera.main == null)
+            return;
+
         RaycastHit hit;
-        //Camera.main.
 
         //Interaction with NPCs
         bool lookingAtGoldStar = false;
@@ -346,14 +352,14 @@ public class Player : MonoBehaviour
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, rayCastToSuspectLookAt))
         {
 
-            if (hit.collider.CompareTag("SUSPECT")) // we're looking at a charcter
+            if (hit.collider.CompareTag("SUSPECT")) // we're looking at a character
             {
                 Character ch = hit.collider.gameObject.GetComponent<Character>();
-                //selectedCharacter = ch;
+                //selectedCharacter = ch; //commented out here as moved down
                 suspectGazeTimer.SetObject(ch);
                 if (suspectGazeTimer.IsExpired() && missionManager != null)
                 {
-                    // we've been starting at thisa one thing for three seconds...  //Kathy quarter of a second
+                    // we've been staring at this thing for three seconds...  //Kathy made it quarter of a second
                     missionManager.Interrogate(ch);
                     selectedCharacter = ch;
                 }
@@ -408,6 +414,9 @@ public class Player : MonoBehaviour
 
     public void walk()
     {
+        if (Camera.main == null)
+            return;
+
         bool lookingDown = (cameraAngle > minBounds && cameraAngle < maxBounds);
 
         if (lookingDown)
@@ -429,6 +438,8 @@ public class Player : MonoBehaviour
 
     void isMoving()
     {
+        if (Camera.main == null)
+            return;
         Vector3 fwd = Camera.main.transform.forward;
         controller.Move((speed  * Time.deltaTime) * fwd);
         Vector3 horizontalVelocity = new Vector3(characterController.velocity.x, 0, characterController.velocity.z);
