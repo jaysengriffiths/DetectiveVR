@@ -350,6 +350,16 @@ Prefab:
       propertyPath: mic
       value: 
       objectReference: {fileID: 1509986095}
+    - target: {fileID: 114000010199914380, guid: c499189063ad66c4298f293aea424e98,
+        type: 2}
+      propertyPath: Heartbeat_Medium_12
+      value: 
+      objectReference: {fileID: 8300000, guid: dfee709b901b3e04f8cc025f24afc053, type: 3}
+    - target: {fileID: 114000010199914380, guid: c499189063ad66c4298f293aea424e98,
+        type: 2}
+      propertyPath: heartbeatSource
+      value: 
+      objectReference: {fileID: 1087135559}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c499189063ad66c4298f293aea424e98, type: 2}
   m_IsPrefabParent: 0
@@ -4810,6 +4820,11 @@ Transform:
   - {fileID: 1648330880}
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!82 &1087135559 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82000013866666038, guid: c499189063ad66c4298f293aea424e98,
+    type: 2}
+  m_PrefabInternal: {fileID: 83890149}
 --- !u!1 &1091045015
 GameObject:
   m_ObjectHideFlags: 0
@@ -5478,6 +5493,7 @@ GameObject:
   - 114: {fileID: 1216565056}
   - 114: {fileID: 1216565055}
   - 114: {fileID: 1216565054}
+  - 82: {fileID: 1216565060}
   m_Layer: 0
   m_Name: Enk
   m_TagString: Player
@@ -5553,6 +5569,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 772ed7b5c1a57254591107b3c77aa414, type: 3}
   - {fileID: 8300000, guid: f663bd6820fc2c9438cdf34beecf1be3, type: 3}
   - {fileID: 8300000, guid: 991dcd4af2cbf99459a21f3936971cf3, type: 3}
+  heartbeatSource: {fileID: 1216565060}
+  Heartbeat_Medium_12: {fileID: 8300000, guid: dfee709b901b3e04f8cc025f24afc053, type: 3}
   clueObject: {fileID: 0}
   enkHoldingCloth: {fileID: 1938522471}
   clueComparisonPlayed: 0
@@ -5569,13 +5587,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 503a0f3f2a0818f4f88fc693abde12e4, type: 3}
   - {fileID: 8300000, guid: e76689448e0dc0e428a7cd73dcdb53a6, type: 3}
   - {fileID: 8300000, guid: b87d408a77e41264cb2e91ba6684d2d5, type: 3}
-  M118_PC_SheInChimney_2: {fileID: 8300000, guid: 822d17a681812af40946753935b96456,
-    type: 3}
-  chimneyDialogPlace: {x: 0, y: 0, z: 0}
   selectedCharacter: {fileID: 0}
   sceneLoaded: 0
   puzzle: 0
-  mainCam: {fileID: 1011528608}
 --- !u!143 &1216565057
 CharacterController:
   m_ObjectHideFlags: 0
@@ -5634,6 +5648,80 @@ Transform:
   - {fileID: 1091045016}
   m_Father: {fileID: 1232756629}
   m_RootOrder: 0
+--- !u!82 &1216565060
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1216565053}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!4 &1224013083
 Transform:
   m_ObjectHideFlags: 0

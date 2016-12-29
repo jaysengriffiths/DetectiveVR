@@ -169,17 +169,17 @@ public class Player : MonoBehaviour
 
     IEnumerator LoadNewScene()
     {
-        loadScene = false;  // Kathy
+        //loadScene = false;  // Kathy
 
         AsyncOperation async = SceneManager.LoadSceneAsync("Main_Scene");
         
         while(!async.isDone)
         {
             yield return null;
-            heartbeatSource.PlayOneShot(Heartbeat_Medium_12);
         }
-        
-       // yield return new WaitForSeconds(12);
+
+            loadScene = false;  // Kathy
+        // yield return new WaitForSeconds(12);
     }
 
     // Update is called once per frame
@@ -187,11 +187,14 @@ public class Player : MonoBehaviour
     {
         if(canLoad == true && loadScene == false)
         {
-            canLoad = false;  //Kathy
-            loadScene = true;
+
             Text loading = GameObject.Find("Canvas").GetComponent<Text>();
             loading.text = "Loading.......";
             loading.color = new Color(loading.color.r, loading.color.g, loading.color.b, Mathf.PingPong(Time.time, 1));
+            heartbeatSource.PlayOneShot(Heartbeat_Medium_12);
+
+            canLoad = false;  //Kathy
+            loadScene = true;
 
             StartCoroutine(LoadNewScene());
         }
