@@ -169,16 +169,16 @@ public class Player : MonoBehaviour
 
     IEnumerator LoadNewScene()
     {
-        //loadScene = false;  // Kathy
+        // loadScene = false;  // Kathy
 
         AsyncOperation async = SceneManager.LoadSceneAsync("Main_Scene");
-        
-        while(!async.isDone)
+
+        while (!async.isDone)
         {
             yield return null;
         }
 
-            loadScene = false;  // Kathy
+        loadScene = false;  // Kathy
         // yield return new WaitForSeconds(12);
     }
 
